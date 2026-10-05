@@ -1,0 +1,2 @@
+Task /root/changeo_foundations/foundation_plan_review
+No unresolved sandbox design question. PR1–PR5 and both clarifications resolved in root-accepted F2. Existing production questions docs/questions.md/S1 stay open. Missing toolchain/real PostgreSQL/Testcontainers/browser checks belong to builder/final reviewer; readiness does not waive their acceptance gate.

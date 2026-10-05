@@ -1,0 +1,88 @@
+# Architecture and shared contracts
+
+Status: private synthetic Java 25 / Spring Boot 4.1.1 foundations independently accepted; moderation implementation awaiting separate review. Mercado Pago remains selected for planning; all production and real-money contracts remain Gate0. Current private identity contracts are S1/F1/F2 below.
+
+## Stack and deployment shape
+
+Use Java 25 LTS, a supported Spring Boot 4 patch, Maven wrapper, Spring MVC, Thymeleaf with minimal JavaScript, Spring Security, Spring Data JPA, Flyway and PostgreSQL. Pin compatible versions when implementation starts using [Spring's requirements](https://docs.spring.io/spring-boot/system-requirements.html) and dependency management. Java familiarity is an established preference; no demonstrated cost advantage justified changing language.
+
+Start with one deployable application organized by feature ownership and a shared transactional database. Use private object storage for files and transactional email for delivery notifications. Public pages are server-rendered for accessibility and search indexing. No native app, separate SPA, microservice fleet, custom search cluster or distributed message broker is required by current scope.
+
+Use PostgreSQL full-text search, ordinary application services and incremental polling for active conversations. A persistent outbox/job table with bounded retries and safe database claiming handles notifications, moderation and reconciliation. Add dedicated infrastructure only when measured workloads or a concrete requirement justify it.
+
+Host/region is a Gate0 selection using actual price, Argentina latency, Java memory needs, database backup support and operational effort. Use an always-on container, managed PostgreSQL with tested backups/recovery, object storage, TLS, secret management and health checks. Capacity estimates are planning inputs, not verified load limits. Avoid unneeded native-image optimization before measurement.
+
+## Ownership boundaries
+
+| Area | Owned state and decisions |
+| --- | --- |
+| Identity and permissions | Accounts, contact verification, optional identity status, guardian links/authority, age eligibility and role permissions. |
+| Listings and discovery | Offers, requests, approved public revisions, tags, fulfillment coverage, search and availability. |
+| Conversations and files | Participant access, message revisions/delivery, private file references, retention and report context. |
+| Agreements and jobs | Quote revisions, explicit acceptance, immutable funded terms, progress/feedback and final-delivery workflow. |
+| Payments | Funding sources, financial entries, partner identifiers, serialized operations, release/refund/payout, credits and reconciliation. |
+| Subscriptions and rewards | Provider entitlements, renewal states, promotional subscription credits, earned benefits and funded cash-reward obligations. |
+| Moderation and cases | Policy decisions, exact revision approvals, reports, appeals and support case decisions. |
+| Notifications and jobs | Durable delivery intents, safe retries, scheduled work and delivery status. |
+
+Each owner controls its writes and exposes behavior-level operations to callers. Prefer clear responsibilities and traceable failure paths over a blanket ban on useful abstractions. Payment, identity and moderation integrations have justified boundaries; do not build a speculative multi-vendor framework.
+
+Plan the payment integration around Mercado Pago within the existing payments owner. The [capability findings](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) leave collected custody, final-release control and backed credits unresolved. Selection introduces no endpoint/schema contract and does not authorize automatic split, delayed capture or an ordinary operating-account balance as the required holding arrangement. Billing uses approved Mercado Pago features only after account/commercial evidence; subscription entitlements and promotional credits retain their separate owner.
+
+## Core records and behavior contracts
+
+- **Account/guardian relationship:** the acting user, legal payer and provider can differ; preserve explicit ownership and authorization.
+- **Listing:** offer or request with private draft and approved public revisions. Pausing/deleting public availability must not rewrite associated agreements.
+- **Conversation/message/file:** access belongs to authorized participants; approval and delivery refer to the exact revision and attachments.
+- **Agreement revision:** immutable scope, amounts/currency, participants, fulfillment, deadlines, evidence and approved release/refund terms. Both parties accept the same revision.
+- **Job/progress stage:** execution and feedback state; progress-stage acceptance never invokes payout.
+- **Payment operation:** recorded intent and idempotency identity, partner observations, funding allocation and reconciliation outcome.
+- **Credit balance/source lot:** monetary liability owned by the legal payer, with atomic reservation/spend/refund and cumulative source limits.
+- **Subscription/reward:** commercial entitlement and promotion state, separate from customer principal.
+- **Moderation decision/case:** content revision, policy/model version, reason, review status, appeal and responsible operator.
+
+Specific endpoint paths and persistence schemas belong in accepted feature briefs under S1 for private synthetic development, and after Gate0 for production; this document intentionally fixes ownership and invariants before provider-specific wire contracts are known. No public third-party developer API is a launch requirement.
+
+## Financial and asynchronous correctness
+
+Database transitions and external partner actions are not atomic together. Persist intent, commit, perform/retry the external operation with a stable key, then reconcile observed outcomes. Authenticate callbacks, reject invalid events, deduplicate legitimate repeats and tolerate ordering differences.
+
+Serializing money decisions per job prevents conflicting payout/refund paths. Unknown outcomes block competing operations. Store exact minor-unit values and currency; refunds are bounded by remaining refundable amounts and per-source cumulative limits. Append financial corrections rather than rewriting previous entries.
+
+Notification and moderation retries are also durable. A task's result applies only to the content revision it inspected. Access control must be enforced at data retrieval and file-link issuance, not only in rendered templates.
+
+## Security and privacy baseline
+
+Use managed framework support for sessions/authentication, CSRF protection, input validation and output escaping. Protect state-changing actions, ownership checks, secrets and session lifecycle. Add rate limits to abuse-sensitive registration, posting, messaging, uploads and review submissions.
+
+Files need type/size limits, quarantine/scanning, private storage, authorized short-lived downloads and safe extraction. Do not preview arbitrary active content or trust a filename extension. Do not expose identity documents, precise locations, payment identifiers or conversation contents in public indexes or logs.
+
+Admin MFA, minimum privileges and an audit trail are required. Moderation output is untrusted structured data; it cannot execute instructions, access administrative tools or move money.
+
+## Verification and operations
+
+Use Spring Boot-managed JUnit Jupiter/AssertJ, MockMvc and PostgreSQL Testcontainers for meaningful boundaries; use a small browser suite for end-to-end accessibility and permission flows. Follow the installed Java/JUnit skills while respecting the chosen framework's supported dependency versions.
+
+Prioritize agreements/permissions, concurrent financial operations, mixed-source refunds, revision publication, attachments, guardian actions and retry/recovery behavior. Do not replace behavior checks with source-token or class-layout tests.
+
+Private staging uses partner sandboxes and test identities where provided. This is technical verification, not the public prototype the user rejected. Exercise backups and restoration, monitor reconciliation failures, job queue age, moderation latency, payment exceptions, error rates and delivery failures. Capacity targets and alert thresholds come from the approved launch forecast and support model.
+
+## Required coding guidance
+
+Every planner, implementer and reviewer loads the current shared policy at `/home/paradis/.agents/skills/astra-flash-orchestrator/references/code-quality.md`. Java work also loads `/home/paradis/.agents/skills/java-coding-standards/SKILL.md` and relevant testing work loads `/home/paradis/.agents/skills/java-junit/SKILL.md`. Record actual reads and validation evidence in role reports. There are no existing project implementations to cite as local reference patterns.
+
+## Private development authorization and current foundations
+
+The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
+
+The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Foundations and F3 are independently accepted; moderation awaits its separate independent review; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.
+
+## Private synthetic moderation and publication
+
+The foundation and focused moderation roles are independently accepted under [F3](agent-work/changeo-implementation/foundations-contract-F3.md). The current moderation implementation is readying an independent review under [M1](agent-work/changeo-implementation/moderation-contract-M1.md), [M1A](agent-work/changeo-implementation/moderation-contract-M1A.md), [M1B](agent-work/changeo-implementation/moderation-contract-M1B.md), [M1C](agent-work/changeo-implementation/moderation-contract-M1C.md) and [M1D](agent-work/changeo-implementation/moderation-contract-M1D.md). This does not close Gate0 or certify production content, vendors or capacity.
+
+The local `/moderation` workbench saves guarded private drafts, queues exact immutable revisions, retains an unchanged approved revision during edits, and exposes review/retry/report/appeal states. `/content` retrieves only currently approved and audience-eligible synthetic examples; detail, search, preview, notification projections and downloads use current owner checks. A committed draft that was not submitted explicitly says it still needs review. Current workbench owners cover request-body and private-message fixtures only; the marketplace workflows and their actual authored surfaces remain later dependencies.
+
+Canonical workbench resources, membership, revisions and publication pointers are separate from moderation reference barriers, immutable review snapshots, decisions, tasks, cases and ID-only signals. Installed trusted owners lock/revalidate canonical bindings after current identity authorization. Submission joins the owner's transaction before canonical locks; a downstream caught failure still rolls back that whole submission. Background results never lock canonical workbench records. Every positive automated/manual/appeal/label-correction decision records a durable activation intent; a fresh identity-first transaction changes the owner's pointer and completes its signal/task together. Files owns each raw-read transaction and rejects an outer caller transaction; its current bridge authorizes before bounded immutable byte copying. The independent test-owned canonical bridge demonstrates this boundary without workbench records; future real owners still require their own concrete integration tests.
+
+Only an explicit local opt-in enables deterministic review fixtures. Arbitrary or invalid output holds for human review, outages retry, and unsupported files stay quarantined. Operator review requires the focused current role, MFA and fresh authentication; metadata audit requires its own role and MFA. Human warnings/strikes are reversible evidence and do not automatically restrict identity or move money. Restricted authors retain controlled status/help/appeal access. Production Spanish model performance, legal content policy, privacy processing, retention and support capacity remain unverified.

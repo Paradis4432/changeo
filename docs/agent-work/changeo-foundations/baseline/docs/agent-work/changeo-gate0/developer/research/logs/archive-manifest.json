@@ -1,0 +1,11 @@
+{
+  "report.md": "79c1dff368d45a806f4542411d7605f45af9f53078f12bc575c5ee216ec7b042",
+  "CHECKPOINT.md": "95499735b525df82a2d58de94ab26e768eeb95b7c4ce9d175ebc5e4eb8001843",
+  "notes.txt": "a44b02585dc84db70cda16e6414ae68374c09d52ba2bd14a055e368a30017f04",
+  "questions.txt": "a5507cb8b488fc0a8188bef6e4f71fd392748cc417b0a245b32ae31df53b4d17",
+  "logs/baseline-before.txt": "f60b80f7ddcc20fd066a2daa72b484751944c954dc496b838c859e1051e5c08c",
+  "logs/inventory-before.txt": "7e00371d898df20078af46a4b14055f467c1e9c0fcfdad7fa93674a330a158e2",
+  "logs/questions-check.txt": "fd1889d3d12f1f07ddbcd925192adfaa81a965008d3590b5edc67773ba860a56",
+  "logs/source-reads.txt": "4c8b45bbe56b174887a8660b39c100f5df7933f9f2fd6122c3965d54b337060f",
+  "logs/final-artifacts.txt": "ca297a365a51278c70ba83827962f3f44e1edd0ab16993581e55a06b54078dab"
+}

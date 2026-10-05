@@ -1,0 +1,1469 @@
+{
+  "command": "python3 baseline snapshot/current SHA256 verification",
+  "underlying_exit": 0,
+  "snapshot_count": 289,
+  "snapshot_mismatches": [],
+  "current_differences": [
+    "docs/agent-work/changeo-foundations/CHECKPOINT.md",
+    "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md"
+  ],
+  "git_branch": {
+    "exit": 0,
+    "stdout": "master\n",
+    "stderr": ""
+  },
+  "git_head": {
+    "exit": 128,
+    "stdout": "",
+    "stderr": "fatal: Needed a single revision\n"
+  },
+  "tracked_diff_empty": true,
+  "staged_diff_empty": true,
+  "entries": [
+    {
+      "path": ".gitignore",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": ".mvn/maven.config",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/.obsidian/app.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/.obsidian/appearance.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/.obsidian/core-plugins.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/.obsidian/workspace.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/README.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": false
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/coordinator-handoff-check.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/correction-FR1.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/design-amendment-F2.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/environment.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/final-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-agents-and-environment.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-amendment-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-budget-and-support.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-git-initialization-confirmation.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-goal.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-mercadopago-capability-and-account.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-mercadopago-choice.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/originals/user-sandbox-development-approval.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/CHECKPOINT.before-F2.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/notes.before-F2.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/questions.before-F2.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/report.before-F2.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/report.before-FR1.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/role-routing.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-handoff-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-handoff-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-handoff-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-handoff-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/source-support.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.before-r3g.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.before-r3g.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/report.before-r3g.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/source-support.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/source-support.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/notes.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-final-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-handoff-check.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/developer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/plan.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/reviewer-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.before-moderation.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.before-r2.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": false
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/business.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/gate0-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/marketing.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/questions.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/trust-operations.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-support-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/child-routing.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/feature-coordinator-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F1.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F2.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-coordinator-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-routing.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/git-user-approved-baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/README.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/architecture.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/business.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/gate0-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/payments.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/questions.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-coordinator-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-routing.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/injected-astra-skill.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/injected-java-skill.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-agents-and-environment.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-amendment-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-budget-and-support.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-git-initialization-confirmation.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-goal.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-mercadopago-choice.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-sandbox-development-approval.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/payment-account-question.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/gate0-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/questions.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-amendment-brief.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline/docs/questions.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-budget-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-mercadopago-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-personal-account-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-research-report.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-routing.json",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/README.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/documentation-review.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/planning-review.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/requirements.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/sources.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/architecture.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/business.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/delivery.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/marketing.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/payments.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/product-design.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/trust-operations.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/prompt.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/CHECKPOINT.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/documentation-review.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/planning-review.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/requirements.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/sources.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/business.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/delivery.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/gate0-research.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/marketing.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/payments.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/product-design.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/questions.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "mvnw",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "mvnw.cmd",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "pom.xml",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "scripts/browser-qa.cjs",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "scripts/local-db.sh",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "scripts/run-sandbox.sh",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/ChangeoApplication.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/RuntimeConfig.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/SandboxSafety.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AbuseLimits.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Account.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AccountService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminMfa.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminSecurityService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AuditEvent.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ConsentStatus.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ContactToken.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Evidence.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/EvidenceKind.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/FactorCipher.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianLink.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityFailure.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityStore.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/JobConsent.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LinkStatus.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LocalMailbox.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/OperatorService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PrivateFiles.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Restriction.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/SecurityProof.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenDelivery.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenPurpose.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Totp.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountAccessSnapshot.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountId.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/ActorId.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionDecision.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/SubjectId.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/AccountPrincipal.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionEpochFilter.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionProof.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteController.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteErrors.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V1__identity.sql",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V2__identity_state_integrity.sql",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/static/style.css",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/account.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/admin.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/audit.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/failure.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/forgot.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/guardian.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/home.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/login.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/mfa.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/reauth.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/register.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/reset.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/shell.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/main/resources/templates/support.html",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/MutableClock.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/SandboxSafetyTest.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/TotpTest.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+      "snapshot_matches": true,
+      "current_matches": true
+    }
+  ]
+}

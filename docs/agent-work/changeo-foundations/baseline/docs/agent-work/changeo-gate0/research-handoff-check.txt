@@ -1,0 +1,29 @@
+# Research coordinator handoff check
+
+Command:
+python3 - <<'PY'
+from pathlib import Path
+root=Path('/home/paradis/changeo')
+files=['docs/questions.md','docs/gate0-research.md','docs/agent-work/changeo-gate0/developer/questions.txt','docs/agent-work/changeo-gate0/developer/research/report.md','docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md','docs/agent-work/changeo-gate0/developer/research/notes.txt','docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json','docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json','docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json','docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json','docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json']
+for name in files:
+    path=root/name
+    assert path.is_file() and path.stat().st_size>0,name
+    print(name)
+print('PASS: research developer minimum durable artifacts present; independent acceptance reopened/pending')
+PY
+
+Underlying exit: 0
+Output:
+docs/questions.md
+docs/gate0-research.md
+docs/agent-work/changeo-gate0/developer/questions.txt
+docs/agent-work/changeo-gate0/developer/research/report.md
+docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md
+docs/agent-work/changeo-gate0/developer/research/notes.txt
+docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json
+docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json
+docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json
+docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json
+docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json
+PASS: research developer minimum durable artifacts present; independent acceptance reopened/pending
+

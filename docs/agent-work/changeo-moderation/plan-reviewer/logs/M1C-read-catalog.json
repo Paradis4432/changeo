@@ -1,0 +1,282 @@
+[
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/briefs/plan-reviewer-brief.md",
+    "sha256": "0325ad8a784d5b614ef60c158e2ca240caf058533931e9a56be91fcc03bfd947",
+    "bytes": 4839,
+    "lines": 15,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-implementation/moderation-contract-M1C.md",
+    "sha256": "01678c5685f51018e466e177d784579fa5c388cbc9ea49a3ba1e0799c7db6803",
+    "bytes": 3210,
+    "lines": 11,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/design-amendment-M1C.md",
+    "sha256": "62390194e33c8718321c91cfcbcd3be9a42b0fbbb76459cd3dde87c99cfc829b",
+    "bytes": 3102,
+    "lines": 11,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/design-amendment-M1C1.md",
+    "sha256": "ef121635f57cd78fb45c6c76148a37e1e821d1cf2e8c5bb6832e85c8a89996d3",
+    "bytes": 2642,
+    "lines": 9,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/plan.md",
+    "sha256": "b1fc4f49cc9b4b2de181f0a43de5755cb120a7100f9758e26690bb6c6cad73ed",
+    "bytes": 20808,
+    "lines": 76,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/dependency-F3.json",
+    "sha256": "fa835cecebd5ec596775de4c725ae565b968e850889df5cbe53f9c9e99322088",
+    "bytes": 28661,
+    "lines": 572,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-implementation/foundations-contract-F3.md",
+    "sha256": "d210c5bc9d38c630f771f23751a310052276f2e717ee72373357875480313084",
+    "bytes": 2965,
+    "lines": 13,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-foundations/f3/plan.md",
+    "sha256": "dd43623bf68f200179c3d37b499b3d4cb7aad159ad0edb894cc31ec1447d7cb3",
+    "bytes": 9738,
+    "lines": 43,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-foundations/f3/coordinator-report.md",
+    "sha256": "292d9ee4af9e043e1f0c3b17445175aa83b8de81d510a984f9990dc3b07d22b2",
+    "bytes": 3964,
+    "lines": 13,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-foundations/reviewer/f3/report.md",
+    "sha256": "681c3174b154b6b00bd975a6cbca6e07bda7cff4b24a842dd37862ceef42ed1f",
+    "bytes": 15700,
+    "lines": 69,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-foundations/reviewer/f3/logs/final-artifacts.json",
+    "sha256": "a8c65fdc57ac7709436f979a54edfe8193ba686ab7f1fe47440d260a771d8d46",
+    "bytes": 662,
+    "lines": 23,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/sandbox-runtime.md",
+    "sha256": "7d40ebb4ec3f28375db508851a8c7ee56faeba7aa923b6979d077dca6907730c",
+    "bytes": 10047,
+    "lines": 64,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/api/SurfaceKind.java",
+    "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6",
+    "bytes": 318,
+    "lines": 7,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/api/ContentReference.java",
+    "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e",
+    "bytes": 317,
+    "lines": 8,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/api/AuthorContext.java",
+    "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f",
+    "bytes": 662,
+    "lines": 12,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/api/ModerationAccess.java",
+    "sha256": "e23451fbc127e1bf536c79ff85e1e6f6aacf5985532c6f41e400cf97401e9b00",
+    "bytes": 449,
+    "lines": 10,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/ModerationStore.java",
+    "sha256": "91ad8907bce36af674f639608a122bc2ee0a17748c8237f785808387b94fd97f",
+    "bytes": 5341,
+    "lines": 60,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/ModerationFailure.java",
+    "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad",
+    "bytes": 157,
+    "lines": 5,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/DecisionService.java",
+    "sha256": "3a532b72c5ca5bf0ee162f85fbb7a5b563525cd75d7c7fc742f2efc178de83b4",
+    "bytes": 1727,
+    "lines": 24,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/ModerationWorker.java",
+    "sha256": "af9f0f4b82bc2cfb3a67cf6a08e1702babb93fc7011d228325fafa816a7b76b5",
+    "bytes": 8607,
+    "lines": 112,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/ContentDigest.java",
+    "sha256": "2ed58232d2163d7217be98197227195dab2a40353894d68106f5d114976f28ff",
+    "bytes": 1422,
+    "lines": 24,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/moderation/Admission.java",
+    "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99",
+    "bytes": 717,
+    "lines": 14,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/files/PrivateFileService.java",
+    "sha256": "ee76d551f7dc5b602fd069d1c887235eba073f47c1ac62ef82383122bf065f30",
+    "bytes": 10078,
+    "lines": 144,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/files/api/FileReference.java",
+    "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592",
+    "bytes": 422,
+    "lines": 9,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java",
+    "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8",
+    "bytes": 159,
+    "lines": 5,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/files/api/FileAccess.java",
+    "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051",
+    "bytes": 673,
+    "lines": 16,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/PermissionService.java",
+    "sha256": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784",
+    "bytes": 8788,
+    "lines": 137,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/AdminRole.java",
+    "sha256": "566a04b319721f93cce587a67be425b4c7093517f344ead497ac0f00af6d1d4a",
+    "bytes": 138,
+    "lines": 3,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/api/Capability.java",
+    "sha256": "d5a7529305ab88860cfcd84248bf80979178f85dc550708fbbd56dc63ed7e57e",
+    "bytes": 464,
+    "lines": 10,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/resources/db/migration/V3__identity_moderation_roles.sql",
+    "sha256": "4465d012e593ff2fdcb91bc4cb0fc8a139fccce41bdb0ea99f4c65b76b7c5635",
+    "bytes": 281,
+    "lines": 3,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/resources/db/migration/V4__moderation_and_private_files.sql",
+    "sha256": "d32a14c15b332fb0dbf19f325336cf91ee9f0801ce7899df0dbd9250454e4086",
+    "bytes": 7095,
+    "lines": 77,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+    "sha256": "65f8bb07eed5cb574383622909d4f85f0c6931c001d2dde65b61904caf133e52",
+    "bytes": 2651,
+    "lines": 40,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/test/java/ar/changeo/identity/IdentityMigrationAssertions.java",
+    "sha256": "53faa6634b4d4858732c9944376384ace531a5a602673b6d24d3e1531c0baefc",
+    "bytes": 9583,
+    "lines": 139,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+    "sha256": "aa5a5e0b7f40d07b87843dcd23d5e130620b291a3ea764b8b3a6cc86c5c55464",
+    "bytes": 38177,
+    "lines": 508,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+    "sha256": "1f0713ddcfcc49463a58f8043adc91d6a20b1c6761bb7a178754b54ea4ce805c",
+    "bytes": 26929,
+    "lines": 383,
+    "load": "complete independent tool read; dependency JSON fully machine-inspected",
+    "underlying_shell_exit": 0
+  }
+]

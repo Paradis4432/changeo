@@ -1,0 +1,62 @@
+[
+  {
+    "name": "missing-app-bind",
+    "args": [
+      "--server.address="
+    ],
+    "environment": {},
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  },
+  {
+    "name": "missing-management-bind",
+    "args": [
+      "--management.server.port=9090"
+    ],
+    "environment": {},
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  },
+  {
+    "name": "cli-public",
+    "args": [
+      "--server.address=0.0.0.0"
+    ],
+    "environment": {},
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  },
+  {
+    "name": "env-money",
+    "args": [],
+    "environment": {
+      "CHANGEO_REAL_MONEY": "true"
+    },
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  },
+  {
+    "name": "mixed-profile",
+    "args": [
+      "--spring.profiles.active=sandbox,production"
+    ],
+    "environment": {},
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  },
+  {
+    "name": "missing-key",
+    "args": [
+      "--changeo.mfa-key=.runtime/reviewer-absent.key"
+    ],
+    "environment": {},
+    "exit": 1,
+    "server_started": false,
+    "expected_refusal": true
+  }
+]

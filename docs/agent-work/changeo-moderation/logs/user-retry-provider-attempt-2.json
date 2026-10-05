@@ -1,0 +1,13 @@
+{
+  "authority": "Explicit user try again, first fresh resumed overall-goal turn; same-builder correction recovery after native300000ms backoff.",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "upstream503_connection_timeout_after_backoff",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43deeba2ab7f394-EZE",
+  "backoff": "Native300000ms wait completed; exact errored child reconciled before sole useful followup.",
+  "current_progress_check": "Two partial tests match attempt3 snapshots byte-for-byte; worker/result match initial hashes. Actual command0 at user-retry-current-source-check.log/.exit. Earlier root141 remaining-source check reused; no correction delivery exists.",
+  "native_state": "Confirmed errored then interrupted; same writer/reviewer retained.",
+  "next_action": "Return material provider blocker/current progress to root for fresh resumed audit continuation. Same correction brief/red evidence/roles retained; no overall goal blocked status inferred from historical audit."
+}

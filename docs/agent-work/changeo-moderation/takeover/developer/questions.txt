@@ -1,0 +1,4 @@
+Task M1 / MFR1–MFR3. No unresolved private developer question or shared contract decision.
+Complete scope and evidence: report.md; takeover/developer-brief.md; root S1/F1–F3/M1–M1D.
+Independent reviewer verdict remains pending; coordinator owns next dispatch.
+Production questions remain unchanged in docs/questions.md and docs/gate0-research.md. No new founder choice was invented.

@@ -1,0 +1,21 @@
+Task: /root/changeo_gate0/developer; workspace /home/paradis/changeo
+Card: implement all features found in docs; leave questions in docs/questions.md
+Current R4 authority: docs/agent-work/changeo-implementation/personal-account-brief.md; docs/agent-work/changeo-gate0/personal-account-developer-brief.md; docs/agent-work/changeo-gate0/personal-account-plan.md
+Verbatim inputs: docs/agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md; prior user-budget-and-support.md/user-mercadopago-choice.md in the same directory
+Decision/evidence brief: docs/questions.md
+Full original 25-ID map: docs/gate0-research.md#original-question-coverage-and-remaining-evidence
+Current pre-R4 snapshots: docs/agent-work/changeo-implementation/personal-account-baseline/; personal-account-baseline.json
+Original inventory: docs/agent-work/changeo-implementation/research-baseline/docs/questions.md
+
+F1 setup: already supplied starting-from-zero baseline; no new setup questionnaire.
+F2 funding: ANSWERED: 100$ a month. USD100/month provisional comparison only; currency/upfront/runway/dedicated marketing allocation not separately supplied. No spending permission. Do not repeat general funding question.
+F3 support: ANSWERED founder alone, regular hours. No 40-hour support-only week, exact schedule/SLA/measured capacity or 24/7 promise inferred. Do not repeat general availability question.
+G01.2 / G05.2 provider choice: ANSWERED Mercado Pago for job-payment and provider-billing planning. No BIND/Mobbex choice or outreach pending. Selection is not account/commercial/custody/credit approval.
+G01.1 / G01.2 / G01.3 clarification: ANSWERED public API and founder personal checking account now; Changeo account planned later. Founder says "they do. i checked" and proposes holding collected money there. Attributed claim/proposal, not independently verified bank/provider permission, segregation, lawful custody or executable release/refund/credit support. No legal/illegal conclusion, manual-payout acceptance or ordinary-account/Gate0 waiver inferred.
+
+Conditional private technical reference USD40.80/month; paid-email variant USD60.80; separate Plus minimum raises first to USD139.80 before required exclusions. All safeguards preserved, development DB not production, identity suitability/bundled KYC/account cost unknown; no full-launch impossibility inferred. Docs/gate0-research.md#supplied-budget-and-solo-support--r2
+
+No additional private question blocks current authorized documentation. Remaining evidence G01.1/G01.3/G02.1/G02.4: exact approved Argentina/ARS bank/provider account/custody arrangement for already-collected full-job funds under final-acceptance/dispute/inactivity control and fully backed reusable legal-payer/guardian credits with mixed sources/closure/redemption, plus executable operations/contracts. Public API choice/split/card authorization/scheduled Payouts/original-method refunds do not establish the whole flow; no public proof does not mean impossible. Historical prepared MP inquiry/contact path: docs/gate0-research.md#mercado-pago-inquiry--prepared-not-sent. No message sent; generic outreach-approval request superseded as immediate next action. Historical support-center access/form limits preserved in research.
+Remaining work: Mercado Pago written account/fees/subsidy/reconciliation/test evidence; counsel/accountant entity/tax/age/guardian/privacy/retention outputs; technical/operations cost and measured capacity proposals. Complete map assigns all 24 mandatory IDs and optional Y01. Actual supported terms/values/remaining services remain Gate0 outputs, no dropped requirement.
+Source links: docs/business.md#funding-and-decision-outputs; docs/trust-operations.md#reports-appeals-and-operator-tools; docs/marketing.md#budget-and-expansion-gates; docs/delivery.md#ordered-delivery-bundles-after-gate0
+Next owner coordinator -> same independent reviewer -> root evidence/authority/contract decisions. All six Gate0 groups open; no product implementation before full closure; optional Y01 no base blocker. No code/purchase/outreach/paid inference/launch/goal lifecycle operation.

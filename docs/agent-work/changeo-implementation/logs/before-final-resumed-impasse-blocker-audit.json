@@ -1,0 +1,33 @@
+{
+  "condition": "required_Sol_high_feature_role_configured_route_unavailable503",
+  "resumed_audit": true,
+  "resume_original": "originals/user-retry-after-provider-block.md",
+  "consecutive_resumed_goal_turns": 2,
+  "current_resumed_goal_turn": 3,
+  "goal_status": "active",
+  "current_action": "same retained builder native handle restored and running remaining MFR3/full delivery",
+  "previous_run": "three-turn blocked audit preserved in blocker-audit.before-user-retry.json",
+  "last_review_verdict": "changes_requested",
+  "partial_tests_preserved": 2,
+  "production_fixes_pending": true,
+  "next_owner": "same builder finishes/validates partial fixes and MFR3 races through same coordinator, then same independent re-review",
+  "current_goal_turn_classification": "progress: product/validator changes and real PG regression pass after owner-transaction assertion repair",
+  "latest_error_reference": "a43e14f069f3f458-EZE",
+  "latest_error": "upstream503 after useful affected check; current attempt20 validator passes,3 PG assertion errors due missing owner transaction",
+  "new_correction_delivery": false,
+  "validated_blocked_artifact_seals": 15,
+  "partial_product_fixes_landed": 2,
+  "current_partial_sources_changed": 4,
+  "unchanged_initial_sources": 139,
+  "source_evidence": "logs/moderation-user-retry-turn2-check.json",
+  "impasse": false,
+  "audit_note": "Third current turn has not ended; count2 prior terminal resumed turns. Observed third503 alone insufficient: same configured route repeatedly executes useful work and precise viable scoped next action remains. Root removes own one-dispatch limit based on evidence; no arbitrary correction cap.",
+  "focused_pg_tests": {
+    "executions": 3,
+    "exit": 0,
+    "failures_errors_skips": 0
+  },
+  "current_provider_state": "same original host Sol/high verified20:47:52 UTC; no replacement",
+  "native_handles": "same coordinator/builder restored by exact canonical followup; no spawn",
+  "latest_recorded_terminal_error": "attempt6 503 historical, current useful recovery running"
+}

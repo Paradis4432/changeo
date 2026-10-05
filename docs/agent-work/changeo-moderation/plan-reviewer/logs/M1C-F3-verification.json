@@ -1,0 +1,478 @@
+{
+  "command": "python3 F3 source87 and six evidence SHA256 snapshot/current comparison",
+  "underlying_exit": 0,
+  "source_count": 87,
+  "source_snapshot_mismatch": [],
+  "source_current_difference": [],
+  "evidence_count": 6,
+  "evidence_mismatch": [],
+  "sources": [
+    {
+      "path": "pom.xml",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": ".gitignore",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "mvnw",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "mvnw.cmd",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": ".mvn/maven.config",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/TotpTest.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/SandboxSafetyTest.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/MutableClock.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/shell.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/home.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/register.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/login.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/forgot.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/reset.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/account.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/guardian.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/support.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/mfa.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/reauth.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/admin.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/audit.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/templates/failure.html",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/static/style.css",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V1__identity.sql",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V2__identity_state_integrity.sql",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/ChangeoApplication.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityFailure.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Totp.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Account.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Evidence.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ContactToken.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianLink.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/JobConsent.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Restriction.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminMfa.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AuditEvent.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/EvidenceKind.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenPurpose.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LinkStatus.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ConsentStatus.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityStore.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/SecurityProof.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PrivateFiles.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenDelivery.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LocalMailbox.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AbuseLimits.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AccountService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/FactorCipher.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminSecurityService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/OperatorService.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/AccountPrincipal.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionProof.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionEpochFilter.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteController.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteErrors.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/SandboxSafety.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/RuntimeConfig.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountId.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/ActorId.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/SubjectId.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionDecision.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountAccessSnapshot.java",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "scripts/local-db.sh",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "scripts/run-sandbox.sh",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "scripts/browser-qa.cjs",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/README.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/delivery.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/payments.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/questions.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V3__identity_moderation_roles.sql",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/IdentityMigrationAssertions.java",
+      "snapshot_match": true,
+      "current_match": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F3.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/plan.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/coordinator-report.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/f3/report.md",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/f3/logs/final-artifacts.json",
+      "snapshot_match": true,
+      "current_match": true
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/foundations-F3-dependency-check.json",
+      "snapshot_match": true,
+      "current_match": true
+    }
+  ]
+}

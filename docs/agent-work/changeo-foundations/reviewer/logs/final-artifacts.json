@@ -1,0 +1,15 @@
+{
+  "exit": 0,
+  "verdict": "accepted",
+  "required_artifacts": true,
+  "source_fingerprints": 85,
+  "errors": [],
+  "commands": {
+    "independent_final_verify": 0,
+    "independent_live_fr1": 0,
+    "preservation": 0,
+    "app_cleanup_expected": 143,
+    "host_cleanup_harness": 0
+  },
+  "report_hash": "b29cb113f5cff71667e490cb24c5b24e3a569ba269f8ee1bcf8ee44533cd418e"
+}

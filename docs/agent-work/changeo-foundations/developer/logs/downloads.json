@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "curl",
+      "-fL",
+      "--max-time",
+      "30",
+      "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/maven-metadata.xml",
+      "-o",
+      "/home/paradis/changeo/docs/agent-work/changeo-foundations/developer/logs/boot-artifacts.xml"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "curl",
+      "-fL",
+      "--max-time",
+      "60",
+      "https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.11/apache-maven-3.9.11-bin.tar.gz",
+      "-o",
+      "/home/paradis/changeo/.local-tools/maven.tar.gz"
+    ],
+    "exit": 0
+  }
+]

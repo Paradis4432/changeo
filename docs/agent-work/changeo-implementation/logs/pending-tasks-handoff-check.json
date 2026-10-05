@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-01T22:06:42.705Z",
+  "file": "docs/pending-tasks.md",
+  "sha256": "58cf75db752d0df7103a68b735df24f087a297ff1a9de20014000ea022fe4825",
+  "localLinks": 37,
+  "missingLinks": [],
+  "checkedEvidenceSeals": 36,
+  "evidenceMismatches": [],
+  "checkedSourceFingerprints": 143,
+  "sourceMismatches": [],
+  "applicationTestsRun": false,
+  "goalLifecycleChanged": false,
+  "skills": {
+    "read": [
+      "/home/paradis/.agents/skills/astra-flash-orchestrator/SKILL.md",
+      "/home/paradis/.agents/skills/astra-flash-orchestrator/references/coordination.md",
+      "/home/paradis/.agents/skills/astra-flash-orchestrator/references/execution.md",
+      "/home/paradis/.agents/skills/astra-flash-orchestrator/references/routing.md",
+      "/home/paradis/.agents/skills/java-coding-standards/SKILL.md",
+      "/home/paradis/.agents/skills/caveman/SKILL.md"
+    ],
+    "injected": [
+      "/home/paradis/.agents/skills/astra-flash-orchestrator/references/code-quality.md"
+    ],
+    "application": "Root-owned standalone handoff documentation; complete source index, unchanged role and permission boundaries, preservation and link checks. No product implementation/review/agent dispatch."
+  },
+  "exit": 0
+}

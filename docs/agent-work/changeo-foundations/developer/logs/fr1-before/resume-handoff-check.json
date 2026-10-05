@@ -1,0 +1,23 @@
+{
+  "exit": 0,
+  "manifest_files": 85,
+  "source_hashes_match": true,
+  "report_checkpoint_status": "ready_for_review",
+  "report_links_exist": true,
+  "errors": [],
+  "verification": "Saved implementation evidence inspected; no tests rerun and no product source changed.",
+  "runtime": {
+    "recorded_app_pid_present": false,
+    "ps_exit": 1,
+    "podman_socket_exists": true,
+    "podman_socket_check_exit": 0,
+    "listener_check": "ss exit0 but netlink denied; availability unverified",
+    "next_action": "Restart application through docs/sandbox-runtime.md for live review"
+  },
+  "changed_artifacts": [
+    "report.md",
+    "CHECKPOINT.md",
+    "notes.txt",
+    "logs/resume-handoff-check.json"
+  ]
+}

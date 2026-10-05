@@ -1,0 +1,86 @@
+{
+  "captured_at": "2026-10-01T05:53:15.386089+00:00",
+  "command": "python3 complete F3 baseline parse, current/copy85 hashes, immutable271 hashes, complete Git inventory structured inspection, source manifest and unchanged original-doc comparison",
+  "exit": 0,
+  "accepted85_count": 85,
+  "errors85": [],
+  "immutable_original271_count": 271,
+  "errors271": [],
+  "baseline_git_commands": {
+    "git diff --binary": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "git diff --cached --binary": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "git branch --show-current": {
+      "exit": 0,
+      "stdout": "master\n",
+      "stderr": ""
+    },
+    "git rev-parse --verify HEAD": {
+      "exit": 128,
+      "stdout": "",
+      "stderr": "fatal: Needed a single revision\n"
+    }
+  },
+  "baseline_inventory_entries": 1165,
+  "baseline_inventory_sha256": "50c73de1dc8debe41686de93f6b641b8cbe8735e80fe1d2da7197016eafaaa7a",
+  "unexpected_inventory_status": [],
+  "private_runtime_inventory_paths": [],
+  "source_manifest": [
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-extension-F3-brief.md",
+      "bytes": 5154,
+      "sha256": "9472e3acbf0245d3022773e03fec68c93a3d18231319915dca15b4670dc5a08a"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1.md",
+      "bytes": 4201,
+      "sha256": "46be04aa2e81fb27e8b6f9ae00099bd9cb7ef708fb7e603b0983c354f983f180"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/shared-contract-proposal-M1.md",
+      "bytes": 11434,
+      "sha256": "8f697f04cb76f13c1a1318237332b104a239f01e22764af0c109cd721a61978e"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/plan.md",
+      "bytes": 8450,
+      "sha256": "53cc3faccef49fd7fb71a8d3a7a031955af56a5fa3ca236be5415ae40e2644a8"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/CHECKPOINT.md",
+      "bytes": 1144,
+      "sha256": "26835ad30ee8f683b43b22559c4bf8998fbb138d7570964063b53bd44b49e567"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/baseline.json",
+      "bytes": 122589,
+      "sha256": "e816da9acebf1c0c31b75574864a941e32427941eb49cc8a035528b75d7c22b9"
+    }
+  ],
+  "complete_retained_source_reuse": [
+    {
+      "path": "docs/product-design.md",
+      "same_complete_prior_read": true
+    },
+    {
+      "path": "docs/business.md",
+      "same_complete_prior_read": true
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "same_complete_prior_read": true
+    },
+    {
+      "path": "docs/marketing.md",
+      "same_complete_prior_read": true
+    }
+  ],
+  "runtime_checks": "not run; plan review only"
+}

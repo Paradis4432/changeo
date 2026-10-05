@@ -1,0 +1,14 @@
+{
+  "paths": [
+    "docs/README.md",
+    "docs/agent-work/changeo-moderation/developer/report.md",
+    "docs/architecture.md",
+    "docs/delivery.md",
+    "docs/payments.md",
+    "docs/questions.md",
+    "docs/sandbox-runtime.md",
+    "docs/trust-operations.md"
+  ],
+  "local_links_checked": 108,
+  "errors": []
+}

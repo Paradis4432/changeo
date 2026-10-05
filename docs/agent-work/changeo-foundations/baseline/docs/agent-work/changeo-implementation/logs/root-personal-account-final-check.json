@@ -1,0 +1,10 @@
+{
+  "command": {
+    "cmd": "python3 - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,re\nroot=Path('/home/paradis/changeo');work=root/'docs/agent-work/changeo-implementation';feature=root/'docs/agent-work/changeo-gate0'\ns=json.loads((feature/'reviewer/personal-account/logs/accepted-artifacts.json').read_text())\nassert s['verdict'].startswith('accepted')\nfor name,r in s['artifacts'].items():\n p=root/name\n assert len(p.read_bytes())==r['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==r['sha256'],name\nassert 'Underlying exit: 0' in (feature/'personal-account-final-check.txt').read_text()\nassert 'Decision: accepted for documentation fidelity only' in (feature/'reviewer/personal-account/report.md').read_text()\nlinks=0\nfor name in ['GOAL-CHECKPOINT.md','root-personal-account-report.md']:\n p=work/name\n for target in re.findall(r'\\[[^\\]]*\\]\\(([^)]+)\\)',p.read_text()):\n  if target.startswith('http'):continue\n  assert (p.parent/target.partition('#')[0]).is_file(),(name,target)\n  links+=1\nprint(json.dumps({'current_sealed_artifacts':len(s['artifacts']),'root_local_links':links,'coordinator_combined_final_exit':0,'independent_verdict':'accepted documentation fidelity only','preservation':'reuse accepted combined final checks; source/artifacts match','custody_gate0_product_goal_complete':False},indent=2))\nPY"
+  },
+  "chunk_id": "784f80",
+  "wall_time_seconds": 0.000009768,
+  "exit_code": 0,
+  "original_token_count": 75,
+  "output": "{\n  \"current_sealed_artifacts\": 34,\n  \"root_local_links\": 26,\n  \"coordinator_combined_final_exit\": 0,\n  \"independent_verdict\": \"accepted documentation fidelity only\",\n  \"preservation\": \"reuse accepted combined final checks; source/artifacts match\",\n  \"custody_gate0_product_goal_complete\": false\n}\n"
+}

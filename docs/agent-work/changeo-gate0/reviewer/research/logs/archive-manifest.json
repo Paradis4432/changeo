@@ -1,0 +1,12 @@
+{
+  "report.md": "3aad54aafd36de8922b3b9db0fc7cd46fae8e1bc41d3403f5ffe51aeeab481c5",
+  "CHECKPOINT.md": "983669587e5aa5efcb3af4123ed7d20915f9c621b6fa1336eb488c4abd246833",
+  "notes.txt": "50f28d4b5b3769b9814ab2306e687ebe4ed75db51429aa4648a8dc56dd938078",
+  "logs/accepted-artifacts.json": "b39de692f368112eb4ec038c32f2458589c129963d87ff1502c07ca338f54a88",
+  "logs/document-check.txt": "c19321ed2afbc27b8fdfd20264d958aa7abf28be0ca1e7b8041b619e3619ed65",
+  "logs/final-artifacts.txt": "f38193589470acf166bf384eff87c2e5aed21cf5f2ed3cb83c5cf45a5da1a609",
+  "logs/inventory.txt": "ddd1ca93a08aed0283dfe150411525ab75392671a79fd2f70edce595da82cd4c",
+  "logs/preservation-command.txt": "83d7471a668418f5b859b55dad56db316f915b12d822b5227898f9aaf5010508",
+  "logs/preservation.txt": "abceb8f6da2b871b70679fb1cfab197793692f31d01254ccbf93e93067fa4457",
+  "logs/read-notes.txt": "22e45462107ccce7154d8a264116c88975fedad17c1e559cd98522789db16aaa"
+}

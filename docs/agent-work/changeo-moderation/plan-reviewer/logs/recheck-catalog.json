@@ -1,0 +1,66 @@
+[
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/design-amendment-M1A.md",
+    "sha256": "1f8b6fc812cbae045338c73ee095e55ba877f0fd375c3cbbe385e56d31e2e718",
+    "bytes": 4926,
+    "lines": 19,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/design-amendment-M1B.md",
+    "sha256": "65f7fdf097a7acb4030307975877baa60b39b24eca218795255e07dfdd38d1c2",
+    "bytes": 3867,
+    "lines": 15,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-implementation/moderation-contract-M1A.md",
+    "sha256": "a66e6d377373a5bdccea6dd13d9065b9c484f91e49f354661af7e0bd75444d0b",
+    "bytes": 2233,
+    "lines": 9,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/briefs/developer-brief.md",
+    "sha256": "5c9986b9614fca9eceea19d128446e3aeb1ddb7dc3f94bbbc347276ae1402d08",
+    "bytes": 14291,
+    "lines": 57,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/AccountService.java",
+    "sha256": "527be994201d3887312a785388cd4599bb391f0e27eb29790377b01ea9a7bf7a",
+    "bytes": 7559,
+    "lines": 146,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/GuardianService.java",
+    "sha256": "837ddae736206dcef55ccb52924add592d1645b597c45e2d9a7d2e07f401591a",
+    "bytes": 6479,
+    "lines": 105,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/main/java/ar/changeo/identity/Account.java",
+    "sha256": "c07b0384228aeda5471b44e77ecb3003ae5dbdd3767abd8af8c1d9ea467a9d42",
+    "bytes": 729,
+    "lines": 26,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/src/test/java/ar/changeo/identity/TotpTest.java",
+    "sha256": "4581b74b96b86b0e29ca405d87c9c5406e91ace3e94ad4013377212a8f9267b9",
+    "bytes": 443,
+    "lines": 13,
+    "read": "complete independent cat read",
+    "command_exit": 0
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "ps",
+      "-p",
+      "1730365,2050473",
+      "-o",
+      "pid=,comm=,stat="
+    ],
+    "exit": 0,
+    "stdout": "1730365 postgres        Ss\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "ss",
+      "-ltn",
+      "sport = :8080 or sport = :55432"
+    ],
+    "exit": 0,
+    "stdout": "State  Recv-Q Send-Q Local Address:Port  Peer Address:Port\nLISTEN 0      200        127.0.0.1:55432      0.0.0.0:*   \n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "curl",
+      "-fsS",
+      "--unix-socket",
+      "/tmp/changeo-podman/podman.sock",
+      "http://localhost/_ping"
+    ],
+    "exit": 0,
+    "stdout": "OK",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "podman",
+      "--root",
+      "/tmp/changeo-podman-store",
+      "--runroot",
+      "/tmp/changeo-podman-run",
+      "ps",
+      "-a",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  }
+]

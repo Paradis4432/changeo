@@ -1,0 +1,48 @@
+[
+  {
+    "name": "public-bind",
+    "arguments": [
+      "--server.address=0.0.0.0"
+    ],
+    "exit": 1,
+    "serverStarted": false,
+    "refusal": "java.lang.IllegalStateException: An explicit loopback listener is required"
+  },
+  {
+    "name": "live-money",
+    "arguments": [
+      "--changeo.real-money=true"
+    ],
+    "exit": 1,
+    "serverStarted": false,
+    "refusal": "java.lang.IllegalStateException: Real money is disabled"
+  },
+  {
+    "name": "production-profile",
+    "arguments": [
+      "--spring.profiles.active=production"
+    ],
+    "exit": 1,
+    "serverStarted": false,
+    "refusal": "java.lang.IllegalStateException: Only the private sandbox profile is permitted"
+  },
+  {
+    "name": "management-missing-bind",
+    "arguments": [
+      "--management.server.port=9090"
+    ],
+    "exit": 1,
+    "serverStarted": false,
+    "refusal": "java.lang.IllegalStateException: An explicit loopback listener is required"
+  },
+  {
+    "name": "missing-key",
+    "arguments": [
+      "--changeo.mfa-key=.runtime/absent-mfa.key",
+      "--server.port=0"
+    ],
+    "exit": 1,
+    "serverStarted": false,
+    "refusal": "2026-10-01T01:38:07.461-03:00  WARN 1773829 --- [changeo] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminSecurityService' defined in URL [jar:nested:/home/paradis/changeo/target/changeo-0.1.0-SNAPSHOT.jar/!BOOT-INF/classes/!/ar/changeo/identity/AdminSecurityService.class]: Clave privada MFA no disponible"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "observations": [
+    {
+      "thread_id": "01a0f43e-3b5a-7570-9c40-e092d62fac3a",
+      "agent_path": "/root/changeo_gate0",
+      "role": "default",
+      "parent_thread_id": "01a0f433-fd90-7511-905b-e6e5d6440d39",
+      "depth": 1,
+      "host_transport": "codex-router-signed",
+      "evidence_path": "/home/paradis/.codex/sessions/2026/09/30/rollout-2026-09-30T18-35-14-01a0f43e-3b5a-7570-9c40-e092d62fac3a.jsonl",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "downstream_inference_provider": "unverified",
+      "router_child_request_correlation": "unverified"
+    },
+    {
+      "thread_id": "01a0f441-7dbf-7421-ad80-f32bf42b4f5e",
+      "agent_path": "/root/changeo_gate0/developer",
+      "role": "astra_flash_builder",
+      "parent_thread_id": "01a0f43e-3b5a-7570-9c40-e092d62fac3a",
+      "depth": 2,
+      "host_transport": "codex-router-signed",
+      "evidence_path": "/home/paradis/.codex/sessions/2026/09/30/rollout-2026-09-30T18-38-47-01a0f441-7dbf-7421-ad80-f32bf42b4f5e.jsonl",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "downstream_inference_provider": "unverified",
+      "router_child_request_correlation": "unverified"
+    },
+    {
+      "thread_id": "01a0f44b-d28d-7f33-94ad-bf8f7348ddf6",
+      "agent_path": "/root/changeo_gate0/reviewer",
+      "role": null,
+      "parent_thread_id": "01a0f43e-3b5a-7570-9c40-e092d62fac3a",
+      "depth": 2,
+      "host_transport": "codex-router-signed",
+      "evidence_path": "/home/paradis/.codex/sessions/2026/09/30/rollout-2026-09-30T18-50-04-01a0f44b-d28d-7f33-94ad-bf8f7348ddf6.jsonl",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "downstream_inference_provider": "unverified",
+      "router_child_request_correlation": "unverified"
+    }
+  ],
+  "reuse_until": "Host/configuration/session facts change; new roles require their own observations.",
+  "router_evidence_limit": "Usage event metadata lacks thread/agent identity; current root/coordinator thread IDs absent from router.log. Do not infer correlation."
+}

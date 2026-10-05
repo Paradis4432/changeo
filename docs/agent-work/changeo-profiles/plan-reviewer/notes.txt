@@ -1,0 +1,7 @@
+Task P1 profiles/offers/requests/discovery high-risk plan review.
+Verdict ready; authoritative report.md, CHECKPOINT.md and logs/seals.sha256.
+Resolved PR1 badge complete sorted account/guardian set and final clock expiry; PR2 immutable NEW revision before every submission; PR3 historical operator callback; PR4 exact guarded per-candidate search/visible-only pagination.
+No remaining private implementation decision or reviewer runtime resource.
+Production questions remain existing docs/questions.md and docs/gate0-research.md original-ID map; no new answers, vendor, custody, retention, commercial, funds or launch authority invented.
+No product/plans/root ledger changes; no tests, DB mutation, browser/app/container, child, goal, staging/commit/deploy or external action.
+Next action coordinator dispatches sole developer, then separate final reviewer. Material local redesign returns same plan reviewer; shared contract/path changes return root before edits.

@@ -1,0 +1,75 @@
+Command (cwd /home/paradis/changeo; login=false):
+python3 - <<'PY'
+import hashlib, json, pathlib, re
+root = pathlib.Path('/home/paradis/changeo')
+baseline = json.loads((root / 'docs/agent-work/changeo-implementation/baseline.json').read_text())
+errors = []
+for name, expected in baseline['files'].items():
+    p = root / name
+    if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != expected['sha256'] or p.stat().st_size != expected['bytes']:
+        errors.append('Original changed: ' + name)
+for name, expected in baseline['protected_metadata'].items():
+    p = root / name
+    if oct(p.stat().st_mode) != expected['mode'] or sorted(x.name for x in p.iterdir()) != expected['entries']:
+        errors.append('Metadata changed: ' + name)
+snapshots = 0
+for name in baseline['files']:
+    if name.endswith('.md'):
+        original = root / name
+        snapshot = root / 'docs/agent-work/changeo-implementation/source-baseline' / name
+        if snapshot.read_bytes() != original.read_bytes():
+            errors.append('Snapshot mismatch: ' + name)
+        snapshots += 1
+q = root / 'docs/questions.md'
+txt = root / 'docs/agent-work/changeo-gate0/developer/questions.txt'
+text = q.read_text()
+def anchors(p):
+    found = []
+    for heading in re.findall(r'^#{1,6}\s+(.+)$', p.read_text(), re.M):
+        slug = re.sub(r'[^\w\- ]', '', heading.lower()).replace(' ', '-')
+        found.append(slug)
+    return found
+links = 0
+for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)', text):
+    if '://' in target:
+        continue
+    name, sep, fragment = target.partition('#')
+    p = (q.parent / name).resolve() if name else q
+    if not p.is_file() or (sep and fragment not in anchors(p)):
+        errors.append('Bad markdown target: ' + target)
+    links += 1
+txt_links = 0
+for target in re.findall(r'docs/[\w./-]+\.md(?:#[\w-]+)?', txt.read_text()):
+    name, sep, fragment = target.partition('#')
+    p = root / name
+    if not p.is_file() or (sep and fragment not in anchors(p)):
+        errors.append('Bad txt target: ' + target)
+    txt_links += 1
+for p in [q]:
+    if len(re.findall(r'^```', p.read_text(), re.M)) % 2:
+        errors.append('Unbalanced fence: ' + str(p))
+counts = [4, 5, 4, 3, 4, 4]
+for index, count in enumerate(counts, 1):
+    group = f'G0{index}'
+    if not re.search(r'^## ' + group + r' ', text, re.M):
+        errors.append('Missing group: ' + group)
+    for number in range(1, count + 1):
+        if text.count('**' + group + '.' + str(number) + ':**') != 1:
+            errors.append('Missing/duplicate question: ' + group + '.' + str(number))
+        if group + '.' + str(number) not in txt.read_text() and not (group + '.1–' + group + '.' + str(count)) in txt.read_text():
+            errors.append('Missing txt group index: ' + group)
+print(f"Preservation: {len(baseline['files'])} originals, 4 protected directory modes/inventories, {snapshots} complete Markdown snapshots match.")
+print(f'Local targets/anchors: {links} Markdown links and {txt_links} txt references checked.')
+print('Coverage: six Gate0 groups, 24 exact required questions, one optional yield question; fences balanced.')
+print('Manual content assessment required in addition to these structural checks.')
+print('Errors:', errors)
+raise SystemExit(bool(errors))
+PY
+
+Exit status: 0
+Output:
+Preservation: 18 originals, 4 protected directory modes/inventories, 14 complete Markdown snapshots match.
+Local targets/anchors: 35 Markdown links and 23 txt references checked.
+Coverage: six Gate0 groups, 24 exact required questions, one optional yield question; fences balanced.
+Manual content assessment required in addition to these structural checks.
+Errors: []

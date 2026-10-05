@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-10-01T20:58:37.308Z",
+  "check": "Current coordinator evidence seals, actual independent verdict and retained source preservation",
+  "artifactCount": 20,
+  "artifactMismatches": [],
+  "sourceCount": 143,
+  "initialUnchanged": 139,
+  "ownedSourceChanges": [
+    "src/main/java/ar/changeo/moderation/ModerationWorker.java",
+    "src/main/java/ar/changeo/moderation/ReviewResult.java",
+    "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+    "src/test/java/ar/changeo/moderation/ReviewValidationTest.java"
+  ],
+  "currentReconciliationMismatches": [],
+  "independentVerdict": "changes_requested",
+  "independentReportSha256": "21fb21971d0da536ccaee2d61b5e24fd6cef36884ca643021265bc9e0ee5e027",
+  "focusedPostgresExit": "0",
+  "latestFailure": {
+    "builder": "/root/changeo_moderation/moderation_builder",
+    "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+    "status": "terminal503_after_exact_native_role_recovery",
+    "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+    "route": "http://127.0.0.1:4202/v1/responses",
+    "error_reference": "a43e5a1fad307a5c-EZE",
+    "native_terminal_utc": "2026-10-01T20:52:39.050Z",
+    "native_recovery_started_utc": "2026-10-01T20:47:51.566Z",
+    "last_turn_model": "gpt-6.1-sol",
+    "last_turn_effort": "high",
+    "native_recovery": "Exact canonical followup restored same original child to running; subsequent terminal errored was confirmed and interrupted.",
+    "actual_progress": "No tool execution in this turn. All143 source hashes remain exact relative to current reconciliation comparison; prior focused PG/validator success retained.",
+    "current_source_comparison": "docs/agent-work/changeo-moderation/logs/user-retry-handle-recovery/source-comparison.tsv",
+    "remaining_work": "MFR3 both-order file byte races, full current PG/Testcontainers verify, corrected cumulative durable handoff and same independent reviewer.",
+    "next_action": "Root notified of material repeated provider failure. Existing authority allows bounded backoff/same-role useful recovery; no replacement role/provider/configuration or writer-gate release. Root owns overall lifecycle audit."
+  },
+  "acceptance": false,
+  "missing": [
+    "MFR3 actual file-byte races in both orders",
+    "full corrected verification and durable developer handoff",
+    "same independent final reviewer acceptance",
+    "later features and whole-goal integration"
+  ],
+  "exit": 0
+}

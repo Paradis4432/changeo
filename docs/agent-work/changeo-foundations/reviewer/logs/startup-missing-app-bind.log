@@ -1,0 +1,26 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T02:00:54.867-03:00 ERROR 1815271 --- [changeo] [           main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: An explicit loopback listener is required
+	at ar.changeo.config.SandboxSafety.requireLoopback(SandboxSafety.java:30) ~[!/:0.1.0-SNAPSHOT]
+	at ar.changeo.config.SandboxSafety.validate(SandboxSafety.java:21) ~[!/:0.1.0-SNAPSHOT]
+	at ar.changeo.ChangeoApplication.lambda$main$0(ChangeoApplication.java:11) ~[!/:0.1.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623) ~[spring-boot-4.1.1.jar!/:4.1.1]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:393) ~[spring-boot-4.1.1.jar!/:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-4.1.1.jar!/:4.1.1]
+	at ar.changeo.ChangeoApplication.main(ChangeoApplication.java:22) ~[!/:0.1.0-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106) ~[changeo-0.1.0-SNAPSHOT.jar:0.1.0-SNAPSHOT]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[changeo-0.1.0-SNAPSHOT.jar:0.1.0-SNAPSHOT]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[changeo-0.1.0-SNAPSHOT.jar:0.1.0-SNAPSHOT]
+

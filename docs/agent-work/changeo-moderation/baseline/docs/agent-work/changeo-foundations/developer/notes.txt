@@ -1,0 +1,11 @@
+Task foundations F-A1–F-A8 + F2; authoritative evidence is report.md.
+No model/routing substitution, recursive agent, goal, host configuration, real data/vendor/money, staging/commit/deploy.
+Coordinator approved PostgreSQL stable-row locking before JPA refresh after the concurrent role-removal regression exposed Hibernate follow-on lock stale reads; no F2 API or ownership change.
+Native browser VM cannot import filesystem modules. Switched to workspace-local Playwright and read private token/factor files internally; all returned logs/screenshots sanitized. Shared native page closed and local contexts close in finally.
+Initial PostgreSQL configure accidentally created out-of-tree build files beside application sources. All those developer-generated files were relocated to ignored .local-tools/pg-build, including src/test Makefile leftovers; baseline source/user files were preserved.
+
+Resume handoff check: 85 source fingerprints match, report/checkpoint ready_for_review agree, report links exist. No tests rerun/source changes. Recorded app PID absent (ps exit1); handoff updated to require documented restart. Podman socket exists; ss netlink access denied, so database/listener availability unverified. Evidence logs/resume-handoff-check.json.
+
+FR1 correction: earlier restricted ps absence was a namespace limitation, not proof of termination. Reviewer discovered1774171, stopped/replaced it with1812877, then stopped1812877. Fresh host ps/ss evidence in logs/fr1-runtime-handoff.json proves assigned app now stopped, database/Podman running, containers[].
+FR1 canonical contact rule and independent reauth counters implemented;10 new HTTP cases. First focused run1 with8 reproduced defects; corrected0/13 cases; full verify0/50 cases, no skips. Existing unaffected browser/restart/startup evidence reused. Cumulative manifest and preservation updated; report.md authoritative; same reviewer next.
+Final FR1 document/handoff check exit0:12 documents/87 local links,85 cumulative source fingerprints, required ready_for_review artifacts agree. First document check exit1 from its not-yet-written own output target was retained, then corrected artifact ordering before recheck.

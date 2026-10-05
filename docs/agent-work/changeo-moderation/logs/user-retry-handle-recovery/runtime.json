@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-10-01 20:43 UTC",
+  "initial_sandbox_check": "ps had no host process visibility; ss netlink and Unix curl denied. No absence inferred.",
+  "host_read_only_check_exit": 0,
+  "postgres": {"pid": 1730365, "uid": 1000, "command": "postgres", "loopback55432_listener": true},
+  "private_podman_api": {"pid": 2094717, "uid": 1000, "command": "podman", "socket": "/tmp/changeo-podman/podman.sock", "ping": "OK"},
+  "old_reviewer_app": {"pid": 2287567, "present": false, "8080_listener": false},
+  "process_mutation": false,
+  "secret_read_or_output": false,
+  "runtime_owner": "Same retained sole builder."
+}

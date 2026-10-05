@@ -1,0 +1,2 @@
+Task /root/changeo_foundations/foundation_plan_review
+No new founder question required for sandbox plan review. Coordinator/root must settle PR1 mutation transaction API and PR4 capability/context semantics in report.md, plus local MFA/token/guardian technical lifecycle. Existing production questions in docs/questions.md and S1 remain unresolved; this review does not answer them or block authorized synthetic design solely on production approval.

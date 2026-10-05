@@ -1,0 +1,29 @@
+# Changeo takeover checkpoint
+
+Root thread `01a0f959-d9b3-7040-a5bd-32fd5122ccf6`; host goal **blocked, incomplete**. Actual [lifecycle result](logs/current-blocked-goal-result.json), [third-condition audit](blocker-audit.json). Original entire objective preserved: continue all Changeo tasks in docs/pending-tasks.md, in accepted order, under S1 and required roles. This is not a completed handoff-only goal. Full previous ledger preserved at logs/GOAL-CHECKPOINT-before-third-condition-blocked.md.
+
+## Authority and accepted dependencies
+
+Complete original requirements/amendments/contracts in ../changeo-implementation/, [takeover request/role replacement approval](originals/user-takeover.md), current supplied AGENTS/environment/policy, [pending task index](../../pending-tasks.md), and complete current automatic continuation [original](originals/user-active-goal-continuation-turn3.md). User approved replacing original inaccessible roles only; current retained profiles roles are not replaced for provider errors.
+
+S1 permits private synthetic development. F1/F2/F3 and cumulative moderation M1–M1D/M1C1 independently accepted. Actual [moderation verdict](../changeo-moderation/takeover/reviewer/report.md) SHA2565ebac9cf9c8282c6a048d11bd69df005cd212c4e3a968b2763da1bb7aadc8f30. Original correction MFR1–MFR3 resolved, independent161 checks/56 actual container executions pass. Current P1/P1A shared integration and additive badge acceptance remain reopened/unaccepted within profiles. All subsequent bundles are pending; production Gate0/real money/public launch remain open/gated. No new custody/vendor/commercial/host/retention/spending/deployment decision or automatic Git action.
+
+## Current roles and exact blocker
+
+Coordinator `/root/profiles_listings`, host01a0f9ba-eb40-7f72-8cb4-da194c9493a1, completed/interrupted. Same sole builder `/root/profiles_listings/profiles_builder`, host01a0f9d1-4c85-73d1-81ea-e5e822f5061b, errored/interrupted. Same distinct plan reviewer host01a0f9c3-fa84-7713-a241-ca17a887897b completed/interrupted; P1/P1A plan ready. Separate final reviewer not yet dispatched because complete developer delivery is missing. No writer or pending uncertain dispatch. Coordinator remains sole nested dispatcher; root never implements/reviews.
+
+Three consecutive current root goal turns ended at the same required coding-route failure; historical goals and child error counts excluded. Latest useful same-builder assignment started01:27:43UTC and failed before tools `503`, cf-ray a43ff2e94e9d6d4a-EZE; safe actual metadata ../changeo-profiles/logs/continuation-turn3-builder-host.json. No new implementation/runtime progress in turns2/3. Actual role Sol/high/signed host transport verified; downstream attribution unverified. Local services healthy and exact remaining task viable, but required developer cannot execute it. No authorized substitute or downstream independent path. External availability change is necessary; no new founder product answer. Root audited and called blocked, not complete/paused, per required third-condition threshold.
+
+## Preserved evidence and runtime
+
+Root read complete [current profiles handoff](../changeo-profiles/coordinator-report.md), SHA256e5ccd0ec6dc2b7a1f758df16a6d51c3b013bfa4647a268f9f7ebc48ff302a3ad. Before root lifecycle/index bookkeeping, current177 source hashes/current81 handoff seals independently matched, logs/continuation-turn3-source-final.log and seals-final.log exit0. Original145 snapshots/prior68 archive/current partial45-path patch preserved. Root then updated only its pending index and archived its previous version under originals/pending-tasks-before-third-condition-blocked.md; expected new index delta is root-owned. Historical source/seal mismatch exits and mutable API-log prefix classification remain preserved, no false old full equality claimed.
+
+Earlier profiles verify276/111 container executions pass, later60 canonical cases and browser-second/five mobile screenshots pass. That full verification predates later tests; latest combined verify/restart/docs/durable delivery/final acceptance remain absent. No current full-green or final feature acceptance claim.
+
+Actual read-only runtime ../changeo-profiles/logs/continuation-turn3-runtime.log/.exit0: PG1730365 UID1000/loopback55432 and private Podman2094717 Unix ping healthy; old owned app3465232 absent, no8080 or test containers. No newly owned runtime created by before-tools failure; unrelated Firefox preserved. Never print/copy/snapshot runtime secrets/fixtures. Protected metadata/unborn dirty Git/original source preserved.
+
+## Exact resume
+
+On route recovery and user resume, follow up same coordinator, reconcile roles/current files/root pending-index delta, and resume same builder: remaining HTTP guardian/file/audience coverage; latest full actual PostgreSQL/Testcontainers verify; packaged restart/exact publication/search/portfolio/browser/permission checks; truthful docs/questions; complete developer report/checkpoint/notes/cumulative patch/fingerprints/seals/cleanup. Coordinator verifies actual delivery, then dispatches fresh separate Sol/high final reviewer for entire P1/P1A and reopened identity/moderation integration. Same writer/reviewer handle corrections. Only actual independent acceptance releases conversations/jobs; later money/billing/support/launch bundles retain original gates/order. No new role/model/provider/CLI/global setting or paid availability probe. A future resumed blocked audit starts fresh, per goal instructions.
+
+Loaded guidance reused from complete prior context: Astra SKILL.md/code-quality/coordination/execution/routing/routing.json, Java coding standards, Caveman; full shared quality/Ponytail policy injected. Exact source paths and application attribution in archived ledger and feature authority/reports. Root did preservation/contract/lifecycle work only; no application test or product review claimed.

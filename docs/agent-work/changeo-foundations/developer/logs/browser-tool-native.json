@@ -1,0 +1,6 @@
+{
+  "registration": "native browser keyboard register/signin succeeded",
+  "private_token_import": "ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING; no raw token was read/exposed",
+  "diagnosis": "native unsafe VM has no require/process/module; switched to local Playwright for private filesystem access",
+  "session_cleanup": "native browser logged out and closed; local Firefox contexts close in finally"
+}

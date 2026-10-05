@@ -1,0 +1,18 @@
+Retained processes:
+1730365  1000 postgres
+2094717  1000 podman
+Owned app state:
+owned_app_absent=true
+8080 listeners:
+State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+55432 listener:
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                               
+LISTEN 0      200        127.0.0.1:55432      0.0.0.0:*    users:(("postgres",pid=1730365,fd=6))
+Private API ping:
+OK
+Remaining test containers:
+[]
+
+Preexisting unrelated browser:
+2858248       1  1000 Thu Oct  1 16:00:33 2026 firefox
+/home/paradis

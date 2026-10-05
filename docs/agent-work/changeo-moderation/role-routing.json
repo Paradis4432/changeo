@@ -1,0 +1,41 @@
+{
+  "plan_reviewer": {
+    "metadata_source": "/home/paradis/.codex/sessions/2026/10/01/rollout-2026-10-01T02-52-11-01a0f605-34ea-7211-8a69-9a599b9a2261.jsonl",
+    "host_id": "01a0f605-34ea-7211-8a69-9a599b9a2261",
+    "agent_path": "/root/changeo_moderation/moderation_plan_review",
+    "parent_thread_id": "01a0f5f8-b744-74e2-92c3-0b15f212bfeb",
+    "host_transport": "codex-router-signed",
+    "latest_turn_context": {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "downstream_inference_provider": "unverified",
+    "router_request_correlation": "unverified"
+  },
+  "developer": {
+    "metadata_source": "/home/paradis/.codex/sessions/2026/10/01/rollout-2026-10-01T03-54-49-01a0f63e-8e08-7402-b9f2-7890bc50902c.jsonl",
+    "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+    "agent_path": "/root/changeo_moderation/moderation_builder",
+    "parent_thread_id": "01a0f5f8-b744-74e2-92c3-0b15f212bfeb",
+    "host_transport": "codex-router-signed",
+    "latest_turn_context": {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "downstream_inference_provider": "unverified",
+    "router_request_correlation": "unverified"
+  },
+  "final_reviewer": {
+    "metadata_source": "/home/paradis/.codex/sessions/2026/10/01/rollout-2026-10-01T05-48-19-01a0f6a6-743f-7c42-aaf2-67e616a4cb8d.jsonl",
+    "host_id": "01a0f6a6-743f-7c42-aaf2-67e616a4cb8d",
+    "agent_path": "/root/changeo_moderation/moderation_final_review",
+    "parent_thread_id": "01a0f5f8-b744-74e2-92c3-0b15f212bfeb",
+    "host_transport": "codex-router-signed",
+    "latest_turn_context": {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "downstream_inference_provider": "unverified",
+    "router_request_correlation": "unverified"
+  }
+}

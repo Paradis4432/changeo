@@ -1,0 +1,7 @@
+observed_at=2026-10-02T01:18:44Z
+1730365  1000 postgres
+2094717  1000 podman
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                               
+LISTEN 0      200        127.0.0.1:55432      0.0.0.0:*    users:(("postgres",pid=1730365,fd=6))
+State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+OK[]

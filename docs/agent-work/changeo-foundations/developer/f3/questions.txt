@@ -1,0 +1,4 @@
+Task F3-A1–A5. No missing founder answer, shared-contract deviation or environment blocker for final review.
+Future moderation/files owners must enforce exact resource/case/membership/audience/safe-byte and metadata/payload boundaries; this identity extension does not implement them.
+Production legal/age/guardian/privacy/retention/vendor/custody/commercial/capacity/public launch remain pending under S1 and docs/questions.md. No new policy values or spending authority inferred.
+Same retained independent final reviewer decides F3 acceptance; root releases moderation afterward.

@@ -1,0 +1,1404 @@
+{
+  "captured_at": "2026-10-01T03:27:07.399041+00:00",
+  "root": "/home/paradis/changeo",
+  "head": "unborn",
+  "commands": {
+    "git status --porcelain=v1 --untracked-files=all": {
+      "exit": 0,
+      "stdout": "?? docs/.obsidian/app.json\n?? docs/.obsidian/appearance.json\n?? docs/.obsidian/core-plugins.json\n?? docs/.obsidian/workspace.json\n?? docs/README.md\n?? docs/agent-work/changeo-foundations/baseline/docs/.obsidian/app.json\n?? docs/agent-work/changeo-foundations/baseline/docs/.obsidian/appearance.json\n?? docs/agent-work/changeo-foundations/baseline/docs/.obsidian/core-plugins.json\n?? docs/agent-work/changeo-foundations/baseline/docs/.obsidian/workspace.json\n?? docs/agent-work/changeo-foundations/baseline/docs/README.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-handoff-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/budget-reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/coordinator-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/coordinator-handoff-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/logs/artifact-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/logs/baseline-before.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/logs/originals-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/logs/six-file.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/budget/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/logs/baseline-before.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/logs/final-artifacts.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/logs/inventory-before.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/logs/questions-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/logs/source-reads.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/artifact-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/baseline-before.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/document-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/history-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/preservation-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/seven-file.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/sources-manifest.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch2.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch3.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch4.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch5.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch6.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch7.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch8.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch9.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/mercadopago/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/artifact-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/baseline-before.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/document-delivery.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/document-final.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/document-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/preservation-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/logs/three-file.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/personal-account/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/archive-before.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/archive-manifest.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/manifest-command.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/resend-confirmation.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/supplemental-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/research/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/logs/baseline-before.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/logs/final-artifacts.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/logs/inventory-before.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/logs/questions-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/logs/source-reads.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/developer/round-one/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-handoff-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/mercadopago-reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/personal-account-coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/personal-account-developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/personal-account-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/personal-account-plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/personal-account-reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-handoff-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/research-reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/logs/final-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/budget/source-support.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/document-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/final-artifacts.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/inventory.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/preservation-command.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/preservation.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/logs/read-notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.before-r3g.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.before-r3g.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/cumulative-source.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.before-r3g.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/independent-seven-file.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-archive-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-final.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification.py\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-corrected-original.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-scoped.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification.py\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence-batches3-4.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.before-r3g.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/report.before-r3g.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/mercadopago/source-support.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/logs/final-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/logs/independent-three-file.patch\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification.py\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/personal-account/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/archive-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/archive-manifest.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/final-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/moderation-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/openai-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/render-pricing-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/verification-first.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/logs/web-evidence.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/research/source-support.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/document-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/final-artifacts.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/inventory.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation-command.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/logs/read-notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/notes.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/reviewer/round-one/report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/coordinator-final-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/coordinator-handoff-check.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/coordinator-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/developer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/plan.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-gate0/round-one/reviewer-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.before-r2.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/business.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/marketing.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/questions.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-baseline/docs/trust-operations.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/budget-support-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/child-routing.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/feature-coordinator-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/foundations-coordinator-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/foundations-routing.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/git-user-approved-baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/git-metadata-change.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/mercadopago-root-primary-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/personal-account-root-primary-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/root-budget-final-check.log\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/root-final-check.log\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/root-mercadopago-final-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/root-personal-account-final-check.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/root-research-final-check.log\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/logs/routing-doctor.log\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/README.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/architecture.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/business.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/payments.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-baseline/docs/questions.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/mercadopago-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/injected-astra-skill.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/injected-java-skill.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-agents-and-environment.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-amendment-research.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-budget-and-support.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-git-initialization-confirmation.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-goal.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-mercadopago-choice.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/originals/user-sandbox-development-approval.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/payment-account-question.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/personal-account-baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/personal-account-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/personal-account-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/personal-account-baseline/docs/questions.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/personal-account-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/research-amendment-brief.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/research-baseline.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/research-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/research-baseline/docs/questions.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-budget-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-mercadopago-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-personal-account-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-research-report.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/root-routing.json\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/sandbox-scope-contract.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/README.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/documentation-review.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/planning-review.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/requirements.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/sources.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/architecture.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/business.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/delivery.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/marketing.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/payments.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/product-design.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/docs/trust-operations.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-implementation/source-baseline/prompt.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-planning/CHECKPOINT.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-planning/documentation-review.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-planning/planning-review.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-planning/requirements.md\n?? docs/agent-work/changeo-foundations/baseline/docs/agent-work/changeo-planning/sources.md\n?? docs/agent-work/changeo-foundations/baseline/docs/architecture.md\n?? docs/agent-work/changeo-foundations/baseline/docs/business.md\n?? docs/agent-work/changeo-foundations/baseline/docs/delivery.md\n?? docs/agent-work/changeo-foundations/baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-foundations/baseline/docs/marketing.md\n?? docs/agent-work/changeo-foundations/baseline/docs/payments.md\n?? docs/agent-work/changeo-foundations/baseline/docs/product-design.md\n?? docs/agent-work/changeo-foundations/baseline/docs/questions.md\n?? docs/agent-work/changeo-foundations/baseline/docs/trust-operations.md\n?? docs/agent-work/changeo-foundations/baseline/prompt.md\n?? docs/agent-work/changeo-gate0/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/budget-coordinator-report.md\n?? docs/agent-work/changeo-gate0/budget-developer-brief.md\n?? docs/agent-work/changeo-gate0/budget-final-check.txt\n?? docs/agent-work/changeo-gate0/budget-handoff-check.txt\n?? docs/agent-work/changeo-gate0/budget-plan.md\n?? docs/agent-work/changeo-gate0/budget-reviewer-brief.md\n?? docs/agent-work/changeo-gate0/coordinator-final-check.txt\n?? docs/agent-work/changeo-gate0/coordinator-handoff-check.txt\n?? docs/agent-work/changeo-gate0/coordinator-report.md\n?? docs/agent-work/changeo-gate0/developer-brief.md\n?? docs/agent-work/changeo-gate0/developer/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/budget/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/budget/logs/artifact-check.json\n?? docs/agent-work/changeo-gate0/developer/budget/logs/baseline-before.json\n?? docs/agent-work/changeo-gate0/developer/budget/logs/originals-check.json\n?? docs/agent-work/changeo-gate0/developer/budget/logs/six-file.patch\n?? docs/agent-work/changeo-gate0/developer/budget/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/developer/budget/notes.txt\n?? docs/agent-work/changeo-gate0/developer/budget/report.md\n?? docs/agent-work/changeo-gate0/developer/logs/baseline-before.txt\n?? docs/agent-work/changeo-gate0/developer/logs/final-artifacts.txt\n?? docs/agent-work/changeo-gate0/developer/logs/inventory-before.txt\n?? docs/agent-work/changeo-gate0/developer/logs/questions-check.txt\n?? docs/agent-work/changeo-gate0/developer/logs/source-reads.txt\n?? docs/agent-work/changeo-gate0/developer/mercadopago/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/artifact-check.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/baseline-before.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/document-first.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/history-check.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/preservation-first.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/seven-file.patch\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/sources-manifest.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch2.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch3.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch4.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch5.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch6.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch7.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch8.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch9.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence.json\n?? docs/agent-work/changeo-gate0/developer/mercadopago/notes.txt\n?? docs/agent-work/changeo-gate0/developer/mercadopago/report.md\n?? docs/agent-work/changeo-gate0/developer/notes.txt\n?? docs/agent-work/changeo-gate0/developer/personal-account/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/artifact-check.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/baseline-before.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/document-delivery.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/document-final.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/document-first.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/preservation-first.json\n?? docs/agent-work/changeo-gate0/developer/personal-account/logs/three-file.patch\n?? docs/agent-work/changeo-gate0/developer/personal-account/notes.txt\n?? docs/agent-work/changeo-gate0/developer/personal-account/report.md\n?? docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-gate0/developer/report.md\n?? docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/research/logs/archive-before.txt\n?? docs/agent-work/changeo-gate0/developer/research/logs/archive-manifest.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/manifest-command.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/resend-confirmation.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/supplemental-evidence.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json\n?? docs/agent-work/changeo-gate0/developer/research/notes.txt\n?? docs/agent-work/changeo-gate0/developer/research/report.md\n?? docs/agent-work/changeo-gate0/developer/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/developer/round-one/logs/baseline-before.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/logs/final-artifacts.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/logs/inventory-before.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/logs/questions-check.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/logs/source-reads.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/notes.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/questions.txt\n?? docs/agent-work/changeo-gate0/developer/round-one/report.md\n?? docs/agent-work/changeo-gate0/mercadopago-coordinator-report.md\n?? docs/agent-work/changeo-gate0/mercadopago-developer-brief.md\n?? docs/agent-work/changeo-gate0/mercadopago-final-check.txt\n?? docs/agent-work/changeo-gate0/mercadopago-handoff-check.txt\n?? docs/agent-work/changeo-gate0/mercadopago-plan.md\n?? docs/agent-work/changeo-gate0/mercadopago-reviewer-brief.md\n?? docs/agent-work/changeo-gate0/personal-account-coordinator-report.md\n?? docs/agent-work/changeo-gate0/personal-account-developer-brief.md\n?? docs/agent-work/changeo-gate0/personal-account-final-check.txt\n?? docs/agent-work/changeo-gate0/personal-account-plan.md\n?? docs/agent-work/changeo-gate0/personal-account-reviewer-brief.md\n?? docs/agent-work/changeo-gate0/plan.md\n?? docs/agent-work/changeo-gate0/research-coordinator-report.md\n?? docs/agent-work/changeo-gate0/research-developer-brief.md\n?? docs/agent-work/changeo-gate0/research-final-check.txt\n?? docs/agent-work/changeo-gate0/research-handoff-check.txt\n?? docs/agent-work/changeo-gate0/research-plan.md\n?? docs/agent-work/changeo-gate0/research-reviewer-brief.md\n?? docs/agent-work/changeo-gate0/reviewer-brief.md\n?? docs/agent-work/changeo-gate0/reviewer/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/budget/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/budget/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/budget/logs/final-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/budget/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/reviewer/budget/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/budget/report.md\n?? docs/agent-work/changeo-gate0/reviewer/budget/source-support.md\n?? docs/agent-work/changeo-gate0/reviewer/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/logs/document-check.txt\n?? docs/agent-work/changeo-gate0/reviewer/logs/final-artifacts.txt\n?? docs/agent-work/changeo-gate0/reviewer/logs/inventory.txt\n?? docs/agent-work/changeo-gate0/reviewer/logs/preservation-command.txt\n?? docs/agent-work/changeo-gate0/reviewer/logs/preservation.txt\n?? docs/agent-work/changeo-gate0/reviewer/logs/read-notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.before-r3g.md\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.before-r3g.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/cumulative-source.patch\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.before-r3g.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/independent-seven-file.patch\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-archive-first.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-final.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-first.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification.py\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-corrected-original.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-scoped.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification.py\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence-batches3-4.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence.json\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.before-r3g.txt\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/report.before-r3g.md\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/report.md\n?? docs/agent-work/changeo-gate0/reviewer/mercadopago/source-support.md\n?? docs/agent-work/changeo-gate0/reviewer/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/logs/final-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/logs/independent-three-file.patch\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification.py\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/personal-account/report.md\n?? docs/agent-work/changeo-gate0/reviewer/report.md\n?? docs/agent-work/changeo-gate0/reviewer/research/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/archive-check.txt\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/archive-manifest.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/final-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/moderation-evidence.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/openai-evidence.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/render-pricing-evidence.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/verification-first.json\n?? docs/agent-work/changeo-gate0/reviewer/research/logs/web-evidence.json\n?? docs/agent-work/changeo-gate0/reviewer/research/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/research/report.md\n?? docs/agent-work/changeo-gate0/reviewer/research/source-support.md\n?? docs/agent-work/changeo-gate0/reviewer/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/accepted-artifacts.json\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/document-check.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/final-artifacts.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/inventory.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation-command.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/logs/read-notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/notes.txt\n?? docs/agent-work/changeo-gate0/reviewer/round-one/report.md\n?? docs/agent-work/changeo-gate0/round-one/CHECKPOINT.md\n?? docs/agent-work/changeo-gate0/round-one/coordinator-final-check.txt\n?? docs/agent-work/changeo-gate0/round-one/coordinator-handoff-check.txt\n?? docs/agent-work/changeo-gate0/round-one/coordinator-report.md\n?? docs/agent-work/changeo-gate0/round-one/developer-brief.md\n?? docs/agent-work/changeo-gate0/round-one/plan.md\n?? docs/agent-work/changeo-gate0/round-one/reviewer-brief.md\n?? docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.before-r2.md\n?? docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md\n?? docs/agent-work/changeo-implementation/baseline.json\n?? docs/agent-work/changeo-implementation/budget-baseline.json\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/business.md\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/marketing.md\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/questions.md\n?? docs/agent-work/changeo-implementation/budget-baseline/docs/trust-operations.md\n?? docs/agent-work/changeo-implementation/budget-support-brief.md\n?? docs/agent-work/changeo-implementation/child-routing.json\n?? docs/agent-work/changeo-implementation/feature-coordinator-brief.md\n?? docs/agent-work/changeo-implementation/foundations-coordinator-brief.md\n?? docs/agent-work/changeo-implementation/foundations-routing.json\n?? docs/agent-work/changeo-implementation/git-user-approved-baseline.json\n?? docs/agent-work/changeo-implementation/logs/git-metadata-change.json\n?? docs/agent-work/changeo-implementation/logs/mercadopago-root-primary-check.json\n?? docs/agent-work/changeo-implementation/logs/personal-account-root-primary-check.json\n?? docs/agent-work/changeo-implementation/logs/root-budget-final-check.log\n?? docs/agent-work/changeo-implementation/logs/root-final-check.log\n?? docs/agent-work/changeo-implementation/logs/root-mercadopago-final-check.json\n?? docs/agent-work/changeo-implementation/logs/root-personal-account-final-check.json\n?? docs/agent-work/changeo-implementation/logs/root-research-final-check.log\n?? docs/agent-work/changeo-implementation/logs/routing-doctor.log\n?? docs/agent-work/changeo-implementation/mercadopago-baseline.json\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/README.md\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/architecture.md\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/business.md\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/payments.md\n?? docs/agent-work/changeo-implementation/mercadopago-baseline/docs/questions.md\n?? docs/agent-work/changeo-implementation/mercadopago-brief.md\n?? docs/agent-work/changeo-implementation/originals/injected-astra-skill.md\n?? docs/agent-work/changeo-implementation/originals/injected-java-skill.md\n?? docs/agent-work/changeo-implementation/originals/user-agents-and-environment.md\n?? docs/agent-work/changeo-implementation/originals/user-amendment-research.md\n?? docs/agent-work/changeo-implementation/originals/user-budget-and-support.md\n?? docs/agent-work/changeo-implementation/originals/user-git-initialization-confirmation.md\n?? docs/agent-work/changeo-implementation/originals/user-goal.md\n?? docs/agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md\n?? docs/agent-work/changeo-implementation/originals/user-mercadopago-choice.md\n?? docs/agent-work/changeo-implementation/originals/user-sandbox-development-approval.md\n?? docs/agent-work/changeo-implementation/payment-account-question.txt\n?? docs/agent-work/changeo-implementation/personal-account-baseline.json\n?? docs/agent-work/changeo-implementation/personal-account-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-implementation/personal-account-baseline/docs/gate0-research.md\n?? docs/agent-work/changeo-implementation/personal-account-baseline/docs/questions.md\n?? docs/agent-work/changeo-implementation/personal-account-brief.md\n?? docs/agent-work/changeo-implementation/research-amendment-brief.md\n?? docs/agent-work/changeo-implementation/research-baseline.json\n?? docs/agent-work/changeo-implementation/research-baseline/docs/agent-work/changeo-gate0/developer/questions.txt\n?? docs/agent-work/changeo-implementation/research-baseline/docs/questions.md\n?? docs/agent-work/changeo-implementation/root-budget-report.md\n?? docs/agent-work/changeo-implementation/root-mercadopago-report.md\n?? docs/agent-work/changeo-implementation/root-personal-account-report.md\n?? docs/agent-work/changeo-implementation/root-report.md\n?? docs/agent-work/changeo-implementation/root-research-report.md\n?? docs/agent-work/changeo-implementation/root-routing.json\n?? docs/agent-work/changeo-implementation/sandbox-scope-contract.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/README.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/CHECKPOINT.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/documentation-review.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/planning-review.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/requirements.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/sources.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/architecture.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/business.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/delivery.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/marketing.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/payments.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/product-design.md\n?? docs/agent-work/changeo-implementation/source-baseline/docs/trust-operations.md\n?? docs/agent-work/changeo-implementation/source-baseline/prompt.md\n?? docs/agent-work/changeo-planning/CHECKPOINT.md\n?? docs/agent-work/changeo-planning/documentation-review.md\n?? docs/agent-work/changeo-planning/planning-review.md\n?? docs/agent-work/changeo-planning/requirements.md\n?? docs/agent-work/changeo-planning/sources.md\n?? docs/architecture.md\n?? docs/business.md\n?? docs/delivery.md\n?? docs/gate0-research.md\n?? docs/marketing.md\n?? docs/payments.md\n?? docs/product-design.md\n?? docs/questions.md\n?? docs/trust-operations.md\n?? prompt.md\n",
+      "stderr": ""
+    },
+    "git diff --binary": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "git diff --cached --binary": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "git branch --show-current": {
+      "exit": 0,
+      "stdout": "master\n",
+      "stderr": ""
+    },
+    "git rev-parse --verify HEAD": {
+      "exit": 128,
+      "stdout": "",
+      "stderr": "fatal: Needed a single revision\n"
+    },
+    "java -version": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"21.0.10\" 2026-01-20\nOpenJDK Runtime Environment (Red_Hat-21.0.10.0.7-2) (build 21.0.10+7)\nOpenJDK 64-Bit Server VM (Red_Hat-21.0.10.0.7-2) (build 21.0.10+7, mixed mode, sharing)\n"
+    },
+    "docker info": {
+      "exit": 1,
+      "stdout": "Client: Docker Engine - Community\n Version:    29.4.0\n Context:    default\n Debug Mode: false\n Plugins:\n  buildx: Docker Buildx (Docker Inc.)\n    Version:  v0.33.0\n    Path:     /usr/libexec/docker/cli-plugins/docker-buildx\n  compose: Docker Compose (Docker Inc.)\n    Version:  v5.1.2\n    Path:     /usr/libexec/docker/cli-plugins/docker-compose\n\nServer:\n",
+      "stderr": "permission denied while trying to connect to the docker API at unix:///var/run/docker.sock\n"
+    },
+    "podman info": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Failed to obtain podman configuration: mkdir /run/user/1000/libpod: read-only file system\n"
+    }
+  },
+  "files": [
+    {
+      "path": "docs/.obsidian/app.json",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "docs/.obsidian/appearance.json",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "docs/.obsidian/core-plugins.json",
+      "size": 696,
+      "sha256": "763cf20a921fd9955735b278006820b90b207b2fc04d9e79ca648279c7c14276"
+    },
+    {
+      "path": "docs/.obsidian/workspace.json",
+      "size": 5251,
+      "sha256": "d9f97d4f2ca89359cdb77beeb8c7e47e73b5b35a8549e28747726a038a045a8b"
+    },
+    {
+      "path": "docs/README.md",
+      "size": 6189,
+      "sha256": "9da75ae6743b55996bc9c3dbf803b287693ad4b87482db81a4d5d99c684a5d02"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/CHECKPOINT.md",
+      "size": 5875,
+      "sha256": "70465910249ca1092a0710baed843924fc0b9c4cd7683a6e11257a4a28c72cd2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-coordinator-report.md",
+      "size": 6746,
+      "sha256": "378a822c67885b7febbad1fc06d0c5e6f862c6284c786427e3938bd7ffc82d31"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-developer-brief.md",
+      "size": 6621,
+      "sha256": "c04505b44dce5cf30e917e9a27a9e28b2042d652b3336a48afe9d1ceaf01b5c4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-final-check.txt",
+      "size": 2098,
+      "sha256": "9478951f5c55bf7f3db2558a42b6f5541cf6391ca10bbe353257de31d0ba225a"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-handoff-check.txt",
+      "size": 990,
+      "sha256": "6f9c2cab3c842043e2bfd4e8fd26e84477d8eb40b1390bb640a35ee3d370b2f0"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-plan.md",
+      "size": 4828,
+      "sha256": "59a9cf502f010b28f135c2f06ce76f22b6712a90227efc7bd13c376edcb72915"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/budget-reviewer-brief.md",
+      "size": 4910,
+      "sha256": "ae32075673dd461e3c8baa68b429a9b1ceef1d24cf41f0321a3d585c9b0a3240"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-final-check.txt",
+      "size": 1138,
+      "sha256": "0c6d96ad6456a51ad6fb2a01926ca4ccb352c0fe410e41a07493a3476c737da2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-handoff-check.txt",
+      "size": 1579,
+      "sha256": "0d9492c11ada43e1538f153a803871d46e9489118b170e401f69eac0c5a419ef"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/coordinator-report.md",
+      "size": 4922,
+      "sha256": "1c350d02771ae128e3534ede3795771c36f932a0e18ad4fb85fd6daa3d80e00f"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/CHECKPOINT.md",
+      "size": 2081,
+      "sha256": "95499735b525df82a2d58de94ab26e768eeb95b7c4ce9d175ebc5e4eb8001843"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/CHECKPOINT.md",
+      "size": 2306,
+      "sha256": "871f16ab55e28ce2f83f44402e65c302b4994ba56aacd53064ee9b5fffd3d5ac"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/logs/artifact-check.json",
+      "size": 3619,
+      "sha256": "818247b352d948a3029c4145828071136db82924b95ab0a09114b790e3483858"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/logs/baseline-before.json",
+      "size": 1613,
+      "sha256": "444f36347314958d400d61430cdd226ea6980fcbe84ead9cfc359ae78ce1f040"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/logs/originals-check.json",
+      "size": 1355,
+      "sha256": "1248f66a6390d310c738275221254d362104c9bb81615c209a285d1b17d2848e"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/logs/six-file.patch",
+      "size": 35686,
+      "sha256": "f9077ae4b258441ab93fcf0757deca36cddc4f9f832e0dd0dec62bb155007258"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/logs/verification-first.json",
+      "size": 7420,
+      "sha256": "32419d62a875cbd873e1319910861f09cf0e68bbffffe85676804cf2824c4692"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/notes.txt",
+      "size": 1620,
+      "sha256": "0eee47349d8f1d6ec62e1b07fd0098c85929c7732ef3c092628d01309b6cca70"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/budget/report.md",
+      "size": 12035,
+      "sha256": "b5f32191102bc30fbea8b35818561d1bdb426ee229f5ee2208ea7eb0564988b7"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/logs/baseline-before.txt",
+      "size": 1115,
+      "sha256": "f60b80f7ddcc20fd066a2daa72b484751944c954dc496b838c859e1051e5c08c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/logs/final-artifacts.txt",
+      "size": 4032,
+      "sha256": "ca297a365a51278c70ba83827962f3f44e1edd0ab16993581e55a06b54078dab"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/logs/inventory-before.txt",
+      "size": 2807,
+      "sha256": "7e00371d898df20078af46a4b14055f467c1e9c0fcfdad7fa93674a330a158e2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/logs/questions-check.txt",
+      "size": 3675,
+      "sha256": "fd1889d3d12f1f07ddbcd925192adfaa81a965008d3590b5edc67773ba860a56"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/logs/source-reads.txt",
+      "size": 3082,
+      "sha256": "4c8b45bbe56b174887a8660b39c100f5df7933f9f2fd6122c3965d54b337060f"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/CHECKPOINT.md",
+      "size": 2053,
+      "sha256": "74fc9e190187fee6e6833a8f3fcc903c54d29c31820c8dc8b83e89e645d5009d"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/artifact-check.json",
+      "size": 10159,
+      "sha256": "56a54c5fd8c2688d20d908c616a57733671b123a0eb9428ca44375c8b9c8e5ba"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/baseline-before.json",
+      "size": 1319,
+      "sha256": "7d135d36fb53952126b562684fb1d49b32ff00928c851f4e41c5f271e008422d"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/document-first.json",
+      "size": 10756,
+      "sha256": "ab93d8e8996d0570c0d72df7aa439af38bbe14813333bc1b0e489f3f6ee79fc1"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/history-check.json",
+      "size": 22788,
+      "sha256": "468fda849c7f4f81e9a12e95f25210312999648fcbf87076b54f6614677197b5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/preservation-first.json",
+      "size": 28490,
+      "sha256": "e43d5435f7cc57a76f37e164cbe537ccdd27d281f4d1c468118b8867278deb4d"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/seven-file.patch",
+      "size": 49225,
+      "sha256": "cfd62cb933588ba5e03e956b8b16d3f068eacc7ad8adc55335db79f0834fd971"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/sources-manifest.json",
+      "size": 7014,
+      "sha256": "fe67faf6f982fa42e113ac4f9e694d76e88c969041ab5b74273565122efd5846"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch2.json",
+      "size": 40111,
+      "sha256": "7110a316b968fe539ba67a293640688a51cd0d2cfe5cd58f8bcac1de9e470a1d"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch3.json",
+      "size": 29033,
+      "sha256": "53bf73d2a2115bce3f1b5eaf1a87f98bc5dc34324aaf0cc90bfa90092ef294c5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch4.json",
+      "size": 31961,
+      "sha256": "204f500065a15d58f30a3227af94fbba5c83232b0bf3bc79525829b8f2fcc336"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch5.json",
+      "size": 12028,
+      "sha256": "c5741b9e62ff56d4c173f224eb3dffd5fba046f7d0c25f63793bb7e422d9cb6c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch6.json",
+      "size": 32867,
+      "sha256": "6b6e4705a7745dfde4d9796dbda789baa528b5f3d2a6f5ed56df3787d9ff33b5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch7.json",
+      "size": 33359,
+      "sha256": "1d4f1da6c52eba6939d0db69f467fd44d6e4386e289e5c36fe56e1c792cd4eff"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch8.json",
+      "size": 34437,
+      "sha256": "253c26bef8ca56b9d5f7676e1bba6a2ebcb531e31f03899aaedbac26427bfebd"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch9.json",
+      "size": 22759,
+      "sha256": "d566cfd3d55900c8880738edfc1e1bf54b8523caa6e00a79286e66142c2bdd65"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence.json",
+      "size": 34687,
+      "sha256": "484a0eb888391ee7e359231a3d7c13e1c82be76717cb5f1e0a990c10d03f35dd"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/notes.txt",
+      "size": 1564,
+      "sha256": "a92acd6493a23b6f0006e80c9cf8504efb90e36c33fb5fea67dc8d54bc20fca3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/mercadopago/report.md",
+      "size": 11532,
+      "sha256": "e002497f0503027650ae45ad9a6a5a2cb78d2245b89d88580aa62315bf738e9e"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/notes.txt",
+      "size": 1432,
+      "sha256": "a44b02585dc84db70cda16e6414ae68374c09d52ba2bd14a055e368a30017f04"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/CHECKPOINT.md",
+      "size": 997,
+      "sha256": "79e0b1792bd307ea85464858de035d988862c0ef52a884d9ef6b202414a4b21b"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/artifact-check.json",
+      "size": 3932,
+      "sha256": "bef8a8d81cf991df07b0a13ce6cc35d7583e9b323640031fba56cbcc1ce5dacd"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/baseline-before.json",
+      "size": 1398,
+      "sha256": "9877becc949c1605adb18e2f0d526dbabe4e482c8891fa747ff8a394e0e01972"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/document-delivery.json",
+      "size": 8059,
+      "sha256": "68f5f58e7be00ce5eb4ad52f60132cd7990cf9867f54374f824642d0534eb698"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/document-final.json",
+      "size": 8059,
+      "sha256": "d535ac23d6c45aa265b0335672688bda7176cfb7082521a235de056905085db9"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/document-first.json",
+      "size": 8059,
+      "sha256": "a4caffd199e124f862610fc44f49a2da7a84a263c4773bc95d68e981f5b355bc"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/preservation-first.json",
+      "size": 4018,
+      "sha256": "00c3f9cba728e28769b4bef43126109316952838f6a0e90c487dba2d1738ab82"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/logs/three-file.patch",
+      "size": 21403,
+      "sha256": "caba7dc6b509095bcc7dca558420ca24a3eace705fdf9fbc5fb23511d13386b5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/notes.txt",
+      "size": 667,
+      "sha256": "4efde8136b2177316901f481408a11a1495d4026572cf6d41567779cfd8d461c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/personal-account/report.md",
+      "size": 8534,
+      "sha256": "253d5a5653f2cae9edf007796af53a66f030fcc424e48f30ed3072b3847c9959"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/questions.txt",
+      "size": 4147,
+      "sha256": "a888934139dc889b0d7610dc42aa2c3ad49be411f9268bf02f7f856eb7f3112c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/report.md",
+      "size": 9529,
+      "sha256": "79c1dff368d45a806f4542411d7605f45af9f53078f12bc575c5ee216ec7b042"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md",
+      "size": 1947,
+      "sha256": "233efe601d1552b04242e95a8d32647587cc41bc1b8f51411033f82b3b9eecaf"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/archive-before.txt",
+      "size": 1737,
+      "sha256": "68a8aa9ad25b57cf515e25bb73225360246cde6512706216d54840cef2285b07"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/archive-manifest.json",
+      "size": 831,
+      "sha256": "8df8ba7538f3060005fd385da319df1d41eb5c5b670a6490a9fe75d62625d675"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json",
+      "size": 4496,
+      "sha256": "22daa304680113b56118bc0ebab4d5149bca8d1e146bf1c1dcdd244f1ec298aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/manifest-command.json",
+      "size": 9011,
+      "sha256": "f11528e59bdad5488f459bd10a157b4e8b67b67d4dd0c3df3efdd685855ef644"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json",
+      "size": 161523,
+      "sha256": "f02e2e5c355f6df93de83ea37ea2daf55247af81ac6db1873b425c3d3d8c8dc8"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/resend-confirmation.json",
+      "size": 19059,
+      "sha256": "3e82936a81033b621b2823e6082e7863673cda96ceec1caa5f86c2e52796cc25"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json",
+      "size": 62375,
+      "sha256": "814b6bbf7c7d2826aceecaa3214318c98b03f87f848f3433e480f235ea9b56ff"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/supplemental-evidence.json",
+      "size": 30382,
+      "sha256": "4f0697ee5f1e83b889eddc8b162f830045dd4089e228ecdb9ebf2fc6f125cc86"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json",
+      "size": 7250,
+      "sha256": "aa7dc8f4df04fdc92bc8bef0c30c3194b3cbbf3041055d0f4ef54be9e73ddaa9"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json",
+      "size": 495018,
+      "sha256": "9facd4235cfb48d25e8775973702da12f4ac6eada90e4028389c331c22c201d4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/notes.txt",
+      "size": 1875,
+      "sha256": "06ec02482965af75f73854c2677892392ce426e5675dbb9262e04cd7668412b3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/research/report.md",
+      "size": 10308,
+      "sha256": "2be47ba82cd8246563ff290463f20a4f34756c3ef6ec5bbe74d41339777aadee"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/CHECKPOINT.md",
+      "size": 2081,
+      "sha256": "95499735b525df82a2d58de94ab26e768eeb95b7c4ce9d175ebc5e4eb8001843"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/logs/baseline-before.txt",
+      "size": 1115,
+      "sha256": "f60b80f7ddcc20fd066a2daa72b484751944c954dc496b838c859e1051e5c08c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/logs/final-artifacts.txt",
+      "size": 4032,
+      "sha256": "ca297a365a51278c70ba83827962f3f44e1edd0ab16993581e55a06b54078dab"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/logs/inventory-before.txt",
+      "size": 2807,
+      "sha256": "7e00371d898df20078af46a4b14055f467c1e9c0fcfdad7fa93674a330a158e2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/logs/questions-check.txt",
+      "size": 3675,
+      "sha256": "fd1889d3d12f1f07ddbcd925192adfaa81a965008d3590b5edc67773ba860a56"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/logs/source-reads.txt",
+      "size": 3082,
+      "sha256": "4c8b45bbe56b174887a8660b39c100f5df7933f9f2fd6122c3965d54b337060f"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/notes.txt",
+      "size": 1432,
+      "sha256": "a44b02585dc84db70cda16e6414ae68374c09d52ba2bd14a055e368a30017f04"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/questions.txt",
+      "size": 3525,
+      "sha256": "a5507cb8b488fc0a8188bef6e4f71fd392748cc417b0a245b32ae31df53b4d17"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer/round-one/report.md",
+      "size": 9529,
+      "sha256": "79c1dff368d45a806f4542411d7605f45af9f53078f12bc575c5ee216ec7b042"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/developer-brief.md",
+      "size": 7813,
+      "sha256": "356cf36e3c9e65497817abf541accbe2657ad57309db5182b05e676b5e29ad45"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-coordinator-report.md",
+      "size": 7303,
+      "sha256": "e8150299713a901d8a5e12028845c1684ded992a2f4cc23d7199acd60cd787f8"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-developer-brief.md",
+      "size": 5776,
+      "sha256": "44643245bc20dee65eff9d56000daa6155d0ba285b6281a8856c95dede788902"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-final-check.txt",
+      "size": 3024,
+      "sha256": "b86a7be3ecf7097e812ff2a59ed7cb79c87bbe6cfeb741dc952281a7d46eb1f0"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-handoff-check.txt",
+      "size": 1104,
+      "sha256": "cfb9abe13f4a0ff4d719796a95c5b87e57539bb20c812d1dc2ee976ec7559674"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-plan.md",
+      "size": 5439,
+      "sha256": "3e38410dd389d530accb65230abdc6350cbea76de01bdaaadbd95a44821b8e9b"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/mercadopago-reviewer-brief.md",
+      "size": 5703,
+      "sha256": "1bed6fc6d887052a64aa6cea149a7a24c14717a148a776450c5bbe16474970aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-coordinator-report.md",
+      "size": 3836,
+      "sha256": "d9fa8a39d598166b09c075a0d7db09241cab960217604d4a6a7231d4a371ae7b"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-developer-brief.md",
+      "size": 3233,
+      "sha256": "0737b7ef5e1fa87286374f493c43932d916103e8c4ac2f11cec43c6b5bfe1135"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-final-check.txt",
+      "size": 3469,
+      "sha256": "9bfa54fa6b193e6b52e6370b7987cd6273f54353a5dbdc9c4bca2c9bc1acf9cd"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-plan.md",
+      "size": 2639,
+      "sha256": "f3568a96061fb46c37f6b842f1446789d404d560108af20d64bed86e685944cf"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/personal-account-reviewer-brief.md",
+      "size": 2809,
+      "sha256": "d164018fed769e81a0313c14e75adc1fa5b42401e5a41d59a77af2501454db89"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/plan.md",
+      "size": 5629,
+      "sha256": "e195c675babcc7b9618671cce7a9b4b57ce73de18dda2c23d9da448bec99cfb4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-coordinator-report.md",
+      "size": 7464,
+      "sha256": "f0778bd0b22aeff890aec80f04c2d731178ff75a8efc9dd95bfc69407ba05b06"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-developer-brief.md",
+      "size": 7203,
+      "sha256": "e4552f2ab5c517c5e3fbbb033f2d8d8d4fa4d742de2bc8bce894cfe64bf8c3c6"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-final-check.txt",
+      "size": 1970,
+      "sha256": "6dbd4b5fb5a99851febe0948e1de2c2729e959b65c80764311bd9cff23a4eeff"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-handoff-check.txt",
+      "size": 1818,
+      "sha256": "528473aae7c0eabbd665554133c8571592b464dbf2afa3fe5f325084eb6a4d01"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-plan.md",
+      "size": 7414,
+      "sha256": "c22d89e7f158ceeb95639fc63c02684b8b411239e153c79aba179e23f0cd4e85"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/research-reviewer-brief.md",
+      "size": 7283,
+      "sha256": "bb8dd73ec1a26895b6eec7bb7ca5e6953ed4a4fb95247f427585cac8a2c1b0d1"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/CHECKPOINT.md",
+      "size": 930,
+      "sha256": "983669587e5aa5efcb3af4123ed7d20915f9c621b6fa1336eb488c4abd246833"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/CHECKPOINT.md",
+      "size": 1257,
+      "sha256": "f3af178f1e85361c804f8fc7a9e4ea7903797410402885cac3a7b971a5e41fa7"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/logs/accepted-artifacts.json",
+      "size": 3722,
+      "sha256": "3aa712d5fec6f09584a0901f90370ea51d22730f3f40845b421d52900f8a72a4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/logs/final-artifacts.json",
+      "size": 4438,
+      "sha256": "48b93ecf79c037f1622e980f416b48d91c2a407f6cffd8be91efee6209d2e676"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/logs/verification-first.json",
+      "size": 9002,
+      "sha256": "f1bc733af8a0e7252e24ff3b6283cdd29dc8c4c947c66fdf7f22ce04814621f2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/notes.txt",
+      "size": 1110,
+      "sha256": "79b7c94363b6697c3098dd15cfb32e9dae7df80b2388a5d9572e2a78394d8417"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/report.md",
+      "size": 9107,
+      "sha256": "e91148b6aaeeffa0bf729546f2e9a32377024090060b2335f867ee3bbfc51e79"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/budget/source-support.md",
+      "size": 3016,
+      "sha256": "6ec9475b2627215c0e248196d0664fa187482e78b310f05855e16831bd5b2bbb"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/accepted-artifacts.json",
+      "size": 1282,
+      "sha256": "b39de692f368112eb4ec038c32f2458589c129963d87ff1502c07ca338f54a88"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/document-check.txt",
+      "size": 9139,
+      "sha256": "c19321ed2afbc27b8fdfd20264d958aa7abf28be0ca1e7b8041b619e3619ed65"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/final-artifacts.txt",
+      "size": 1878,
+      "sha256": "f38193589470acf166bf384eff87c2e5aed21cf5f2ed3cb83c5cf45a5da1a609"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/inventory.txt",
+      "size": 3377,
+      "sha256": "ddd1ca93a08aed0283dfe150411525ab75392671a79fd2f70edce595da82cd4c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/preservation-command.txt",
+      "size": 2129,
+      "sha256": "83d7471a668418f5b859b55dad56db316f915b12d822b5227898f9aaf5010508"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/preservation.txt",
+      "size": 3231,
+      "sha256": "abceb8f6da2b871b70679fb1cfab197793692f31d01254ccbf93e93067fa4457"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/logs/read-notes.txt",
+      "size": 2296,
+      "sha256": "22e45462107ccce7154d8a264116c88975fedad17c1e559cd98522789db16aaa"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.before-r3g.md",
+      "size": 2087,
+      "sha256": "1745de4cbe234b4ef23faba0cc7bd18d89825d48cd98dc9f6cfb56b415903410"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.md",
+      "size": 2711,
+      "sha256": "26b2b2790c20629c80f337e237570dc41e2d66961724567a29c8b3f968bad104"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.before-r3g.json",
+      "size": 7929,
+      "sha256": "18461244041be32b83d0f6556a5212aafc651122c0ffcb9f53065340590f3ea9"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.json",
+      "size": 10361,
+      "sha256": "a69d28973c3f751d6d10f0db77f43456bc5927b819de33da60eb7e20946643db"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/cumulative-source.patch",
+      "size": 15512,
+      "sha256": "8a867bdb852379d075f8a9d69ad35344382af6cf34e43620fb1f280b08051e3b"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.before-r3g.json",
+      "size": 3218,
+      "sha256": "6a7bc8fe29da4dfe2670437a57c6f7bed7acfd60cd46b31ea020436298aff98e"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/final-artifacts.json",
+      "size": 3741,
+      "sha256": "a0f6de655c03664e2494dec105d667357d83bfbadad833cc8a5f1adacb0a0fa5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/independent-seven-file.patch",
+      "size": 49225,
+      "sha256": "cfd62cb933588ba5e03e956b8b16d3f068eacc7ad8adc55335db79f0834fd971"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-archive-first.json",
+      "size": 2749,
+      "sha256": "e23f277bbab361dc96cbf78767cb824c4390efd76e63858a31a504531e83bd80"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-final.json",
+      "size": 9316,
+      "sha256": "b872b4fdb7b3234271dfbdf4deae00c58640b1a057e883ca009d9ac649f613e1"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification-first.json",
+      "size": 9316,
+      "sha256": "b4298eed6868794990d5dbbfb2d0d2593ff315efd16f2eea2545fd3a5f7d49d3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/r3g-verification.py",
+      "size": 3726,
+      "sha256": "f56bbc597ae43e205456b152bd46ac5b16824ae2c7159386affd5f5b00db8d69"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-corrected-original.json",
+      "size": 33869,
+      "sha256": "c3f3baec5d51884e655395209500fa24ebd3668b1bcbe565e1d55b8fe9f617a0"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-first.json",
+      "size": 33903,
+      "sha256": "dad83d620f1ba2533e56d0f5201fd20afcdf279673f2cd45ee550c0e0efbf8c3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-scoped.json",
+      "size": 33834,
+      "sha256": "b1b55d5fc1458a26df9364e4925a81c17f924f97b03b62ba71dfcb695402e02b"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification.py",
+      "size": 9076,
+      "sha256": "962b6de142ee22e387eab9348f7b0058e4eb83534c47be50997aa9ccea7a314e"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence-batches3-4.json",
+      "size": 63054,
+      "sha256": "cc9a50335d944b952c21494bf3f43f24f99b3d14afe686d205497c43dcb79f65"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence.json",
+      "size": 28378,
+      "sha256": "39066f1d927870af24add2c962af578cd1450bbb581584ad0278ef44d253a2c4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.before-r3g.txt",
+      "size": 1339,
+      "sha256": "f3d47cf6f7636976fde1177d88625e3ee3ff9056a6c0679e64953987f47e2dca"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.txt",
+      "size": 1376,
+      "sha256": "fb1009d41fb919b29e4467174fd3712e593da0cabd56fd06111360557d9f7df4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/report.before-r3g.md",
+      "size": 11680,
+      "sha256": "c46251c205d2448e126afeef433e351afa1ae867a1d2f017b950ef9e862449b5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/report.md",
+      "size": 14047,
+      "sha256": "313931118d91bacad14dee9ae93958daa716b2af13df734eabd294ec4b8aac87"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/mercadopago/source-support.md",
+      "size": 5600,
+      "sha256": "ffe84e43bd5372a32ac27905c76315001366f750d666b46d7a636f03da65cf0f"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/notes.txt",
+      "size": 882,
+      "sha256": "50f28d4b5b3769b9814ab2306e687ebe4ed75db51429aa4648a8dc56dd938078"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/CHECKPOINT.md",
+      "size": 1668,
+      "sha256": "2da7e97b57cbb810704f76795ca6ae32685b3b250827712e6b8e8517309f09b3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/logs/accepted-artifacts.json",
+      "size": 6812,
+      "sha256": "fd88b7a63b53c0ec494a22f66aea61ce2733c764d1f51cec02b4bea4689cccd9"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/logs/final-artifacts.json",
+      "size": 4213,
+      "sha256": "4223c8b545ab6d5827d78b060381a7ac8f65901bc943521bd5a532cdf59a3440"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/logs/independent-three-file.patch",
+      "size": 21403,
+      "sha256": "caba7dc6b509095bcc7dca558420ca24a3eace705fdf9fbc5fb23511d13386b5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification-first.json",
+      "size": 24244,
+      "sha256": "974dcb1df5a53ac3e12ad578e0df2c9472b82290a121dc972186d670f97e30b6"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/logs/verification.py",
+      "size": 8012,
+      "sha256": "dbc0d4c4e1c0473272bce44c8ed5e246feb14441156557faef2f26393d98a229"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/notes.txt",
+      "size": 1194,
+      "sha256": "fdc2c98f74a4f98cf4ab326d3068cc88c2377b7128a7fe2e5b5781bc350eeac3"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/personal-account/report.md",
+      "size": 10082,
+      "sha256": "356a38939e13ad18247d9aaf5173127d240e8723aeb3e55f75cfdeabd9c6fad0"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/report.md",
+      "size": 12800,
+      "sha256": "3aad54aafd36de8922b3b9db0fc7cd46fae8e1bc41d3403f5ffe51aeeab481c5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/CHECKPOINT.md",
+      "size": 1327,
+      "sha256": "1ce00e2c14d73bd2e2383392e5d5d828fd0193b842b4f4fcdc876a1e24da3d58"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/accepted-artifacts.json",
+      "size": 5478,
+      "sha256": "8a853a594ddf605f7b53df768661bd51763cb8c758909abb8b329128c0645809"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/archive-check.txt",
+      "size": 1083,
+      "sha256": "f539e986a60e03af2b9c4d1fb3ea5f73afc590dbdcf7816ba4c66acd9970dea6"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/archive-manifest.json",
+      "size": 936,
+      "sha256": "d91efab89d2e73258ed86db218d60e075a21ef8baf70e93d956da4f7c3e4c734"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/final-artifacts.json",
+      "size": 4115,
+      "sha256": "ea1a9a4a6a88798483dca4768078d32b7a9810dce4149d28b28571226f848c67"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/moderation-evidence.json",
+      "size": 27291,
+      "sha256": "62c852fb9a737fd34f43b08d9bfba345728e26c1dacaa4f3753ee7473f169f96"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/openai-evidence.json",
+      "size": 104369,
+      "sha256": "8898c1965df7beda92acfb8b800ad7ae94ed409595c96b3bc53ad5b2ede03c28"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/render-pricing-evidence.json",
+      "size": 5081,
+      "sha256": "1791e06fcbef63f4f3ae23c8b9e9340966ffeae840707902f5f12ad69d281844"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/verification-first.json",
+      "size": 8666,
+      "sha256": "847dad86267d50f77d35e8fa3a0bec805e2e2664b984766d54c0c28cfd6458eb"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/logs/web-evidence.json",
+      "size": 311751,
+      "sha256": "17c6ebe15aed2fd8e805c58c793d1c44e7e941db3d6b1fa472234d36b1dee426"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/notes.txt",
+      "size": 1082,
+      "sha256": "cb455a1272b4ebc168f27b1833a168391b38aa55a6b57112dc03268b2ff97587"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/report.md",
+      "size": 11818,
+      "sha256": "4cee06cb69f8d077b0b9a292ad585e8289f3ca21908782ae0491d7802a866448"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/research/source-support.md",
+      "size": 11105,
+      "sha256": "3cd3a1051aa7c6d43b719460a9181cb097b4984dc826d988dceba8ecaee17734"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/CHECKPOINT.md",
+      "size": 930,
+      "sha256": "983669587e5aa5efcb3af4123ed7d20915f9c621b6fa1336eb488c4abd246833"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/accepted-artifacts.json",
+      "size": 1282,
+      "sha256": "b39de692f368112eb4ec038c32f2458589c129963d87ff1502c07ca338f54a88"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/document-check.txt",
+      "size": 9139,
+      "sha256": "c19321ed2afbc27b8fdfd20264d958aa7abf28be0ca1e7b8041b619e3619ed65"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/final-artifacts.txt",
+      "size": 1878,
+      "sha256": "f38193589470acf166bf384eff87c2e5aed21cf5f2ed3cb83c5cf45a5da1a609"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/inventory.txt",
+      "size": 3377,
+      "sha256": "ddd1ca93a08aed0283dfe150411525ab75392671a79fd2f70edce595da82cd4c"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation-command.txt",
+      "size": 2129,
+      "sha256": "83d7471a668418f5b859b55dad56db316f915b12d822b5227898f9aaf5010508"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/preservation.txt",
+      "size": 3231,
+      "sha256": "abceb8f6da2b871b70679fb1cfab197793692f31d01254ccbf93e93067fa4457"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/logs/read-notes.txt",
+      "size": 2296,
+      "sha256": "22e45462107ccce7154d8a264116c88975fedad17c1e559cd98522789db16aaa"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/notes.txt",
+      "size": 882,
+      "sha256": "50f28d4b5b3769b9814ab2306e687ebe4ed75db51429aa4648a8dc56dd938078"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer/round-one/report.md",
+      "size": 12800,
+      "sha256": "3aad54aafd36de8922b3b9db0fc7cd46fae8e1bc41d3403f5ffe51aeeab481c5"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/reviewer-brief.md",
+      "size": 8140,
+      "sha256": "9994bc72a049f42dc0b3ca3a1aff6e46063ac50fd4437cdd80be7dc343374ac4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/CHECKPOINT.md",
+      "size": 2535,
+      "sha256": "8c3e647ffe304573b9d5f00dcd2095302855a3784ea1c4606cc04e5707423718"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-final-check.txt",
+      "size": 1138,
+      "sha256": "0c6d96ad6456a51ad6fb2a01926ca4ccb352c0fe410e41a07493a3476c737da2"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-handoff-check.txt",
+      "size": 1579,
+      "sha256": "0d9492c11ada43e1538f153a803871d46e9489118b170e401f69eac0c5a419ef"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/coordinator-report.md",
+      "size": 4922,
+      "sha256": "1c350d02771ae128e3534ede3795771c36f932a0e18ad4fb85fd6daa3d80e00f"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/developer-brief.md",
+      "size": 7813,
+      "sha256": "356cf36e3c9e65497817abf541accbe2657ad57309db5182b05e676b5e29ad45"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/plan.md",
+      "size": 5629,
+      "sha256": "e195c675babcc7b9618671cce7a9b4b57ce73de18dda2c23d9da448bec99cfb4"
+    },
+    {
+      "path": "docs/agent-work/changeo-gate0/round-one/reviewer-brief.md",
+      "size": 8140,
+      "sha256": "9994bc72a049f42dc0b3ca3a1aff6e46063ac50fd4437cdd80be7dc343374ac4"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.before-r2.md",
+      "size": 12266,
+      "sha256": "172df9a53150a20966bb356245411b0fe9963c300b9b46554cd8ebe4e7c89279"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md",
+      "size": 13537,
+      "sha256": "594378c42c34031d748e120110e486e4549752d42e3b0b1be44b9bc92be2d76f"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/baseline.json",
+      "size": 3067,
+      "sha256": "f2d9ad6c29f4879201e431114fd05788ee52dc1d5031e72974a8bc9579cbf8ac"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "size": 2258,
+      "sha256": "f53b4c4803d03f2b78d85b85510792457c2bd54d92f594f10d19540187e40f54"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/business.md",
+      "size": 5564,
+      "sha256": "b58fa1b27cba750387b2288ffceee18fafacabaeb886857a60afb5905107fca5"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/gate0-research.md",
+      "size": 34413,
+      "sha256": "44dc40d73ea9cd79c9f33dc87678e830b78f188ee5f67b7bc6b3fab5db99a83b"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/marketing.md",
+      "size": 5506,
+      "sha256": "2e24ac4d8fc10e39ee3b9274bd88e34f91cf0271fc6ed4d9df83a1f11fdf99f3"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/questions.md",
+      "size": 3320,
+      "sha256": "7cf67b31b5b42818f5e72eb4dca693d5d10729715ee9e78360c8e3fc6caf9d14"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline/docs/trust-operations.md",
+      "size": 9179,
+      "sha256": "61faff539620b0969a6399c2df06395136d9c05f6db00d4a7de7aad23175dd11"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-baseline.json",
+      "size": 25597,
+      "sha256": "00f21bd14830bc1f2d90f9d4836db69c7a396e0a2481c678d4bcad2e925dae41"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/budget-support-brief.md",
+      "size": 8968,
+      "sha256": "ee4e507f53e50704a7e9343b0bbd8000dcb466781872731ffe9103b88ab17133"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/child-routing.json",
+      "size": 2035,
+      "sha256": "af355647de60413521b932d75e622c8d3ff264755bfc28c81e1e9139f2133000"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/feature-coordinator-brief.md",
+      "size": 8623,
+      "sha256": "ffb0e9c9e512a90dfd4b0ae46250d7dba12888c75a83f365aa2bf50e3ad8e774"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-coordinator-brief.md",
+      "size": 9163,
+      "sha256": "0b90f35adeb9d134ff5bf734312a91120a14c8eb7d0dc0486cc2cf494cd164f7"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-routing.json",
+      "size": 631,
+      "sha256": "ea6d3e56574532a4cd29df46009697e00c3e3cfe153f27f3b215ccd1a09b2bd7"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/git-user-approved-baseline.json",
+      "size": 4784,
+      "sha256": "65620205e109a413a9fb42db0bb8d831267d1edc5089aa1f9b33d073cae4925b"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/git-metadata-change.json",
+      "size": 5430,
+      "sha256": "274e0743dcedd771127d8889b75b8351abe0a54bd29585647d8c36edc509d487"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/mercadopago-root-primary-check.json",
+      "size": 23643,
+      "sha256": "b4a2c227523814ad5ce1634c1a9b444b5f0156c79320a253aec56189114b0ad9"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/personal-account-root-primary-check.json",
+      "size": 17481,
+      "sha256": "d3fa4e260bfd940295c09e1e396a9f8c5ba754ad4613fa6fc6de98693a6e4d28"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/root-budget-final-check.log",
+      "size": 2297,
+      "sha256": "2eabe42f2e1a5ee9727ab37353585ca7137da96491620eec79376f5e1c79d663"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/root-final-check.log",
+      "size": 2383,
+      "sha256": "7de5a8f2cae36488a067af24c5064a080c1592e1eebbefb71556e2f874149f05"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/root-mercadopago-final-check.json",
+      "size": 2153,
+      "sha256": "a0ad97872eb9bbab1d550c3efa63bcbf926075a9c885891eac822203466c290a"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/root-personal-account-final-check.json",
+      "size": 1807,
+      "sha256": "78244e9781f9b2c5c8ff13d00ddae7d3103f5bc20c84306aacf35d12b61bd461"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/root-research-final-check.log",
+      "size": 2272,
+      "sha256": "654c7c210b03e3dafb2df4fb624d9458f154cc25a3e6288a94391dbb0cb36aed"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/logs/routing-doctor.log",
+      "size": 894,
+      "sha256": "5524d64a64f18336c4af3b97e0c31f887162aca510af06b57dd7c50ce9887039"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/README.md",
+      "size": 5691,
+      "sha256": "641e87f0f2b7f673a8e5377bd560fd1d6b8d31c5aa6633f2b10587fdfc0122a3"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "size": 2522,
+      "sha256": "dc83a06746cc47af3802af31ce7cfd9cdae845d708130333995e9dfa8c72e4ca"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/architecture.md",
+      "size": 8111,
+      "sha256": "d5de180fc023b3464d833ca75348ccef63efe61640f4b1c3723b2f89b6880bc8"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/business.md",
+      "size": 6036,
+      "sha256": "7979cc261f3b2d1aa121ff6b7df931a5b28493f8a89a0fb84c8e258066a8b236"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/gate0-research.md",
+      "size": 40706,
+      "sha256": "8c0a7d83d063c01477949325aa3d12decb0b417ff5677fc79200db2c1dee1f31"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/payments.md",
+      "size": 9654,
+      "sha256": "7ba258019445c61c211c4559c99f2b31258d74b41b8f13ecd2a3bbeba8f34396"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline/docs/questions.md",
+      "size": 2510,
+      "sha256": "917a575b4111f2bb0032dd349809882b4f35374a0dd82ef3cc6177fe230052a0"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-baseline.json",
+      "size": 31925,
+      "sha256": "580024acf7efc1ff0db42608f99bb2d4f46d1e472e66eb08eed859b9640f8b29"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/mercadopago-brief.md",
+      "size": 7835,
+      "sha256": "0d5d3820bad7ac1fe57d12e91e71b5420707232efb9f6e65c904ec6b43276dc7"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/injected-astra-skill.md",
+      "size": 10934,
+      "sha256": "aeb61a958b7b9a8fa35ae7f24476bac602f5ed7175cbb7a1acc749fb6826cf11"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/injected-java-skill.md",
+      "size": 3998,
+      "sha256": "306a87f02874d94dbdcf0bdd7e45adbb4e70c6425163a3b4fb7adfd8a239c198"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-agents-and-environment.md",
+      "size": 8091,
+      "sha256": "20d796cc2d4ae82211abb8e9f623a83ddfafa56d7a93da99fc7f694fcde38a78"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-amendment-research.md",
+      "size": 67,
+      "sha256": "1250b88f5a6c8d4434ca660109c995e9ef7d7ad0a5cab1270cfbd6fa135f44bd"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-budget-and-support.md",
+      "size": 53,
+      "sha256": "ced31d321dc118274cb8d4e4c02f7612f5c124b025fc7ac7fc54a1afcece8408"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-git-initialization-confirmation.md",
+      "size": 362,
+      "sha256": "2648f329b5e6427ab53be474be712f3ebf9d31baea30688c3d2967870e95e2a3"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-goal.md",
+      "size": 20514,
+      "sha256": "42f37aca5542dbd1099b4bc443763ccf646f87046f0b987618e164274bde4cae"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md",
+      "size": 1289,
+      "sha256": "f09314e34e26d07a661cced40cc94006e67721daea5e7227ad53d3e1b19496bd"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-mercadopago-choice.md",
+      "size": 29,
+      "sha256": "c50c0ef943cea6402f9bc27712750140548a60a2c5e2601f7a4c2e1c6e5a07c1"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/originals/user-sandbox-development-approval.md",
+      "size": 721,
+      "sha256": "af3809a6952201fcc9341a4f6a20a4be718addc092d2eccb72628ff39ceeb32e"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/payment-account-question.txt",
+      "size": 1755,
+      "sha256": "2d5fd3178a4895ad20f7c02e61dc9cde4958d23991e4745ddf87285604ce86d4"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "size": 3508,
+      "sha256": "af9496bb62a6f760ca3e85e34058c15a31b0133d97bca465a3f348152f4c1216"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/gate0-research.md",
+      "size": 46758,
+      "sha256": "50db16f4093aca44f94b532c55d3e05eb4af3be3032e927cb4dc2285c1f4d742"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline/docs/questions.md",
+      "size": 3187,
+      "sha256": "78812bf70e364953cc261198696fa4f4a508c33aeaa64ba79402da3364a1a460"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-baseline.json",
+      "size": 945,
+      "sha256": "00b80928b62ddf8b60349f93fdb497f5688ff9ce6d3df6cea10e896717dd48c1"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/personal-account-brief.md",
+      "size": 4970,
+      "sha256": "fdff84b1216a6495b197f6e23c86b5a5927051835d968145b7771bbbe4f5aee8"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-amendment-brief.md",
+      "size": 7857,
+      "sha256": "7ff16b9060ef0cdbfecd763533cd0ceb6c8e835fa78892d548c1159823d79542"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline/docs/agent-work/changeo-gate0/developer/questions.txt",
+      "size": 3525,
+      "sha256": "a5507cb8b488fc0a8188bef6e4f71fd392748cc417b0a245b32ae31df53b4d17"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline/docs/questions.md",
+      "size": 20608,
+      "sha256": "2d26e40cc335c30cf5329c95735f3847b0243d1af069d5e0b88191f70adba0c7"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/research-baseline.json",
+      "size": 12858,
+      "sha256": "5574c13dc4dfd2c10c6067ab48c0eb1a17999327a47903fb65ffcb6c1d26294f"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-budget-report.md",
+      "size": 4252,
+      "sha256": "30f6cf4eb72eca198e654b994d6e4ea9c987197e0baa5262ec8f5c4e9a401aa6"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-mercadopago-report.md",
+      "size": 3944,
+      "sha256": "f9b5bf9c4797a57635e95060a408ba5fd758c8436a7b9bf2324eff783950ed11"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-personal-account-report.md",
+      "size": 3148,
+      "sha256": "58eec3faae9b030b33ead7090e48230d2afed69107e20298b1689c7189bda52f"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-report.md",
+      "size": 7022,
+      "sha256": "c877d5cdd7e7b293a2f621eade457c5a94232d785ccd61e1a4a9c1c58fc25f4e"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-research-report.md",
+      "size": 4869,
+      "sha256": "505919838b11f2618745fa809dac5f887b33d24b323bf86e6c738f7b471b1495"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/root-routing.json",
+      "size": 539,
+      "sha256": "efe8a273fa1149db2c596e8f8f770798567ae15a36b8c017f9bb60d3a3ff533e"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "size": 3567,
+      "sha256": "a0b531b0663876117be89fac9a5c74bdae7276924f2984cc48d699624f57e106"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/README.md",
+      "size": 5691,
+      "sha256": "641e87f0f2b7f673a8e5377bd560fd1d6b8d31c5aa6633f2b10587fdfc0122a3"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/CHECKPOINT.md",
+      "size": 3592,
+      "sha256": "b25e433deb8ace7fdf59560d849bcc960e5e5e7a2ea5ffdf8672acdad8fb264b"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/documentation-review.md",
+      "size": 3759,
+      "sha256": "95b33fee2129e0f86e188160c0ef283753c75077f6abed990e30308c5e47d42e"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/planning-review.md",
+      "size": 2821,
+      "sha256": "8db4823c6a0be9515cfbe728622186f40d07931926b109c4121281b0b7b9bf30"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/requirements.md",
+      "size": 9477,
+      "sha256": "7aa1dfec61d882f4087da290006e4371143f2ddf95e02f7a3ee6d85bed71d46e"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/agent-work/changeo-planning/sources.md",
+      "size": 8873,
+      "sha256": "a7dbc7becf01dccd0d15669b5d57a8998e94fb4781dbda16d087f2589f82a5a4"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/architecture.md",
+      "size": 8111,
+      "sha256": "d5de180fc023b3464d833ca75348ccef63efe61640f4b1c3723b2f89b6880bc8"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/business.md",
+      "size": 5564,
+      "sha256": "b58fa1b27cba750387b2288ffceee18fafacabaeb886857a60afb5905107fca5"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/delivery.md",
+      "size": 10373,
+      "sha256": "4cf332617fe9ed403c34d4a99b5235039ff44b947bc61455497db17a9ced4987"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/marketing.md",
+      "size": 5506,
+      "sha256": "2e24ac4d8fc10e39ee3b9274bd88e34f91cf0271fc6ed4d9df83a1f11fdf99f3"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/payments.md",
+      "size": 9654,
+      "sha256": "7ba258019445c61c211c4559c99f2b31258d74b41b8f13ecd2a3bbeba8f34396"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/product-design.md",
+      "size": 7672,
+      "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/docs/trust-operations.md",
+      "size": 9179,
+      "sha256": "61faff539620b0969a6399c2df06395136d9c05f6db00d4a7de7aad23175dd11"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/source-baseline/prompt.md",
+      "size": 20432,
+      "sha256": "1d7ef52df3068bd22aad9d34e38357863063bc3a3f6276e5d4b3357da0a038ab"
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/CHECKPOINT.md",
+      "size": 3592,
+      "sha256": "b25e433deb8ace7fdf59560d849bcc960e5e5e7a2ea5ffdf8672acdad8fb264b"
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/documentation-review.md",
+      "size": 3759,
+      "sha256": "95b33fee2129e0f86e188160c0ef283753c75077f6abed990e30308c5e47d42e"
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/planning-review.md",
+      "size": 2821,
+      "sha256": "8db4823c6a0be9515cfbe728622186f40d07931926b109c4121281b0b7b9bf30"
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/requirements.md",
+      "size": 9477,
+      "sha256": "7aa1dfec61d882f4087da290006e4371143f2ddf95e02f7a3ee6d85bed71d46e"
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/sources.md",
+      "size": 8873,
+      "sha256": "a7dbc7becf01dccd0d15669b5d57a8998e94fb4781dbda16d087f2589f82a5a4"
+    },
+    {
+      "path": "docs/architecture.md",
+      "size": 8830,
+      "sha256": "597441381b5eb78887a4748837650418f1729c95d3a8fbe5212dd395adf5910f"
+    },
+    {
+      "path": "docs/business.md",
+      "size": 6713,
+      "sha256": "58cb1df2272508101af04c18c8d7a5766c769c2e11d0a36d9e7fef87091feefd"
+    },
+    {
+      "path": "docs/delivery.md",
+      "size": 10373,
+      "sha256": "4cf332617fe9ed403c34d4a99b5235039ff44b947bc61455497db17a9ced4987"
+    },
+    {
+      "path": "docs/gate0-research.md",
+      "size": 49802,
+      "sha256": "0ac3b90fb3a9a8a4ec48256a5273c4f83f06214b74690f6411fea9f568ec474a"
+    },
+    {
+      "path": "docs/marketing.md",
+      "size": 5936,
+      "sha256": "5b74efe35bfe4b257c0a7711ad951ba42f7c59e31f69e7078b0f0eeb26fd9917"
+    },
+    {
+      "path": "docs/payments.md",
+      "size": 10115,
+      "sha256": "ad8194a8c455f390cd90aab6d39fe45aa4479aff9c92a59653bf2efeec462977"
+    },
+    {
+      "path": "docs/product-design.md",
+      "size": 7672,
+      "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d"
+    },
+    {
+      "path": "docs/questions.md",
+      "size": 3928,
+      "sha256": "bbccf0b9587e0c455c9f6c1460a23f104353832d2ff72c19f49833cd5b449bc1"
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "size": 9511,
+      "sha256": "936d52936035d1b43a0572bdd0b3a59aac40eee84225a71bfec6579f07a23a0b"
+    },
+    {
+      "path": "prompt.md",
+      "size": 20432,
+      "sha256": "1d7ef52df3068bd22aad9d34e38357863063bc3a3f6276e5d4b3357da0a038ab"
+    }
+  ]
+}

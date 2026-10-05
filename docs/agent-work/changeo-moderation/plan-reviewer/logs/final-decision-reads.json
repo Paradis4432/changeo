@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-implementation/moderation-contract-M1B.md",
+    "sha256": "94b8ee11f36e48459ff965894daac64d7685fc15f55aac4492386105369c1e1e",
+    "bytes": 2221,
+    "lines": 9,
+    "inspection": "complete independent read except latest developer brief delta independently inspected; prior complete brief read preserved",
+    "underlying_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/plan.md",
+    "sha256": "32931520ca86d08bb6a66554a34c56d075fc918068ebb3b936ca7038d7962c47",
+    "bytes": 20311,
+    "lines": 74,
+    "inspection": "complete independent read except latest developer brief delta independently inspected; prior complete brief read preserved",
+    "underlying_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/briefs/plan-reviewer-brief.md",
+    "sha256": "340bb6b49d168f894d928aacdbd309ef24f60b8ad1f28dd933d18249ad6728c6",
+    "bytes": 4729,
+    "lines": 15,
+    "inspection": "complete independent read except latest developer brief delta independently inspected; prior complete brief read preserved",
+    "underlying_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/briefs/developer-brief.md",
+    "sha256": "5c9986b9614fca9eceea19d128446e3aeb1ddb7dc3f94bbbc347276ae1402d08",
+    "bytes": 14291,
+    "lines": 57,
+    "inspection": "complete independent read except latest developer brief delta independently inspected; prior complete brief read preserved",
+    "underlying_exit": 0
+  },
+  {
+    "path": "/home/paradis/changeo/docs/agent-work/changeo-moderation/role-routing.json",
+    "sha256": "e46478cec09c975aad350b8ea4594d25b6cc7ca11653198804d17029ba10395b",
+    "bytes": 587,
+    "lines": 15,
+    "inspection": "complete independent read except latest developer brief delta independently inspected; prior complete brief read preserved",
+    "underlying_exit": 0
+  }
+]

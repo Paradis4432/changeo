@@ -1,0 +1,171 @@
+{
+  "date": "2026-09-30",
+  "revision": "R3 selected Mercado Pago",
+  "reviewer": "/root/changeo_gate0/reviewer",
+  "reviewer_host": "01a0f44b-d28d-7f33-94ad-bf8f7348ddf6",
+  "verdict": "accepted",
+  "scope": "Seven-file selected-provider documentation only; all Gate0/product/goal incomplete. Original .git preservation EXCEPTION/UNVERIFIED; actor/authority UNKNOWN.",
+  "artifacts": {
+    "docs/README.md": {
+      "bytes": 6189,
+      "sha256": "9da75ae6743b55996bc9c3dbf803b287693ad4b87482db81a4d5d99c684a5d02"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/CHECKPOINT.md": {
+      "bytes": 2053,
+      "sha256": "74fc9e190187fee6e6833a8f3fcc903c54d29c31820c8dc8b83e89e645d5009d"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/artifact-check.json": {
+      "bytes": 10159,
+      "sha256": "56a54c5fd8c2688d20d908c616a57733671b123a0eb9428ca44375c8b9c8e5ba"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/baseline-before.json": {
+      "bytes": 1319,
+      "sha256": "7d135d36fb53952126b562684fb1d49b32ff00928c851f4e41c5f271e008422d"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/document-first.json": {
+      "bytes": 10756,
+      "sha256": "ab93d8e8996d0570c0d72df7aa439af38bbe14813333bc1b0e489f3f6ee79fc1"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/history-check.json": {
+      "bytes": 22788,
+      "sha256": "468fda849c7f4f81e9a12e95f25210312999648fcbf87076b54f6614677197b5"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/preservation-first.json": {
+      "bytes": 28490,
+      "sha256": "e43d5435f7cc57a76f37e164cbe537ccdd27d281f4d1c468118b8867278deb4d"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/seven-file.patch": {
+      "bytes": 49225,
+      "sha256": "cfd62cb933588ba5e03e956b8b16d3f068eacc7ad8adc55335db79f0834fd971"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/sources-manifest.json": {
+      "bytes": 7014,
+      "sha256": "fe67faf6f982fa42e113ac4f9e694d76e88c969041ab5b74273565122efd5846"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch2.json": {
+      "bytes": 40111,
+      "sha256": "7110a316b968fe539ba67a293640688a51cd0d2cfe5cd58f8bcac1de9e470a1d"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch3.json": {
+      "bytes": 29033,
+      "sha256": "53bf73d2a2115bce3f1b5eaf1a87f98bc5dc34324aaf0cc90bfa90092ef294c5"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch4.json": {
+      "bytes": 31961,
+      "sha256": "204f500065a15d58f30a3227af94fbba5c83232b0bf3bc79525829b8f2fcc336"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch5.json": {
+      "bytes": 12028,
+      "sha256": "c5741b9e62ff56d4c173f224eb3dffd5fba046f7d0c25f63793bb7e422d9cb6c"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch6.json": {
+      "bytes": 32867,
+      "sha256": "6b6e4705a7745dfde4d9796dbda789baa528b5f3d2a6f5ed56df3787d9ff33b5"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch7.json": {
+      "bytes": 33359,
+      "sha256": "1d4f1da6c52eba6939d0db69f467fd44d6e4386e289e5c36fe56e1c792cd4eff"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch8.json": {
+      "bytes": 34437,
+      "sha256": "253c26bef8ca56b9d5f7676e1bba6a2ebcb531e31f03899aaedbac26427bfebd"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence-batch9.json": {
+      "bytes": 22759,
+      "sha256": "d566cfd3d55900c8880738edfc1e1bf54b8523caa6e00a79286e66142c2bdd65"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/logs/web-evidence.json": {
+      "bytes": 34687,
+      "sha256": "484a0eb888391ee7e359231a3d7c13e1c82be76717cb5f1e0a990c10d03f35dd"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/notes.txt": {
+      "bytes": 1564,
+      "sha256": "a92acd6493a23b6f0006e80c9cf8504efb90e36c33fb5fea67dc8d54bc20fca3"
+    },
+    "docs/agent-work/changeo-gate0/developer/mercadopago/report.md": {
+      "bytes": 11532,
+      "sha256": "e002497f0503027650ae45ad9a6a5a2cb78d2245b89d88580aa62315bf738e9e"
+    },
+    "docs/agent-work/changeo-gate0/developer/questions.txt": {
+      "bytes": 3508,
+      "sha256": "af9496bb62a6f760ca3e85e34058c15a31b0133d97bca465a3f348152f4c1216"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/CHECKPOINT.md": {
+      "bytes": 2087,
+      "sha256": "1745de4cbe234b4ef23faba0cc7bd18d89825d48cd98dc9f6cfb56b415903410"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/cumulative-source.patch": {
+      "bytes": 15512,
+      "sha256": "8a867bdb852379d075f8a9d69ad35344382af6cf34e43620fb1f280b08051e3b"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/independent-seven-file.patch": {
+      "bytes": 49225,
+      "sha256": "cfd62cb933588ba5e03e956b8b16d3f068eacc7ad8adc55335db79f0834fd971"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-corrected-original.json": {
+      "bytes": 33869,
+      "sha256": "c3f3baec5d51884e655395209500fa24ebd3668b1bcbe565e1d55b8fe9f617a0"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-first.json": {
+      "bytes": 33903,
+      "sha256": "dad83d620f1ba2533e56d0f5201fd20afcdf279673f2cd45ee550c0e0efbf8c3"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification-scoped.json": {
+      "bytes": 33834,
+      "sha256": "b1b55d5fc1458a26df9364e4925a81c17f924f97b03b62ba71dfcb695402e02b"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/verification.py": {
+      "bytes": 9076,
+      "sha256": "962b6de142ee22e387eab9348f7b0058e4eb83534c47be50997aa9ccea7a314e"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence-batches3-4.json": {
+      "bytes": 63054,
+      "sha256": "cc9a50335d944b952c21494bf3f43f24f99b3d14afe686d205497c43dcb79f65"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/web-evidence.json": {
+      "bytes": 28378,
+      "sha256": "39066f1d927870af24add2c962af578cd1450bbb581584ad0278ef44d253a2c4"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/notes.txt": {
+      "bytes": 1339,
+      "sha256": "f3d47cf6f7636976fde1177d88625e3ee3ff9056a6c0679e64953987f47e2dca"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/report.md": {
+      "bytes": 11680,
+      "sha256": "c46251c205d2448e126afeef433e351afa1ae867a1d2f017b950ef9e862449b5"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/mercadopago/source-support.md": {
+      "bytes": 5600,
+      "sha256": "ffe84e43bd5372a32ac27905c76315001366f750d666b46d7a636f03da65cf0f"
+    },
+    "docs/architecture.md": {
+      "bytes": 8830,
+      "sha256": "597441381b5eb78887a4748837650418f1729c95d3a8fbe5212dd395adf5910f"
+    },
+    "docs/business.md": {
+      "bytes": 6713,
+      "sha256": "58cb1df2272508101af04c18c8d7a5766c769c2e11d0a36d9e7fef87091feefd"
+    },
+    "docs/gate0-research.md": {
+      "bytes": 46758,
+      "sha256": "50db16f4093aca44f94b532c55d3e05eb4af3be3032e927cb4dc2285c1f4d742"
+    },
+    "docs/marketing.md": {
+      "bytes": 5936,
+      "sha256": "5b74efe35bfe4b257c0a7711ad951ba42f7c59e31f69e7078b0f0eeb26fd9917"
+    },
+    "docs/payments.md": {
+      "bytes": 10115,
+      "sha256": "ad8194a8c455f390cd90aab6d39fe45aa4479aff9c92a59653bf2efeec462977"
+    },
+    "docs/questions.md": {
+      "bytes": 3187,
+      "sha256": "78812bf70e364953cc261198696fa4f4a508c33aeaa64ba79402da3364a1a460"
+    },
+    "docs/trust-operations.md": {
+      "bytes": 9511,
+      "sha256": "936d52936035d1b43a0572bdd0b3a59aac40eee84225a71bfec6579f07a23a0b"
+    }
+  },
+  "self_reference_limit": "This seal and final-artifacts.json excluded; final evidence records, not self-sealed deliverable content."
+}

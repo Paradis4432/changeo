@@ -1,0 +1,210 @@
+[
+  {
+    "path": "src/test/java/ar/changeo/identity/TotpTest.java",
+    "sha256": "4581b74b96b86b0e29ca405d87c9c5406e91ace3e94ad4013377212a8f9267b9"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/SandboxSafetyTest.java",
+    "sha256": "27c0343c13df258ec606b8fc33ac9ebbf18a6c9e3e715b61b2aebb5f73399786"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/MutableClock.java",
+    "sha256": "9f1b959f96696eb98c872e79d78a3951e784cc0299792b79da47926596bc2ce8"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+    "sha256": "2bd5fea332ee175d15a0f353d419105e68c3e27aacd9ddcc44a1c58184509f17"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+    "sha256": "373e17f3ecdbd889fb5d37ed29f4f549ae6832af93a57d6c4ee9a3c538cc48e9"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+    "sha256": "d3e536d81f2eb4718ce75e204b2286ed1c81adaf7f34361008d5a9427f6a3249"
+  },
+  {
+    "path": "src/main/java/ar/changeo/ChangeoApplication.java",
+    "sha256": "73bd69526d919c0dc1e2ee2b3b8d76e05d26d60abec584049415ee5830b51ac4"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/IdentityFailure.java",
+    "sha256": "58ac58f404a407333b880aabf9e0293332050abbf60fcfa4490d3b11504441c5"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/Totp.java",
+    "sha256": "da0882079ec7314fcb0ac91826271e57754625daf61c5fd81252d1adf8e1d756"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/Account.java",
+    "sha256": "c07b0384228aeda5471b44e77ecb3003ae5dbdd3767abd8af8c1d9ea467a9d42"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/Evidence.java",
+    "sha256": "5411ddb5f6cac4afc43fc8f686ee2efe46895f4ee567fad43f6e9fb8c773bd61"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/ContactToken.java",
+    "sha256": "b4d0f261aa67dd3c7c3289a057b05bf064eb44813f654248a5db4d4658249884"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/GuardianLink.java",
+    "sha256": "3465685b60202c77b2a8a15418bccf62454dbb6b9c4c001eb8000f4469da9539"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/JobConsent.java",
+    "sha256": "a7836501697ad5428f873c7d65fcf72789e7aec6b9cb0778a8a89e4fe99da4d1"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/Restriction.java",
+    "sha256": "1b508bb36cf2e689ea8522533547019976c71c8a05766add839415cfdbde2643"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AdminMfa.java",
+    "sha256": "8702b6a1c696b84e7d48bb64ecb6f2c70ed30aecf8b460b77bb2d31309c42444"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AuditEvent.java",
+    "sha256": "ea1e93acba3763401b7d716af54328dee4f6d199cea7366fdc4b130e6c0f7768"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+    "sha256": "8e451926b14d5d39a1624f93648af3c32706945a265483d42525ffd251bc4743"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/EvidenceKind.java",
+    "sha256": "7782981521257b1940e678ab3529f16faacf4035b247ee1c0cecd56e76745408"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/TokenPurpose.java",
+    "sha256": "8fc3acc18b785921c38c18e5d56d28f78ffae4f648830a6fa69716d5981eb959"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/LinkStatus.java",
+    "sha256": "733253c682c796a39354a08dbbe57b479031de384a608c2164ef150f83c3b66f"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/ConsentStatus.java",
+    "sha256": "2d25195588bda1288261ade11ab74c6431984d8267a150067aeb8897d3351aa2"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/IdentityStore.java",
+    "sha256": "337194cc4c5fed43d91e6758a298c8980abe6f71befd093a92d30b7b668964c5"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/SecurityProof.java",
+    "sha256": "7dc12c933ccd70a3a7474b88030ada7349a9b7d96d8d1742cb9ff0402c477abf"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+    "sha256": "f1f335422e62e8e0d417422c44a77b592149ce3ae7485d9058c0d9e41358395b"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/PrivateFiles.java",
+    "sha256": "0bbb90bf55fb1f45593af11666bd83617065dbbdad93d9d36b681e6659aac3ff"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/TokenDelivery.java",
+    "sha256": "54e33e8d60250b19a80dc3f5c07e80f6bd4a5f14fd584f46d322a2ce989715b8"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/LocalMailbox.java",
+    "sha256": "21308f5802ca7538816e8ab5433426886daa07cc912f15b1ce62a6b0ce7052c4"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AbuseLimits.java",
+    "sha256": "8b1551608b44b82fba00d0e34f2347530c35478cbec820c13ff68f97b727e7f0"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AccountService.java",
+    "sha256": "527be994201d3887312a785388cd4599bb391f0e27eb29790377b01ea9a7bf7a"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/FactorCipher.java",
+    "sha256": "b8524466ac46ead545611d8d9781ca7393fa4851d71ac9efc36248c2a5c073a1"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AdminSecurityService.java",
+    "sha256": "f17e13633194ad6a0a8bca004c218b7d610cb4fa916965a4b16b4fcaca501b07"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/GuardianService.java",
+    "sha256": "837ddae736206dcef55ccb52924add592d1645b597c45e2d9a7d2e07f401591a"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AdminService.java",
+    "sha256": "95641c082f1534a5a6c4fc8737a6353938b63b46065159650dedea7fb8cb1d19"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/OperatorService.java",
+    "sha256": "1e85040a608f9fb7f4c90c0b65307352a48429d92b086f688d557766b4eff5a5"
+  },
+  {
+    "path": "src/main/java/ar/changeo/security/AccountPrincipal.java",
+    "sha256": "0a286011976d4d8ac2cf7fe49f624967c4c8b299b519d9495098984b3167c1e4"
+  },
+  {
+    "path": "src/main/java/ar/changeo/security/SessionProof.java",
+    "sha256": "53aa4b587c39603c453d6418313177139ec9254e95dd686e0b227c1fb70ad33e"
+  },
+  {
+    "path": "src/main/java/ar/changeo/security/SessionEpochFilter.java",
+    "sha256": "b2bc353aae641c3431a01f550c6c275ffb5b34ff3ebf73428ec28873e5372f8b"
+  },
+  {
+    "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+    "sha256": "369bb7b3eae6a79bee1974c5546275ca3e1603dd1416ab05259ddf2304db75c4"
+  },
+  {
+    "path": "src/main/java/ar/changeo/web/WebsiteController.java",
+    "sha256": "8c69050ce05991d476336d9980b88f46b8c6763450418a8fc02b270683bfc90b"
+  },
+  {
+    "path": "src/main/java/ar/changeo/web/WebsiteErrors.java",
+    "sha256": "7644a8b39044d61ab3227b0c5e51cacdb11ff01208df697603b695cac293f748"
+  },
+  {
+    "path": "src/main/java/ar/changeo/config/SandboxSafety.java",
+    "sha256": "855ae7d037eaa2c66b94750db17ca37abb75b2b61dce0c15be8e2cdd024d1bf6"
+  },
+  {
+    "path": "src/main/java/ar/changeo/config/RuntimeConfig.java",
+    "sha256": "bcb5a30db727c250b1adf57562f5bab3d2f44bb6a7385e65b97c5f9a76d3789d"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+    "sha256": "29a4ff350751bff9cbd7d449beedf17983c8266f95e5df0896b13de4bf0ff5ae"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/AccountId.java",
+    "sha256": "bfa61a2b25c54ce944115fe1165cb9c20a653f876e85d85b44921cb498bdb9a6"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/ActorId.java",
+    "sha256": "aee48d293a361abf6c168f3ffcdf74b9d06d75bcc443710b51ac645f6b6291ed"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/SubjectId.java",
+    "sha256": "700f23ffa22d0e6c390a7e30339b9cb0e413ed764100b3a09438c15a94374bd5"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+    "sha256": "a8d7543910632ce731d86e81f3ccdab8ef58604ff994b12caadce86275d9120d"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+    "sha256": "3e8d1666f33980dd074706bbdee2b0ef3bc45dbee5a45b33ec617b75a0a2c57d"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+    "sha256": "e073b295e43d46263c7e356c9f0226b33571b9f5d7413646ea24bcf1c260140a"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/PermissionDecision.java",
+    "sha256": "49a0ad8b7468bb7b56a485590d1c94a0cdb500642c856c04d590dc9df3d09a62"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/AccountAccessSnapshot.java",
+    "sha256": "f898edc23faf48977994467c55dc03d3dd1d4cc3921413bfedc400a3f66cd6db"
+  }
+]

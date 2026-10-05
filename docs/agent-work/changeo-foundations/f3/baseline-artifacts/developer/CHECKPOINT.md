@@ -1,0 +1,11 @@
+# Foundations developer checkpoint
+
+STATUS ready_for_review. Task F-A1–F-A8/F2 + FR1; workspace /home/paradis/changeo; sole developer /root/changeo_foundations/foundation_builder. Authoritative cumulative evidence: [report.md](report.md). Same coordinator and independent final reviewer retained. No acceptance, delegation, goals, commit or deployment.
+
+FR1 implemented at existing owners: AccountService canonical contact rule now drives lookup and login/recovery counters; reauthentication uses independent actor/source counters. Ten additional HTTP cases prove alias, source, malformed/generic, window and denied-proof behavior. First focused run exit1 with8 reproduced bypass failures; corrected run exit0 with13 HTTP cases. Full fr1-verify.log exit0:35 local/unit/HTTP +15 actual PostgreSQL container tests, no skips. Existing browser/restart/startup evidence reused only for unaffected behavior; no fresh browser checks claimed.
+
+Cumulative85-source manifest refreshed; exactly5 FR1 source edits. All271 baseline snapshots remain unchanged; only assigned5 current docs and independently root-owned GOAL-CHECKPOINT differ from historical sources. Previous developer report/checkpoint/manifests and affected source saved under logs/fr1-before/. FR1 delta patch and complete command evidence saved in logs/; no private material captured.
+
+Runtime inference corrected: restricted-namespace absence did not prove1774171 stopped. Reviewer explicitly stopped/replaced1774171, then stopped1812877. Fresh host-visible FR1 ps/ss proves both app PIDs absent and no8080 listener. Assigned PostgreSQL1730365 on127.0.0.1:55432 and Podman1742781 remain; containers[]. Browser ownership released; no browser opened during FR1. Restart corrected jar via docs/sandbox-runtime.md for live review. Private keys/tokens/enrollment remain ignored owner-private .runtime.
+
+Next owner: coordinator resumes same independent final reviewer against full cumulative S1/F1/F2 patch plus FR1. Same developer available for corrections. No new founder/shared-contract/environment blocker. Production legal/vendor/custody/commercial/public launch stays pending. Reload original requirements/latest contracts/report/checkpoint after interruption.

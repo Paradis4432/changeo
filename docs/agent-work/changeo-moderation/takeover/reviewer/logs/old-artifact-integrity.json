@@ -1,0 +1,1773 @@
+{
+  "authoritative_seals": {
+    "developer": [
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/report.md",
+        "size": 22459,
+        "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+        "size": 2116,
+        "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2",
+        "matches": false
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/notes.txt",
+        "size": 511,
+        "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/questions.txt",
+        "size": 591,
+        "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/complete-change-manifest.json",
+        "size": 44566,
+        "sha256": "e3cf3411171c4f60e6338583034274c15ed104ff6d7c9b0a9a23ddc26ec88ba9",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/source-manifest.json",
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/changed-paths.json",
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/cumulative-original-baseline.patch",
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/accepted-F3.patch",
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/moderation-after-F3.patch",
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-summary.json",
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/history-question-preservation.json",
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/F3-integrity.json",
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/baseline289-integrity.json",
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/exact-command-catalog.json",
+        "size": 12906,
+        "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/command-summary.json",
+        "size": 10098,
+        "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.json",
+        "size": 902,
+        "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/final-test-results.json",
+        "size": 11039,
+        "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/developer/logs/markdown-check.json",
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f",
+        "matches": true
+      }
+    ],
+    "reviewer": [
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/report.md",
+        "size": 20871,
+        "sha256": "21fb21971d0da536ccaee2d61b5e24fd6cef36884ca643021265bc9e0ee5e027",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/CHECKPOINT.md",
+        "size": 2240,
+        "sha256": "2fb636a7feb33fe8efd0e72f63a322d3fa0ebc3f45eca53b62006d9f4abf5e94",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/notes.txt",
+        "size": 835,
+        "sha256": "b699f9fc2e06cdd53858dbb820a58ef0a4704d426fc051c4307571f2136218ec",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/questions.txt",
+        "size": 553,
+        "sha256": "0f882acba9e5eaa6592c28fd139a3a6d69c8501dee4cafaef4a239fce313c5e5",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/F3-integrity.json",
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/ReviewerRegressionProbe.java",
+        "size": 3243,
+        "sha256": "7a86a27907b796c62b94bcac6929130c940c3a73569ecf076b1e591b302c1608",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/accepted-F3.patch",
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/api-log-append-assessment.json",
+        "size": 362,
+        "sha256": "a18f0855010e727be54a673b79c052952992c9d98631f3a771949bafdee71d2e",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/app-first.log",
+        "size": 6724,
+        "sha256": "00bcfa438f7dffb02bfd627f6e95deaeb372d418efa1a558ab237819f4967ac9",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/app.pid",
+        "size": 8,
+        "sha256": "2a4b022fecc7a06fa6a89a071d415d4d31dd7b4733ac6b95d81ce1e969fc6f75",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/baseline289-integrity.json",
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-final-visual.json",
+        "size": 109,
+        "sha256": "da8f0aab311c83fc67be4fb3639d1ed62afa916b8008e14c5030e8c9c6f54fb8",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-first.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-first.log",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-operator-desktop.png",
+        "size": 277282,
+        "sha256": "1439f99eac3629d50d673963d826b746df7fe468a18d2e5d0a4b2926d58bb9d7",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-operator-final-mobile.png",
+        "size": 257767,
+        "sha256": "4a4394c761e194d88cea6175748a486f52a50a2ac533aca7b364531415c61849",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-own-desktop.png",
+        "size": 170931,
+        "sha256": "b61182802ec5709717a6c766bb4ab21b34806a17dc13044f500ac13651e3929f",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-own-final-mobile.png",
+        "size": 170077,
+        "sha256": "aba86f74f77f9a1faa18e6e4ec9ec0608c49840857aea741c264fa00a62d1ffb",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-qa.cjs",
+        "size": 13827,
+        "sha256": "930ba245536e76abb0c4aa0f2b076b6feaa99d95ab4e7f771134142204778060",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-restart.json",
+        "size": 48,
+        "sha256": "88d97b407c8849711892a8e0793a359440fcd5ebadc8b49261895a61bfbbe6ea",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/changed-paths.json",
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/command-summary.json",
+        "size": 1231,
+        "sha256": "558e5ff4a6ec380996155036a859dc29d28e009220a7c082c65c445b3360b307",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/cumulative-original-baseline.patch",
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/evidence-integrity-command.exit",
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/evidence-integrity-command.log",
+        "size": 134,
+        "sha256": "e3e5c8af79210e24f43b0986290bcce234c79a2ce89647c4aa471d7dadbf6e27",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/evidence-integrity.json",
+        "size": 130318,
+        "sha256": "5e1320a1fcc473fa89452d6597a3d9500d9c3266571246b25ea97aa5e805af8a",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/evidence_integrity.py",
+        "size": 2470,
+        "sha256": "a5cea7b394e790a920506b544b2030fda207c7a4ce593790cd6c92c100287830",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/final-command-results.json",
+        "size": 3219,
+        "sha256": "51c5bf39b216f5d1b6ba628cde54b8e4787f3a6495e1443cab4723f878a24e39",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/finalize_review.py",
+        "size": 3651,
+        "sha256": "2dfa7c92db3b07de14a79b47019d22f2cf643cfbe70e39aa7d4a8d7a7ca39f10",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/history-question-preservation.json",
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/markdown-check.json",
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/moderation-after-F3.patch",
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/preservation-first.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/preservation-first.log",
+        "size": 263,
+        "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/preservation-summary.json",
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/preservation.py",
+        "size": 11905,
+        "sha256": "c556dfa745a76dcdccfa9f4f2536235f9783766a6ac0e3761852a85b360772f1",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-classes/ar/changeo/moderation/ReviewerRegressionProbe.class",
+        "size": 6582,
+        "sha256": "1bd7790becf0064d664c15d4482108d5b545d4ac8064f42df60f6659e2e88c4e",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-classpath.txt",
+        "size": 15807,
+        "sha256": "dbd660592e2f121a54d839a4b80f6add4e985f09fbdd2ce64d360c0768e14528",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile-final.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile-final.log",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile.log",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/recovered-command-catalog.json",
+        "size": 7536,
+        "sha256": "6e77d99de950430b1e6b73dc7b4717d0089592736d5f4e4975737c6e74221a91",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe-final.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe-final.log",
+        "size": 5616,
+        "sha256": "86feb9a63fe648d595a1e021f853574ba3d02b50fdfa57952dd2654baedab6af",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe.exit",
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe.log",
+        "size": 12127,
+        "sha256": "7813d8cb5a592e269e0578450dfd85044c123ea5595086313fd542303420d56a",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/reviewer-document-check.json",
+        "size": 147,
+        "sha256": "5ca00ffa9f801c1369519f567720ef9f2e94bc2b7a7cfb7ba7490e2408498e88",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/source-manifest.json",
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/unowned-inputs.json",
+        "size": 342,
+        "sha256": "79c31abbe1ac5fe3adf11e1f66fe84ea622bffc50b35c9002a84a732ab519413",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-first.exit",
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-first.log",
+        "size": 1835176,
+        "sha256": "04a80bcd74753116192967533660a29351439628f4a774b6c8c755d33f72454e",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-host.exit",
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "matches": true
+      },
+      {
+        "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-host.log",
+        "size": 53580,
+        "sha256": "49e2a1aa0a430cb2b8b9c150039457f62bfb623d9b84e80d8ede9c1680ba8f89",
+        "matches": true
+      }
+    ]
+  },
+  "exhaustive": [
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+      "size": 2116,
+      "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2",
+      "owner": "M1 developer evidence",
+      "matches": false
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/F3-integrity.json",
+      "size": 34345,
+      "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/accepted-F3.patch",
+      "size": 42902,
+      "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-ownership.json",
+      "size": 91,
+      "sha256": "f9616292eb8941360b03458a595268f75f4d63833c71283225709720fe0d2383",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-restored.json",
+      "size": 82,
+      "sha256": "d958ddff77865d6a9606f26fd84c925a8a6b8db5719cb48ac311235c326e67b5",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-start.log",
+      "size": 596,
+      "sha256": "5c76cfa6f4949fe6d1cd009ebb2bb429fdd924b3bb2319567960c094e126eda1",
+      "owner": "M1 developer evidence",
+      "matches": false
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api.pid",
+      "size": 8,
+      "sha256": "71e50589aae0586459df8cd6a1954e8c485c06ac96cc567f2ce9bdaa267976a8",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-final-stop.json",
+      "size": 202,
+      "sha256": "2a83bc63639f780ce639c31ef407b7644b12dc671f84aa1efb80ea90372393a3",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-final.log",
+      "size": 6430,
+      "sha256": "18e7166b4f274dc85f8e6fb7ed54d2a1a924e34ac8991faae1cbf83fd4b22cc9",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-first-stop.json",
+      "size": 60,
+      "sha256": "e0ad0c8053fb37d5ac80e145e0ba584a5f5f35f0770016c92f9f7d8b57220e67",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-restart-stop.json",
+      "size": 60,
+      "sha256": "5cfb482740ddb8e00302fa5415a93190d5b8be867bcfe9a8fb3faf480d644afb",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/baseline-integrity.json",
+      "size": 32,
+      "sha256": "eda8b1ccf1cd9009a98c699e3121b2a6d2151f4858ad5ea477e50268eecc6cd4",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/baseline289-integrity.json",
+      "size": 61006,
+      "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/before.json",
+      "size": 125720,
+      "sha256": "4c95952e26dafadf538c097cde42416bb7b19e11e7d7f9174cebe1c37190f1c0",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-activation.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-activation.log",
+      "size": 303,
+      "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app-first.log",
+      "size": 5485,
+      "sha256": "ae473758aa239f7719d86b167f5e3a20276d0817ef3ac852158416bb5ea3a66d",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app-restart.log",
+      "size": 7011,
+      "sha256": "11669d111b9394cc07d7930977e9658459995800b5728637fd26efc5a37b568b",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app.log",
+      "size": 6428,
+      "sha256": "d8cb28441ab4853d094223a42f3dc87d0e8d6e884a6c9c316061a138105f93c9",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-clean-package.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-clean-package.log",
+      "size": 2995,
+      "sha256": "ac8f3f320344bdca24e89d2449b72b8303dab378792b26256be07dc44e89c0f2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-delivery.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-delivery.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure-first.json",
+      "size": 219,
+      "sha256": "5f8ce26cf862bbdc446288ae101a5aa29dc459c0e5dfae9739b89397304a22b9",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure-third.json",
+      "size": 355,
+      "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure.json",
+      "size": 355,
+      "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final-visual.json",
+      "size": 109,
+      "sha256": "da8f0aab311c83fc67be4fb3639d1ed62afa916b8008e14c5030e8c9c6f54fb8",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final.log",
+      "size": 303,
+      "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-first.log",
+      "size": 13,
+      "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-desktop.png",
+      "size": 277282,
+      "sha256": "1439f99eac3629d50d673963d826b746df7fe468a18d2e5d0a4b2926d58bb9d7",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-final-mobile.png",
+      "size": 257767,
+      "sha256": "4a4394c761e194d88cea6175748a486f52a50a2ac533aca7b364531415c61849",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-mobile.png",
+      "size": 253205,
+      "sha256": "0edc9c4080555f40c0ee2443b094edb6980e3b436152cf1839c21f22283a77ac",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-accessibility.yml",
+      "size": 2308,
+      "sha256": "b3e17ac0e7846d651766c064daf7209e8af4264af56e452036c9baefa80efe23",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-desktop.png",
+      "size": 170931,
+      "sha256": "b61182802ec5709717a6c766bb4ab21b34806a17dc13044f500ac13651e3929f",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-final-mobile.png",
+      "size": 170077,
+      "sha256": "aba86f74f77f9a1faa18e6e4ec9ec0608c49840857aea741c264fa00a62d1ffb",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-mobile.png",
+      "size": 169939,
+      "sha256": "d47d9686dae0f08bc03dca6648f8de66e3dd5ee26b0347e41354790699225ab2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-package.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-package.log",
+      "size": 2893,
+      "sha256": "307b41dd332f348404a8d2a1cd208c6026d47ce986b4be583dc21a3e751fef60",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-provision.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-provision.log",
+      "size": 4806,
+      "sha256": "e8003d5ba48e29774fc58f7948ba06a34e8adb9fefed6212fa4b065ad0c56d44",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-qa.json",
+      "size": 347,
+      "sha256": "abaa02af340c0e1de7667018e48c9621ef6193cf3e516c9f48feff4ec135f792",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.json",
+      "size": 48,
+      "sha256": "88d97b407c8849711892a8e0793a359440fcd5ebadc8b49261895a61bfbbe6ea",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-second.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-second.log",
+      "size": 982,
+      "sha256": "1ced4fdc6fa596b20e8a6fa19a3be4c1880663cc5d698df3b0a94b20190c9fcc",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-third.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-third.log",
+      "size": 13,
+      "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/changed-paths.json",
+      "size": 15623,
+      "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/command-summary.json",
+      "size": 10098,
+      "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/cumulative-original-baseline.patch",
+      "size": 296617,
+      "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/exact-command-catalog.json",
+      "size": 12906,
+      "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-invalid-input.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-invalid-input.log",
+      "size": 8101,
+      "sha256": "96196d17a42b66ec44697d08c0476274b996bafc988870bf92ca756faa2b3ae2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-test-results.json",
+      "size": 11039,
+      "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/history-question-preservation.json",
+      "size": 1142,
+      "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/markdown-check.json",
+      "size": 314,
+      "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/moderation-after-F3.patch",
+      "size": 256612,
+      "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/neutral-compile-tests.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/neutral-compile-tests.log",
+      "size": 2729,
+      "sha256": "928e6d698d97fcad5587fcb8836b67f59c8a1ef6b53e7b28b168b88d5f650c33",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/notes-before-final.txt",
+      "size": 2539,
+      "sha256": "9a67a27cf094de2dfe13ec289263d6f163e68178f705410740b1e9ac3b290ab0",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-agent.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-agent.log",
+      "size": 228353,
+      "sha256": "53a33cca48cfbc89caa13d2f0b058b87338de1ca83fc20e73249a56facdf1f93",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-connected.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-connected.log",
+      "size": 7194,
+      "sha256": "bde588764f5ee67d1c517ec2eb05e1bceabe055fd23bfb06e2d47ae943150769",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-extended.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-extended.log",
+      "size": 11969,
+      "sha256": "5fb0525a244dc8cbbbabfe47a3137f76658d9d7372a2a93c6c84ebd512b212ac",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-first.log",
+      "size": 16271,
+      "sha256": "06cde62e5abb9c4656fde75f9f96de39af85cec609ef2ebf3d2a33abda903c1a",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-http.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-http.log",
+      "size": 13038,
+      "sha256": "f0c3b015f4e761d560d93b99cfa8ab3043e82724134d5a804e38042cb627416e",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-proxy.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-proxy.log",
+      "size": 227643,
+      "sha256": "ae90cf3422d11c9d580243faecf52abadc70268c90947da4d0389874184418ec",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-final.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-final.log",
+      "size": 263,
+      "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-first.log",
+      "size": 542,
+      "sha256": "c6792ed4085bc5ecea511e3376a0caaff01232be98ba10091b092860fbe859c6",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-summary.json",
+      "size": 5666,
+      "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.log",
+      "size": 263,
+      "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.py",
+      "size": 11906,
+      "sha256": "44851e7695cb3270430c18a2abaee0f9fb9cc00189d46013936e3571a9848cab",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/review-test.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/review-test.log",
+      "size": 2559,
+      "sha256": "495b59e22e4ac822b9e030dc099322527c9b4790e8745eba935f2fe8e4ac37ba",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup-partial.json",
+      "size": 293,
+      "sha256": "c4b3619a05e1ed0e0364ccdcd6af60762ca8f1226505f050414d9da2f7cecda1",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.json",
+      "size": 902,
+      "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.log",
+      "size": 192,
+      "sha256": "54a4b75a9e5f2001b1799f0bdbd62f11a4c2111abbbb7588f394ccf1c96b0113",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-first.json",
+      "size": 574,
+      "sha256": "b2b17c4fb096185c8faf306b620d93afc8150420bf7092f191ddd65cfdf6b722",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-host.json",
+      "size": 4638,
+      "sha256": "63051b51e0ae3dd428341704a5c4c3a32619cd6b43c40ede66787c4bae03c2c2",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-prebrowser.json",
+      "size": 272,
+      "sha256": "9065a3410b6241ef7b3d9eb3d3aad5106c8a371ae650f1ac39c2676812aa4fef",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/source-manifest.json",
+      "size": 24488,
+      "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/test-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/test-first.log",
+      "size": 6984,
+      "sha256": "b4f61550b51d4abd17f679e52913d2e95118ff7a03e694ce9a98810922d4d690",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/unowned-inputs.json",
+      "size": 342,
+      "sha256": "79c31abbe1ac5fe3adf11e1f66fe84ea622bffc50b35c9002a84a732ab519413",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-policy-tests.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-policy-tests.log",
+      "size": 2729,
+      "sha256": "c86996276f87cbd2cc9e4a84106a695c3fa6ee91b5b2a42f67ebec4dbf42e07a",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-tests.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-tests.log",
+      "size": 2729,
+      "sha256": "315614f654f02a97283576425bc977efe322e6762847b286839fd381796770c4",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-delivery.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-delivery.log",
+      "size": 53767,
+      "sha256": "ba248605909baee6b696e5516eec90dd89b119c0d3878d3a9b285b47f7c26c91",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-final.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-final.log",
+      "size": 54216,
+      "sha256": "b3e53be040f8d20e8b86c09037bbe588888f21a4bdb6b70268ff08b4fb0c38dd",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-first.log",
+      "size": 28878,
+      "sha256": "efb5c6c692c7729b2f1ebad3538e3e27852c2d576e5cbd83496551b462815bda",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-guardian.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-guardian.log",
+      "size": 53767,
+      "sha256": "0b00bd3934e0749588fdf158fc3ef06cdac5c8493d399b659e080014ebc533e5",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-races.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-races.log",
+      "size": 53687,
+      "sha256": "63c798572b2f96832e8d756614d7b1bc3e963b863131136fa6a354407065cee0",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/web-compile.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/web-compile.log",
+      "size": 3081,
+      "sha256": "5d32524b8a36c2c7636af870285f87cb5d6d111cdaa6664116f68ac95ad134f3",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/notes.txt",
+      "size": 511,
+      "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/questions.txt",
+      "size": 591,
+      "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/report.md",
+      "size": 22459,
+      "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5",
+      "owner": "M1 developer evidence",
+      "matches": true
+    },
+    {
+      "path": "docs/README.md",
+      "size": 10704,
+      "sha256": "ff07b5e9c1ed659f0f1b325ce99ff388e097a37ed5a1a02ed8661a27c821a089",
+      "moderation_change": "modified",
+      "before_sha256": "86386640157dbfa720b2e67aea5c3103a1033cd30bb7c20e0939fc25a3325f39",
+      "matches": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "size": 13156,
+      "sha256": "73570f1d1d0a44c8988095ed3484e1f78e2ee8034e22668988fcba4d66a686c5",
+      "moderation_change": "modified",
+      "before_sha256": "3d56c49c0e98a21af3ae103a33992374d8f7edc1b6396818a47f9d93a00d5c54",
+      "matches": true
+    },
+    {
+      "path": "docs/delivery.md",
+      "size": 15119,
+      "sha256": "a1b57184cc5413845da2cfa6f467252c887c6a2222f77e476ea4b18c890007cc",
+      "moderation_change": "modified",
+      "before_sha256": "780c8fb0340869527d213358d1506a2bf89673df00e8bb85a18455143ee023fe",
+      "matches": true
+    },
+    {
+      "path": "docs/payments.md",
+      "size": 11600,
+      "sha256": "aca3fad94dffca6974bc4a4296a344c90b049a33e8466048ffb0a99846a025d2",
+      "moderation_change": "modified",
+      "before_sha256": "8b7aac1ac2c42697d56880e0325cc4ca003c31dcbef1f3cdf5e26d5e7edf2df7",
+      "matches": true
+    },
+    {
+      "path": "docs/questions.md",
+      "size": 5414,
+      "sha256": "2e669c66ee0eb896e66817f36c0d716aca97680882e31eb4872ae83f75424a32",
+      "moderation_change": "modified",
+      "before_sha256": "705c7da3f80b9b766721de9876138d99c3e3537eec753df44bafb0965e8266af",
+      "matches": true
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "size": 14807,
+      "sha256": "64d98536eaf5d70d7fb2ed25f7f84e19a2234f77806742c0f334198bc6b6e401",
+      "moderation_change": "modified",
+      "before_sha256": "7d40ebb4ec3f28375db508851a8c7ee56faeba7aa923b6979d077dca6907730c",
+      "matches": true
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "size": 12446,
+      "sha256": "65dcfa6c5581c373f03635d238dfca5568fc4dc646bd2992b5c535ca0c70e3df",
+      "moderation_change": "modified",
+      "before_sha256": "936d52936035d1b43a0572bdd0b3a59aac40eee84225a71bfec6579f07a23a0b",
+      "matches": true
+    },
+    {
+      "path": "scripts/moderation-browser-qa.cjs",
+      "size": 13825,
+      "sha256": "a61ce96032734de81d6734d18e033624c6c4169f3560bd57c17f6af454857843",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/ModerationSchedule.java",
+      "size": 665,
+      "sha256": "7100817049ddc6ec508a32a346afc8bebce401103cc7195197fbbc51a0fc34b7",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/FileInspector.java",
+      "size": 2863,
+      "sha256": "9b1cd17f7dd3108f9fdec1db129dcd20d1429af3c0558d8e43a81c902b6e899e",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/PrivateFileService.java",
+      "size": 7772,
+      "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java",
+      "size": 159,
+      "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileAccess.java",
+      "size": 673,
+      "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileReference.java",
+      "size": 422,
+      "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/Admission.java",
+      "size": 717,
+      "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/AttachmentPolicyRouter.java",
+      "size": 481,
+      "sha256": "73c63931fb5cb1a7c9f81e13e00de5592b6cda770c02b83c5e284879792af957",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/CaseService.java",
+      "size": 11355,
+      "sha256": "cea76492446b05451f045f8172f388336ee8d29b7077ccf4905df010a443f9be",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentDigest.java",
+      "size": 1788,
+      "sha256": "6d6c96b719c311110e37ba1b4e4d88a4e9bd9262e7bd4b4b09f3f7a76ded6a09",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentReader.java",
+      "size": 7765,
+      "sha256": "15462444cc53159bb26108ab35bd06984a56b2fe6aa6bbc26b89d332eb139f11",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/DecisionService.java",
+      "size": 2513,
+      "sha256": "7b2239fce2b4130da1b22a7e15188ce18148562e2e81c3d66ece5396c4e45389",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationFailure.java",
+      "size": 157,
+      "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationService.java",
+      "size": 6744,
+      "sha256": "2e6354d978601f434811c5c1d09053ba691c49db7a1a4a02f3809d7ef0041c71",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationStore.java",
+      "size": 6203,
+      "sha256": "e8764cea1630cdb81cd9603539568c1512dd71425190b1df6ec268b42d93a61c",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationWorker.java",
+      "size": 9010,
+      "sha256": "686a1112ae376c4deb4f5c94061e9c5acb1ad62f48c954331b89b5a0cc50db05",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": false
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/OwnerRegistry.java",
+      "size": 784,
+      "sha256": "47a5369a3df74c72eee63e3cbcc53ce92e0b17c9c01381156304d2fa81254035",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewEngine.java",
+      "size": 136,
+      "sha256": "7fb7a61b900f02289b039d0745071584665ca1cfb1bff8beb0609781063900f3",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewInput.java",
+      "size": 358,
+      "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewResult.java",
+      "size": 1979,
+      "sha256": "9a4cf212875ea7cdd081872f039efefb8a2d235050677b7aa84168d45b9e2124",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": false
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticPolicy.java",
+      "size": 812,
+      "sha256": "f09f782cb1534ddf23471fc076d9bda17f17e1ba94a02dee2ea4a935eae52062",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticReviewEngine.java",
+      "size": 1277,
+      "sha256": "6b2f0ce6c5a65ff1af6f1066bdee02b6cc4c084bc133e1a224255f8af65abc60",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchOwner.java",
+      "size": 3044,
+      "sha256": "650945ebfaad4c503a8e3f71110e10358254ed94e6015c369378ae91450407b2",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchService.java",
+      "size": 9297,
+      "sha256": "7e0b2a376f73110eeb0f1f9b3f8f433558787e80062e60c1d42b5edfb38ef2de",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchStore.java",
+      "size": 2423,
+      "sha256": "d8099272849bcee38beb85636d30e423a6faee249f0a8e82a54c8d4e1a307301",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/AuthorContext.java",
+      "size": 662,
+      "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentOwner.java",
+      "size": 548,
+      "sha256": "be6ac56b2d28af275027dbdfdbabf4e0dbbba5489e0c48b736b42a730f8e2d9c",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentReference.java",
+      "size": 317,
+      "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ModerationAccess.java",
+      "size": 509,
+      "sha256": "5c304cbd2650a5ff7bbe0076c4838ca19a1267905e8a5d4fb0fc0a2e64530e90",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/SurfaceKind.java",
+      "size": 318,
+      "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ContentController.java",
+      "size": 1718,
+      "sha256": "0f88ddf44143f847cfb5482e7ad638c410c5a92667e6c6382b0ea1dbe439f753",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationController.java",
+      "size": 8320,
+      "sha256": "882392b202590aaacc511229ba2cb7e38b3f8be40eba2ff0fc069f3855f8bff2",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationErrors.java",
+      "size": 1257,
+      "sha256": "d75afebb4302d9bb76f360123817461b559d44f234ff469a178447f212a339de",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationSourceFilter.java",
+      "size": 1236,
+      "sha256": "2ad557f381e5696b140f7bc5b452a9820620e400c7b53b316e2f7a3eb8c69ab9",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationWords.java",
+      "size": 2423,
+      "sha256": "7205bb8a85c032f6ccd995ea237913a94e92ca916e8c889b34a71514a87f5e43",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "size": 3532,
+      "sha256": "c8d22862307bf49116f2124eac1a1d5e260e553ae3844388c2f7a17a2ee4eaf2",
+      "moderation_change": "modified",
+      "before_sha256": "369bb7b3eae6a79bee1974c5546275ca3e1603dd1416ab05259ddf2304db75c4",
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "size": 1267,
+      "sha256": "9e60364f1235ad2b25a2e16df0b960d26d110458092b10e4cb7323a7393e0d1f",
+      "moderation_change": "modified",
+      "before_sha256": "1de674acc2f3c1968dc770d944967d1306f1489e106b723fb89f9b94b9dc19dc",
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V4__moderation_and_private_files.sql",
+      "size": 9437,
+      "sha256": "a0623e3dc0d97b240d7174df50e09d1a0e1f83295b9eeed3bb6774487b68c927",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/static/style.css",
+      "size": 2877,
+      "sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda",
+      "moderation_change": "modified",
+      "before_sha256": "63a21071d41cf22ceed53610bab92d3ed2b99af091cc3443e5d3b5592b382d91",
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-detail.html",
+      "size": 1842,
+      "sha256": "e3ab5876c2ebdcf87c1300c1eeabec7e6038d6da4b1c17aa8863fb3806a9b97c",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-search.html",
+      "size": 1055,
+      "sha256": "8adfd254b400765dbd683384bbe3e5a42af0384115454fa5bc940e8f5a2b1494",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/home.html",
+      "size": 1435,
+      "sha256": "b82ec0cfb6ccab9be2e9e25cbf57e6691d9b3ac7de3537b51fd33eadc0426069",
+      "moderation_change": "modified",
+      "before_sha256": "e8f1da851175b58f77cf11d2d8334055d6145fc43aaa6dd74af68a2dffa619bd",
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-cases.html",
+      "size": 1109,
+      "sha256": "7c3c3c894b603e34db40284e428493843fbbbdca971bc7fc6a8dc0ddc46b647e",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-evidence.html",
+      "size": 1177,
+      "sha256": "8ababb64a55bbffbe6bfc342499d3428d908ae363606fbd1f1c3ca370c8a0016",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator-signin.html",
+      "size": 1220,
+      "sha256": "02407ca587df3ef47c71de1c73b95010de8253cb0f6d9c53e5eab983a7493193",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator.html",
+      "size": 4322,
+      "sha256": "fcc0bfeda957902c68c19056d1549700900df40b61ad467df525ac663c55b829",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-own.html",
+      "size": 4166,
+      "sha256": "dafdad98d0de108bbd53779bcfabe99313171cda0434101d7bc13d69250c0efe",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-workbench.html",
+      "size": 2700,
+      "sha256": "4930c0a2a5475ef6db8c4ff291037c2491f0bc15fa2d8a5a2fa3ebb935eb8fe6",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/shell.html",
+      "size": 993,
+      "sha256": "15aa630623aff6147b087e3c4b217a17ca7415ea439592ebb86eb97ccc9346ab",
+      "moderation_change": "modified",
+      "before_sha256": "2938b6ffad2a238ee38b5f5b8a10c38dfc193ac9199695aa890b8f683bb2b5fd",
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/files/FileInspectorTest.java",
+      "size": 2045,
+      "sha256": "ff998681b4711eb48f9b39acaa099472ece90e23a3ecf1d47a95512c23483056",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/IndependentOwner.java",
+      "size": 4341,
+      "sha256": "8af07b9ce86faa4d5bd41338c285583482dde03d04473cd87f477b9e3e2c2bed",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationContainerIT.java",
+      "size": 1827,
+      "sha256": "cb50c955e8529d44a7ed9aee33d23354b71c2b3ebf02642d01ca8a36736ed5ab",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationHttpTest.java",
+      "size": 11883,
+      "sha256": "6a63a17f3b0734b65ce4209ba12db401c3d217b49be93ac4b66b33f69fa7942b",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+      "size": 44428,
+      "sha256": "90587ec1c062c8b8b1a2d65aaf759977301a5ec9a25099dfb8a17c41f1bb076f",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": false
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ReviewValidationTest.java",
+      "size": 2658,
+      "sha256": "7cf1ce431c26f2013e54833fa47c65183120264860fa32517b3d2aa649a86d13",
+      "moderation_change": "added",
+      "before_sha256": null,
+      "matches": false
+    }
+  ],
+  "api_append_assessment": {
+    "path": "docs/agent-work/changeo-moderation/developer/logs/api-start.log",
+    "sealed_size": 596,
+    "takeover_start_size": 745,
+    "current_size": 1043,
+    "sealed_prefix_matches": true,
+    "takeover_start_prefix_matches": true,
+    "full_file_matches": false
+  },
+  "preexisting_correction_checkpoint": {
+    "current_path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+    "current_matches_old_seal": false,
+    "archive_path": "docs/agent-work/changeo-moderation/developer/logs/pre-MFR1-MFR3/CHECKPOINT.md",
+    "archive_matches_old_seal": true,
+    "current_unchanged_since_takeover": true
+  }
+}

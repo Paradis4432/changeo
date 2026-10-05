@@ -1,0 +1,19 @@
+{
+  "authority": "Automatic active goal continuation turn2, same fresh audit1 prior terminal goal turn; root owns lifecycle.",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "terminal503_before_useful_saved_MFR3_execution",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43ea4bbbd769269-EZE",
+  "native_started_utc": "2026-10-01T21:39:31.376Z",
+  "native_terminal_utc": "2026-10-01T21:43:35.157Z",
+  "actual_host_model": "gpt-6.1-sol",
+  "actual_host_effort": "high",
+  "native_state": "Same original builder errored confirmed and interrupted; no healthy work stopped, duplicate writer or settings change.",
+  "actual_progress": "No tool execution/source changes in this turn.143 current sources exact; prior20 validator/three actual PG focused passes retained. MFR3/full corrected handoff and same-reviewer acceptance remain incomplete.",
+  "current_source_check": "docs/agent-work/changeo-moderation/logs/current-continuation-turn2-source-check.exit",
+  "current_source_check_exit": 0,
+  "runtime_evidence_reused": "docs/agent-work/changeo-moderation/logs/current-continuation-runtime.json; last actual21:27 healthy PG/API/no8080, no subsequent runtime tools or process mutations.",
+  "next_action": "Return exact external route diagnosis/retained partial evidence to root for fresh audit/current turn2. On authorized useful continuation resume same builder at MFR3/full verification/durable handoff, then same final reviewer. No availability-only retry loop or alternative role/provider/model/CLI/config/probe/authority."
+}

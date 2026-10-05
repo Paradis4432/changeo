@@ -1,0 +1,12 @@
+{
+  "status": "blocked_without_independent_acceptance",
+  "artifacts": {
+    "docs/agent-work/changeo-moderation/coordinator-report.md": "9a06c36532e0bd788041a85f73e62b939e9c8bedf0ec68ea9b62d74854b4e27b",
+    "docs/agent-work/changeo-moderation/CHECKPOINT.md": "965583abbbd576a517f247d32a19604979417d98f0d187a51efd121f9dd874f8",
+    "docs/agent-work/changeo-moderation/logs/reviewer-provider-blocker.json": "0c6a3e6c732f9e3498f5470e25afdb9e66a43072048ea4378ddffe2585242eb2",
+    "docs/agent-work/changeo-moderation/logs/reviewer-app-cleanup.json": "94ac110345a11a989795dec5837ec85d57b94a24c5375afbefdede5ecf7c522a"
+  },
+  "coordinator_product_source_changes": false,
+  "final_reviewer_verdict": null,
+  "same_roles_retained": true
+}

@@ -1,0 +1,32 @@
+{
+  "canonical_login_account": {
+    "attempts": 12,
+    "allowed_checks": 10,
+    "limited": 2
+  },
+  "canonical_recovery_account": {
+    "attempts": 6,
+    "acknowledged": 5,
+    "limited": 1
+  },
+  "login_source": {
+    "distinct_known_accounts": 10,
+    "limited_next": true
+  },
+  "recovery_source": {
+    "distinct_known_accounts": 5,
+    "limited_next": true
+  },
+  "reauth_actor": {
+    "attempts": 6,
+    "password_checks": 5,
+    "limited": 1,
+    "correct_password_blocked": true
+  },
+  "reauth_source": {
+    "distinct_actors": 6,
+    "password_checks": 5,
+    "limited": 1,
+    "correct_password_blocked": true
+  }
+}

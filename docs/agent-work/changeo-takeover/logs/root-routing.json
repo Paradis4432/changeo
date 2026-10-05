@@ -1,0 +1,13 @@
+[
+  {
+    "type": "turn_context",
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  {
+    "type": "session_meta",
+    "id": "01a0f959-d9b3-7040-a5bd-32fd5122ccf6",
+    "model_provider": "codex-router-signed",
+    "source": "vscode"
+  }
+]

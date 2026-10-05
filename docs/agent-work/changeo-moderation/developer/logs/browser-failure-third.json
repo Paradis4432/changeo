@@ -1,0 +1,13 @@
+{
+  "keyboardRegistrationVerification": true,
+  "passwordOnlyDenied": true,
+  "currentIdentityEvidence": true,
+  "exactApprovedFile": true,
+  "reportCreated": true,
+  "appealCreated": true,
+  "stage": "authorApprovedAppeal",
+  "failure": "TimeoutError",
+  "frames": [
+    "    at run (/home/paradis/changeo/scripts/moderation-browser-qa.cjs:85:192)"
+  ]
+}

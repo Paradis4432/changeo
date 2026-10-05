@@ -1,0 +1,15 @@
+{
+  "phase": "MFR1-MFR3 same-builder corrections",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "configured_route_blocked_after_bounded_backoff",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43aabc729814703-EZE",
+  "captured_utc": "2026-10-01 10:10:00 UTC",
+  "backoff": "Native300000ms notification wait; exact errored child reconciled before sole recovery followup.",
+  "result": "Same recovery failed immediately; interrupted/retained, no corrected deliverable.",
+  "current_source_check": {"count": 143, "exit": 0, "log": "docs/agent-work/changeo-moderation/logs/correction-provider-source-check.log"},
+  "saved_progress": "Existing developer correction checkpoint and pre-MFR1-MFR3 archives retained; actual independent changes_requested report and54 sealed artifacts retained.",
+  "resume_action": "Resume same coordinator and sole builder from exact correction brief/checkpoint when existing configured authorized route can execute useful work; same reviewer then independently rechecks cumulative correction. No substitutions, source takeover or new founder answer."
+}

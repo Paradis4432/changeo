@@ -1,0 +1,33 @@
+{
+  "scope": "coordinator handoff completeness only, not source review/acceptance",
+  "underlying_exit": 0,
+  "status": "ready_for_review",
+  "seals_verified": 19,
+  "current_source_hashes": 143,
+  "checks_claimed": {
+    "verify_delivery_exit": 0,
+    "tests": 121,
+    "actual_container_executions": 45,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "browser_final_exit": 0,
+    "browser_delivery_restart_visual_exit": 0,
+    "preservation_final_exit": 0,
+    "source_changes": 63,
+    "source_hashes": 143,
+    "baseline_snapshots": 289,
+    "F3_snapshots": 87,
+    "F3_seals": 6,
+    "markdown_local_links": 108
+  },
+  "runtime_claims": {
+    "owned_app_absent": true,
+    "http8080_listener": false,
+    "test_containers": [],
+    "app_native17684_exit": 143,
+    "retained_database_pid": 1730365,
+    "retained_private_api_pid": 2094717
+  },
+  "ready_for_independent_review": true
+}

@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-10-01T05:59:49.241327+00:00",
+  "command": "python3 artifact existence/hash/verdict consistency and written migration amendment check",
+  "exit": 0,
+  "verdict": "ready",
+  "artifacts": [
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/f3/report.md",
+      "bytes": 13698,
+      "sha256": "f6b7bdcea77ccbb61e94479b104e32148dc0211b25cda52b70a92136ebae2502"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/f3/CHECKPOINT.md",
+      "bytes": 1138,
+      "sha256": "784920492f2db703eaac07b65f3d5af3074856a73f15b9ef62703cefca29a19e"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/f3/notes.txt",
+      "bytes": 771,
+      "sha256": "426f123e60cf97f68a938ff2852f266b3dd9b6121cae5f4dce08d79e460ff323"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/f3/questions.txt",
+      "bytes": 563,
+      "sha256": "54e3ee3f26729c13fcc2f2c5f8a2a22721ff25d9cb70e55a7934fb26990c1c74"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/f3/logs/inspection.json",
+      "bytes": 2685,
+      "sha256": "d1eeb4beaf297d4959efee4de9e3bee94e753bdeebc2b2fec30f374774e71897"
+    }
+  ],
+  "latest_plan": {
+    "path": "docs/agent-work/changeo-foundations/f3/plan.md",
+    "bytes": 9738,
+    "sha256": "dd43623bf68f200179c3d37b499b3d4cb7aad159ad0edb894cc31ec1447d7cb3"
+  },
+  "checks": {
+    "report_ready": true,
+    "checkpoint_ready": true,
+    "notes_ready": true,
+    "report_requires_behavioral_migration_records": true,
+    "report_allows_future_v4": true,
+    "report_no_fixed_total": true,
+    "report_preserves_ordinary_f2_eligibility": true,
+    "runtime_tests_not_claimed": true,
+    "moderation_still_held": true,
+    "prior_complete_baseline_inspection_passed": true,
+    "latest_written_root_amendment_present": true
+  },
+  "errors": [],
+  "runtime_tests_executed": false,
+  "scope": "plan readiness only; retained builder next, separate final acceptance before moderation release"
+}

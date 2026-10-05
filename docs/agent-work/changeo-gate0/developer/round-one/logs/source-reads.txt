@@ -1,0 +1,23 @@
+Task: /root/changeo_gate0/developer
+Workspace: /home/paradis/changeo
+Source outputs remain in native task transcript; authoritative originals and complete Markdown source snapshots remain in their supplied paths. This log records actual reads/results, not new copied sources or a claim of external revalidation.
+
+Initial cat docs/agent-work/changeo-gate0/developer-brief.md used default login shell. Complete brief output retrieved; Starship warned that its session log could not be written to read-only /home/paradis/.cache/starship. Underlying status was not retained in this local evidence. No change to shell/global configuration made; later commands used login=false.
+
+All following read commands returned underlying exit status 0:
+1. Batched individual cat reads: implementation originals user-goal.md and user-agents-and-environment.md; all eight main docs; planning requirements.md, CHECKPOINT.md, sources.md, planning-review.md, documentation-review.md. Combined returned display truncated, so sources not fully displayed there were retrieved below.
+2. cat docs/README.md docs/product-design.md docs/payments.md
+3. cat docs/business.md docs/trust-operations.md docs/architecture.md docs/marketing.md docs/delivery.md
+4. cat docs/agent-work/changeo-planning/requirements.md docs/agent-work/changeo-implementation/originals/user-agents-and-environment.md
+5. cat docs/agent-work/changeo-implementation/originals/user-goal.md
+6. cat docs/agent-work/changeo-implementation/feature-coordinator-brief.md docs/agent-work/changeo-implementation/GOAL-CHECKPOINT.md docs/agent-work/changeo-gate0/plan.md docs/agent-work/changeo-gate0/CHECKPOINT.md
+7. sed -n '280,420p' docs/agent-work/changeo-implementation/originals/user-goal.md (retrieve final truncated goal portion)
+8. cat docs/agent-work/changeo-implementation/feature-coordinator-brief.md (retrieve complete brief after combined display truncation)
+9. cat /home/paradis/.agents/skills/astra-flash-orchestrator/SKILL.md
+10. cat /home/paradis/.agents/skills/astra-flash-orchestrator/references/execution.md /home/paradis/.agents/skills/astra-flash-orchestrator/references/routing.md /home/paradis/.agents/skills/astra-flash-orchestrator/routing.json /home/paradis/.agents/skills/astra-flash-orchestrator/templates/task-report.md
+11. cat /home/paradis/.agents/skills/java-coding-standards/SKILL.md
+12. cat docs/agent-work/changeo-implementation/baseline.json docs/agent-work/changeo-implementation/root-routing.json docs/agent-work/changeo-implementation/logs/routing-doctor.log
+13. sed -n '250,305p' docs/agent-work/changeo-implementation/originals/user-goal.md (confirm routing and final goal continuity)
+14. cat docs/agent-work/changeo-implementation/child-routing.json (root-supplied actual host evidence)
+
+Complete source-baseline Markdown byte comparisons: see questions-check.txt (14 matches). Shared code-quality policy and Ponytail full controls fully injected, not an unread catalog substitute; see report.md. No Caveman/Java-JUnit/browser skill read claimed. No application behavior/test work authorized at open Gate0.

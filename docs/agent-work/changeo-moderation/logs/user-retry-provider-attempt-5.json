@@ -1,0 +1,14 @@
+{
+  "authority": "Root reassessed useful progress and authorized bounded-backoff same-builder completion; no arbitrary error-count cap.",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "terminal503_after_successful_focused_postgresql_corrections",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43e2ffc38241120-EZE",
+  "captured_utc": "2026-10-01 20:25:54 UTC",
+  "actual_progress": "Existing tx helper now wraps three canonical pointer assertions. MFR-pg-green.log/.exit0 verifies all three actual PostgreSQL correction regressions with zero failures/errors/skips. Prior failed MFR-green log/exit1 preserved;20 validator tests previously passed against unchanged validator.",
+  "remaining_work": "MFR3 both-order current byte-read restriction/Sensitive+Adult preference/private membership races, full actual PG/Testcontainers regression, cumulative patches/preservation/durable corrected handoff and same reviewer.",
+  "native_state": "Errored confirmed then interrupted; same writer/reviewer retained.",
+  "next_action": "Bounded five-minute native backoff then same-builder targeted MFR3/full completion; no discovery/red/focused-pass repetition without changes, no provider/settings/model/probe/substitution."
+}

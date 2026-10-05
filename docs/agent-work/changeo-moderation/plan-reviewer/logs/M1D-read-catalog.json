@@ -1,0 +1,182 @@
+{
+  "scope": "Full independent reads after compaction, material design/source snapshots at evidence capture; WIP source is not accepted",
+  "underlying_exit": 0,
+  "proposal_sha256": "a4f44bb3a043837fa28d6d0cb10ba681e740e1f4081176deff4eede684f3b0c2",
+  "reads": [
+    {
+      "path": "docs/agent-work/changeo-moderation/shared-contract-proposal-M1D.md",
+      "size": 7021,
+      "lines": 27,
+      "sha256": "a4f44bb3a043837fa28d6d0cb10ba681e740e1f4081176deff4eede684f3b0c2",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-moderation/shared-contract-proposal-M1D.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1D.md",
+      "size": 2736,
+      "lines": 11,
+      "sha256": "6bcb4ce2e5066f5164a29aabc35fc3aa126f6009f6dfa1d2c6050f7de44183fe",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-implementation/moderation-contract-M1D.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/plan.md",
+      "size": 21936,
+      "lines": 78,
+      "sha256": "125edd10a314e67915e40084dc32526a4d371e03e38d96eb96dbbb8cbfa2c5f2",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-moderation/plan.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/briefs/plan-reviewer-brief.md",
+      "size": 5531,
+      "lines": 17,
+      "sha256": "5f29e56bc16b6724a3c4d6d5ae4aa495871c62e00ee5eb0ece1524c66a4d2390",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-moderation/briefs/plan-reviewer-brief.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1C.md",
+      "size": 3210,
+      "lines": 11,
+      "sha256": "01678c5685f51018e466e177d784579fa5c388cbc9ea49a3ba1e0799c7db6803",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-implementation/moderation-contract-M1C.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/design-amendment-M1C.md",
+      "size": 3102,
+      "lines": 11,
+      "sha256": "62390194e33c8718321c91cfcbcd3be9a42b0fbbb76459cd3dde87c99cfc829b",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-moderation/design-amendment-M1C.md"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/design-amendment-M1C1.md",
+      "size": 2642,
+      "lines": 9,
+      "sha256": "ef121635f57cd78fb45c6c76148a37e1e821d1cf2e8c5bb6832e85c8a89996d3",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/docs/agent-work/changeo-moderation/design-amendment-M1C1.md"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/AuthorContext.java",
+      "size": 662,
+      "lines": 12,
+      "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/api/AuthorContext.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ModerationAccess.java",
+      "size": 449,
+      "lines": 10,
+      "sha256": "e23451fbc127e1bf536c79ff85e1e6f6aacf5985532c6f41e400cf97401e9b00",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/api/ModerationAccess.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentReference.java",
+      "size": 317,
+      "lines": 8,
+      "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/api/ContentReference.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationStore.java",
+      "size": 5341,
+      "lines": 60,
+      "sha256": "91ad8907bce36af674f639608a122bc2ee0a17748c8237f785808387b94fd97f",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/ModerationStore.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationWorker.java",
+      "size": 8607,
+      "lines": 112,
+      "sha256": "af9f0f4b82bc2cfb3a67cf6a08e1702babb93fc7011d228325fafa816a7b76b5",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/ModerationWorker.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/DecisionService.java",
+      "size": 1727,
+      "lines": 24,
+      "sha256": "3a532b72c5ca5bf0ee162f85fbb7a5b563525cd75d7c7fc742f2efc178de83b4",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/DecisionService.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentReader.java",
+      "size": 7055,
+      "lines": 94,
+      "sha256": "e7d485f7c106be86970abeb027b4eeeef6297b4ff1401ec6fd738f5a05d2df18",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/ContentReader.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentDigest.java",
+      "size": 1710,
+      "lines": 29,
+      "sha256": "fc420b921d22fe08e14bf4b066e2d1b77d56a9b6e7a876213dd022fcc5437c6d",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/ContentDigest.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewInput.java",
+      "size": 358,
+      "lines": 9,
+      "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/moderation/ReviewInput.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileAccess.java",
+      "size": 673,
+      "lines": 16,
+      "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/files/api/FileAccess.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileReference.java",
+      "size": 422,
+      "lines": 9,
+      "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/files/api/FileReference.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java",
+      "size": 159,
+      "lines": 5,
+      "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/PrivateFileService.java",
+      "size": 7772,
+      "lines": 113,
+      "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/files/PrivateFileService.java"
+    },
+    {
+      "path": "src/main/resources/db/migration/V4__moderation_and_private_files.sql",
+      "size": 7095,
+      "lines": 77,
+      "sha256": "d32a14c15b332fb0dbf19f325336cf91ee9f0801ce7899df0dbd9250454e4086",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/resources/db/migration/V4__moderation_and_private_files.sql"
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "size": 253,
+      "lines": 7,
+      "sha256": "29a4ff350751bff9cbd7d449beedf17983c8266f95e5df0896b13de4bf0ff5ae",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/identity/api/IdentityAccess.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+      "size": 727,
+      "lines": 18,
+      "sha256": "e073b295e43d46263c7e356c9f0226b33571b9f5d7413646ea24bcf1c260140a",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/identity/api/PermissionRequest.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+      "size": 335,
+      "lines": 12,
+      "sha256": "3e8d1666f33980dd074706bbdee2b0ef3bc45dbee5a45b33ec617b75a0a2c57d",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/identity/api/JobContext.java"
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+      "size": 8788,
+      "lines": 137,
+      "sha256": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784",
+      "snapshot": "docs/agent-work/changeo-moderation/plan-reviewer/logs/M1D-inputs/src/main/java/ar/changeo/identity/PermissionService.java"
+    }
+  ]
+}

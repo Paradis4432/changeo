@@ -1,0 +1,28 @@
+{
+  "phase": "third overall-goal turn, same-builder MFR1-MFR3 correction recovery",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "provider_impasse_after_test_first_progress",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43abf46dd74e97f-EZE",
+  "captured_utc": "2026-10-01 10:23:23 UTC",
+  "dispatch": "One root-authorized useful correction recovery of exact retained terminal builder; no duplicate/new role/model/provider/probe.",
+  "meaningful_saved_progress": {
+    "changed_source_paths": ["src/test/java/ar/changeo/moderation/ModerationPostgresTest.java", "src/test/java/ar/changeo/moderation/ReviewValidationTest.java"],
+    "test_first_command_log": "docs/agent-work/changeo-moderation/developer/logs/MFR-red.log",
+    "underlying_exit": 1,
+    "result": "New activation recovery/exhaustion and coherent machine tuple/worker regressions reproduce original defects;23 executions,19 failures/one error,zero skips. No production fix or green correction verification saved."
+  },
+  "current_sources": {
+    "initial_manifest_count": 143,
+    "unchanged": 141,
+    "changed": 2,
+    "comparison": "docs/agent-work/changeo-moderation/logs/builder-correction-attempt-3/source-comparison.tsv",
+    "partial_test_snapshots": "docs/agent-work/changeo-moderation/logs/builder-correction-attempt-3",
+    "ModerationWorker_and_ReviewResult": "unchanged from independently rejected initial delivery"
+  },
+  "native_state": "Confirmed errored then interrupted; same builder retained, no healthy work interrupted.",
+  "acceptance": "Actual same-reviewer changes_requested remains binding; partial test work unaccepted, corrected delivery and re-review absent.",
+  "resume_action": "When existing configured route can execute required role, resume same coordinator/builder from correction brief/developer checkpoint plus saved red regression/partial source evidence. Complete product fixes/MFR3/full verification/durable handoff, then same final reviewer cumulative re-review. Root alone owns overall blocked audit/lifecycle."
+}

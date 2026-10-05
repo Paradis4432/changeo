@@ -1,0 +1,8 @@
+{
+  "command": "python3 - <<'PY'\nimport json, hashlib\nfrom pathlib import Path\nroot=Path('docs/agent-work/changeo-implementation')\nm=json.loads((root/'personal-account-baseline.json').read_text())\nfor name, expected in m['files'].items():\n current=Path(name).read_bytes(); snapshot=(root/'personal-account-baseline'/name).read_bytes()\n assert current == snapshot, name\n for data in [current,snapshot]:\n  assert len(data)==expected['bytes'] and hashlib.sha256(data).hexdigest()==expected['sha256'],name\n print(name, 'complete current/snapshot bytes match', len(current), expected['sha256'])\nprint('PASS: all three full snapshots read; their complete text is identical to independently displayed current documents.')\nPY",
+  "chunk_id": "d04d4b",
+  "wall_time_seconds": 0.000009148,
+  "exit_code": 0,
+  "original_token_count": 134,
+  "output": "docs/questions.md complete current/snapshot bytes match 3187 78812bf70e364953cc261198696fa4f4a508c33aeaa64ba79402da3364a1a460\ndocs/gate0-research.md complete current/snapshot bytes match 46758 50db16f4093aca44f94b532c55d3e05eb4af3be3032e927cb4dc2285c1f4d742\ndocs/agent-work/changeo-gate0/developer/questions.txt complete current/snapshot bytes match 3508 af9496bb62a6f760ca3e85e34058c15a31b0133d97bca465a3f348152f4c1216\nPASS: all three full snapshots read; their complete text is identical to independently displayed current documents.\n"
+}

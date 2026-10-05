@@ -1,0 +1,100 @@
+{
+  "captured_at": "2026-10-01T03:51:30.087829+00:00",
+  "command": "python3 final F2 read-manifest/artifact/verdict/clarification verification",
+  "exit": 0,
+  "missing": [],
+  "errors": [],
+  "verdict": "ready",
+  "source_manifest": [
+    {
+      "path": "docs/agent-work/changeo-foundations/design-amendment-F2.md",
+      "bytes": 12631,
+      "sha256": "fb48694b1f95cb5df4e84f0a5e96987ad8cd6e1c01e6944c19e1c3de182d5099",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan.md",
+      "bytes": 12495,
+      "sha256": "e3e789f7bc61748874288e756004eb344366e1671f0d94f33834efcd4338bf9b",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer-brief.md",
+      "bytes": 9939,
+      "sha256": "1dd226bf828a64ed8e32d1ba69bedc5c9a60585927b16c7ab31e86152fe3d291",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/CHECKPOINT.md",
+      "bytes": 1775,
+      "sha256": "70d8b175577f6967d57d30572bcd0d3c4515068230459ab581d6f6b106f76897",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F2.md",
+      "bytes": 4201,
+      "sha256": "f9c277316a9b60e023b1e4b78c14e1db796dad72f608989e114638bee523183e",
+      "read": "complete; final post-clarification amendment/root decision read"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/report.md",
+      "bytes": 9222,
+      "sha256": "f16f0c3709b65021d04d17632c3b05a59790488513ec0ee113af5d1b5f2fa292"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/CHECKPOINT.md",
+      "bytes": 832,
+      "sha256": "10bff3183b8cf24eea730487fe873499f98953c440e48ca779b58959cbdf163f"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/notes.txt",
+      "bytes": 442,
+      "sha256": "ecca5525db54e78d74af4a0363054e4595c593714353f9787b6b4b6a79c853d1"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/questions.txt",
+      "bytes": 365,
+      "sha256": "2c60c5444dfcba672009559f65143bae9d1b9397829e31e1497576fd5b01cd49"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/report.before-F2.md",
+      "bytes": 19801,
+      "sha256": "2bb47daa7406784836cb528c0953dce726026c639735da0d2867dcef2b02df0d"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/CHECKPOINT.before-F2.md",
+      "bytes": 722,
+      "sha256": "0c1077a5a8dfda5d985fe90f1c68a998ec260446064f53e2dcc8ff51fb3375a0"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/notes.before-F2.txt",
+      "bytes": 359,
+      "sha256": "77cffaa9a03b3f392bd817de1e8ca737932dc4c428a7cdc5fc20b98101cf0817"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/questions.before-F2.txt",
+      "bytes": 450,
+      "sha256": "a6f51fed73411b1859258b50f2e7864116ea2df700582d42effe530afb3f2f90"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/logs/verification.json",
+      "bytes": 8496,
+      "sha256": "793fda398e49cfcdcef6518bf41ba6eff2e2d570f1c3b5cd915b24ec9059e0b8"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/logs/web-evidence.md",
+      "bytes": 1376,
+      "sha256": "129aa527466ceed8a2387287b15331025c3a7712fd84f66d7ddbab2482cf8637"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan-reviewer/logs/revision-F2-read.json",
+      "bytes": 2389,
+      "sha256": "d2e734574134d1551d6e87106366cfb0514fa54a2a47bb8200db354edca4d33f"
+    }
+  ],
+  "runtime_tests": "not run; plan review only",
+  "prior_evidence_reused": true,
+  "write_tool_retry": "apply_patch rejected same-path delete/add as invalid before edits; safe quoted Python write then succeeded, exit 0"
+}

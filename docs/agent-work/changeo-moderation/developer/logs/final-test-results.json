@@ -1,0 +1,213 @@
+[
+  {
+    "name": "ar.changeo.files.FileInspectorTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldVerifyImageSignatureDecodeAndDimensionBeforePixelAllocation",
+      "shouldInspectUtf8HoldArbitraryTextAndQuarantineUnsupportedBytes"
+    ]
+  },
+  {
+    "name": "ar.changeo.identity.IdentityPostgresTest",
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldKeepMailboxAndFactorMaterialPrivateAndFailClosedOnBadKey",
+      "shouldKeepGuardianTerminalStatesAndRequireCurrentVersionIndependentEvidence",
+      "shouldPreserveIndependentlyEstablishedOrdinaryEligibilityForModerationOperators",
+      "shouldRequireMfaForBothModerationRolesAndFreshPasswordOnlyForReview",
+      "shouldSerializeModerationReviewIntentAgainstRoleRemovalAndRollbackCaughtDenial",
+      "shouldKeepControlledOwnRightsAfterRestrictionRevocationExpiryAndRelink",
+      "shouldConsumeMfaCounterAtomicallyAndKeepReplayProtectionAcrossServiceInstances",
+      "shouldUpgradePopulatedIdentityRolesWithoutChangingOriginalRowsKeysOrChecksums",
+      "shouldGrantOnlyExactFocusedModerationRolesForKnownSelfWithoutJobContext",
+      "shouldAllowOnlyOneConcurrentTokenConsumption",
+      "shouldEnforceAdultMinorProviderGuardianAndExactPayerMatrix",
+      "shouldConsumeRecoveryOnceAndInvalidateAllPreviousGenerationsPreservingMfa",
+      "shouldValidateSyntheticContactsDuplicatesAndPasswords",
+      "shouldSerializePendingGuardianReviewAgainstRevocationWithoutRevivingTerminalAuthority",
+      "shouldEnforceCsrfHttpOwnershipAdminAndEpochOnEveryOldSession",
+      "shouldSerializeProtectedCommitsAgainstRevocationRestrictionsAndRoleRemoval",
+      "shouldVerifyOnlyOwnCurrentContactTokenAndPreservePendingFailure",
+      "shouldRollbackDeniedProtectedIntentEvenIfCallerCatchesFailure",
+      "shouldProvisionFocusedRolePrivatelyAndRemoveItWithEpochAndAudit(String)[1]",
+      "shouldProvisionFocusedRolePrivatelyAndRemoveItWithEpochAndAudit(String)[2]",
+      "shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation"
+    ]
+  },
+  {
+    "name": "ar.changeo.identity.SandboxSafetyTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldDenyPublicOrAmbiguousBind(String)[1]",
+      "shouldDenyPublicOrAmbiguousBind(String)[2]",
+      "shouldDenyPublicOrAmbiguousBind(String)[3]",
+      "shouldDenyPublicOrAmbiguousBind(String)[4]",
+      "shouldDenyMissingManagementBind",
+      "shouldDenyRealMoneyAndProfileOverrides",
+      "shouldAllowOnlyPrivateSandbox"
+    ]
+  },
+  {
+    "name": "ar.changeo.identity.TotpTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldMatchRfc6238Sha1Vector"
+    ]
+  },
+  {
+    "name": "ar.changeo.identity.WebsiteSecurityTest",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldLimitCanonicalRecoveryContactAcrossAliasesAndSourcesWithGenericAcknowledgment(String)[1]",
+      "shouldLimitCanonicalRecoveryContactAcrossAliasesAndSourcesWithGenericAcknowledgment(String)[2]",
+      "shouldLimitCanonicalRecoveryContactAcrossAliasesAndSourcesWithGenericAcknowledgment(String)[3]",
+      "shouldLoginLogoutAndRequireRealSessionMfaFreshPasswordCurrentEpochAndRoles",
+      "shouldEnforceFocusedModerationRolesThroughActualLoginMfaFreshnessAndOwnerTransaction(String)[1]",
+      "shouldEnforceFocusedModerationRolesThroughActualLoginMfaFreshnessAndOwnerTransaction(String)[2]",
+      "shouldEnforceFocusedModerationRolesThroughActualLoginMfaFreshnessAndOwnerTransaction(String)[3]",
+      "shouldLimitReauthenticationSourceAcrossDistinctActors",
+      "shouldDenyStepupReplayAndClearOrdinaryAndMfaSessionsAfterReprovision",
+      "shouldLimitCanonicalLoginAccountAcrossContactAliasesAndSources(boolean)[1]",
+      "shouldLimitCanonicalLoginAccountAcrossContactAliasesAndSources(boolean)[2]",
+      "shouldRejectWrongActorEpochRestrictionAndRemovedModerationRoleWithRealSessionProof",
+      "shouldKeepRecoveryResponseGenericEvenWhenPrivateDeliveryFails",
+      "shouldLimitReauthenticationActorAcrossSourcesWithoutGrantingFreshAuthentication",
+      "shouldKeepMissingAndMalformedLoginGenericAndBounded",
+      "shouldLimitRecoverySourceAcrossDistinctAccounts",
+      "shouldLimitLoginSourceAcrossDistinctAccounts"
+    ]
+  },
+  {
+    "name": "ar.changeo.moderation.ModerationHttpTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldBoundActorAcrossIndependentRemoteSourcesAndRejectStaleSessionOnNextRequest",
+      "shouldBoundRemoteSourceBeforeMutationPreserveStatusAndExpireWindow",
+      "shouldDenyPasswordOnlyAuditorPayloadAndExpiredProofAndEscapeUntrustedEvidence",
+      "shouldRenderSpanishWorkflowAndApplyExactApprovalToEveryPublicProjection"
+    ]
+  },
+  {
+    "name": "ar.changeo.moderation.ModerationPostgresTest",
+    "tests": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldClaimConcurrentlyRecoverLeaseRejectStaleTokenAndBoundOutageRetries",
+      "shouldCreateActivationForManualAppealAndLabelCorrectionAndKeepWarningsReversible",
+      "shouldKeepCommittedUnsubmittedDraftPrivateAndReplayWithoutNewArtifactsOrTasks",
+      "shouldPreserveGuardianMetadataButDenySubmissionAndActivationAfterRevocation",
+      "shouldDenyReadWaitingBehindCommittedRecall",
+      "shouldHoldUnderlabelledAttachmentsAndRejectProhibitedManualAndAutomatedApproval",
+      "shouldSerializeActivationBeforeRestrictionAndGuardianSubmissionBeforeRevocation",
+      "shouldLeaveDurableTasksUntouchedWhenSyntheticWorkerIsDisabled",
+      "shouldKeepIdentityGuardThroughSubmissionCommitAndDenyAfterWinningRestriction",
+      "shouldBoundActorCommandsPreserveReplayAndRecoverAfterWindow",
+      "shouldPreserveApprovalWhenActivationEligibilityDeniesAndAllowOneDeliberateRetryGeneration",
+      "shouldEnforceByteBindingQuarantineCorruptionAndOwnedReadTransaction",
+      "shouldRollbackCaughtOwnerCallbackAndAdmissionFailuresWithoutPartialEffects",
+      "shouldRecoverDurableApprovalActivationAfterNewWorkerAndAvoidDuplicateEffects",
+      "shouldPermitCanonicalEditWhileBackgroundResultHoldsOnlyModerationLocks",
+      "shouldRollbackCaughtBindingFailureAfterSuccessfulIdentityAndRejectAbsentTransaction",
+      "shouldRecheckPrivateMembershipAndPreferencesAndConfineFilesToSafePrivatePaths",
+      "shouldHideAdultUnknownPendingAndPrivateContentUntilCurrentAudienceAllows",
+      "shouldEnforceOperatorProofLeastPrivilegeCurrentRoleAndIndependentApproval",
+      "shouldSerializeFileCopyBeforeRecallAndDenyAfterRecallCommit",
+      "shouldRetainExactApprovedRevisionAcrossPendingEditStaleResultsAndRecall",
+      "shouldUseIndependentCanonicalOwnerForSnapshotActivationRecallAndFilesWithoutWorkbenchRows"
+    ]
+  },
+  {
+    "name": "ar.changeo.moderation.ReviewValidationTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldHoldArbitraryInstructionsAndKeepTattooGeneral",
+      "shouldRejectWrongBindingsExtraFieldsAndContradictoryApproval"
+    ]
+  },
+  {
+    "name": "ar.changeo.identity.PostgresContainerIT",
+    "tests": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldKeepMailboxAndFactorMaterialPrivateAndFailClosedOnBadKey",
+      "shouldKeepGuardianTerminalStatesAndRequireCurrentVersionIndependentEvidence",
+      "shouldPreserveIndependentlyEstablishedOrdinaryEligibilityForModerationOperators",
+      "shouldRequireMfaForBothModerationRolesAndFreshPasswordOnlyForReview",
+      "shouldSerializeModerationReviewIntentAgainstRoleRemovalAndRollbackCaughtDenial",
+      "shouldKeepControlledOwnRightsAfterRestrictionRevocationExpiryAndRelink",
+      "shouldConsumeMfaCounterAtomicallyAndKeepReplayProtectionAcrossServiceInstances",
+      "shouldUpgradePopulatedIdentityRolesWithoutChangingOriginalRowsKeysOrChecksums",
+      "shouldGrantOnlyExactFocusedModerationRolesForKnownSelfWithoutJobContext",
+      "shouldAllowOnlyOneConcurrentTokenConsumption",
+      "shouldEnforceAdultMinorProviderGuardianAndExactPayerMatrix",
+      "shouldConsumeRecoveryOnceAndInvalidateAllPreviousGenerationsPreservingMfa",
+      "shouldValidateSyntheticContactsDuplicatesAndPasswords",
+      "shouldSerializePendingGuardianReviewAgainstRevocationWithoutRevivingTerminalAuthority",
+      "shouldEnforceCsrfHttpOwnershipAdminAndEpochOnEveryOldSession",
+      "shouldSerializeProtectedCommitsAgainstRevocationRestrictionsAndRoleRemoval",
+      "shouldVerifyOnlyOwnCurrentContactTokenAndPreservePendingFailure",
+      "shouldRollbackDeniedProtectedIntentEvenIfCallerCatchesFailure",
+      "shouldProvisionFocusedRolePrivatelyAndRemoveItWithEpochAndAudit(String)[1]",
+      "shouldProvisionFocusedRolePrivatelyAndRemoveItWithEpochAndAudit(String)[2]",
+      "shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation",
+      "shouldMigratePostgresTwiceAndEnforceAuditImmutability"
+    ]
+  },
+  {
+    "name": "ar.changeo.moderation.ModerationContainerIT",
+    "tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "shouldClaimConcurrentlyRecoverLeaseRejectStaleTokenAndBoundOutageRetries",
+      "shouldCreateActivationForManualAppealAndLabelCorrectionAndKeepWarningsReversible",
+      "shouldKeepCommittedUnsubmittedDraftPrivateAndReplayWithoutNewArtifactsOrTasks",
+      "shouldPreserveGuardianMetadataButDenySubmissionAndActivationAfterRevocation",
+      "shouldDenyReadWaitingBehindCommittedRecall",
+      "shouldHoldUnderlabelledAttachmentsAndRejectProhibitedManualAndAutomatedApproval",
+      "shouldSerializeActivationBeforeRestrictionAndGuardianSubmissionBeforeRevocation",
+      "shouldLeaveDurableTasksUntouchedWhenSyntheticWorkerIsDisabled",
+      "shouldKeepIdentityGuardThroughSubmissionCommitAndDenyAfterWinningRestriction",
+      "shouldBoundActorCommandsPreserveReplayAndRecoverAfterWindow",
+      "shouldPreserveApprovalWhenActivationEligibilityDeniesAndAllowOneDeliberateRetryGeneration",
+      "shouldEnforceByteBindingQuarantineCorruptionAndOwnedReadTransaction",
+      "shouldRollbackCaughtOwnerCallbackAndAdmissionFailuresWithoutPartialEffects",
+      "shouldRecoverDurableApprovalActivationAfterNewWorkerAndAvoidDuplicateEffects",
+      "shouldPermitCanonicalEditWhileBackgroundResultHoldsOnlyModerationLocks",
+      "shouldRollbackCaughtBindingFailureAfterSuccessfulIdentityAndRejectAbsentTransaction",
+      "shouldRecheckPrivateMembershipAndPreferencesAndConfineFilesToSafePrivatePaths",
+      "shouldHideAdultUnknownPendingAndPrivateContentUntilCurrentAudienceAllows",
+      "shouldEnforceOperatorProofLeastPrivilegeCurrentRoleAndIndependentApproval",
+      "shouldSerializeFileCopyBeforeRecallAndDenyAfterRecallCommit",
+      "shouldRetainExactApprovedRevisionAcrossPendingEditStaleResultsAndRecall",
+      "shouldUseIndependentCanonicalOwnerForSnapshotActivationRecallAndFilesWithoutWorkbenchRows",
+      "shouldApplyModerationMigrationValidateAndRepeatWithoutEffects"
+    ]
+  }
+]

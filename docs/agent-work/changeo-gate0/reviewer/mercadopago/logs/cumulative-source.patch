@@ -1,0 +1,121 @@
+--- original/docs/README.md
++++ docs/README.md
+@@ -1,10 +1,10 @@
+ # Changeo planning documentation
+ 
+-Status: planning and discovery program accepted; product implementation is gated. Updated: 24 September 2026.
++Status: planning and discovery program accepted; product implementation is gated. Updated: 30 September 2026.
+ 
+ Changeo is an Argentina-wide marketplace where people offer services or publish requests for services they need. The two starting journeys are **Ofrezco** and **Necesito**. Service names are freeform; fulfillment can be local, remote or shipped. Customers pay the agreed service price; providers fund the platform through subscriptions, with Changeo covering processing costs.
+ 
+-The latest instruction, “write to docs,” replaces the earlier `plan/` destination. This package records the planning conversation; it does not establish a payment partnership, authorize spending or declare the product ready to launch.
++The instruction “write to docs” replaced the earlier `plan/` destination. The founder subsequently selected **Mercado Pago for payments**, covering job payments and provider billing planning. This selection does not establish account eligibility, a custody/credit arrangement, commercial terms, spending authority or launch readiness.
+ 
+ ## Read the plan
+ 
+@@ -34,6 +34,7 @@
+ | Delivery | In-person, remote and shipped custom outputs. |
+ | Launch | One public production launch with real payments; resolve payment feasibility before product implementation. |
+ | Money | Negotiate full job price; fund upfront; final-only release under accepted per-job terms; Changeo absorbs processing costs. |
++| Payment provider | Mercado Pago selected for job-payment and provider-billing planning; exact supported arrangement and commercial approval remain Gate0 outputs. |
+ | Refunds | Original payment method or explicitly chosen customer credits. |
+ | Progress | Work/feedback stages are supported; intermediate approval releases no money. |
+ | Revenue | Monthly provider subscriptions; free founding launch, then trials. Customers have no platform subscription. |
+@@ -55,10 +56,10 @@
+ 
+ Adult-content classification and age controls are covered. Booking sexual services and commissioning pornography are outside this implementation plan. The original request is retained in the source record rather than rewritten to suggest the user withdrew it.
+ 
+-No paid-provider price, trial length, bonus threshold, holding limit, legal entity, payment partner, AI vendor, host, launch date or advertising budget has been approved. These have named discovery outputs in [Delivery](delivery.md); they are not free choices for an implementer.
++Mercado Pago is selected. No paid-provider price, trial length, bonus threshold, holding limit, legal entity, payment account/contract, AI vendor, host, launch date or advertising budget has been approved. The supplied monthly envelope and solo regular-hours support are recorded in [Questions](questions.md). Remaining values have named discovery outputs in [Delivery](delivery.md); they are not free choices for an implementer.
+ 
+ ## First gate
+ 
+-Obtain a viable business/payment arrangement that supports the required Argentina funds flow, full-price funding, accepted release conditions, refunds, credit backing, eligible users and processing-cost subsidy. Public documentation has not established a suitable partner. A normal marketplace split or temporary card authorization is not proof of the requested holding mechanism.
++Establish a supported Mercado Pago Argentina arrangement for full-price funding, accepted final release, refunds, credit backing, eligible users and processing-cost subsidy. The [selected-provider research](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) has not publicly established the complete required flow. A normal marketplace split, temporary card authorization or scheduled transfer is not proof of the requested custody mechanism.
+ 
+ If the gate fails, return to the founder for a product-model decision. Do not silently weaken payment protection or promise an unverified launch.
+--- original/docs/architecture.md
++++ docs/architecture.md
+@@ -1,6 +1,6 @@
+ # Architecture and shared contracts
+ 
+-Status: architecture baseline for later bounded feature plans. No application exists yet. Payment, age, vendor and business contracts must pass [Gate0](delivery.md#gate0-feasibility-before-product-implementation) before implementation.
++Status: architecture baseline for later bounded feature plans. No application exists yet. Mercado Pago is selected for job-payment and provider-billing planning; supported account/financial contracts, age, remaining vendor and business contracts must pass [Gate0](delivery.md#gate0-feasibility-before-product-implementation) before implementation.
+ 
+ ## Stack and deployment shape
+ 
+@@ -26,6 +26,8 @@
+ | Notifications and jobs | Durable delivery intents, safe retries, scheduled work and delivery status. |
+ 
+ Each owner controls its writes and exposes behavior-level operations to callers. Prefer clear responsibilities and traceable failure paths over a blanket ban on useful abstractions. Payment, identity and moderation integrations have justified boundaries; do not build a speculative multi-vendor framework.
++
++Plan the payment integration around Mercado Pago within the existing payments owner. The [capability findings](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) leave collected custody, final-release control and backed credits unresolved. Selection introduces no endpoint/schema contract and does not authorize automatic split, delayed capture or an ordinary operating-account balance as the required holding arrangement. Billing uses approved Mercado Pago features only after account/commercial evidence; subscription entitlements and promotional credits retain their separate owner.
+ 
+ ## Core records and behavior contracts
+ 
+--- original/docs/business.md
++++ docs/business.md
+@@ -7,6 +7,8 @@
+ Founding launch is free, followed by a defined trial/subscription policy. The duration, start trigger, subscription price, renewal notice, grace period and cancellation/refund terms are not yet approved. Determine them from willingness-to-pay research, actual partner costs and the financial model before implementation. Obtain explicit renewal/payment authorization; a free founding account is not permission for a surprise charge.
+ 
+ Changeo absorbs processing costs. This is separate from charging no platform transaction commission: payment providers can still charge Changeo. At high transaction volumes a provider may cost more to serve than their subscription contributes; the model must expose that risk.
++
++The founder selected **Mercado Pago** for job payments and provider billing planning on 30 September 2026. Its [subscriptions overview](https://www.mercadopago.com.ar/developers/es/docs/subscriptions/overview) describes recurring billing, monthly frequency and trials with Argentina availability. Account approval, exact methods/fees, renewal/cancellation terms and promotional-credit treatment remain to validate. Job custody and reusable refund-credit backing are separate unresolved capabilities in the [R3 findings](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3). Selection supplies no subscription price, reserve funding or fee-subsidy mechanism.
+ 
+ ## Subscription behavior
+ 
+@@ -65,4 +67,4 @@
+ 
+ Before product implementation, the founder must accept modeled subscription terms, free/trial periods, reward limits, subsidy exposure, support capacity, reserve funding and initial marketing budget. Gate0 must record exact approved values and evidence; developers do not choose them.
+ 
+-No budget amount or launch date was committed in the conversation. Marketing investment is intended to be substantial, but this documentation does not authorize spending. Optional held-fund yield is a separate feasibility hypothesis in [Payments](payments.md), with zero contribution in the base case.
++The founder supplied **`100$ a month`** on 30 September 2026. Use **USD100/month provisionally** to compare the existing USD vendor quotations; the currency was not separately specified. This is a planning envelope, not purchase authority. No upfront capital, runway, separate reserve/setup funding, dedicated advertising allocation or launch date was supplied. Marketing investment is still intended to be substantial. The [budget-informed comparison](gate0-research.md#supplied-budget-and-solo-support--r2) separates lean private-staging arithmetic from full launch costs; exact commercial terms and funded feasibility remain Gate0 outputs. Optional held-fund yield is a separate feasibility hypothesis in [Payments](payments.md), with zero contribution in the base case.
+--- original/docs/marketing.md
++++ docs/marketing.md
+@@ -54,6 +54,6 @@
+ 
+ ## Budget and expansion gates
+ 
+-The founder approves channel budgets, runway and stop/expand thresholds after the [business model](business.md) includes processing subsidies, moderation and support. No budget or CAC was supplied, so none is fabricated here.
++The founder approves channel budgets, runway and stop/expand thresholds after the [business model](business.md) includes processing subsidies, moderation and support. The supplied **`100$ a month`** is the known recurring planning envelope, compared provisionally as USD100/month. It does not establish a dedicated campaign allocation, upfront acquisition funding, runway or CAC. Substantial paid-acquisition intent remains; the [budget comparison](gate0-research.md#supplied-budget-and-solo-support--r2) leaves campaign funding and tranche thresholds unresolved rather than treating the whole envelope as advertising money. No spending authority follows.
+ 
+ Before releasing a tranche, set numeric targets from the financial model for suitable-response rate, completed-job conversion, contribution, retention, fraud and support capacity. If a campaign attracts demand that cannot be served, correct coverage rather than buying more unfulfilled requests. Do not fund acquisition from customer money awaiting release.
+--- original/docs/payments.md
++++ docs/payments.md
+@@ -1,6 +1,6 @@
+ # Payments, refunds and held funds
+ 
+-Status: required product behavior defined; partner capability, legal structure and commercial terms remain unverified. No real-money implementation may start before [Gate0](delivery.md#gate0-feasibility-before-product-implementation) passes.
++Status: Mercado Pago selected for job payments and provider billing planning on 30 September 2026; custody/credit capability, legal structure, account eligibility and commercial terms remain unverified. No real-money implementation may start before [Gate0](delivery.md#gate0-feasibility-before-product-implementation) passes.
+ 
+ ## Required money flow
+ 
+@@ -10,7 +10,7 @@
+ 
+ ## Feasibility evidence required
+ 
+-The founder owns business setup and commercial/legal decisions. An Astra investigation can prepare comparisons, source evidence, funds-flow diagrams and partner questions. Written partner confirmation and applicable professional review must establish:
++The founder owns business setup and commercial/legal decisions. The coordinator records Mercado Pago source evidence and the [prepared capability inquiry](gate0-research.md#mercado-pago-inquiry--prepared-not-sent); provider choice is answered. Written Mercado Pago confirmation and applicable professional review must establish:
+ 
+ - Argentina/ARS eligibility for the platform, providers, customers and guardian-paid jobs.
+ - Permitted services and supported payment methods.
+@@ -21,7 +21,7 @@
+ - Customer refund-credit backing, reuse, mixed funding, account closure and any redemption rights.
+ - Onboarding/KYC, tax/invoicing, reserves, reconciliation, authenticated events and idempotent operations.
+ 
+-The public [Mercado Pago split flow](https://www.mercadopago.com.ar/developers/es/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace) allocates payment to seller/marketplace and deducts processing commission from seller proceeds. It does not establish the requested final-acceptance custody control. Its [seven-day card authorization](https://www.mercadopago.com.ar/developers/es/docs/checkout-api-payments/payment-management/make-value-reserve?scope=prod) is not collected escrow and cannot be assumed to cover long jobs. Escrow.com's documented [currencies](https://www.escrow.com/support/supported-currencies) exclude ARS; it is not a selected launch solution.
++The public [Mercado Pago split flow](https://www.mercadopago.com.ar/developers/es/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace) allocates payment to seller/marketplace and deducts processing commission from seller proceeds. It does not establish the requested final-acceptance custody control; its localized examples include BRL and do not establish this account's Argentina eligibility. Its [seven-day card authorization](https://www.mercadopago.com.ar/developers/es/docs/checkout-api-payments/payment-management/make-value-reserve?scope=prod) is not collected escrow and cannot be assumed to cover long jobs. The [R3 findings](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) distinguish Argentina/ARS Payouts and seller-balance availability from approved custody, and original-method refunds from backed reusable credits. Historical alternative-provider comparisons remain research provenance; Mercado Pago is the selected provider.
+ 
+ If no arrangement satisfies the requirements, stop product implementation and return for a product-model decision. Do not route customer funds through an ordinary Changeo operating account or silently substitute immediate split payments.
+ 
+--- original/docs/trust-operations.md
++++ docs/trust-operations.md
+@@ -61,7 +61,7 @@
+ 
+ Users can report listings, profiles, comments, messages and jobs with structured reasons and relevant evidence. Offer blocking while preserving active job/support obligations. Avoid letting abusive reporting alone trigger irreversible enforcement.
+ 
+-The founder dashboard needs queues for moderation/appeals, identity/guardian exceptions, fraud concerns, payment exceptions, disputes/refunds and subscription support. Each case records ownership, status, evidence, decisions and notices. Set realistic support hours, escalation timing and case capacity before launch; do not advertise an unfunded 24/7 guarantee.
++The founder dashboard needs queues for moderation/appeals, identity/guardian exceptions, fraud concerns, payment exceptions, disputes/refunds and subscription support. Each case records ownership, status, evidence, decisions and notices. The founder confirmed **sole-operator support during regular hours** on 30 September 2026. Exact days/time zone, dedicated case hours, response/escalation targets and measured capacity are not supplied; regular hours does not imply a forty-hour support-only workweek. Derive and validate realistic targets before launch, using the [proposed solo routine](gate0-research.md#supplied-budget-and-solo-support--r2); do not advertise an unfunded 24/7 guarantee.
+ 
+ Dispute decisions follow published, legally reviewed criteria and accepted agreements. The model can assist triage but cannot decide entitlement to customer funds. Staff money actions require explicit permissions, fresh authentication where appropriate and audit records. Admin accounts require MFA.
+ 

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+    "before": "2bd5fea332ee175d15a0f353d419105e68c3e27aacd9ddcc44a1c58184509f17",
+    "after": "aa5a5e0b7f40d07b87843dcd23d5e130620b291a3ea764b8b3a6cc86c5c55464"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+    "before": "373e17f3ecdbd889fb5d37ed29f4f549ae6832af93a57d6c4ee9a3c538cc48e9",
+    "after": "65f8bb07eed5cb574383622909d4f85f0c6931c001d2dde65b61904caf133e52"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+    "before": "d3e536d81f2eb4718ce75e204b2286ed1c81adaf7f34361008d5a9427f6a3249",
+    "after": "1f0713ddcfcc49463a58f8043adc91d6a20b1c6761bb7a178754b54ea4ce805c"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+    "before": "8e451926b14d5d39a1624f93648af3c32706945a265483d42525ffd251bc4743",
+    "after": "566a04b319721f93cce587a67be425b4c7093517f344ead497ac0f00af6d1d4a"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+    "before": "f1f335422e62e8e0d417422c44a77b592149ce3ae7485d9058c0d9e41358395b",
+    "after": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784"
+  },
+  {
+    "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+    "before": "a8d7543910632ce731d86e81f3ccdab8ef58604ff994b12caadce86275d9120d",
+    "after": "d5a7529305ab88860cfcd84248bf80979178f85dc550708fbbd56dc63ed7e57e"
+  },
+  {
+    "path": "docs/sandbox-runtime.md",
+    "before": "4058a2a572890ab93d5342dff4e13ea991c292600e5b9f0bb76d6d57d424df92",
+    "after": "7d40ebb4ec3f28375db508851a8c7ee56faeba7aa923b6979d077dca6907730c"
+  },
+  {
+    "path": "src/main/resources/db/migration/V3__identity_moderation_roles.sql",
+    "before": null,
+    "after": "4465d012e593ff2fdcb91bc4cb0fc8a139fccce41bdb0ea99f4c65b76b7c5635"
+  },
+  {
+    "path": "src/test/java/ar/changeo/identity/IdentityMigrationAssertions.java",
+    "before": null,
+    "after": "53faa6634b4d4858732c9944376384ace531a5a602673b6d24d3e1531c0baefc"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "MFR3-first",
+    "exit": 1,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-first.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-first.log",
+    "log_sha256": "a12399882df6570cf085d5eb27d8202ce0c6552c80f81e680e6a4beba46ff65f"
+  },
+  {
+    "name": "MFR3-host-first",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-host-first.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-host-first.log",
+    "log_sha256": "a8d49c3cce9070b49c798cb091243ccb6138777589dd0a9f9bbfc69deb9cd849"
+  },
+  {
+    "name": "correction-integrity",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction-integrity.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction-integrity.log",
+    "log_sha256": "96d992493bfd2492dfd2e257badd9a3e5812dc2c5525506508523a0f2bdc8920"
+  },
+  {
+    "name": "first-correction-integrity",
+    "exit": 1,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-correction-integrity.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-correction-integrity.log",
+    "log_sha256": "d77c4ec16e37f005b86dcd78c89a0fde932d0e28b051f6b9c84a9a63c8802352"
+  },
+  {
+    "name": "runtime-cleanup",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/runtime-cleanup.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/runtime-cleanup.log",
+    "log_sha256": "edec931813345e7e69cf8f45a09b570362e4f10f3c180932ca2d02e3a1a5b468"
+  },
+  {
+    "name": "verify-first",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/takeover/developer/logs/verify-first.exit",
+    "log": "docs/agent-work/changeo-moderation/takeover/developer/logs/verify-first.log",
+    "log_sha256": "81c4b9ea3ae81e771a269770b8f3632d2083cd7074c655d8cb73e2a96c64f058"
+  }
+]

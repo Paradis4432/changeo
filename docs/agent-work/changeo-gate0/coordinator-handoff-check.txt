@@ -1,0 +1,28 @@
+# Coordinator developer handoff presence check
+
+Command:
+python3 - <<'PY'
+from pathlib import Path
+root=Path('/home/paradis/changeo')
+files=['docs/questions.md','docs/agent-work/changeo-gate0/developer/questions.txt','docs/agent-work/changeo-gate0/developer/report.md','docs/agent-work/changeo-gate0/developer/CHECKPOINT.md','docs/agent-work/changeo-gate0/developer/notes.txt','docs/agent-work/changeo-gate0/developer/logs/baseline-before.txt','docs/agent-work/changeo-gate0/developer/logs/inventory-before.txt','docs/agent-work/changeo-gate0/developer/logs/questions-check.txt','docs/agent-work/changeo-gate0/developer/logs/final-artifacts.txt','docs/agent-work/changeo-gate0/developer/logs/source-reads.txt']
+for name in files:
+    path=root/name
+    assert path.is_file() and path.stat().st_size > 0, name
+    print(name)
+print('PASS: minimum developer handoff artifacts present; independent acceptance pending')
+PY
+
+Underlying exit: 0
+Output:
+docs/questions.md
+docs/agent-work/changeo-gate0/developer/questions.txt
+docs/agent-work/changeo-gate0/developer/report.md
+docs/agent-work/changeo-gate0/developer/CHECKPOINT.md
+docs/agent-work/changeo-gate0/developer/notes.txt
+docs/agent-work/changeo-gate0/developer/logs/baseline-before.txt
+docs/agent-work/changeo-gate0/developer/logs/inventory-before.txt
+docs/agent-work/changeo-gate0/developer/logs/questions-check.txt
+docs/agent-work/changeo-gate0/developer/logs/final-artifacts.txt
+docs/agent-work/changeo-gate0/developer/logs/source-reads.txt
+PASS: minimum developer handoff artifacts present; independent acceptance pending
+

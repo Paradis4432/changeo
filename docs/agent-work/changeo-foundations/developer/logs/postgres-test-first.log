@@ -1,0 +1,985 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/paradis/changeo/.local-tools/apache-maven-3.9.11/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< ar.changeo:changeo >-------------------------
+[INFO] Building changeo 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ changeo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 16 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ changeo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 46 source files with javac [debug parameters release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ changeo ---
+[INFO] skip non existing resourceDirectory /home/paradis/changeo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ changeo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ changeo ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ar.changeo.identity.IdentityPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T01:18:54.661-03:00  INFO 1736438 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Starting IdentityPostgresTest using Java 25.0.4.1 with PID 1736438 (started by paradis in /home/paradis/changeo)
+2026-10-01T01:18:54.662-03:00  INFO 1736438 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T01:18:54.908-03:00  INFO 1736438 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T01:18:54.922-03:00  INFO 1736438 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/paradis/changeo/.local-tools/m2/net/bytebuddy/byte-buddy-agent/1.18.11/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-01T01:18:55.573-03:00  INFO 1736438 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T01:18:55.641-03:00  INFO 1736438 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46fa2a7e
+2026-10-01T01:18:55.642-03:00  INFO 1736438 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T01:18:55.652-03:00  INFO 1736438 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T01:18:55.682-03:00  INFO 1736438 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-10-01T01:18:55.683-03:00  INFO 1736438 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.007s)
+2026-10-01T01:18:55.688-03:00  INFO 1736438 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-10-01T01:18:55.713-03:00  INFO 1736438 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-10-01T01:18:55.725-03:00  INFO 1736438 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - identity"
+2026-10-01T01:18:55.753-03:00  INFO 1736438 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.015s)
+2026-10-01T01:18:55.819-03:00  INFO 1736438 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T01:18:55.840-03:00  INFO 1736438 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01T01:18:55.941-03:00  INFO 1736438 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T01:18:55.976-03:00  INFO 1736438 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T01:18:56.314-03:00  INFO 1736438 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T01:18:56.330-03:00  INFO 1736438 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T01:18:56.575-03:00  INFO 1736438 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T01:18:56.766-03:00  INFO 1736438 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T01:18:56.766-03:00  INFO 1736438 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T01:18:56.767-03:00  INFO 1736438 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T01:18:56.812-03:00  INFO 1736438 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Started IdentityPostgresTest in 2.248 seconds (process running for 2.727)
+2026-10-01T01:18:56.921-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:56.921-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (7962bc7d-591e-4a76-8040-74bfdc3f002c, admine13538a4-0e9a-40a3-8b04-8e388b4c1ee0@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:56.980-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:56.980-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (056aaa4f-6ff0-4c91-9ced-b917b86f3586, admina749485e-2bbd-41aa-81dc-eb89bc0aad00@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.029-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.030-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (a27930de-10ad-4d77-ba01-bc92f44b43c3, admine71a8971-18eb-4169-a380-3be2fff79113@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.088-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.089-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cd258ef3-b8db-46c6-9b14-bd26c0b368aa, admin12edbb22-795f-4266-8b00-157c8818c156@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.138-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.138-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (e89be152-5690-49f2-ac05-fbdb91265f7a, adminf4fff56f-464a-44db-a2cd-a844fc59b670@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.186-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.186-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (78b1ac03-a46a-425f-92ad-d61a279f4f21, admin9a413c77-9ead-468e-9d45-be9a145bffa0@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.235-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.235-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cef3a0e9-874b-4377-b7c6-2ec0ca861865, admin05517348-22b1-4c6d-a26d-fa6df38a2c55@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.283-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.283-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (04b02e5e-8d20-48ba-ab93-0a0a787b86af, admin433b18cb-dc14-4b13-8107-67b4bb2c9fbe@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.331-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.332-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (c9309925-65f7-42eb-8ed8-f2a055a7a092, adminf8ab1a6a-c97e-46be-abfa-9e7117310759@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.380-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.380-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (31dec159-ff82-4119-be07-56846629923e, admina34073ee-2e11-4f54-9b5b-2803a8fb4890@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.428-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.428-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (6af02304-cb33-4517-9fad-39af101877db, admin0c900901-6388-4bb7-a982-aef0855533a0@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.476-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.476-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (02723f2b-cb1c-4cd1-b378-3006467237bb, admincac7b199-9929-40dc-aa3a-2fe97aad80c4@example.test, null, f, 0, 0, 0, f, f, 0).
+2026-10-01T01:18:57.523-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-10-01T01:18:57.523-03:00  WARN 1736438 --- [changeo] [           main] org.hibernate.orm.jdbc.error             : ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (0eac1546-3e0b-423f-9fa6-91a4761f4a02, admin07f079db-033e-49a0-9897-9a11cdc082d4@example.test, null, f, 0, 0, 0, f, f, 0).
+[ERROR] Tests run: 13, Failures: 0, Errors: 13, Skipped: 0, Time elapsed: 3.103 s <<< FAILURE! -- in ar.changeo.identity.IdentityPostgresTest
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldKeepMailboxAndFactorMaterialPrivateAndFailClosedOnBadKey -- Time elapsed: 0.111 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (7962bc7d-591e-4a76-8040-74bfdc3f002c, admine13538a4-0e9a-40a3-8b04-8e388b4c1ee0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (7962bc7d-591e-4a76-8040-74bfdc3f002c, admine13538a4-0e9a-40a3-8b04-8e388b4c1ee0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (7962bc7d-591e-4a76-8040-74bfdc3f002c, admine13538a4-0e9a-40a3-8b04-8e388b4c1ee0@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldKeepGuardianTerminalStatesAndRequireCurrentVersionIndependentEvidence -- Time elapsed: 0.050 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (056aaa4f-6ff0-4c91-9ced-b917b86f3586, admina749485e-2bbd-41aa-81dc-eb89bc0aad00@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (056aaa4f-6ff0-4c91-9ced-b917b86f3586, admina749485e-2bbd-41aa-81dc-eb89bc0aad00@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (056aaa4f-6ff0-4c91-9ced-b917b86f3586, admina749485e-2bbd-41aa-81dc-eb89bc0aad00@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldKeepControlledOwnRightsAfterRestrictionRevocationExpiryAndRelink -- Time elapsed: 0.048 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (a27930de-10ad-4d77-ba01-bc92f44b43c3, admine71a8971-18eb-4169-a380-3be2fff79113@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (a27930de-10ad-4d77-ba01-bc92f44b43c3, admine71a8971-18eb-4169-a380-3be2fff79113@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (a27930de-10ad-4d77-ba01-bc92f44b43c3, admine71a8971-18eb-4169-a380-3be2fff79113@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldConsumeMfaCounterAtomicallyAndKeepReplayProtectionAcrossServiceInstances -- Time elapsed: 0.057 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cd258ef3-b8db-46c6-9b14-bd26c0b368aa, admin12edbb22-795f-4266-8b00-157c8818c156@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cd258ef3-b8db-46c6-9b14-bd26c0b368aa, admin12edbb22-795f-4266-8b00-157c8818c156@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cd258ef3-b8db-46c6-9b14-bd26c0b368aa, admin12edbb22-795f-4266-8b00-157c8818c156@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldAllowOnlyOneConcurrentTokenConsumption -- Time elapsed: 0.048 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (e89be152-5690-49f2-ac05-fbdb91265f7a, adminf4fff56f-464a-44db-a2cd-a844fc59b670@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (e89be152-5690-49f2-ac05-fbdb91265f7a, adminf4fff56f-464a-44db-a2cd-a844fc59b670@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (e89be152-5690-49f2-ac05-fbdb91265f7a, adminf4fff56f-464a-44db-a2cd-a844fc59b670@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldEnforceAdultMinorProviderGuardianAndExactPayerMatrix -- Time elapsed: 0.048 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (78b1ac03-a46a-425f-92ad-d61a279f4f21, admin9a413c77-9ead-468e-9d45-be9a145bffa0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (78b1ac03-a46a-425f-92ad-d61a279f4f21, admin9a413c77-9ead-468e-9d45-be9a145bffa0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (78b1ac03-a46a-425f-92ad-d61a279f4f21, admin9a413c77-9ead-468e-9d45-be9a145bffa0@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldConsumeRecoveryOnceAndInvalidateAllPreviousGenerationsPreservingMfa -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cef3a0e9-874b-4377-b7c6-2ec0ca861865, admin05517348-22b1-4c6d-a26d-fa6df38a2c55@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cef3a0e9-874b-4377-b7c6-2ec0ca861865, admin05517348-22b1-4c6d-a26d-fa6df38a2c55@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cef3a0e9-874b-4377-b7c6-2ec0ca861865, admin05517348-22b1-4c6d-a26d-fa6df38a2c55@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldValidateSyntheticContactsDuplicatesAndPasswords -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (04b02e5e-8d20-48ba-ab93-0a0a787b86af, admin433b18cb-dc14-4b13-8107-67b4bb2c9fbe@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (04b02e5e-8d20-48ba-ab93-0a0a787b86af, admin433b18cb-dc14-4b13-8107-67b4bb2c9fbe@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (04b02e5e-8d20-48ba-ab93-0a0a787b86af, admin433b18cb-dc14-4b13-8107-67b4bb2c9fbe@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldEnforceCsrfHttpOwnershipAdminAndEpochOnEveryOldSession -- Time elapsed: 0.048 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (c9309925-65f7-42eb-8ed8-f2a055a7a092, adminf8ab1a6a-c97e-46be-abfa-9e7117310759@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (c9309925-65f7-42eb-8ed8-f2a055a7a092, adminf8ab1a6a-c97e-46be-abfa-9e7117310759@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (c9309925-65f7-42eb-8ed8-f2a055a7a092, adminf8ab1a6a-c97e-46be-abfa-9e7117310759@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldSerializeProtectedCommitsAgainstRevocationRestrictionsAndRoleRemoval -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (31dec159-ff82-4119-be07-56846629923e, admina34073ee-2e11-4f54-9b5b-2803a8fb4890@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (31dec159-ff82-4119-be07-56846629923e, admina34073ee-2e11-4f54-9b5b-2803a8fb4890@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (31dec159-ff82-4119-be07-56846629923e, admina34073ee-2e11-4f54-9b5b-2803a8fb4890@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldVerifyOnlyOwnCurrentContactTokenAndPreservePendingFailure -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (6af02304-cb33-4517-9fad-39af101877db, admin0c900901-6388-4bb7-a982-aef0855533a0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (6af02304-cb33-4517-9fad-39af101877db, admin0c900901-6388-4bb7-a982-aef0855533a0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (6af02304-cb33-4517-9fad-39af101877db, admin0c900901-6388-4bb7-a982-aef0855533a0@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldRollbackDeniedProtectedIntentEvenIfCallerCatchesFailure -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (02723f2b-cb1c-4cd1-b378-3006467237bb, admincac7b199-9929-40dc-aa3a-2fe97aad80c4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (02723f2b-cb1c-4cd1-b378-3006467237bb, admincac7b199-9929-40dc-aa3a-2fe97aad80c4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (02723f2b-cb1c-4cd1-b378-3006467237bb, admincac7b199-9929-40dc-aa3a-2fe97aad80c4@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation -- Time elapsed: 0.047 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (0eac1546-3e0b-423f-9fa6-91a4761f4a02, admin07f079db-033e-49a0-9897-9a11cdc082d4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:556)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at ar.changeo.identity.OperatorService$$SpringCGLIB$$0.provision(<generated>)
+	at ar.changeo.identity.IdentityPostgresTest.setup(IdentityPostgresTest.java:70)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (0eac1546-3e0b-423f-9fa6-91a4761f4a02, admin07f079db-033e-49a0-9897-9a11cdc082d4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:96)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552)
+	... 9 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (0eac1546-3e0b-423f-9fa6-91a4761f4a02, admin07f079db-033e-49a0-9897-9a11cdc082d4@example.test, null, f, 0, 0, 0, f, f, 0).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+	... 32 more
+
+[INFO] Running ar.changeo.identity.SandboxSafetyTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in ar.changeo.identity.SandboxSafetyTest
+[INFO] Running ar.changeo.identity.TotpTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in ar.changeo.identity.TotpTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (e89be152-5690-49f2-ac05-fbdb91265f7a, adminf4fff56f-464a-44db-a2cd-a844fc59b670@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cd258ef3-b8db-46c6-9b14-bd26c0b368aa, admin12edbb22-795f-4266-8b00-157c8818c156@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (cef3a0e9-874b-4377-b7c6-2ec0ca861865, admin05517348-22b1-4c6d-a26d-fa6df38a2c55@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (78b1ac03-a46a-425f-92ad-d61a279f4f21, admin9a413c77-9ead-468e-9d45-be9a145bffa0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (c9309925-65f7-42eb-8ed8-f2a055a7a092, adminf8ab1a6a-c97e-46be-abfa-9e7117310759@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (a27930de-10ad-4d77-ba01-bc92f44b43c3, admine71a8971-18eb-4169-a380-3be2fff79113@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (056aaa4f-6ff0-4c91-9ced-b917b86f3586, admina749485e-2bbd-41aa-81dc-eb89bc0aad00@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (7962bc7d-591e-4a76-8040-74bfdc3f002c, admine13538a4-0e9a-40a3-8b04-8e388b4c1ee0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (0eac1546-3e0b-423f-9fa6-91a4761f4a02, admin07f079db-033e-49a0-9897-9a11cdc082d4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (02723f2b-cb1c-4cd1-b378-3006467237bb, admincac7b199-9929-40dc-aa3a-2fe97aad80c4@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (31dec159-ff82-4119-be07-56846629923e, admina34073ee-2e11-4f54-9b5b-2803a8fb4890@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (04b02e5e-8d20-48ba-ab93-0a0a787b86af, admin433b18cb-dc14-4b13-8107-67b4bb2c9fbe@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[ERROR]   IdentityPostgresTest.setup:70 » DataIntegrityViolation could not execute statement [ERROR: null value in column "password_hash" of relation "identity_account" violates not-null constraint
+  Detail: Failing row contains (6af02304-cb33-4517-9fad-39af101877db, admin0c900901-6388-4bb7-a982-aef0855533a0@example.test, null, f, 0, 0, 0, f, f, 0).] [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into identity_account (adult_preference,contact,contact_generation,contact_verified,password_hash,recovery_generation,security_epoch,sensitive_preference,version,id) values (?,?,?,?,?,?,?,?,?,?)]; constraint [password_hash]
+[INFO] 
+[ERROR] Tests run: 21, Failures: 0, Errors: 13, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.887 s
+[INFO] Finished at: 2026-10-01T01:18:57-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project changeo: 
+[ERROR] 
+[ERROR] See /home/paradis/changeo/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

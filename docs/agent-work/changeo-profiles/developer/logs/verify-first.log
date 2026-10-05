@@ -1,0 +1,415 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/paradis/changeo/.local-tools/maven-user/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< ar.changeo:changeo >-------------------------
+[INFO] Building changeo 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ changeo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 37 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ changeo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ changeo ---
+[INFO] skip non existing resourceDirectory /home/paradis/changeo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ changeo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 18 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ changeo ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ar.changeo.files.FileInspectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 s -- in ar.changeo.files.FileInspectorTest
+[INFO] Running ar.changeo.identity.IdentityPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:28:26.254-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Starting IdentityPostgresTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:28:26.255-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:28:26.604-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:28:26.618-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-10-01T21:28:27.180-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T21:28:27.263-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ead3c67
+2026-10-01T21:28:27.264-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T21:28:27.273-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:27.298-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.009s)
+2026-10-01T21:28:27.321-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "foundation_test": 4
+2026-10-01T21:28:27.329-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_test" to version "5 - profiles listings discovery"
+2026-10-01T21:28:27.354-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "foundation_test", now at version v5 (execution time 00:00.010s)
+2026-10-01T21:28:27.423-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:28:27.452-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01T21:28:27.580-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:28:27.621-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/foundation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:28:27.997-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:28:28.017-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:28:28.366-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:28:28.607-03:00  INFO 3448261 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T21:28:28.608-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T21:28:28.609-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T21:28:28.659-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Started IdentityPostgresTest in 2.528 seconds (process running for 3.413)
+2026-10-01T21:28:30.414-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.417-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" ...
+2026-10-01T21:28:30.418-03:00  INFO 3448261 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230"."flyway_schema_history" ...
+2026-10-01T21:28:30.465-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230": null
+2026-10-01T21:28:30.470-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" to version "1 - identity"
+2026-10-01T21:28:30.487-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" to version "2 - identity state integrity"
+2026-10-01T21:28:30.496-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230", now at version v2 (execution time 00:00.012s)
+2026-10-01T21:28:30.498-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.501-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.001s)
+2026-10-01T21:28:30.526-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.532-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.535-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.001s)
+2026-10-01T21:28:30.535-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230": 2
+2026-10-01T21:28:30.536-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" to version "3 - identity moderation roles"
+2026-10-01T21:28:30.586-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" to version "4 - moderation and private files"
+2026-10-01T21:28:30.631-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" to version "5 - profiles listings discovery"
+2026-10-01T21:28:30.642-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230", now at version v5 (execution time 00:00.021s)
+2026-10-01T21:28:30.643-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.647-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.001s)
+2026-10-01T21:28:30.650-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:30.655-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:28:30.656-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230": 5
+2026-10-01T21:28:30.656-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "f3_upgrade_ededb8e57e0346baac588a3a0c6eb230" is up to date. No migration necessary.
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.86 s -- in ar.changeo.identity.IdentityPostgresTest
+[INFO] Running ar.changeo.identity.PublicIdentityBadgePostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:28:36.820-03:00  INFO 3448261 --- [changeo] [           main] a.c.i.PublicIdentityBadgePostgresTest    : Starting PublicIdentityBadgePostgresTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:28:36.820-03:00  INFO 3448261 --- [changeo] [           main] a.c.i.PublicIdentityBadgePostgresTest    : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:28:36.882-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:28:36.884-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:28:36.915-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-01T21:28:36.923-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@53eb6ac5
+2026-10-01T21:28:36.923-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-01T21:28:36.924-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:36.931-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:28:36.956-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "profiles_badge_test": 5
+2026-10-01T21:28:36.957-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "profiles_badge_test" is up to date. No migration necessary.
+2026-10-01T21:28:36.969-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:28:36.982-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:28:36.984-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/profiles_badge_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:28:37.010-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:28:37.016-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:28:37.043-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:28:37.088-03:00  INFO 3448261 --- [changeo] [           main] a.c.i.PublicIdentityBadgePostgresTest    : Started PublicIdentityBadgePostgresTest in 0.275 seconds (process running for 11.842)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.383 s -- in ar.changeo.identity.PublicIdentityBadgePostgresTest
+[INFO] Running ar.changeo.identity.SandboxSafetyTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in ar.changeo.identity.SandboxSafetyTest
+[INFO] Running ar.changeo.identity.TotpTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in ar.changeo.identity.TotpTest
+[INFO] Running ar.changeo.identity.WebsiteSecurityTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:28:37.224-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : Starting WebsiteSecurityTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:28:37.224-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:28:37.279-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:28:37.282-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:28:37.309-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-01T21:28:37.313-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@45a2d27c
+2026-10-01T21:28:37.313-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-01T21:28:37.314-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:37.320-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:28:37.326-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "foundation_web_test": 4
+2026-10-01T21:28:37.327-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_web_test" to version "5 - profiles listings discovery"
+2026-10-01T21:28:37.339-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "foundation_web_test", now at version v5 (execution time 00:00.006s)
+2026-10-01T21:28:37.344-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:28:37.350-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:28:37.352-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/foundation_web_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:28:37.374-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:28:37.380-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:28:37.404-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:28:37.433-03:00  INFO 3448261 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T21:28:37.433-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T21:28:37.434-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T21:28:37.441-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : Started WebsiteSecurityTest in 0.23 seconds (process running for 12.195)
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.859 s -- in ar.changeo.identity.WebsiteSecurityTest
+[INFO] Running ar.changeo.moderation.ModerationPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:28:44.072-03:00  INFO 3448261 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : Starting ModerationPostgresTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:28:44.072-03:00  INFO 3448261 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:28:44.113-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:28:44.115-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:28:44.136-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-01T21:28:44.143-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@3d40c095
+2026-10-01T21:28:44.143-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-01T21:28:44.144-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:28:44.149-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:28:44.158-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_test": 4
+2026-10-01T21:28:44.160-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_test" to version "5 - profiles listings discovery"
+2026-10-01T21:28:44.208-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "moderation_test", now at version v5 (execution time 00:00.012s)
+2026-10-01T21:28:44.216-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:28:44.226-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:28:44.229-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/moderation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:28:44.249-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:28:44.257-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:28:44.519-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:28:44.542-03:00  INFO 3448261 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T21:28:44.543-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T21:28:44.543-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-01T21:28:44.550-03:00  INFO 3448261 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : Started ModerationPostgresTest in 0.483 seconds (process running for 19.304)
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.63 s -- in ar.changeo.moderation.ModerationPostgresTest
+[INFO] Running ar.changeo.moderation.ModerationHttpTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:29:00.705-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : Starting ModerationHttpTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:29:00.705-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:29:00.744-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:29:00.746-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:29:00.765-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-01T21:29:00.772-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5e4f1dc9
+2026-10-01T21:29:00.772-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-01T21:29:00.772-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:29:00.778-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:29:00.784-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_http_test": 4
+2026-10-01T21:29:00.785-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_http_test" to version "5 - profiles listings discovery"
+2026-10-01T21:29:00.841-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "moderation_http_test", now at version v5 (execution time 00:00.011s)
+2026-10-01T21:29:00.846-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:29:00.851-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:29:00.853-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/moderation_http_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:29:00.872-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:29:00.877-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:29:00.896-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:29:00.917-03:00  INFO 3448261 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T21:29:00.917-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T21:29:00.918-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T21:29:00.924-03:00  INFO 3448261 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : Started ModerationHttpTest in 0.225 seconds (process running for 35.678)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.917 s -- in ar.changeo.moderation.ModerationHttpTest
+[INFO] Running ar.changeo.moderation.OwnerRegistryContractTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in ar.changeo.moderation.OwnerRegistryContractTest
+[INFO] Running ar.changeo.moderation.ReviewValidationTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in ar.changeo.moderation.ReviewValidationTest
+[INFO] Running ar.changeo.marketplace.MarketplacePostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:29:02.640-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplacePostgresTest  : Starting MarketplacePostgresTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:29:02.641-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplacePostgresTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:29:02.678-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:29:02.680-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:29:02.701-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-01T21:29:02.704-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@7f34036a
+2026-10-01T21:29:02.704-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-01T21:29:02.705-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:29:02.708-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.001s)
+2026-10-01T21:29:02.713-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "profiles_test": 5
+2026-10-01T21:29:02.713-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "profiles_test" is up to date. No migration necessary.
+2026-10-01T21:29:02.717-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:29:02.722-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:29:02.723-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/profiles_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:29:02.741-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:29:02.746-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:29:02.852-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:29:02.878-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplacePostgresTest  : Started MarketplacePostgresTest in 0.242 seconds (process running for 37.631)
+[ERROR] Tests run: 54, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 26.07 s <<< FAILURE! -- in ar.changeo.marketplace.MarketplacePostgresTest
+[ERROR] ar.changeo.marketplace.MarketplacePostgresTest.shouldReviewEachAuthoredEditAndMediaAsOneImmutableRevision(String)[3] -- Time elapsed: 0.181 s <<< ERROR!
+ar.changeo.moderation.ModerationFailure: Revisá los campos: título, descripción, provincia y zona amplia; hasta ocho etiquetas y una modalidad como mínimo
+	at ar.changeo.marketplace.MarketplaceDetails.invalid(MarketplaceDetails.java:63)
+	at ar.changeo.marketplace.MarketplaceDetails.text(MarketplaceDetails.java:58)
+	at ar.changeo.marketplace.MarketplaceDetails.lambda$new$0(MarketplaceDetails.java:26)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.Collections$2.tryAdvance(Collections.java:5182)
+	at java.base/java.util.Collections$2.forEachRemaining(Collections.java:5190)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at ar.changeo.marketplace.MarketplaceDetails.<init>(MarketplaceDetails.java:26)
+	at ar.changeo.marketplace.MarketplacePostgresTest.shouldReviewEachAuthoredEditAndMediaAsOneImmutableRevision(MarketplacePostgresTest.java:336)
+
+[INFO] Running ar.changeo.marketplace.MarketplaceHttpTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T21:29:28.709-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplaceHttpTest      : Starting MarketplaceHttpTest using Java 25.0.4.1 with PID 3448261 (started by paradis in /home/paradis/changeo)
+2026-10-01T21:29:28.710-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplaceHttpTest      : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T21:29:28.743-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T21:29:28.745-03:00  INFO 3448261 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T21:29:28.764-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-01T21:29:28.771-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@5bdd0953
+2026-10-01T21:29:28.771-03:00  INFO 3448261 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-01T21:29:28.772-03:00  INFO 3448261 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T21:29:28.778-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2026-10-01T21:29:28.784-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "profiles_http_test": 5
+2026-10-01T21:29:28.785-03:00  INFO 3448261 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "profiles_http_test" is up to date. No migration necessary.
+2026-10-01T21:29:28.801-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T21:29:28.809-03:00  INFO 3448261 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T21:29:28.811-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/profiles_http_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T21:29:28.829-03:00  INFO 3448261 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T21:29:28.838-03:00  INFO 3448261 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T21:29:28.855-03:00  INFO 3448261 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T21:29:28.875-03:00  INFO 3448261 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T21:29:28.875-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T21:29:28.876-03:00  INFO 3448261 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T21:29:28.882-03:00  INFO 3448261 --- [changeo] [           main] a.c.marketplace.MarketplaceHttpTest      : Started MarketplaceHttpTest in 0.177 seconds (process running for 63.636)
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.311 s -- in ar.changeo.marketplace.MarketplaceHttpTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   MarketplacePostgresTest.shouldReviewEachAuthoredEditAndMediaAsOneImmutableRevision:336 » ModerationFailure Revisá los campos: título, descripción, provincia y zona amplia; hasta ocho etiquetas y una modalidad como mínimo
+[INFO] 
+[ERROR] Tests run: 165, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:07 min
+[INFO] Finished at: 2026-10-01T21:29:30-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project changeo: 
+[ERROR] 
+[ERROR] See /home/paradis/changeo/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,5 @@
+time="2026-10-01T05:06:00-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc000794000
+time="2026-10-01T05:16:06-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T05:20:38-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T05:23:14-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0000c01b0
+time="2026-10-01T05:51:30-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000

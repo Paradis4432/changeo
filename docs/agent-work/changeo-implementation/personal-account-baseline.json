@@ -1,0 +1,24 @@
+{
+  "revision": "R4 founder personal checking-account proposal",
+  "allowed_deliverable_changes": [
+    "docs/questions.md",
+    "docs/gate0-research.md",
+    "docs/agent-work/changeo-gate0/developer/questions.txt"
+  ],
+  "files": {
+    "docs/questions.md": {
+      "bytes": 3187,
+      "sha256": "78812bf70e364953cc261198696fa4f4a508c33aeaa64ba79402da3364a1a460"
+    },
+    "docs/gate0-research.md": {
+      "bytes": 46758,
+      "sha256": "50db16f4093aca44f94b532c55d3e05eb4af3be3032e927cb4dc2285c1f4d742"
+    },
+    "docs/agent-work/changeo-gate0/developer/questions.txt": {
+      "bytes": 3508,
+      "sha256": "af9496bb62a6f760ca3e85e34058c15a31b0133d97bca465a3f348152f4c1216"
+    }
+  },
+  "prior_accepted_seal": "docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.json",
+  "source_changes": "None authorized; only current questions/research/index factual clarification. Preserve all prior sources and contracts."
+}

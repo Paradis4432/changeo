@@ -1,0 +1,39 @@
+{
+  "source": "native collaboration final/error results in coordinator conversation",
+  "builder": "/root/profiles_listings/profiles_builder",
+  "host_id": "01a0f9d1-4c85-73d1-81ea-e5e822f5061b",
+  "status": "terminal, interrupted, same role retained",
+  "errors": [
+    {
+      "status": 503,
+      "reason": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+      "cf_ray": "a43fae6cdeeffafe-EZE"
+    },
+    {
+      "status": 503,
+      "reason": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+      "cf_ray": "a43fb6092a248126-EZE"
+    },
+    {
+      "status": 503,
+      "reason": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+      "cf_ray": "a43fbd030f324175-EZE"
+    },
+    {
+      "status": 503,
+      "reason": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+      "cf_ray": "a43fdd2f3cddf315-EZE",
+      "root_goal_turn": 2,
+      "tool_calls": 0
+    },
+    {
+      "status": 503,
+      "reason": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+      "cf_ray": "a43ff2e94e9d6d4a-EZE",
+      "root_goal_turn": 3,
+      "tool_calls": 0
+    }
+  ],
+  "resume": "same retained coordinator/writer for useful unfinished task when required route executes; root ordered no further availability-only dispatch in current turn3",
+  "substitution_or_configuration_change": false
+}

@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "checked_artifact_seals": 13,
+  "source_count": 143,
+  "unchanged_source_count": 141,
+  "changed_owned_tests": [
+    "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+    "src/test/java/ar/changeo/moderation/ReviewValidationTest.java"
+  ],
+  "partial_snapshots_match": true,
+  "product_fixes_landed": false,
+  "independent_verdict": "changes_requested",
+  "same_required_route_blocker_terminal_goal_turns": 3
+}

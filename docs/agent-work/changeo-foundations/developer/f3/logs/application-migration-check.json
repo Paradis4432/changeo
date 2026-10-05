@@ -1,0 +1,10 @@
+{
+  "exit": 0,
+  "before_v1_v2_checksums_and_counts_preserved": true,
+  "repeat_state_matches_after_upgrade": true,
+  "new_v3_record": [
+    "3|V3__identity_moderation_roles.sql|-1152207325|t"
+  ],
+  "http_status": 200,
+  "repeat_migration_work": 0
+}

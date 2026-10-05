@@ -1,0 +1,118 @@
+{
+  "reviewer": "/root/changeo_gate0/reviewer",
+  "reviewer_host": "01a0f44b-d28d-7f33-94ad-bf8f7348ddf6",
+  "date": "2026-09-30",
+  "verdict": "accepted",
+  "scope": "Bounded documentation/public research only; Gate0/product/goal incomplete.",
+  "artifacts": {
+    "docs/questions.md": {
+      "bytes": 3320,
+      "sha256": "7cf67b31b5b42818f5e72eb4dca693d5d10729715ee9e78360c8e3fc6caf9d14"
+    },
+    "docs/gate0-research.md": {
+      "bytes": 34413,
+      "sha256": "44dc40d73ea9cd79c9f33dc87678e830b78f188ee5f67b7bc6b3fab5db99a83b"
+    },
+    "docs/agent-work/changeo-gate0/developer/questions.txt": {
+      "bytes": 2258,
+      "sha256": "f53b4c4803d03f2b78d85b85510792457c2bd54d92f594f10d19540187e40f54"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/CHECKPOINT.md": {
+      "bytes": 1947,
+      "sha256": "233efe601d1552b04242e95a8d32647587cc41bc1b8f51411033f82b3b9eecaf"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/archive-before.txt": {
+      "bytes": 1737,
+      "sha256": "68a8aa9ad25b57cf515e25bb73225360246cde6512706216d54840cef2285b07"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/archive-manifest.json": {
+      "bytes": 831,
+      "sha256": "8df8ba7538f3060005fd385da319df1d41eb5c5b670a6490a9fe75d62625d675"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/artifact-check.json": {
+      "bytes": 4496,
+      "sha256": "22daa304680113b56118bc0ebab4d5149bca8d1e146bf1c1dcdd244f1ec298aa"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/manifest-command.json": {
+      "bytes": 9011,
+      "sha256": "f11528e59bdad5488f459bd10a157b4e8b67b67d4dd0c3df3efdd685855ef644"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/openai-docs-evidence.json": {
+      "bytes": 161523,
+      "sha256": "f02e2e5c355f6df93de83ea37ea2daf55247af81ac6db1873b425c3d3d8c8dc8"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/resend-confirmation.json": {
+      "bytes": 19059,
+      "sha256": "3e82936a81033b621b2823e6082e7863673cda96ceec1caa5f86c2e52796cc25"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/sources-manifest.json": {
+      "bytes": 62375,
+      "sha256": "814b6bbf7c7d2826aceecaa3214318c98b03f87f848f3433e480f235ea9b56ff"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/supplemental-evidence.json": {
+      "bytes": 30382,
+      "sha256": "4f0697ee5f1e83b889eddc8b162f830045dd4089e228ecdb9ebf2fc6f125cc86"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/verification-first.json": {
+      "bytes": 7250,
+      "sha256": "aa7dc8f4df04fdc92bc8bef0c30c3194b3cbbf3041055d0f4ef54be9e73ddaa9"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/logs/web-evidence.json": {
+      "bytes": 495018,
+      "sha256": "9facd4235cfb48d25e8775973702da12f4ac6eada90e4028389c331c22c201d4"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/notes.txt": {
+      "bytes": 1875,
+      "sha256": "06ec02482965af75f73854c2677892392ce426e5675dbb9262e04cd7668412b3"
+    },
+    "docs/agent-work/changeo-gate0/developer/research/report.md": {
+      "bytes": 10308,
+      "sha256": "2be47ba82cd8246563ff290463f20a4f34756c3ef6ec5bbe74d41339777aadee"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/report.md": {
+      "bytes": 11818,
+      "sha256": "4cee06cb69f8d077b0b9a292ad585e8289f3ca21908782ae0491d7802a866448"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/CHECKPOINT.md": {
+      "bytes": 1327,
+      "sha256": "1ce00e2c14d73bd2e2383392e5d5d828fd0193b842b4f4fcdc876a1e24da3d58"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/notes.txt": {
+      "bytes": 1082,
+      "sha256": "cb455a1272b4ebc168f27b1833a168391b38aa55a6b57112dc03268b2ff97587"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/source-support.md": {
+      "bytes": 11105,
+      "sha256": "3cd3a1051aa7c6d43b719460a9181cb097b4984dc826d988dceba8ecaee17734"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/archive-check.txt": {
+      "bytes": 1083,
+      "sha256": "f539e986a60e03af2b9c4d1fb3ea5f73afc590dbdcf7816ba4c66acd9970dea6"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/archive-manifest.json": {
+      "bytes": 936,
+      "sha256": "d91efab89d2e73258ed86db218d60e075a21ef8baf70e93d956da4f7c3e4c734"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/verification-first.json": {
+      "bytes": 8666,
+      "sha256": "847dad86267d50f77d35e8fa3a0bec805e2e2664b984766d54c0c28cfd6458eb"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/web-evidence.json": {
+      "bytes": 311751,
+      "sha256": "17c6ebe15aed2fd8e805c58c793d1c44e7e941db3d6b1fa472234d36b1dee426"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/openai-evidence.json": {
+      "bytes": 104369,
+      "sha256": "8898c1965df7beda92acfb8b800ad7ae94ed409595c96b3bc53ad5b2ede03c28"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/moderation-evidence.json": {
+      "bytes": 27291,
+      "sha256": "62c852fb9a737fd34f43b08d9bfba345728e26c1dacaa4f3753ee7473f169f96"
+    },
+    "docs/agent-work/changeo-gate0/reviewer/research/logs/render-pricing-evidence.json": {
+      "bytes": 5081,
+      "sha256": "1791e06fcbef63f4f3ae23c8b9e9340966ffeae840707902f5f12ad69d281844"
+    }
+  },
+  "self_reference_limit": "This seal excludes itself and final check log; those are final evidence records, not reviewed deliverable content."
+}

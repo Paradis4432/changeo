@@ -1,0 +1,2 @@
+Task /root/changeo_foundations/foundation_plan_review
+No missing founder or sandbox design answer. Builder must inspect actual role CHECK name and revalidate local assigned PostgreSQL/Podman ownership, test exact new role/freshness/session/removal/migration boundaries and full regression. Focused roles alone do not confer funds eligibility; independently established ordinary F2 eligibility stays unchanged. M1 owner still proves actual safe evidence and metadata-only audience integration separately. Existing production questions remain outside F3 readiness.

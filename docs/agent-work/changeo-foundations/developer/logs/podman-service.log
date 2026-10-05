@@ -1,0 +1,24 @@
+time="2026-10-01T01:25:52-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc00013a018
+Trying to pull docker.io/library/postgres:18.0...
+Getting image source signatures
+Copying blob sha256:99c86b3ee08277e40b2482683eb6acccfe7292e802fe2a9b7ff3b8820ed8123f
+Copying blob sha256:daee9001e88106fa1ed12dff90c3d192c9308a2bef5ce4298157ab30697686a0
+Copying blob sha256:d7ecded7702a5dbf6d0f79a71edc34b534d08f3051980e2c948fba72db3197fc
+Copying blob sha256:020ec506a9a9fba5abb81325e1f885309590512687a408a9e6a27ecb5ae3d09c
+Copying blob sha256:6fb1887789d5ef668957926fdf3e91e486137bc6bae2efebbf1058e21c90ee79
+Copying blob sha256:cf13711e2d93bc817705ff7ad5a6ef510efa34d3094ea3d013941aaf6cb157bc
+Copying blob sha256:d15ec67b8f252c8cdb8419e01d563f7d0b0b1ed72e73d85befe1ece2f2b57017
+Copying blob sha256:4901ed08c960f90c3b34b9b623abfe6beb453579bfd0003e482ce397a44eb4e7
+Copying blob sha256:4d36f395949b7fcb15543f3eb9d8fac43e819e7d5769872e6a14b1b139126840
+Copying blob sha256:79f0f9d42419f171510ca16e744bb96a911ee3bf4924b483260f4a1c90e31959
+Copying blob sha256:7e5e79cb13cef1114e2b9f6777742c36bbee55397dd8993851a8ddbb31a6893d
+Copying blob sha256:f4ece806f0186911a77eebefdc6e97017a8a6a19e7dace2b7d0297257491335f
+Copying blob sha256:433f50e81b26aaa24b1b90cbeaa90aa38f2b9b9be43797822485e92d3b04e803
+Copying config sha256:6cb75ec20a1d7a81c2c92b9a0ab681ffa4d540a5ec404a977def81ffd0138eca
+Writing manifest to image destination
+time="2026-10-01T01:28:23-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc000924da8
+time="2026-10-01T01:37:11-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0010ec000
+time="2026-10-01T01:43:33-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc00013a018
+time="2026-10-01T01:55:32-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc000a16000
+time="2026-10-01T02:13:48-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc000a16000
+time="2026-10-01T02:22:09-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0010ec000

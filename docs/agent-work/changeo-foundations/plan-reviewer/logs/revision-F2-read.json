@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-01T03:45:12.046024+00:00",
+  "complete_reads": [
+    {
+      "path": "docs/agent-work/changeo-foundations/design-amendment-F2.md",
+      "bytes": 11860,
+      "sha256": "485451ea3aea8e87a4e4bc0e08b8a3d657c2a65de5da0d61bbac0a0f28cc6e46"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan.md",
+      "bytes": 12495,
+      "sha256": "e3e789f7bc61748874288e756004eb344366e1671f0d94f33834efcd4338bf9b"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer-brief.md",
+      "bytes": 9615,
+      "sha256": "f5472854bc0fe191d8748b7521d6af5d2fb3479b256f0777306f11663f44ce03"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/CHECKPOINT.md",
+      "bytes": 1791,
+      "sha256": "fc631b1b833f486ef2c2b1bbeb59d20e077f2158b905b0fc57c6767e24b9395a"
+    }
+  ],
+  "reused_evidence": [
+    "report.before-F2.md",
+    "logs/verification.json",
+    "logs/web-evidence.md"
+  ],
+  "status": "ready after root F2 acceptance and written clarifications",
+  "final_complete_reads": [
+    {
+      "path": "docs/agent-work/changeo-foundations/design-amendment-F2.md",
+      "bytes": 12631,
+      "sha256": "fb48694b1f95cb5df4e84f0a5e96987ad8cd6e1c01e6944c19e1c3de182d5099",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan.md",
+      "bytes": 12495,
+      "sha256": "e3e789f7bc61748874288e756004eb344366e1671f0d94f33834efcd4338bf9b",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/developer-brief.md",
+      "bytes": 9939,
+      "sha256": "1dd226bf828a64ed8e32d1ba69bedc5c9a60585927b16c7ab31e86152fe3d291",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/CHECKPOINT.md",
+      "bytes": 1775,
+      "sha256": "70d8b175577f6967d57d30572bcd0d3c4515068230459ab581d6f6b106f76897",
+      "read": "complete; final post-clarification amendment/root decision read"
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F2.md",
+      "bytes": 4201,
+      "sha256": "f9c277316a9b60e023b1e4b78c14e1db796dad72f608989e114638bee523183e",
+      "read": "complete; final post-clarification amendment/root decision read"
+    }
+  ]
+}

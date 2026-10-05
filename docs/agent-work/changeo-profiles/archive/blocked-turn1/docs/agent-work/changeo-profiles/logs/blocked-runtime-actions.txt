@@ -1,0 +1,7 @@
+Root authorized coordinator runtime cleanup after builder terminal, no product edits.
+First host-visible revalidation: PID3465232 UID1000 java; cwd /home/paradis/changeo; exe /home/paradis/changeo/.local-tools/jdk-25.0.4.1+1/bin/java; exact jar target/changeo-0.1.0-SNAPSHOT.jar; loopback8080 listener owned by that PID.
+Termination revalidated UID/cwd/exe/exact jar in the same command before kill -TERM3465232; owned_app_terminate_sent=true.
+Attempted native write_stdin session56588 empty poll; coordinator namespace returned Unknown process id56588. Native app exit unavailable to this coordinator; no false exit143 claim.
+Final host check blocked-runtime-final.log/exit0: owned PID absent, no8080 listener, test containers[], retained PG1730365 loopback55432 and Podman2094717 pingOK.
+Firefox2858248 UID1000 PPID1 started2026-10-01 16:00:33 local; cwd /home/paradis. Predates this feature and builder (feature20:09, builder20:33 local), no headless/profile markers observed. Unrelated existing browser preserved, not killed. No feature-owned browser identified remaining; global no-browser claim not made.
+Private fixture/enrollment/password/factor/token/runtime files untouched by coordinator cleanup and excluded from evidence.

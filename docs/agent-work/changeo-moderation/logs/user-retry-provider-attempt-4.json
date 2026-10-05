@@ -1,0 +1,26 @@
+{
+  "authority": "Third fresh user-resumed overall-goal continuation, one useful same-builder completion recovery from saved partial fixes.",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "terminal503_after_focused_verification_progress",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43e14f069f3f458-EZE",
+  "captured_utc": "2026-10-01 20:06:21 UTC",
+  "actual_progress": {
+    "log": "docs/agent-work/changeo-moderation/developer/logs/MFR-green.log",
+    "underlying_exit": 1,
+    "executions": 23,
+    "validator_executions_passed": 20,
+    "actual_postgresql_executions": 3,
+    "assertion_failures": 0,
+    "errors": 3,
+    "skipped": 0,
+    "result": "Validator regressions pass; three PostgreSQL tests reach new persisted assertions then violate the existing owner-transaction precondition. Filename green means attempted phase, not successful whole command."
+  },
+  "diagnosis": "ModerationPostgresTest lines365/382/399 call canonical.resource outside required owner transaction. Wrap these test assertions in existing tx helper or equivalent persisted-state assertion; never weaken product transaction guard. Current source calls are still unwrapped. This is a test fixture usage defect, not a PostgreSQL access outage or demonstrated new product defect.",
+  "source_state": "Current four approved partial files exactly match prior snapshots, scoped cmp exit0 at user-retry-third-turn-source-check.log/.exit; root139 other initial-source check reused.",
+  "remaining_work": "Fix transaction usage in three regression assertions, rerun affected checks, complete MFR3 both-order byte races/full PG+Testcontainers/preservation/durable handoff, same independent cumulative review.",
+  "native_state": "Terminal errored confirmed then interrupted; same sole writer and final reviewer retained.",
+  "next_owner": "Root owns third fresh audit/lifecycle/continuation. No additional rapid dispatch, configuration/model/provider/probe or writer substitution."
+}

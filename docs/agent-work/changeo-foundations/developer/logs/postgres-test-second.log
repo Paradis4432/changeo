@@ -1,0 +1,329 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/paradis/changeo/.local-tools/apache-maven-3.9.11/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< ar.changeo:changeo >-------------------------
+[INFO] Building changeo 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ changeo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 16 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ changeo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 46 source files with javac [debug parameters release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ changeo ---
+[INFO] skip non existing resourceDirectory /home/paradis/changeo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ changeo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ changeo ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ar.changeo.identity.IdentityPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T01:20:05.939-03:00  INFO 1738606 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Starting IdentityPostgresTest using Java 25.0.4.1 with PID 1738606 (started by paradis in /home/paradis/changeo)
+2026-10-01T01:20:05.940-03:00  INFO 1738606 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T01:20:06.175-03:00  INFO 1738606 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T01:20:06.185-03:00  INFO 1738606 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/paradis/changeo/.local-tools/m2/net/bytebuddy/byte-buddy-agent/1.18.11/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-01T01:20:06.806-03:00  INFO 1738606 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T01:20:06.878-03:00  INFO 1738606 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@441aa7ae
+2026-10-01T01:20:06.878-03:00  INFO 1738606 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T01:20:06.888-03:00  INFO 1738606 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T01:20:06.915-03:00  INFO 1738606 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.009s)
+2026-10-01T01:20:06.929-03:00  INFO 1738606 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2026-10-01T01:20:06.931-03:00  INFO 1738606 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-10-01T01:20:06.976-03:00  INFO 1738606 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T01:20:07.001-03:00  INFO 1738606 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01T01:20:07.095-03:00  INFO 1738606 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T01:20:07.126-03:00  INFO 1738606 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T01:20:07.449-03:00  INFO 1738606 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T01:20:07.464-03:00  INFO 1738606 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T01:20:07.707-03:00  INFO 1738606 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T01:20:07.886-03:00  INFO 1738606 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T01:20:07.886-03:00  INFO 1738606 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T01:20:07.887-03:00  INFO 1738606 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T01:20:07.927-03:00  INFO 1738606 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Started IdentityPostgresTest in 2.082 seconds (process running for 2.465)
+[ERROR] Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.843 s <<< FAILURE! -- in ar.changeo.identity.IdentityPostgresTest
+[ERROR] ar.changeo.identity.IdentityPostgresTest.shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation -- Time elapsed: 0.114 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting ArrayList:
+  ["TOKEN_DELIVERY_PENDING_CONTACT",
+    "REGISTER",
+    "TOKEN_DELIVERY_PENDING_CONTACT",
+    "ROLE_REMOVED_IDENTITY_ADMIN",
+    "GUARDIAN_REQUESTED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "REGISTER",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "ROLE_REMOVED_IDENTITY_ADMIN",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "REGISTER",
+    "GUARDIAN_REQUESTED",
+    "CONTACT_VERIFIED",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "REGISTER",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_REQUESTED",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "RESTRICTED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "REGISTER",
+    "REGISTER",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "REGISTER",
+    "RESTRICTED",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "GUARDIAN_REVOKED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_CONSENT_GRANTED",
+    "GUARDIAN_REQUESTED",
+    "SYNTHETIC_CONSENT_GRANTED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "SYNTHETIC_EVIDENCE_PROVIDER_ELIGIBILITY",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "PREFERENCES",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "RESTRICTION_REMOVED",
+    "GUARDIAN_REQUESTED",
+    "GUARDIAN_REVOKED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT"]
+to contain:
+  ["LOCAL_OPERATOR_PROVISIONED"]
+but could not find the following element(s):
+  ["LOCAL_OPERATOR_PROVISIONED"]
+
+	at ar.changeo.identity.IdentityPostgresTest.shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation(IdentityPostgresTest.java:227)
+
+[INFO] Running ar.changeo.identity.SandboxSafetyTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in ar.changeo.identity.SandboxSafetyTest
+[INFO] Running ar.changeo.identity.TotpTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in ar.changeo.identity.TotpTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   IdentityPostgresTest.shouldRequireCurrentRoleMfaFreshAuthAndPreventSelfElevation:227 
+Expecting ArrayList:
+  ["TOKEN_DELIVERY_PENDING_CONTACT",
+    "REGISTER",
+    "TOKEN_DELIVERY_PENDING_CONTACT",
+    "ROLE_REMOVED_IDENTITY_ADMIN",
+    "GUARDIAN_REQUESTED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "REGISTER",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "ROLE_REMOVED_IDENTITY_ADMIN",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "REGISTER",
+    "GUARDIAN_REQUESTED",
+    "CONTACT_VERIFIED",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "REGISTER",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_REQUESTED",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "RESTRICTED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "REGISTER",
+    "REGISTER",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "TOKEN_DELIVERED_CONTACT",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "REGISTER",
+    "RESTRICTED",
+    "CONTACT_VERIFIED",
+    "TOKEN_DELIVERED_CONTACT",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "REGISTER",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "CONTACT_VERIFIED",
+    "GUARDIAN_REVOKED",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "REGISTER",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "TOKEN_DELIVERED_CONTACT",
+    "GUARDIAN_REQUESTED",
+    "CONTACT_VERIFIED",
+    "SYNTHETIC_CONSENT_GRANTED",
+    "GUARDIAN_REQUESTED",
+    "SYNTHETIC_CONSENT_GRANTED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "GUARDIAN_REQUESTED",
+    "RESTRICTED",
+    "SYNTHETIC_EVIDENCE_PROVIDER_ELIGIBILITY",
+    "GUARDIAN_VERIFIED_SYNTHETIC",
+    "PREFERENCES",
+    "SYNTHETIC_EVIDENCE_AGE",
+    "RESTRICTION_REMOVED",
+    "GUARDIAN_REQUESTED",
+    "GUARDIAN_REVOKED",
+    "SYNTHETIC_EVIDENCE_MINOR_DRAFT"]
+to contain:
+  ["LOCAL_OPERATOR_PROVISIONED"]
+but could not find the following element(s):
+  ["LOCAL_OPERATOR_PROVISIONED"]
+
+[INFO] 
+[ERROR] Tests run: 21, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.479 s
+[INFO] Finished at: 2026-10-01T01:20:11-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project changeo: There are test failures.
+[ERROR] 
+[ERROR] See /home/paradis/changeo/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

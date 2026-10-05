@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "threadId": "01a0f433-fd90-7511-905b-e6e5d6440d39",
+    "objective": "Implement all Changeo features documented in docs, in delivery order and only after Gate0 is closed; preserve existing work, use required GPT-6.1 Sol/high roles and independent acceptance, and record unanswered questions in docs/questions.md.",
+    "status": "blocked",
+    "tokensUsed": 10003218,
+    "timeUsedSeconds": 39944,
+    "createdAt": 1790803843,
+    "updatedAt": 1790891972
+  },
+  "remainingTokens": null,
+  "completionBudgetReport": null
+}

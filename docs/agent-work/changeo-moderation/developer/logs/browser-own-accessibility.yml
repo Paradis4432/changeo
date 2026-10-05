@@ -1,0 +1,59 @@
+- banner:
+  - link "Ir al contenido":
+    - /url: "#main"
+  - text: Entorno privado · Datos sintéticos · Dinero real deshabilitado
+  - navigation "Principal":
+    - link "Changeo":
+      - /url: /
+    - link "Mi cuenta":
+      - /url: /account
+    - link "Guardianes":
+      - /url: /account/guardian
+    - link "Taller":
+      - /url: /moderation
+    - link "Ejemplos aprobados":
+      - /url: /content
+    - link "Ayuda":
+      - /url: /support
+    - link "Derechos":
+      - /url: /rights
+    - link "Administración":
+      - /url: /admin/mfa
+    - button "Salir"
+- main:
+  - heading "Estado de contenido" [level=1]
+  - paragraph:
+    - link "Volver al taller":
+      - /url: /moderation
+    - text: ·
+    - link "Consultar revisión publicada":
+      - /url: /content/1e5e8c08-558c-4983-94e0-adab4cf937cf
+  - paragraph: Una edición conserva la revisión aprobada anterior hasta que la nueva esté aprobada, o la anterior se retire.
+  - heading "Revisión actual" [level=2]
+  - paragraph: f887da34-dc9b-4f7e-b91a-19018fce5398
+  - status: Borrador guardado; falta enviar a revisión
+  - paragraph: Enviá el borrador a revisión
+  - paragraph: "Solo metadatos: la edad, preferencia o clasificación actual no permite mostrar el texto pendiente."
+  - button "Enviar a revisión"
+  - group: Apelar o pedir revisión
+  - heading "Revisión anterior" [level=2]
+  - paragraph: 16ef8c6f-d338-452a-ae62-2788db0f0869
+  - status: Revisión aprobada; publicación sujeta a permisos actuales
+  - paragraph: Ejemplo sintético claro
+  - text: synthetic:clear
+  - paragraph: "Adjuntos privados: su descarga requiere aprobación exacta, audiencia y seguridad actuales."
+  - group: Apelar o pedir revisión
+  - heading "Guardar una edición" [level=2]
+  - text: Nuevo texto
+  - textbox "Nuevo texto"
+  - text: Etiqueta
+  - combobox "Etiqueta":
+    - option "General" [selected]
+    - option "Sensible"
+    - option "Adulto"
+  - text: Nuevo adjunto opcional
+  - button "Nuevo adjunto opcional"
+  - paragraph: La edición tiene adjuntos nuevos e independientes; nunca reemplaza los bytes aprobados.
+  - button "Guardar edición"
+- contentinfo:
+  - paragraph: Prueba local. No ingresar personas, menores reales ni datos personales. Solo contenido sintético de prueba. Sin servicios reales, contratos, saldos ni pagos.

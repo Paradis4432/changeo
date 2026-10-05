@@ -1,0 +1,11 @@
+{
+  "current_source_files": 87,
+  "mismatches": [],
+  "report_sha256": "681c3174b154b6b00bd975a6cbca6e07bda7cff4b24a842dd37862ceef42ed1f",
+  "verdict": "accepted",
+  "test_executions": 68,
+  "exit": 0,
+  "app_stopped_per_independent_cleanup": true,
+  "private_api_native_session": 29315,
+  "postgres_pid": 1730365
+}

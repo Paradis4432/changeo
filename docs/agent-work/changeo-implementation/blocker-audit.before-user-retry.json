@@ -1,0 +1,23 @@
+{
+  "condition": "required_Sol_high_feature_role_configured_route_unavailable503",
+  "consecutive_overall_goal_turns": 3,
+  "goal_status": "blocked",
+  "review_verdict": "changes_requested",
+  "feature_failures": {
+    "reviewer": 4,
+    "correction_builder": 2
+  },
+  "previous_goal_turn_classification": "progress: accepted F3 and shared contracts, preservation/runtime cleanup",
+  "current_goal_turn_classification": "progress: new failing behavior regressions/source evidence; terminal same route impasse remains",
+  "equivalence": "Underlying configured route upstream503 remains same blocker across terminal goal turns, even though required next role changed and reviewer temporarily recovered.",
+  "required_external_change": "configured authorized route sustains same retained builder correction work",
+  "next_owner": "user/external route availability then same root/coordinator/builder/reviewer",
+  "source_corrections_landed": false,
+  "current_goal_turn": 3,
+  "current_state": "same builder terminal errored upstream503 after useful red tests, no production fix/green delivery",
+  "impasse": true,
+  "product_fixes_landed": false,
+  "evidence": "logs/moderation-third-turn-impasse-check.json",
+  "streak_explanation": "Interim useful execution in this turn did not clear terminal blocker: all three consecutive overall-goal turns ended unable to continue required roles at same configured upstream503 route. Child role change does not create a different blocker.",
+  "transition_confirmed": "update_goal returned blocked on third terminal goal-turn audit"
+}

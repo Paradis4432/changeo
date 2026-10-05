@@ -1,0 +1,23 @@
+Command (cwd /home/paradis/changeo; login=false):
+python3 - <<'PY'
+import hashlib, json, pathlib, stat
+root = pathlib.Path('/home/paradis/changeo')
+baseline = json.loads((root / 'docs/agent-work/changeo-implementation/baseline.json').read_text())
+errors = []
+for name, expected in baseline['files'].items():
+    p = root / name
+    if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != expected['sha256'] or p.stat().st_size != expected['bytes']:
+        errors.append(name)
+for name, expected in baseline['protected_metadata'].items():
+    p = root / name
+    if oct(p.stat().st_mode) != expected['mode'] or sorted(x.name for x in p.iterdir()) != expected['entries']:
+        errors.append(name)
+print(f"Checked {len(baseline['files'])} original files and {len(baseline['protected_metadata'])} protected directory modes/inventories; errors: {errors}")
+print('questions.md pre-existing:', (root / 'docs/questions.md').exists())
+raise SystemExit(bool(errors))
+PY
+
+Exit status: 0
+Output:
+Checked 18 original files and 4 protected directory modes/inventories; errors: []
+questions.md pre-existing: False

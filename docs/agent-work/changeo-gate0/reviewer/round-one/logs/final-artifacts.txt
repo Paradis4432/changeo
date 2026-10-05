@@ -1,0 +1,40 @@
+Cwd: /home/paradis/changeo; login=false
+Exact command:
+python3 - <<'PY'
+from pathlib import Path
+import re, hashlib, json
+root=Path('/home/paradis/changeo')
+role=root/'docs/agent-work/changeo-gate0/reviewer'
+errors=[]
+required=['report.md','CHECKPOINT.md','notes.txt','logs/read-notes.txt','logs/inventory.txt','logs/preservation.txt','logs/preservation-command.txt','logs/document-check.txt']
+for name in required:
+    p=role/name
+    if not p.is_file() or p.stat().st_size==0: errors.append('Missing/empty reviewer artifact '+name)
+def anchors(path):
+    return {re.sub(r'[^\w\- ]','',heading.lower()).replace(' ','-') for heading in re.findall(r'^#{1,6}\s+(.+)$',path.read_text(),re.M)}
+links=0
+for p in [role/'report.md',role/'CHECKPOINT.md']:
+    value=p.read_text()
+    if len(re.findall(r'^```',value,re.M))%2: errors.append('Fence '+str(p))
+    for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)',value):
+        name,sep,fragment=target.partition('#')
+        dest=(p.parent/name).resolve() if name else p
+        if not dest.exists() or (sep and (not dest.is_file() or fragment not in anchors(dest))): errors.append('Bad reviewer target '+target)
+        links+=1
+accepted=[root/'docs/questions.md',*sorted((root/'docs/agent-work/changeo-gate0/developer').rglob('*'))]
+manifest={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in accepted if p.is_file()}
+(role/'logs/accepted-artifacts.json').write_text(json.dumps(manifest,indent=2)+'\n')
+print('Required reviewer artifacts: '+str(len(required)))
+print('Reviewer Markdown targets: '+str(links))
+print('Accepted exact question/developer artifact hashes: '+str(len(manifest)))
+print('Errors:',errors)
+raise SystemExit(bool(errors))
+PY
+
+Underlying exit: 0
+Full output:
+Required reviewer artifacts: 8
+Reviewer Markdown targets: 23
+Accepted exact question/developer artifact hashes: 10
+Errors: []
+

@@ -1,0 +1,664 @@
+{
+  "command": "python3 full supplement source87/evidence6 SHA256 snapshot/current comparison with active moderation cumulative changes explicitly recorded",
+  "underlying_exit": 0,
+  "source_count": 87,
+  "evidence_count": 6,
+  "checks": [
+    {
+      "kind": "source87",
+      "path": "pom.xml",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1a62077f16de1072112b61c9c7afec0f0909b7de48b835a12e11961d66e66193"
+    },
+    {
+      "kind": "source87",
+      "path": ".gitignore",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "5e525f57f24cdeec447d6a773080a2024afb47fd1304a5cb16aea5ac795b6b22"
+    },
+    {
+      "kind": "source87",
+      "path": "mvnw",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+    },
+    {
+      "kind": "source87",
+      "path": "mvnw.cmd",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+    },
+    {
+      "kind": "source87",
+      "path": ".mvn/maven.config",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "320d04bd599478c92a208016078cbe1fa911b6bd199ed6890d06290c5df5ae26"
+    },
+    {
+      "kind": "source87",
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "bb0b8f16b2661c3676ed5a6a15f5b11d864460c4e77cfb50c583f54708f944e7"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/TotpTest.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "4581b74b96b86b0e29ca405d87c9c5406e91ace3e94ad4013377212a8f9267b9"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/SandboxSafetyTest.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "27c0343c13df258ec606b8fc33ac9ebbf18a6c9e3e715b61b2aebb5f73399786"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/MutableClock.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "9f1b959f96696eb98c872e79d78a3951e784cc0299792b79da47926596bc2ce8"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "aa5a5e0b7f40d07b87843dcd23d5e130620b291a3ea764b8b3a6cc86c5c55464"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "65f8bb07eed5cb574383622909d4f85f0c6931c001d2dde65b61904caf133e52"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1f0713ddcfcc49463a58f8043adc91d6a20b1c6761bb7a178754b54ea4ce805c"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/application.properties",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1de674acc2f3c1968dc770d944967d1306f1489e106b723fb89f9b94b9dc19dc"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/shell.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "2938b6ffad2a238ee38b5f5b8a10c38dfc193ac9199695aa890b8f683bb2b5fd"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/home.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "e8f1da851175b58f77cf11d2d8334055d6145fc43aaa6dd74af68a2dffa619bd"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/register.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "fcf78114bfb8c05e25b4df948a75b27b2a0452bba9ac983eb045868f8f1ef9fb"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/login.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1ddfca7f93b234143e166da0f45133f287dbc06099119c3971130c49f37cf281"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/forgot.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "71da6a6a92c38a3695c3ee8255c2acb0097a4fad42bae3526d10a9236524bdcf"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/reset.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "d8fc7331e1b211079de3fc3f8fcf60868044cb58c661836a39978802c01ed00c"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/account.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "27d778bd9a402093b0b9b70e8689e42496bfee05679b1eeee2660d51ded1c392"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/guardian.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "f7ee12f54522e1f07861b3ac6bcb1690808f057e546af1c47607181ae6b51620"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/support.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "2ea076e2beca7e488d13b2adaa7defbc07d5dace8ccdd8f22b674c224196196c"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/mfa.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "bd200cef497d0fecc2707755957f64dd6c2d7de9e1d541987b3945ee5c2aa978"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/reauth.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "56983553fac25561710289627f199ef9dfc85631dbd64b81d5ecaccc7f89bc9a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/admin.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "00f9cdef847671515f6f650c0613f5a6a990ac7f8996ac8d725c871f902671d5"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/audit.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "f2b3b2191d2bb387742733e5c48b3c5ab0e7624c0ce7a930c65e9937df364b32"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/templates/failure.html",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "9381cde8fe8257f38f3c7d2628d70a3c69e57624c6b066f07625075ef6c21bcf"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/static/style.css",
+      "snapshot_match": true,
+      "current_match": false,
+      "current_sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/db/migration/V1__identity.sql",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "308d657bf75a2463a55c7a480afbbbba88fb566e0b76d9c751f30366cea0e12e"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/db/migration/V2__identity_state_integrity.sql",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1a78d269a2e736cb936177f776e070bdc4f8db4f9efb23137714358d555b967a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/ChangeoApplication.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "73bd69526d919c0dc1e2ee2b3b8d76e05d26d60abec584049415ee5830b51ac4"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/IdentityFailure.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "58ac58f404a407333b880aabf9e0293332050abbf60fcfa4490d3b11504441c5"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/Totp.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "da0882079ec7314fcb0ac91826271e57754625daf61c5fd81252d1adf8e1d756"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/Account.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "c07b0384228aeda5471b44e77ecb3003ae5dbdd3767abd8af8c1d9ea467a9d42"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/Evidence.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "5411ddb5f6cac4afc43fc8f686ee2efe46895f4ee567fad43f6e9fb8c773bd61"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/ContactToken.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "b4d0f261aa67dd3c7c3289a057b05bf064eb44813f654248a5db4d4658249884"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/GuardianLink.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "3465685b60202c77b2a8a15418bccf62454dbb6b9c4c001eb8000f4469da9539"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/JobConsent.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "a7836501697ad5428f873c7d65fcf72789e7aec6b9cb0778a8a89e4fe99da4d1"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/Restriction.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1b508bb36cf2e689ea8522533547019976c71c8a05766add839415cfdbde2643"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AdminMfa.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "8702b6a1c696b84e7d48bb64ecb6f2c70ed30aecf8b460b77bb2d31309c42444"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AuditEvent.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "ea1e93acba3763401b7d716af54328dee4f6d199cea7366fdc4b130e6c0f7768"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "566a04b319721f93cce587a67be425b4c7093517f344ead497ac0f00af6d1d4a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/EvidenceKind.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "7782981521257b1940e678ab3529f16faacf4035b247ee1c0cecd56e76745408"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/TokenPurpose.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "8fc3acc18b785921c38c18e5d56d28f78ffae4f648830a6fa69716d5981eb959"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/LinkStatus.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "733253c682c796a39354a08dbbe57b479031de384a608c2164ef150f83c3b66f"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/ConsentStatus.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "2d25195588bda1288261ade11ab74c6431984d8267a150067aeb8897d3351aa2"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/IdentityStore.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "337194cc4c5fed43d91e6758a298c8980abe6f71befd093a92d30b7b668964c5"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/SecurityProof.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "7dc12c933ccd70a3a7474b88030ada7349a9b7d96d8d1742cb9ff0402c477abf"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/PrivateFiles.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "0bbb90bf55fb1f45593af11666bd83617065dbbdad93d9d36b681e6659aac3ff"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/TokenDelivery.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "54e33e8d60250b19a80dc3f5c07e80f6bd4a5f14fd584f46d322a2ce989715b8"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/LocalMailbox.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "21308f5802ca7538816e8ab5433426886daa07cc912f15b1ce62a6b0ce7052c4"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AbuseLimits.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "8b1551608b44b82fba00d0e34f2347530c35478cbec820c13ff68f97b727e7f0"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AccountService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "527be994201d3887312a785388cd4599bb391f0e27eb29790377b01ea9a7bf7a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/FactorCipher.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "b8524466ac46ead545611d8d9781ca7393fa4851d71ac9efc36248c2a5c073a1"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AdminSecurityService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "f17e13633194ad6a0a8bca004c218b7d610cb4fa916965a4b16b4fcaca501b07"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/GuardianService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "837ddae736206dcef55ccb52924add592d1645b597c45e2d9a7d2e07f401591a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/AdminService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "95641c082f1534a5a6c4fc8737a6353938b63b46065159650dedea7fb8cb1d19"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/OperatorService.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "1e85040a608f9fb7f4c90c0b65307352a48429d92b086f688d557766b4eff5a5"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/security/AccountPrincipal.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "0a286011976d4d8ac2cf7fe49f624967c4c8b299b519d9495098984b3167c1e4"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/security/SessionProof.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "53aa4b587c39603c453d6418313177139ec9254e95dd686e0b227c1fb70ad33e"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/security/SessionEpochFilter.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "b2bc353aae641c3431a01f550c6c275ffb5b34ff3ebf73428ec28873e5372f8b"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "369bb7b3eae6a79bee1974c5546275ca3e1603dd1416ab05259ddf2304db75c4"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/web/WebsiteController.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "8c69050ce05991d476336d9980b88f46b8c6763450418a8fc02b270683bfc90b"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/web/WebsiteErrors.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "7644a8b39044d61ab3227b0c5e51cacdb11ff01208df697603b695cac293f748"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/config/SandboxSafety.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "855ae7d037eaa2c66b94750db17ca37abb75b2b61dce0c15be8e2cdd024d1bf6"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/config/RuntimeConfig.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "bcb5a30db727c250b1adf57562f5bab3d2f44bb6a7385e65b97c5f9a76d3789d"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "29a4ff350751bff9cbd7d449beedf17983c8266f95e5df0896b13de4bf0ff5ae"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/AccountId.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "bfa61a2b25c54ce944115fe1165cb9c20a653f876e85d85b44921cb498bdb9a6"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/ActorId.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "aee48d293a361abf6c168f3ffcdf74b9d06d75bcc443710b51ac645f6b6291ed"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/SubjectId.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "700f23ffa22d0e6c390a7e30339b9cb0e413ed764100b3a09438c15a94374bd5"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "d5a7529305ab88860cfcd84248bf80979178f85dc550708fbbd56dc63ed7e57e"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "3e8d1666f33980dd074706bbdee2b0ef3bc45dbee5a45b33ec617b75a0a2c57d"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "e073b295e43d46263c7e356c9f0226b33571b9f5d7413646ea24bcf1c260140a"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/PermissionDecision.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "49a0ad8b7468bb7b56a485590d1c94a0cdb500642c856c04d590dc9df3d09a62"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/java/ar/changeo/identity/api/AccountAccessSnapshot.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "f898edc23faf48977994467c55dc03d3dd1d4cc3921413bfedc400a3f66cd6db"
+    },
+    {
+      "kind": "source87",
+      "path": "scripts/local-db.sh",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "ecaa0cf3a8c52dc698d5d70af9c48ec09daf7983b5f7f8bfddf87113c2f3e813"
+    },
+    {
+      "kind": "source87",
+      "path": "scripts/run-sandbox.sh",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "5e3a4afc04b3b77011633c405a6a36eb2c0504393aa0c3e8fab023981de1867c"
+    },
+    {
+      "kind": "source87",
+      "path": "scripts/browser-qa.cjs",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "9d2ea2cddace83ce724bc13db99b2542d4fac19486d2879a62b56dbc48297bf6"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/sandbox-runtime.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "7d40ebb4ec3f28375db508851a8c7ee56faeba7aa923b6979d077dca6907730c"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/README.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "86386640157dbfa720b2e67aea5c3103a1033cd30bb7c20e0939fc25a3325f39"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/architecture.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "3d56c49c0e98a21af3ae103a33992374d8f7edc1b6396818a47f9d93a00d5c54"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/delivery.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "780c8fb0340869527d213358d1506a2bf89673df00e8bb85a18455143ee023fe"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/payments.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "8b7aac1ac2c42697d56880e0325cc4ca003c31dcbef1f3cdf5e26d5e7edf2df7"
+    },
+    {
+      "kind": "source87",
+      "path": "docs/questions.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "705c7da3f80b9b766721de9876138d99c3e3537eec753df44bafb0965e8266af"
+    },
+    {
+      "kind": "source87",
+      "path": "src/main/resources/db/migration/V3__identity_moderation_roles.sql",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "4465d012e593ff2fdcb91bc4cb0fc8a139fccce41bdb0ea99f4c65b76b7c5635"
+    },
+    {
+      "kind": "source87",
+      "path": "src/test/java/ar/changeo/identity/IdentityMigrationAssertions.java",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "53faa6634b4d4858732c9944376384ace531a5a602673b6d24d3e1531c0baefc"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F3.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "d210c5bc9d38c630f771f23751a310052276f2e717ee72373357875480313084"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-foundations/f3/plan.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "dd43623bf68f200179c3d37b499b3d4cb7aad159ad0edb894cc31ec1447d7cb3"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-foundations/f3/coordinator-report.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "292d9ee4af9e043e1f0c3b17445175aa83b8de81d510a984f9990dc3b07d22b2"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-foundations/reviewer/f3/report.md",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "681c3174b154b6b00bd975a6cbca6e07bda7cff4b24a842dd37862ceef42ed1f"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-foundations/reviewer/f3/logs/final-artifacts.json",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "a8c65fdc57ac7709436f979a54edfe8193ba686ab7f1fe47440d260a771d8d46"
+    },
+    {
+      "kind": "evidence",
+      "path": "docs/agent-work/changeo-implementation/logs/foundations-F3-dependency-check.json",
+      "snapshot_match": true,
+      "current_match": true,
+      "current_sha256": "fb80318f39ce8839cd87c6ae57daf7430b1f6ab1a12d140bb5c1b70ff10fa0aa"
+    }
+  ],
+  "snapshot_mismatch": [],
+  "current_difference": [
+    "src/main/resources/static/style.css"
+  ],
+  "current_difference_disposition": "Active moderation builder UI WIP; foundation identity/API/migrations/tests unchanged. Independent final moderation review must cover cumulative CSS and foundation regression; no reuse of previous CSS visual acceptance for changed state."
+}

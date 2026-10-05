@@ -1,0 +1,96 @@
+{
+  "workspace": "/home/paradis/changeo",
+  "git_usable": false,
+  "files": {
+    "docs/.obsidian/app.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "docs/.obsidian/appearance.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "docs/.obsidian/core-plugins.json": {
+      "sha256": "763cf20a921fd9955735b278006820b90b207b2fc04d9e79ca648279c7c14276",
+      "bytes": 696
+    },
+    "docs/.obsidian/workspace.json": {
+      "sha256": "d9f97d4f2ca89359cdb77beeb8c7e47e73b5b35a8549e28747726a038a045a8b",
+      "bytes": 5251
+    },
+    "docs/README.md": {
+      "sha256": "641e87f0f2b7f673a8e5377bd560fd1d6b8d31c5aa6633f2b10587fdfc0122a3",
+      "bytes": 5691
+    },
+    "docs/agent-work/changeo-planning/CHECKPOINT.md": {
+      "sha256": "b25e433deb8ace7fdf59560d849bcc960e5e5e7a2ea5ffdf8672acdad8fb264b",
+      "bytes": 3592
+    },
+    "docs/agent-work/changeo-planning/documentation-review.md": {
+      "sha256": "95b33fee2129e0f86e188160c0ef283753c75077f6abed990e30308c5e47d42e",
+      "bytes": 3759
+    },
+    "docs/agent-work/changeo-planning/planning-review.md": {
+      "sha256": "8db4823c6a0be9515cfbe728622186f40d07931926b109c4121281b0b7b9bf30",
+      "bytes": 2821
+    },
+    "docs/agent-work/changeo-planning/requirements.md": {
+      "sha256": "7aa1dfec61d882f4087da290006e4371143f2ddf95e02f7a3ee6d85bed71d46e",
+      "bytes": 9477
+    },
+    "docs/agent-work/changeo-planning/sources.md": {
+      "sha256": "a7dbc7becf01dccd0d15669b5d57a8998e94fb4781dbda16d087f2589f82a5a4",
+      "bytes": 8873
+    },
+    "docs/architecture.md": {
+      "sha256": "d5de180fc023b3464d833ca75348ccef63efe61640f4b1c3723b2f89b6880bc8",
+      "bytes": 8111
+    },
+    "docs/business.md": {
+      "sha256": "b58fa1b27cba750387b2288ffceee18fafacabaeb886857a60afb5905107fca5",
+      "bytes": 5564
+    },
+    "docs/delivery.md": {
+      "sha256": "4cf332617fe9ed403c34d4a99b5235039ff44b947bc61455497db17a9ced4987",
+      "bytes": 10373
+    },
+    "docs/marketing.md": {
+      "sha256": "2e24ac4d8fc10e39ee3b9274bd88e34f91cf0271fc6ed4d9df83a1f11fdf99f3",
+      "bytes": 5506
+    },
+    "docs/payments.md": {
+      "sha256": "7ba258019445c61c211c4559c99f2b31258d74b41b8f13ecd2a3bbeba8f34396",
+      "bytes": 9654
+    },
+    "docs/product-design.md": {
+      "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d",
+      "bytes": 7672
+    },
+    "docs/trust-operations.md": {
+      "sha256": "61faff539620b0969a6399c2df06395136d9c05f6db00d4a7de7aad23175dd11",
+      "bytes": 9179
+    },
+    "prompt.md": {
+      "sha256": "1d7ef52df3068bd22aad9d34e38357863063bc3a3f6276e5d4b3357da0a038ab",
+      "bytes": 20432
+    }
+  },
+  "protected_metadata": {
+    ".git": {
+      "mode": "0o40555",
+      "entries": []
+    },
+    ".agents": {
+      "mode": "0o40555",
+      "entries": []
+    },
+    ".codex": {
+      "mode": "0o40555",
+      "entries": []
+    },
+    ".aws": {
+      "mode": "0o40555",
+      "entries": []
+    }
+  }
+}

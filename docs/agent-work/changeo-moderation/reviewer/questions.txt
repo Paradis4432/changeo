@@ -1,0 +1,3 @@
+Task M1: no new founder answer required to correct MFR1–MFR3. See report.md and root moderation-contract-M1A/M1B.
+Production questions remain open in docs/questions.md (G01.1–G06.4 and Y01); S1 does not authorize real money, public launch, vendor processing, retention or custody decisions.
+No external task link supplied. Later owners must integrate and verify their concrete canonical/attachment bridges and all retrieval surfaces after moderation acceptance; synthetic workbench/independent test owner does not certify those future integrations.

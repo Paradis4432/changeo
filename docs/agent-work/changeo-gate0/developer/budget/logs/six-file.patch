@@ -1,0 +1,181 @@
+--- budget-baseline/docs/business.md
++++ docs/business.md
+@@ -65,4 +65,4 @@
+ 
+ Before product implementation, the founder must accept modeled subscription terms, free/trial periods, reward limits, subsidy exposure, support capacity, reserve funding and initial marketing budget. Gate0 must record exact approved values and evidence; developers do not choose them.
+ 
+-No budget amount or launch date was committed in the conversation. Marketing investment is intended to be substantial, but this documentation does not authorize spending. Optional held-fund yield is a separate feasibility hypothesis in [Payments](payments.md), with zero contribution in the base case.
++The founder supplied **`100$ a month`** on 30 September 2026. Use **USD100/month provisionally** to compare the existing USD vendor quotations; the currency was not separately specified. This is a planning envelope, not purchase authority. No upfront capital, runway, separate reserve/setup funding, dedicated advertising allocation or launch date was supplied. Marketing investment is still intended to be substantial. The [budget-informed comparison](gate0-research.md#supplied-budget-and-solo-support--r2) separates lean private-staging arithmetic from full launch costs; exact commercial terms and funded feasibility remain Gate0 outputs. Optional held-fund yield is a separate feasibility hypothesis in [Payments](payments.md), with zero contribution in the base case.
+--- budget-baseline/docs/trust-operations.md
++++ docs/trust-operations.md
+@@ -61,7 +61,7 @@
+ 
+ Users can report listings, profiles, comments, messages and jobs with structured reasons and relevant evidence. Offer blocking while preserving active job/support obligations. Avoid letting abusive reporting alone trigger irreversible enforcement.
+ 
+-The founder dashboard needs queues for moderation/appeals, identity/guardian exceptions, fraud concerns, payment exceptions, disputes/refunds and subscription support. Each case records ownership, status, evidence, decisions and notices. Set realistic support hours, escalation timing and case capacity before launch; do not advertise an unfunded 24/7 guarantee.
++The founder dashboard needs queues for moderation/appeals, identity/guardian exceptions, fraud concerns, payment exceptions, disputes/refunds and subscription support. Each case records ownership, status, evidence, decisions and notices. The founder confirmed **sole-operator support during regular hours** on 30 September 2026. Exact days/time zone, dedicated case hours, response/escalation targets and measured capacity are not supplied; regular hours does not imply a forty-hour support-only workweek. Derive and validate realistic targets before launch, using the [proposed solo routine](gate0-research.md#supplied-budget-and-solo-support--r2); do not advertise an unfunded 24/7 guarantee.
+ 
+ Dispute decisions follow published, legally reviewed criteria and accepted agreements. The model can assist triage but cannot decide entitlement to customer funds. Staff money actions require explicit permissions, fresh authentication where appropriate and audit records. Admin accounts require MFA.
+ 
+--- budget-baseline/docs/marketing.md
++++ docs/marketing.md
+@@ -54,6 +54,6 @@
+ 
+ ## Budget and expansion gates
+ 
+-The founder approves channel budgets, runway and stop/expand thresholds after the [business model](business.md) includes processing subsidies, moderation and support. No budget or CAC was supplied, so none is fabricated here.
++The founder approves channel budgets, runway and stop/expand thresholds after the [business model](business.md) includes processing subsidies, moderation and support. The supplied **`100$ a month`** is the known recurring planning envelope, compared provisionally as USD100/month. It does not establish a dedicated campaign allocation, upfront acquisition funding, runway or CAC. Substantial paid-acquisition intent remains; the [budget comparison](gate0-research.md#supplied-budget-and-solo-support--r2) leaves campaign funding and tranche thresholds unresolved rather than treating the whole envelope as advertising money. No spending authority follows.
+ 
+ Before releasing a tranche, set numeric targets from the financial model for suitable-response rate, completed-job conversion, contribution, retention, fraud and support capacity. If a campaign attracts demand that cannot be served, correct coverage rather than buying more unfulfilled requests. Do not fund acquisition from customer money awaiting release.
+--- budget-baseline/docs/questions.md
++++ docs/questions.md
+@@ -1,13 +1,11 @@
+-# Changeo: remaining founder inputs
++# Changeo: answered inputs and remaining evidence
+ 
+-Updated 30 September 2026. I researched the public payment, legal/privacy and vendor-cost questions in [Gate0 research](gate0-research.md). You do not need to choose Argentina, Java, the minimal interface, final-only payment release or guardian controls again: those are already settled.
++Updated 30 September 2026. You supplied **“100$ a month”** and **“just me for now so regular hours”**. Those answers are recorded; there is no need to repeat the funding or availability questionnaire. Starting from zero remains the existing setup baseline.
+ 
+-**F1 — Setup: keep the recorded baseline unless it changed.** You already said you were starting from zero. There is no need to answer that again; only flag any entity/CUIT, adviser or payment-partner relationship established since then. Recommended next step: validate the required custody/credit arrangement with BIND PSP and Mobbex and professional advice before choosing a structure. Public pages cannot establish your actual setup or approve this account; the [prepared partner inquiry](gate0-research.md#reusable-partner-inquiry--prepared-not-sent) covers the evidence to obtain. No outreach has been sent or authorized.
++I used **USD100/month provisionally** to compare the researched USD prices. Currency, upfront capital, runway and a dedicated marketing allocation were not separately supplied. Solo regular-hours support does not establish a forty-hour support-only week, exact schedule, SLA or measured queue capacity.
+ 
+-**F2 — What funding range and runway can you sustain?** An approximate amount/currency and period are enough to prepare the next costed proposal. Separate substantial marketing funding if you already have a range; share any existing subscription-price preference. Recommended direction: preserve free founding access, then an explicit trial/monthly provider plan, with initially capped subscription credits/badges. I can derive candidate prices, durations and spending limits from your funding and partner quotes; you need not invent every number now. The [zero-yield model](gate0-research.md#conditional-zero-yield-model) has current technical inputs, but your available capital and willingness to fund payment subsidies, staff, reserves and acquisition are private facts. Customer principal cannot cover them.
++The [budget-informed draft](gate0-research.md#supplied-budget-and-solo-support--r2) shows one lean private technical environment at **USD40.80/month**, or **USD60.80 with paid email**, under stated usage/free-tier assumptions. It preserves the full review, identity, guardian, custody and recovery requirements. Adding the separately priced Plus identity minimum brings the first comparison to **USD139.80**, before other required costs. These are technical comparisons, not selected services or launch budgets. Unknown partner costs and possible contractually bundled KYC mean the subtotal alone cannot prove a full launch impossible.
+ 
+-**F3 — What support capacity can you actually provide?** Give approximate founder/team hours, availability and any paid support you can fund. Recommended next step: derive queue capacity, coverage and proposed response/escalation limits from that availability, then validate them in authorized testing. The model covers moderation, guardian exceptions, disputes, refunds and reconciliation; public research cannot tell us who is available. A launch date can remain undecided until feasibility and capacity are established.
++The next evidence work is assigned in the [complete original-ID map](gate0-research.md#original-question-coverage-and-remaining-evidence): written Argentina/ARS custody and credit capability/fees; professional entity/tax, age/guardian and privacy/retention outputs; then actual costs, production/recovery requirements and measured solo capacity. The [prepared BIND/Mobbex inquiry](gate0-research.md#reusable-partner-inquiry--prepared-not-sent) remains unsent; external contact requires separate authority. The proposed solo routine prioritizes urgent payment/dispute/guardian cases without promising continuous coverage.
+ 
+-The remaining partner, legal, privacy and engineering work is assigned in the [complete original-ID coverage map](gate0-research.md#original-question-coverage-and-remaining-evidence), rather than another founder questionnaire. It preserves all 24 Gate0 questions plus optional yield discovery, including holding limits, backed credits, guardian authority, per-class retention, full economics and measured capacity. No partner/vendor, commercial value, retention period, holding limit, date or budget has been approved.
+-
+-All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) must close before product implementation. The coordinator uses the funding/capacity answers and any setup update and actual external evidence to prepare exact decisions; the root records approved source/contract revisions. All product bundles remain held. Later outreach, purchases, spending and the single production launch need their own applicable authority. Optional yield remains outside the zero-yield base case.
++**No further private answer blocks this documentation round.** All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) remain open; the map retains all 24 mandatory IDs plus optional yield. Exact provider selections, commercial terms, holding/retention values, funded operating limits and a launch date remain unapproved. The coordinator/root owns the next external-evidence and source-contract decisions under actual authority; product implementation still waits for every gate to close. Spending and the single production launch require their own authority; yield contributes zero to base economics.
+--- budget-baseline/docs/gate0-research.md
++++ docs/gate0-research.md
+@@ -1,6 +1,6 @@
+ # Changeo Gate0 research
+ 
+-Researched **30 September 2026**. Public facts below were checked against primary government, regulator and vendor pages. Recommendations, workload examples and costs are **unapproved drafts**, not account eligibility, legal advice, selected providers or a launch budget. The few remaining founder inputs are in [questions.md](questions.md). All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) remain open; product bundles 1–9 remain held until every requirement closes.
++Researched **30 September 2026**. Public facts below were checked against primary government, regulator and vendor pages. Recommendations, workload examples and costs are **unapproved drafts**, not account eligibility, legal advice, selected providers or a launch budget. The founder has now supplied a monthly planning envelope and sole-operator regular-hours support; [questions.md](questions.md) records the answers and remaining external evidence. All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) remain open; product bundles 1–9 remain held until every requirement closes.
+ 
+ The useful next step is a bounded custody-capability inquiry to **BIND PSP and Mobbex**, paired with Argentine legal/tax review of the actual funds arrangement. Their public material makes them plausible inquiry candidates, but neither reviewed flow establishes Changeo's required acceptance-controlled custody and reusable credits. No inquiry was sent. Failure to find public proof is not proof of impossibility; a product-model decision becomes necessary if qualified partner/professional evidence rules out the required arrangement.
+ 
+@@ -82,7 +82,7 @@
+ 
+ **Excluded and still required:** production sizing/HA, additional workers/nodes, independent backups/restore environment, observability/security/file scanning/extraction, image/audio/media processing, retries, identity add-ons/guardian checks, payment/custody/payout/refund/subscription fees, reserves and fraud losses, legal/accounting/tax setup, support/manual appeals, rewards and **substantial marketing**. The technical subtotal is not the launch funding requirement.
+ 
+-Use a real treasury model once partner quotes and founder funding exist:
++Use a real treasury model once partner quotes and complete own-funds/reserve requirements are established; the monthly input is now recorded in R2 below:
+ 
+ ```text
+ monthly result ARS = paid subscriptions net of tax/refunds/free periods
+@@ -101,6 +101,31 @@
+ 
+ **Support/capacity draft:** budget by queue work, not account counts. For example, 1,000 reviewed revisions with a hypothetical 2% manual rate at five minutes each require 100 minutes; ten hypothetical disputes at 30 minutes add 300 minutes: 6 hours 40 minutes before identity, appeals, billing, reconciliation and interruptions. This is a planning sensitivity, not measured quality or an SLA. Derive sustainable volume and operating hours from actual staff availability, then calibrate manual rate, response/recovery and alert targets in authorized tests. Pause new risky activity when funded capacity is exhausted while preserving existing rights. Founder need not invent JVM limits or alert thresholds.
+ 
++### Supplied budget and solo support — R2
++
++Founder answers on 30 September 2026: **“100$ a month”** and **“just me for now so regular hours”**. [Verbatim amendment](agent-work/changeo-implementation/originals/user-budget-and-support.md). Funding and operator identity/availability are answered to that extent; do not ask the same general questions again. Compare as **USD100/month provisionally**, because the symbol did not separately name a currency. No FX rate, upfront capital, runway, dedicated marketing allocation, purchases or spending authority follows. Founder alone during regular hours establishes no exact days/time zone, dedicated weekly case hours, SLA, measured capacity or 24/7 coverage.
++
++**Lean private-staging comparison, unapproved:** reuse the published USD25 container and USD15 single-node development database, free Resend within both 3,000/month and 100/day, R2 within its free Standard allowances, and the same conditional text-classifier unit cost. No new provider is selected. Assume only 1,000 text revisions, at most 500 transactional emails/month with no day above 100, and 10 GB-month stored within free operation limits. Those are illustrative usage inputs, not forecasts or verified resource requirements.
++
++| Conditional monthly scenario | Arithmetic USD | Subtotal | Headroom against provisional 100 |
++| --- | --- | ---: | ---: |
++| One private technical environment, no billable real-ID checks | 25 app + 15 development DB + 0 email + 0 storage/operations + 0.80 text review | **40.80** | **59.20** |
++| Same reference with paid email, if burst/monthly limits require Pro | 40.80 + 20 email | **60.80** | **39.20** |
++| Separately priced Plus identity minimum added to first reference | 40.80 + 99 minimum | **139.80** | **39.80 over** |
++| 100 Plus checks added to first reference | 40.80 + 139 headline check cost | **179.80** | **79.80 over** |
++
++The first two rows model **one private technical environment**, not simultaneous production and staging. They assume no billable real identity checks during that hypothetical technical exercise; partner/vendor test identities and sandbox access still require actual authorization/availability. They do not permit live users or bypass payment KYC, guardian authority, adult eligibility or optional-badge checks. The free standalone moderation endpoint alone does not implement the whole service policy: retain calibrated policy review, every private message/edit/attachment, supported extraction, safe quarantine, dedicated child-safety safeguards and funded human fallback. Text-only USD0.80 excludes media, retries and extraction.
++
++The remainder is **unallocated headroom**, not spendable surplus or enough demonstrated funding for the excluded work. Tax/FX, production sizing/HA, recovery/independent backups, observability/security/scanning, real identity/guardian review, payment custody/collection/payout/refund/billing costs and subsidies, reserve/fraud exposure, legal/accounting/setup, support, loyalty liabilities and substantial acquisition all remain required. The development database is not a production recommendation. Published production-DB changes and identity calculator ambiguity still apply. Free-tier limits are ceilings, not a commitment to delay required transactional messages to stay free.
++
++**Budget conclusion:** this lean private-environment price arithmetic fits the provisional monthly ceiling before the exclusions. The existing USD208.35 low-use reference and the USD139.80 minimum-Plus comparison exceed it. Neither proves that a compliant public launch is impossible: actual usage, partner quotes, any contractually bundled KYC, production/recovery requirements and separate setup/reserve funding are not established. Investigate those costs before recommending commercial values or committing a launch. Do not choose Essential merely because its minimum is cheaper; its suitability is unproven. Do not finance fees or reserves with held customer principal. No public prototype or deployment is proposed.
++
++**Proposed solo routine, not an SLA:** begin each regular-hours support session with payment exceptions, unresolved partner outcomes, dispute/holding deadlines and safety/guardian restrictions; reconcile through the required partner process before competing money actions. Then handle content/file quarantine, identity exceptions and appeals, followed by ordinary billing/provider support. Before ending the session, check approaching contractual deadlines and unresolved urgent cases, preserve an auditable next action and communicate pending status without promising an unapproved response time. Configure later alerts/escalation against validated partner/legal deadlines; this is operator work, not 24/7 human coverage.
++
++Use the earlier 400-minute hypothetical review/dispute example as workload consumed by cases, not time the founder has guaranteed available. Reconciliation, guardian checks, appeals, billing, development and administration add work. Record actual queue arrivals, review minutes, oldest pending item and interrupted tasks when authorized testing begins; derive proposed sustainable volumes/coverage from that evidence. If a required response/holding window cannot be covered by a sole regular-hours operator, arrange funded escalation/coverage or keep the launch gate open. Capacity limits cannot erase existing support, dispute or monetary rights. No forty-hour dedicated week, precise case throughput or response target is invented.
++
++Next authorized work is documenting the remaining external capability/cost/legal outputs; there is **no additional private question blocking this documentation round**. Currency/upfront/runway details remain unestablished inputs for any later concrete financial commitment, not a repeat questionnaire now. Every Gate0 group and the full map below remains required.
++
+ ## Already settled requirements
+ 
+ The [original requirements](agent-work/changeo-planning/requirements.md) and [current goal](agent-work/changeo-implementation/originals/user-goal.md) already settle Argentina/ARS, Ofrezco/Necesito, freeform permitted services, one selected provider, local/remote/shipped delivery, a minimal responsive Java website and one public launch with working payments. Do not ask the founder to choose these again.
+@@ -117,12 +142,12 @@
+ 
+ | Original ID | Researched answer / remaining output | Evidence or decision owner | Direct dependency |
+ | --- | --- | --- | --- |
+-| G01.1 | Fact: PSP safeguards/trust framework. Pending entity, contractual roles and legal funds ownership at collection/holding/credits/refund/release/payout. Use recorded starting-from-zero setup unless founder updates F1; legal/tax and partner document structure. | Founder + counsel/accountant + partner | 1, 4–8 |
++| G01.1 | Fact: PSP safeguards/trust framework. Pending entity, contractual roles and legal funds ownership at collection/holding/credits/refund/release/payout. The recorded starting-from-zero setup remains the baseline; legal/tax and partner document structure. | Founder + counsel/accountant + partner | 1, 4–8 |
+ | G01.2 | Fact: MP/Escrow mismatches; BIND/Mobbex inquiry candidates. Pending Argentina/ARS account approval, individuals/businesses/guardians, regulated/prohibited services, methods and local/remote/shipped coverage. | Partner + counsel; coordinator records | 1, 4–8 |
+ | G01.3 | No public proof of required complete flow. Pending collected upfront custody, final-only release, disputed/inactive holding and backed reusable credits. Product-model decision only if supported arrangement ruled out. | Partner + counsel; founder if infeasible | All product bundles |
+ | G01.4 | Fact: invoicing and narrow cancellation baseline. Pending applicable tax status, provider/platform issuer, withholding and job/subscription rights/exceptions/presentation. | Accountant + counsel | 4–8 |
+ | G02.1 | Draft: executable supported choices only. Pending fulfillment evidence, review triggers/durations, acceptance/silence terms, maximum holding, inactivity/support deadlines, cancellation/dispute escalation and explicit-only/pending-message path. | Partner + counsel; founder approves terms | 4–8 |
+-| G02.2 | Fact: split fee allocation/Mobbex gateway reference. Pending full collection/holding/payout/refund/billing/tax quote, payout timing, reserves, liquidity and own-funded subsidy preserving exact charge/provider amount. | Partner + accountant; founder funding (F2) | 5–9 |
++| G02.2 | Fact: split fee allocation/Mobbex gateway reference. Pending full collection/holding/payout/refund/billing/tax quote, payout timing, reserves, liquidity and own-funded subsidy preserving exact charge/provider amount. | Partner + accountant + founder (monthly input supplied; exact own-funded limits pending) | 5–9 |
+ | G02.3 | Fact: limited refund capabilities. Pending pre/post-payout rights, authorized amount/evidence/deadline/return shipping, failed refund/payout, unavailable balances, chargeback and irreversible-payout recovery, reserves/retry/operator powers. | Partner + counsel + operations | 5–8 |
+ | G02.4 | Existing credit contract preserved above. Pending backing/issuance/reuse, guardian ownership, closure/restriction/redemption, mixed sources and nontransfer/no-top-up/no-expiry feasibility. Atomic spend, proportional remaining-source refunds/rounding/caps mandatory. | Partner + counsel; payments later verifies | 5–8 |
+ | G02.5 | Fact: BIND daily reconciliation tools. Pending KYC, authenticated events, idempotency/lookup, report/operation identifiers, cadence/exceptions/audit and unknown-outcome reconciliation. Money owner and serialization fixed. | Partner + operations; technical coordinator | 5–8 |
+@@ -133,17 +158,17 @@
+ | G04.1 | Fact: data-law principles. Draft minimization/hosted ID. Pending reviewed purposes/bases/notices/consents/access for contact, identity, guardian, age/location, messages/files/medical data, moderation, job/payment/support. | Privacy counsel + data owners | 1–8 |
+ | G04.2 | Fact: transfer mechanisms and specific AI retention distinction. Pending selected processors/subprocessors/locations, contracts/security/retention/training exclusion and actual transfer assessment; explain private screening. | Privacy counsel + vendors | 1–8, 9 measurement |
+ | G04.3 | Fact: rights deadlines/accounting-record baseline. Pending per-class periods/triggers, rights/deletion handler, audit/case/financial obligations, backup disposal/legal holds and closure exceptions preserving monetary rights. | Privacy counsel + accountant + operations | 1–8 |
+-| G05.1 | Draft: priced technical sensitivities and zero-yield/treasury formulas. Pending real provider/free/trial/paid/job/duration/mix forecasts, churn/conversion, all fees/losses/media/review/support/compliance/acquisition, liabilities/reserves, contribution/break-even/payback and free runway. | Founder funding (F2); coordinator models quotes | 5–9 |
+-| G05.2 | Draft trial-trigger comparison. Pending exact price/free/trial duration/trigger, renewal authority/notices, grace, cancellation/refund/invoice terms. Customer no-subscription and continuing obligations fixed. | Founder (F2) + counsel/accountant | 6–8 |
+-| G05.3 | Draft capped first-stage rewards. Pending thresholds/amounts/liability budget, completed-job qualification, refund/dispute/collusion/self-dealing/duplicate/split-job adjustments, idempotent awards and appeals; funded later visibility/cash settlement criteria. | Founder (F2) + operations | 6–9 |
+-| G05.4 | Draft queue-time formula. Pending own-funded subsidy/reserve/reward/operating caps, accountable staff/hours/case capacity and response/escalation/dispute/finance powers. Admin MFA/audit fixed. | Founder availability (F3); operations derives proposal | 5–9 |
+-| G06.1 | Fact: small capability/price shortlist. Draft container bundle. Pending selected host/region/services, real Java memory/latency/effort/privacy, production DB/backups and funded resource caps. Versions reverified at authorized build time. | Technical coordinator + founder (F2) + vendors | 1–2, 7–9 |
+-| G06.2 | Draft workload-based measurement. Pending traffic/uploads/polling/job and review/support forecasts, delivery/payment/reconciliation/restore acceptance and alerts, named responders, approved private staging/sandboxes/test identities; runtime evidence later. | Technical/operations coordinator + founder (F3) + partner | 1–2, 7–8 |
+-| G06.3 | Existing substantial marketing/national broad-service intent fixed. Pending funded channel tranches/runway/authority and stop/expand targets for supply/responses/CAC/completion/contribution/retention/fraud/support; private attribution and recruitment owners. | Founder funding (F2)/availability (F3); coordinator drafts | 7–9 |
++| G05.1 | Draft: priced technical sensitivities and zero-yield/treasury formulas. Monthly 100$ supplied (USD comparison provisional); pending real provider/free/trial/paid/job/duration/mix forecasts, churn/conversion, all fees/losses/media/review/support/compliance/acquisition, liabilities/reserves, contribution/break-even/payback and free runway. | Founder + coordinator models quotes (monthly input supplied) | 5–9 |
++| G05.2 | Draft trial-trigger comparison. Pending exact price/free/trial duration/trigger, renewal authority/notices, grace, cancellation/refund/invoice terms. Customer no-subscription and continuing obligations fixed. | Founder + counsel/accountant (monthly input supplied) | 6–8 |
++| G05.3 | Draft capped first-stage rewards. Pending thresholds/amounts/liability budget, completed-job qualification, refund/dispute/collusion/self-dealing/duplicate/split-job adjustments, idempotent awards and appeals; funded later visibility/cash settlement criteria. | Founder + operations (monthly input supplied) | 6–9 |
++| G05.4 | Draft queue-time formula. Pending own-funded subsidy/reserve/reward/operating caps, accountable staff/hours/case capacity and response/escalation/dispute/finance powers. Admin MFA/audit fixed. | Sole regular-hours founder + operations/technical coordinator derives capacity proposal | 5–9 |
++| G06.1 | Fact: small capability/price shortlist. Draft container bundle. Pending selected host/region/services, real Java memory/latency/effort/privacy, production DB/backups and funded resource caps. Versions reverified at authorized build time. | Technical coordinator + founder + vendors (monthly input supplied) | 1–2, 7–9 |
++| G06.2 | Draft workload-based measurement. Pending traffic/uploads/polling/job and review/support forecasts, delivery/payment/reconciliation/restore acceptance and alerts, named responders, approved private staging/sandboxes/test identities; runtime evidence later. | Technical/operations coordinator + sole regular-hours founder + partner | 1–2, 7–8 |
++| G06.3 | Existing substantial marketing/national broad-service intent fixed. Pending funded channel tranches/runway/authority and stop/expand targets for supply/responses/CAC/completion/contribution/retention/fraud/support; private attribution and recruitment owners. | Founder + coordinator drafts (monthly input and solo regular-hours support supplied) | 7–9 |
+ | G06.4 | Launch requirements already fixed. Pending actual legal/partner/onboarding/operations closure, feature/end-to-end/recovery acceptance, terms/privacy, funded reserves/support and later expansion criteria. No date supplied or inferred; production authority separate. | Founder + independent reviews + partner/professionals | 8–9 |
+ | Y01 | Fact: safeguards/repeal do not authorize yield. Optional further legal/partner evidence: authority, principal/returns owner/beneficiary, liquidity/loss/tax/fees/insolvency. No extended hold or principal spending. | Counsel + partner; founder elects pursuit | Optional; no added base Gate0 blocker |
+ 
+-**Resume:** coordinator collects external evidence under actual authority and uses the recorded setup and founder funding/capacity inputs F1–F3 to prepare exact proposals. Root records approved decisions in the affected source docs and revises shared contracts through the existing decision/review path. Bundle 1 starts only after all six groups actually close; then follow dependency order. Private staging/sandbox/runtime acceptance and explicit production launch authority remain separate. This research closes factual subquestions, not the full gates.
++**Resume:** coordinator collects external evidence under actual authority and uses the recorded setup, supplied 100$/month and solo regular-hours support to prepare exact proposals. Root records approved decisions in the affected source docs and revises shared contracts through the existing decision/review path. Bundle 1 starts only after all six groups actually close; then follow dependency order. Private staging/sandbox/runtime acceptance and explicit production launch authority remain separate. This research closes factual subquestions, not the full gates.
+ 
+ ## Source access and historical corrections
+ 
+--- budget-baseline/docs/agent-work/changeo-gate0/developer/questions.txt
++++ docs/agent-work/changeo-gate0/developer/questions.txt
+@@ -1,21 +1,18 @@
+-Task: /root/changeo_gate0/developer
+-Workspace: /home/paradis/changeo
++Task: /root/changeo_gate0/developer; workspace /home/paradis/changeo
+ Card: implement all features found in docs; leave questions in docs/questions.md
+-Current amendment: docs/agent-work/changeo-implementation/originals/user-amendment-research.md
+-Authoritative decision brief: docs/questions.md
+-Public findings and full G01.1–G06.4/Y01 map: docs/gate0-research.md#original-question-coverage-and-remaining-evidence
+-Immutable prior inventory: docs/agent-work/changeo-implementation/research-baseline/docs/questions.md
++Current R2 authority: docs/agent-work/changeo-implementation/budget-support-brief.md
++Verbatim input: docs/agent-work/changeo-implementation/originals/user-budget-and-support.md
++Decision/evidence brief: docs/questions.md
++Full original 25-ID map: docs/gate0-research.md#original-question-coverage-and-remaining-evidence
++Current pre-R2 snapshots: docs/agent-work/changeo-implementation/budget-baseline/
++Original inventory: docs/agent-work/changeo-implementation/research-baseline/docs/questions.md
+ 
+-F1: Starting-from-zero baseline already supplied; only update if entity/CUIT, advisers or partner relationship changed. No repeat answer required.
+-Links: docs/questions.md; docs/gate0-research.md#payment-capability-findings; docs/payments.md#feasibility-evidence-required
+-Next evidence: prepared unsent BIND/Mobbex capability inquiry and qualified structure/tax review. No contact/account approval claimed.
++F1 setup: already supplied starting-from-zero baseline; no new setup questionnaire.
++F2 funding: ANSWERED: 100$ a month. USD100/month provisional comparison only; currency/upfront/runway/dedicated marketing allocation not separately supplied. No spending permission. Do not repeat general funding question.
++F3 support: ANSWERED founder alone, regular hours. No 40-hour support-only week, exact schedule/SLA/measured capacity or 24/7 promise inferred. Do not repeat general availability question.
+ 
+-F2: Approximate actual funding/currency/runway, marketing range and any existing subscription preference?
+-Links: docs/questions.md; docs/gate0-research.md#conditional-zero-yield-model; docs/business.md#funding-and-decision-outputs; docs/marketing.md#budget-and-expansion-gates
+-Next proposal: costed price/free/trial/reward/subsidy/reserve/resource/marketing options from funding plus actual quotes. No values selected. Principal excluded; yield zero.
++Conditional private technical reference USD40.80/month; paid-email variant USD60.80; separate Plus minimum raises first to USD139.80 before required exclusions. All safeguards preserved, development DB not production, identity suitability/bundled KYC/account cost unknown; no full-launch impossibility inferred. Docs/gate0-research.md#supplied-budget-and-solo-support--r2
+ 
+-F3: Approximate actual founder/team support hours/availability and paid coverage funding?
+-Links: docs/questions.md; docs/gate0-research.md#conditional-zero-yield-model; docs/trust-operations.md#reports-appeals-and-operator-tools; docs/architecture.md#verification-and-operations
+-Next proposal: queue/case limits, response/escalation and staffing targets, later measured in authorized private staging/sandboxes. Date undecided; no SLA invented.
+-
+-Partner/professional/technical follow-up is in research map, not additional founder homework. All 25 original IDs remain; all six Gate0 groups remain open. No product work before every group closes, source decisions are recorded and root-approved shared contracts revised. Bundle order docs/delivery.md#ordered-delivery-bundles-after-gate0. Explicit later launch/outreach/spending authority separate. Optional Y01 adds no base blocker.
++No additional private question blocks current authorized documentation. Remaining work: partner written custody/credit/account/fees/sandbox evidence; counsel/accountant entity/tax/age/guardian/privacy/retention outputs; technical/operations cost and measured capacity proposals. Inquiry prepared, not sent; outreach/spending requires separate authority. Complete map assigns all 24 mandatory IDs and optional Y01. Actual supported terms/values/selected services remain Gate0 outputs, no dropped requirement.
++Source links: docs/business.md#funding-and-decision-outputs; docs/trust-operations.md#reports-appeals-and-operator-tools; docs/marketing.md#budget-and-expansion-gates; docs/delivery.md#ordered-delivery-bundles-after-gate0
++Next owner coordinator -> same independent reviewer -> root evidence/authority/contract decisions. All six Gate0 groups open; no product implementation before full closure; optional Y01 no base blocker. No code/purchase/outreach/paid inference/launch/goal lifecycle operation.

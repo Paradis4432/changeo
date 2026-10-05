@@ -1,0 +1,10 @@
+time="2026-10-01T05:06:00-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc000794000
+time="2026-10-01T05:16:06-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T05:20:38-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T05:23:14-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0000c01b0
+time="2026-10-01T05:51:30-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T19:33:34-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T19:48:39-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T21:31:17-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0000c01b0
+time="2026-10-01T21:35:27-03:00" level=warning msg="IdleTracker: StateClosed transition by connection marked un-managed" X-Reference-Id=0xc0006d8000
+time="2026-10-01T23:08:17-03:00" level=warning msg="The storage 'driver' option should be set in /home/paradis/.config/containers/storage.conf. A driver was picked automatically."

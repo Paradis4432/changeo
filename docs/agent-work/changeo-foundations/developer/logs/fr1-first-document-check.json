@@ -1,0 +1,445 @@
+{
+  "exit": 1,
+  "documents": 12,
+  "local_links": 87,
+  "errors": [
+    "docs/agent-work/changeo-foundations/developer/report.md: logs/fr1-handoff-check.json"
+  ],
+  "checks": [
+    {
+      "document": "docs/README.md",
+      "target": "product-design.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "payments.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "business.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "trust-operations.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "architecture.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "marketing.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "delivery.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-planning/requirements.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-planning/sources.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-planning/planning-review.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-planning/documentation-review.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-planning/CHECKPOINT.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "questions.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "delivery.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "gate0-research.md#mercado-pago-selection-and-remaining-capability--r3",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/README.md",
+      "target": "sandbox-runtime.md",
+      "error": null
+    },
+    {
+      "document": "docs/product-design.md",
+      "target": "agent-work/changeo-planning/requirements.md",
+      "error": null
+    },
+    {
+      "document": "docs/product-design.md",
+      "target": "trust-operations.md",
+      "error": null
+    },
+    {
+      "document": "docs/product-design.md",
+      "target": "payments.md",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "delivery.md#gate0-feasibility-before-product-implementation",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "gate0-research.md#mercado-pago-inquiry--prepared-not-sent",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "gate0-research.md#mercado-pago-selection-and-remaining-capability--r3",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/payments.md",
+      "target": "sandbox-runtime.md",
+      "error": null
+    },
+    {
+      "document": "docs/business.md",
+      "target": "gate0-research.md#mercado-pago-selection-and-remaining-capability--r3",
+      "error": null
+    },
+    {
+      "document": "docs/business.md",
+      "target": "gate0-research.md#supplied-budget-and-solo-support--r2",
+      "error": null
+    },
+    {
+      "document": "docs/business.md",
+      "target": "payments.md",
+      "error": null
+    },
+    {
+      "document": "docs/trust-operations.md",
+      "target": "agent-work/changeo-planning/requirements.md",
+      "error": null
+    },
+    {
+      "document": "docs/trust-operations.md",
+      "target": "gate0-research.md#supplied-budget-and-solo-support--r2",
+      "error": null
+    },
+    {
+      "document": "docs/architecture.md",
+      "target": "gate0-research.md#mercado-pago-selection-and-remaining-capability--r3",
+      "error": null
+    },
+    {
+      "document": "docs/architecture.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/architecture.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/architecture.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/architecture.md",
+      "target": "sandbox-runtime.md",
+      "error": null
+    },
+    {
+      "document": "docs/marketing.md",
+      "target": "business.md",
+      "error": null
+    },
+    {
+      "document": "docs/marketing.md",
+      "target": "gate0-research.md#supplied-budget-and-solo-support--r2",
+      "error": null
+    },
+    {
+      "document": "docs/delivery.md",
+      "target": "agent-work/changeo-planning/planning-review.md",
+      "error": null
+    },
+    {
+      "document": "docs/delivery.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/delivery.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/delivery.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/delivery.md",
+      "target": "sandbox-runtime.md",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "gate0-research.md#supplied-budget-and-solo-support--r2",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "gate0-research.md#mercado-pago-inquiry--prepared-not-sent",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "gate0-research.md#original-question-coverage-and-remaining-evidence",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "delivery.md#gate0-feasibility-before-product-implementation",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/questions.md",
+      "target": "sandbox-runtime.md",
+      "error": null
+    },
+    {
+      "document": "docs/sandbox-runtime.md",
+      "target": "agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "error": null
+    },
+    {
+      "document": "docs/sandbox-runtime.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F1.md",
+      "error": null
+    },
+    {
+      "document": "docs/sandbox-runtime.md",
+      "target": "agent-work/changeo-implementation/foundations-contract-F2.md",
+      "error": null
+    },
+    {
+      "document": "docs/sandbox-runtime.md",
+      "target": "agent-work/changeo-foundations/developer/report.md",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../correction-FR1.md",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../reviewer/report.md",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/AccountService.java:123",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/security/SecurityConfig.java:44",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/web/WebsiteController.java:50",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/AdminSecurityService.java:48",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/test/java/ar/changeo/identity/WebsiteSecurityTest.java:106",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-test-first.log",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-test-corrected.log",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-verify.log",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-runtime-handoff.json",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-manifest-check.json",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/preservation-final.json",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/document-check.json",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-handoff-check.json",
+      "error": "missing local target"
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/fr1-correction.patch",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/PermissionService.java:28",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/IdentityStore.java:31",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "../../../../src/main/java/ar/changeo/identity/AccountService.java:98",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/changed-file-manifest.json",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/source-docs.patch",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/browser-account-mobile.png",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/browser-admin-desktop.png",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/browser-admin-mobile.png",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/browser-account-accessibility.yml",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/report.md",
+      "target": "logs/browser-admin-accessibility.yml",
+      "error": null
+    },
+    {
+      "document": "docs/agent-work/changeo-foundations/developer/CHECKPOINT.md",
+      "target": "report.md",
+      "error": null
+    }
+  ]
+}

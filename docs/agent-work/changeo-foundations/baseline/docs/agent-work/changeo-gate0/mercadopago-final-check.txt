@@ -1,0 +1,52 @@
+Command:
+python3 - <<'PY'
+import hashlib,json
+from datetime import datetime,timezone
+from pathlib import Path
+root=Path('/home/paradis/changeo')
+work=root/'docs/agent-work/changeo-implementation'
+base=json.loads((work/'baseline.json').read_text())
+r3=json.loads((work/'mercadopago-baseline.json').read_text())
+approved=json.loads((work/'git-user-approved-baseline.json').read_text())
+seal=json.loads((root/'docs/agent-work/changeo-gate0/reviewer/mercadopago/logs/accepted-artifacts.json').read_text())
+assert seal['verdict']=='accepted'
+allowed=set(r3['cumulative_original_source_changes'])
+for name,record in base['files'].items():
+    if name not in allowed:
+        path=root/name
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==record['sha256'],name
+    if name.endswith('.md'):
+        assert hashlib.sha256((work/'source-baseline'/name).read_bytes()).hexdigest()==record['sha256'],name
+for name,record in base['protected_metadata'].items():
+    if name=='.git':
+        continue
+    path=root/name
+    assert oct(path.stat().st_mode)==record['mode'],name
+    assert sorted(p.name for p in path.iterdir())==record['entries'],name
+for name in r3['allowed_deliverable_changes']:
+    assert hashlib.sha256((work/'mercadopago-baseline'/name).read_bytes()).hexdigest()==r3['files'][name]['sha256'],name
+for name in ['docs/trust-operations.md','docs/marketing.md']:
+    assert hashlib.sha256((root/name).read_bytes()).hexdigest()==r3['files'][name]['sha256'],name
+observed=approved['current_git_metadata']
+actual={str(p.relative_to(root)) for p in [root/'.git',*(root/'.git').rglob('*')]}
+assert actual=={record['path'] for record in observed}
+for record in observed:
+    st=(root/record['path']).stat()
+    assert oct(st.st_mode)==record['mode'],record['path']
+    assert st.st_size==record['bytes'],record['path']
+    assert datetime.fromtimestamp(st.st_mtime,timezone.utc).isoformat()==record['modified_utc'],record['path']
+for name,record in seal['artifacts'].items():
+    path=root/name
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==record['sha256'],name
+    assert path.stat().st_size==record['bytes'],name
+print('PASS: twelve unaffected originals, fourteen original Markdown snapshots, seven R3 snapshots, unchanged R2 trust/marketing and three protected inventories')
+print('PASS: all '+str(len(seal['artifacts']))+' accepted artifacts and '+str(len(observed))+' approved Git metadata inventory/mode/size/time entries current')
+print('Git initialization was user-approved transition; original empty Git was not preserved unchanged; first failed audits remain retained')
+PY
+
+Underlying exit: 0
+Output:
+PASS: twelve unaffected originals, fourteen original Markdown snapshots, seven R3 snapshots, unchanged R2 trust/marketing and three protected inventories
+PASS: all 51 accepted artifacts and 27 approved Git metadata inventory/mode/size/time entries current
+Git initialization was user-approved transition; original empty Git was not preserved unchanged; first failed audits remain retained
+

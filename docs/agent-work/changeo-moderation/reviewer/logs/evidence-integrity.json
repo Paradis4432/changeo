@@ -1,0 +1,4138 @@
+{
+  "developer_seals": [
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/report.md",
+      "expected": {
+        "size": 22459,
+        "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5"
+      },
+      "actual": {
+        "size": 22459,
+        "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+      "expected": {
+        "size": 2116,
+        "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2"
+      },
+      "actual": {
+        "size": 2116,
+        "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/notes.txt",
+      "expected": {
+        "size": 511,
+        "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7"
+      },
+      "actual": {
+        "size": 511,
+        "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/questions.txt",
+      "expected": {
+        "size": 591,
+        "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63"
+      },
+      "actual": {
+        "size": 591,
+        "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/complete-change-manifest.json",
+      "expected": {
+        "size": 44566,
+        "sha256": "e3cf3411171c4f60e6338583034274c15ed104ff6d7c9b0a9a23ddc26ec88ba9"
+      },
+      "actual": {
+        "size": 44566,
+        "sha256": "e3cf3411171c4f60e6338583034274c15ed104ff6d7c9b0a9a23ddc26ec88ba9"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/source-manifest.json",
+      "expected": {
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38"
+      },
+      "actual": {
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/changed-paths.json",
+      "expected": {
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0"
+      },
+      "actual": {
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/cumulative-original-baseline.patch",
+      "expected": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      },
+      "actual": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/accepted-F3.patch",
+      "expected": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      },
+      "actual": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/moderation-after-F3.patch",
+      "expected": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      },
+      "actual": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-summary.json",
+      "expected": {
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf"
+      },
+      "actual": {
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/history-question-preservation.json",
+      "expected": {
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1"
+      },
+      "actual": {
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/F3-integrity.json",
+      "expected": {
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c"
+      },
+      "actual": {
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/baseline289-integrity.json",
+      "expected": {
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2"
+      },
+      "actual": {
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/exact-command-catalog.json",
+      "expected": {
+        "size": 12906,
+        "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e"
+      },
+      "actual": {
+        "size": 12906,
+        "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/command-summary.json",
+      "expected": {
+        "size": 10098,
+        "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380"
+      },
+      "actual": {
+        "size": 10098,
+        "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.json",
+      "expected": {
+        "size": 902,
+        "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2"
+      },
+      "actual": {
+        "size": 902,
+        "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-test-results.json",
+      "expected": {
+        "size": 11039,
+        "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003"
+      },
+      "actual": {
+        "size": 11039,
+        "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/markdown-check.json",
+      "expected": {
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f"
+      },
+      "actual": {
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f"
+      },
+      "matches": true
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": ".gitignore",
+      "expected": {
+        "size": 35,
+        "sha256": "5e525f57f24cdeec447d6a773080a2024afb47fd1304a5cb16aea5ac795b6b22"
+      },
+      "actual": {
+        "size": 35,
+        "sha256": "5e525f57f24cdeec447d6a773080a2024afb47fd1304a5cb16aea5ac795b6b22"
+      },
+      "matches": true
+    },
+    {
+      "path": ".mvn/maven.config",
+      "expected": {
+        "size": 35,
+        "sha256": "320d04bd599478c92a208016078cbe1fa911b6bd199ed6890d06290c5df5ae26"
+      },
+      "actual": {
+        "size": 35,
+        "sha256": "320d04bd599478c92a208016078cbe1fa911b6bd199ed6890d06290c5df5ae26"
+      },
+      "matches": true
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "expected": {
+        "size": 255,
+        "sha256": "bb0b8f16b2661c3676ed5a6a15f5b11d864460c4e77cfb50c583f54708f944e7"
+      },
+      "actual": {
+        "size": 255,
+        "sha256": "bb0b8f16b2661c3676ed5a6a15f5b11d864460c4e77cfb50c583f54708f944e7"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/README.md",
+      "expected": {
+        "size": 10704,
+        "sha256": "ff07b5e9c1ed659f0f1b325ce99ff388e097a37ed5a1a02ed8661a27c821a089"
+      },
+      "actual": {
+        "size": 10704,
+        "sha256": "ff07b5e9c1ed659f0f1b325ce99ff388e097a37ed5a1a02ed8661a27c821a089"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "expected": {
+        "size": 13156,
+        "sha256": "73570f1d1d0a44c8988095ed3484e1f78e2ee8034e22668988fcba4d66a686c5"
+      },
+      "actual": {
+        "size": 13156,
+        "sha256": "73570f1d1d0a44c8988095ed3484e1f78e2ee8034e22668988fcba4d66a686c5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/business.md",
+      "expected": {
+        "size": 6713,
+        "sha256": "58cb1df2272508101af04c18c8d7a5766c769c2e11d0a36d9e7fef87091feefd"
+      },
+      "actual": {
+        "size": 6713,
+        "sha256": "58cb1df2272508101af04c18c8d7a5766c769c2e11d0a36d9e7fef87091feefd"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/delivery.md",
+      "expected": {
+        "size": 15119,
+        "sha256": "a1b57184cc5413845da2cfa6f467252c887c6a2222f77e476ea4b18c890007cc"
+      },
+      "actual": {
+        "size": 15119,
+        "sha256": "a1b57184cc5413845da2cfa6f467252c887c6a2222f77e476ea4b18c890007cc"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/gate0-research.md",
+      "expected": {
+        "size": 49802,
+        "sha256": "0ac3b90fb3a9a8a4ec48256a5273c4f83f06214b74690f6411fea9f568ec474a"
+      },
+      "actual": {
+        "size": 49802,
+        "sha256": "0ac3b90fb3a9a8a4ec48256a5273c4f83f06214b74690f6411fea9f568ec474a"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/marketing.md",
+      "expected": {
+        "size": 5936,
+        "sha256": "5b74efe35bfe4b257c0a7711ad951ba42f7c59e31f69e7078b0f0eeb26fd9917"
+      },
+      "actual": {
+        "size": 5936,
+        "sha256": "5b74efe35bfe4b257c0a7711ad951ba42f7c59e31f69e7078b0f0eeb26fd9917"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/payments.md",
+      "expected": {
+        "size": 11600,
+        "sha256": "aca3fad94dffca6974bc4a4296a344c90b049a33e8466048ffb0a99846a025d2"
+      },
+      "actual": {
+        "size": 11600,
+        "sha256": "aca3fad94dffca6974bc4a4296a344c90b049a33e8466048ffb0a99846a025d2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/product-design.md",
+      "expected": {
+        "size": 7672,
+        "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d"
+      },
+      "actual": {
+        "size": 7672,
+        "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/questions.md",
+      "expected": {
+        "size": 5414,
+        "sha256": "2e669c66ee0eb896e66817f36c0d716aca97680882e31eb4872ae83f75424a32"
+      },
+      "actual": {
+        "size": 5414,
+        "sha256": "2e669c66ee0eb896e66817f36c0d716aca97680882e31eb4872ae83f75424a32"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "expected": {
+        "size": 14807,
+        "sha256": "64d98536eaf5d70d7fb2ed25f7f84e19a2234f77806742c0f334198bc6b6e401"
+      },
+      "actual": {
+        "size": 14807,
+        "sha256": "64d98536eaf5d70d7fb2ed25f7f84e19a2234f77806742c0f334198bc6b6e401"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "expected": {
+        "size": 12446,
+        "sha256": "65dcfa6c5581c373f03635d238dfca5568fc4dc646bd2992b5c535ca0c70e3df"
+      },
+      "actual": {
+        "size": 12446,
+        "sha256": "65dcfa6c5581c373f03635d238dfca5568fc4dc646bd2992b5c535ca0c70e3df"
+      },
+      "matches": true
+    },
+    {
+      "path": "mvnw",
+      "expected": {
+        "size": 11790,
+        "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+      },
+      "actual": {
+        "size": 11790,
+        "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+      },
+      "matches": true
+    },
+    {
+      "path": "mvnw.cmd",
+      "expected": {
+        "size": 8481,
+        "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+      },
+      "actual": {
+        "size": 8481,
+        "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+      },
+      "matches": true
+    },
+    {
+      "path": "pom.xml",
+      "expected": {
+        "size": 2666,
+        "sha256": "1a62077f16de1072112b61c9c7afec0f0909b7de48b835a12e11961d66e66193"
+      },
+      "actual": {
+        "size": 2666,
+        "sha256": "1a62077f16de1072112b61c9c7afec0f0909b7de48b835a12e11961d66e66193"
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/browser-qa.cjs",
+      "expected": {
+        "size": 7909,
+        "sha256": "9d2ea2cddace83ce724bc13db99b2542d4fac19486d2879a62b56dbc48297bf6"
+      },
+      "actual": {
+        "size": 7909,
+        "sha256": "9d2ea2cddace83ce724bc13db99b2542d4fac19486d2879a62b56dbc48297bf6"
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/local-db.sh",
+      "expected": {
+        "size": 935,
+        "sha256": "ecaa0cf3a8c52dc698d5d70af9c48ec09daf7983b5f7f8bfddf87113c2f3e813"
+      },
+      "actual": {
+        "size": 935,
+        "sha256": "ecaa0cf3a8c52dc698d5d70af9c48ec09daf7983b5f7f8bfddf87113c2f3e813"
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/moderation-browser-qa.cjs",
+      "expected": {
+        "size": 13825,
+        "sha256": "a61ce96032734de81d6734d18e033624c6c4169f3560bd57c17f6af454857843"
+      },
+      "actual": {
+        "size": 13825,
+        "sha256": "a61ce96032734de81d6734d18e033624c6c4169f3560bd57c17f6af454857843"
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/run-sandbox.sh",
+      "expected": {
+        "size": 266,
+        "sha256": "5e3a4afc04b3b77011633c405a6a36eb2c0504393aa0c3e8fab023981de1867c"
+      },
+      "actual": {
+        "size": 266,
+        "sha256": "5e3a4afc04b3b77011633c405a6a36eb2c0504393aa0c3e8fab023981de1867c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/ChangeoApplication.java",
+      "expected": {
+        "size": 1309,
+        "sha256": "73bd69526d919c0dc1e2ee2b3b8d76e05d26d60abec584049415ee5830b51ac4"
+      },
+      "actual": {
+        "size": 1309,
+        "sha256": "73bd69526d919c0dc1e2ee2b3b8d76e05d26d60abec584049415ee5830b51ac4"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/ModerationSchedule.java",
+      "expected": {
+        "size": 665,
+        "sha256": "7100817049ddc6ec508a32a346afc8bebce401103cc7195197fbbc51a0fc34b7"
+      },
+      "actual": {
+        "size": 665,
+        "sha256": "7100817049ddc6ec508a32a346afc8bebce401103cc7195197fbbc51a0fc34b7"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/RuntimeConfig.java",
+      "expected": {
+        "size": 527,
+        "sha256": "bcb5a30db727c250b1adf57562f5bab3d2f44bb6a7385e65b97c5f9a76d3789d"
+      },
+      "actual": {
+        "size": 527,
+        "sha256": "bcb5a30db727c250b1adf57562f5bab3d2f44bb6a7385e65b97c5f9a76d3789d"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/SandboxSafety.java",
+      "expected": {
+        "size": 1325,
+        "sha256": "855ae7d037eaa2c66b94750db17ca37abb75b2b61dce0c15be8e2cdd024d1bf6"
+      },
+      "actual": {
+        "size": 1325,
+        "sha256": "855ae7d037eaa2c66b94750db17ca37abb75b2b61dce0c15be8e2cdd024d1bf6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/FileInspector.java",
+      "expected": {
+        "size": 2863,
+        "sha256": "9b1cd17f7dd3108f9fdec1db129dcd20d1429af3c0558d8e43a81c902b6e899e"
+      },
+      "actual": {
+        "size": 2863,
+        "sha256": "9b1cd17f7dd3108f9fdec1db129dcd20d1429af3c0558d8e43a81c902b6e899e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/PrivateFileService.java",
+      "expected": {
+        "size": 7772,
+        "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345"
+      },
+      "actual": {
+        "size": 7772,
+        "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java",
+      "expected": {
+        "size": 159,
+        "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8"
+      },
+      "actual": {
+        "size": 159,
+        "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileAccess.java",
+      "expected": {
+        "size": 673,
+        "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051"
+      },
+      "actual": {
+        "size": 673,
+        "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileReference.java",
+      "expected": {
+        "size": 422,
+        "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592"
+      },
+      "actual": {
+        "size": 422,
+        "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AbuseLimits.java",
+      "expected": {
+        "size": 1089,
+        "sha256": "8b1551608b44b82fba00d0e34f2347530c35478cbec820c13ff68f97b727e7f0"
+      },
+      "actual": {
+        "size": 1089,
+        "sha256": "8b1551608b44b82fba00d0e34f2347530c35478cbec820c13ff68f97b727e7f0"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Account.java",
+      "expected": {
+        "size": 729,
+        "sha256": "c07b0384228aeda5471b44e77ecb3003ae5dbdd3767abd8af8c1d9ea467a9d42"
+      },
+      "actual": {
+        "size": 729,
+        "sha256": "c07b0384228aeda5471b44e77ecb3003ae5dbdd3767abd8af8c1d9ea467a9d42"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AccountService.java",
+      "expected": {
+        "size": 7559,
+        "sha256": "527be994201d3887312a785388cd4599bb391f0e27eb29790377b01ea9a7bf7a"
+      },
+      "actual": {
+        "size": 7559,
+        "sha256": "527be994201d3887312a785388cd4599bb391f0e27eb29790377b01ea9a7bf7a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminMfa.java",
+      "expected": {
+        "size": 254,
+        "sha256": "8702b6a1c696b84e7d48bb64ecb6f2c70ed30aecf8b460b77bb2d31309c42444"
+      },
+      "actual": {
+        "size": 254,
+        "sha256": "8702b6a1c696b84e7d48bb64ecb6f2c70ed30aecf8b460b77bb2d31309c42444"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminRole.java",
+      "expected": {
+        "size": 138,
+        "sha256": "566a04b319721f93cce587a67be425b4c7093517f344ead497ac0f00af6d1d4a"
+      },
+      "actual": {
+        "size": 138,
+        "sha256": "566a04b319721f93cce587a67be425b4c7093517f344ead497ac0f00af6d1d4a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminSecurityService.java",
+      "expected": {
+        "size": 2585,
+        "sha256": "f17e13633194ad6a0a8bca004c218b7d610cb4fa916965a4b16b4fcaca501b07"
+      },
+      "actual": {
+        "size": 2585,
+        "sha256": "f17e13633194ad6a0a8bca004c218b7d610cb4fa916965a4b16b4fcaca501b07"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AdminService.java",
+      "expected": {
+        "size": 6895,
+        "sha256": "95641c082f1534a5a6c4fc8737a6353938b63b46065159650dedea7fb8cb1d19"
+      },
+      "actual": {
+        "size": 6895,
+        "sha256": "95641c082f1534a5a6c4fc8737a6353938b63b46065159650dedea7fb8cb1d19"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/AuditEvent.java",
+      "expected": {
+        "size": 323,
+        "sha256": "ea1e93acba3763401b7d716af54328dee4f6d199cea7366fdc4b130e6c0f7768"
+      },
+      "actual": {
+        "size": 323,
+        "sha256": "ea1e93acba3763401b7d716af54328dee4f6d199cea7366fdc4b130e6c0f7768"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ConsentStatus.java",
+      "expected": {
+        "size": 69,
+        "sha256": "2d25195588bda1288261ade11ab74c6431984d8267a150067aeb8897d3351aa2"
+      },
+      "actual": {
+        "size": 69,
+        "sha256": "2d25195588bda1288261ade11ab74c6431984d8267a150067aeb8897d3351aa2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/ContactToken.java",
+      "expected": {
+        "size": 393,
+        "sha256": "b4d0f261aa67dd3c7c3289a057b05bf064eb44813f654248a5db4d4658249884"
+      },
+      "actual": {
+        "size": 393,
+        "sha256": "b4d0f261aa67dd3c7c3289a057b05bf064eb44813f654248a5db4d4658249884"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Evidence.java",
+      "expected": {
+        "size": 471,
+        "sha256": "5411ddb5f6cac4afc43fc8f686ee2efe46895f4ee567fad43f6e9fb8c773bd61"
+      },
+      "actual": {
+        "size": 471,
+        "sha256": "5411ddb5f6cac4afc43fc8f686ee2efe46895f4ee567fad43f6e9fb8c773bd61"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/EvidenceKind.java",
+      "expected": {
+        "size": 121,
+        "sha256": "7782981521257b1940e678ab3529f16faacf4035b247ee1c0cecd56e76745408"
+      },
+      "actual": {
+        "size": 121,
+        "sha256": "7782981521257b1940e678ab3529f16faacf4035b247ee1c0cecd56e76745408"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/FactorCipher.java",
+      "expected": {
+        "size": 2758,
+        "sha256": "b8524466ac46ead545611d8d9781ca7393fa4851d71ac9efc36248c2a5c073a1"
+      },
+      "actual": {
+        "size": 2758,
+        "sha256": "b8524466ac46ead545611d8d9781ca7393fa4851d71ac9efc36248c2a5c073a1"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianLink.java",
+      "expected": {
+        "size": 403,
+        "sha256": "3465685b60202c77b2a8a15418bccf62454dbb6b9c4c001eb8000f4469da9539"
+      },
+      "actual": {
+        "size": 403,
+        "sha256": "3465685b60202c77b2a8a15418bccf62454dbb6b9c4c001eb8000f4469da9539"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/GuardianService.java",
+      "expected": {
+        "size": 6479,
+        "sha256": "837ddae736206dcef55ccb52924add592d1645b597c45e2d9a7d2e07f401591a"
+      },
+      "actual": {
+        "size": 6479,
+        "sha256": "837ddae736206dcef55ccb52924add592d1645b597c45e2d9a7d2e07f401591a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityFailure.java",
+      "expected": {
+        "size": 151,
+        "sha256": "58ac58f404a407333b880aabf9e0293332050abbf60fcfa4490d3b11504441c5"
+      },
+      "actual": {
+        "size": 151,
+        "sha256": "58ac58f404a407333b880aabf9e0293332050abbf60fcfa4490d3b11504441c5"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/IdentityStore.java",
+      "expected": {
+        "size": 6417,
+        "sha256": "337194cc4c5fed43d91e6758a298c8980abe6f71befd093a92d30b7b668964c5"
+      },
+      "actual": {
+        "size": 6417,
+        "sha256": "337194cc4c5fed43d91e6758a298c8980abe6f71befd093a92d30b7b668964c5"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/JobConsent.java",
+      "expected": {
+        "size": 330,
+        "sha256": "a7836501697ad5428f873c7d65fcf72789e7aec6b9cb0778a8a89e4fe99da4d1"
+      },
+      "actual": {
+        "size": 330,
+        "sha256": "a7836501697ad5428f873c7d65fcf72789e7aec6b9cb0778a8a89e4fe99da4d1"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LinkStatus.java",
+      "expected": {
+        "size": 87,
+        "sha256": "733253c682c796a39354a08dbbe57b479031de384a608c2164ef150f83c3b66f"
+      },
+      "actual": {
+        "size": 87,
+        "sha256": "733253c682c796a39354a08dbbe57b479031de384a608c2164ef150f83c3b66f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/LocalMailbox.java",
+      "expected": {
+        "size": 850,
+        "sha256": "21308f5802ca7538816e8ab5433426886daa07cc912f15b1ce62a6b0ce7052c4"
+      },
+      "actual": {
+        "size": 850,
+        "sha256": "21308f5802ca7538816e8ab5433426886daa07cc912f15b1ce62a6b0ce7052c4"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/OperatorService.java",
+      "expected": {
+        "size": 3632,
+        "sha256": "1e85040a608f9fb7f4c90c0b65307352a48429d92b086f688d557766b4eff5a5"
+      },
+      "actual": {
+        "size": 3632,
+        "sha256": "1e85040a608f9fb7f4c90c0b65307352a48429d92b086f688d557766b4eff5a5"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PermissionService.java",
+      "expected": {
+        "size": 8788,
+        "sha256": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784"
+      },
+      "actual": {
+        "size": 8788,
+        "sha256": "db11b6475452baa6077c03f696dce781563a9b7e2ee62d1bbb469ab153131784"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/PrivateFiles.java",
+      "expected": {
+        "size": 1205,
+        "sha256": "0bbb90bf55fb1f45593af11666bd83617065dbbdad93d9d36b681e6659aac3ff"
+      },
+      "actual": {
+        "size": 1205,
+        "sha256": "0bbb90bf55fb1f45593af11666bd83617065dbbdad93d9d36b681e6659aac3ff"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Restriction.java",
+      "expected": {
+        "size": 308,
+        "sha256": "1b508bb36cf2e689ea8522533547019976c71c8a05766add839415cfdbde2643"
+      },
+      "actual": {
+        "size": 308,
+        "sha256": "1b508bb36cf2e689ea8522533547019976c71c8a05766add839415cfdbde2643"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/SecurityProof.java",
+      "expected": {
+        "size": 240,
+        "sha256": "7dc12c933ccd70a3a7474b88030ada7349a9b7d96d8d1742cb9ff0402c477abf"
+      },
+      "actual": {
+        "size": 240,
+        "sha256": "7dc12c933ccd70a3a7474b88030ada7349a9b7d96d8d1742cb9ff0402c477abf"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenDelivery.java",
+      "expected": {
+        "size": 156,
+        "sha256": "54e33e8d60250b19a80dc3f5c07e80f6bd4a5f14fd584f46d322a2ce989715b8"
+      },
+      "actual": {
+        "size": 156,
+        "sha256": "54e33e8d60250b19a80dc3f5c07e80f6bd4a5f14fd584f46d322a2ce989715b8"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/TokenPurpose.java",
+      "expected": {
+        "size": 70,
+        "sha256": "8fc3acc18b785921c38c18e5d56d28f78ffae4f648830a6fa69716d5981eb959"
+      },
+      "actual": {
+        "size": 70,
+        "sha256": "8fc3acc18b785921c38c18e5d56d28f78ffae4f648830a6fa69716d5981eb959"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/Totp.java",
+      "expected": {
+        "size": 1520,
+        "sha256": "da0882079ec7314fcb0ac91826271e57754625daf61c5fd81252d1adf8e1d756"
+      },
+      "actual": {
+        "size": 1520,
+        "sha256": "da0882079ec7314fcb0ac91826271e57754625daf61c5fd81252d1adf8e1d756"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountAccessSnapshot.java",
+      "expected": {
+        "size": 367,
+        "sha256": "f898edc23faf48977994467c55dc03d3dd1d4cc3921413bfedc400a3f66cd6db"
+      },
+      "actual": {
+        "size": 367,
+        "sha256": "f898edc23faf48977994467c55dc03d3dd1d4cc3921413bfedc400a3f66cd6db"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/AccountId.java",
+      "expected": {
+        "size": 180,
+        "sha256": "bfa61a2b25c54ce944115fe1165cb9c20a653f876e85d85b44921cb498bdb9a6"
+      },
+      "actual": {
+        "size": 180,
+        "sha256": "bfa61a2b25c54ce944115fe1165cb9c20a653f876e85d85b44921cb498bdb9a6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/ActorId.java",
+      "expected": {
+        "size": 176,
+        "sha256": "aee48d293a361abf6c168f3ffcdf74b9d06d75bcc443710b51ac645f6b6291ed"
+      },
+      "actual": {
+        "size": 176,
+        "sha256": "aee48d293a361abf6c168f3ffcdf74b9d06d75bcc443710b51ac645f6b6291ed"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/Capability.java",
+      "expected": {
+        "size": 464,
+        "sha256": "d5a7529305ab88860cfcd84248bf80979178f85dc550708fbbd56dc63ed7e57e"
+      },
+      "actual": {
+        "size": 464,
+        "sha256": "d5a7529305ab88860cfcd84248bf80979178f85dc550708fbbd56dc63ed7e57e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/IdentityAccess.java",
+      "expected": {
+        "size": 253,
+        "sha256": "29a4ff350751bff9cbd7d449beedf17983c8266f95e5df0896b13de4bf0ff5ae"
+      },
+      "actual": {
+        "size": 253,
+        "sha256": "29a4ff350751bff9cbd7d449beedf17983c8266f95e5df0896b13de4bf0ff5ae"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/JobContext.java",
+      "expected": {
+        "size": 335,
+        "sha256": "3e8d1666f33980dd074706bbdee2b0ef3bc45dbee5a45b33ec617b75a0a2c57d"
+      },
+      "actual": {
+        "size": 335,
+        "sha256": "3e8d1666f33980dd074706bbdee2b0ef3bc45dbee5a45b33ec617b75a0a2c57d"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionDecision.java",
+      "expected": {
+        "size": 327,
+        "sha256": "49a0ad8b7468bb7b56a485590d1c94a0cdb500642c856c04d590dc9df3d09a62"
+      },
+      "actual": {
+        "size": 327,
+        "sha256": "49a0ad8b7468bb7b56a485590d1c94a0cdb500642c856c04d590dc9df3d09a62"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/PermissionRequest.java",
+      "expected": {
+        "size": 727,
+        "sha256": "e073b295e43d46263c7e356c9f0226b33571b9f5d7413646ea24bcf1c260140a"
+      },
+      "actual": {
+        "size": 727,
+        "sha256": "e073b295e43d46263c7e356c9f0226b33571b9f5d7413646ea24bcf1c260140a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/identity/api/SubjectId.java",
+      "expected": {
+        "size": 180,
+        "sha256": "700f23ffa22d0e6c390a7e30339b9cb0e413ed764100b3a09438c15a94374bd5"
+      },
+      "actual": {
+        "size": 180,
+        "sha256": "700f23ffa22d0e6c390a7e30339b9cb0e413ed764100b3a09438c15a94374bd5"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/Admission.java",
+      "expected": {
+        "size": 717,
+        "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99"
+      },
+      "actual": {
+        "size": 717,
+        "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/AttachmentPolicyRouter.java",
+      "expected": {
+        "size": 481,
+        "sha256": "73c63931fb5cb1a7c9f81e13e00de5592b6cda770c02b83c5e284879792af957"
+      },
+      "actual": {
+        "size": 481,
+        "sha256": "73c63931fb5cb1a7c9f81e13e00de5592b6cda770c02b83c5e284879792af957"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/CaseService.java",
+      "expected": {
+        "size": 11355,
+        "sha256": "cea76492446b05451f045f8172f388336ee8d29b7077ccf4905df010a443f9be"
+      },
+      "actual": {
+        "size": 11355,
+        "sha256": "cea76492446b05451f045f8172f388336ee8d29b7077ccf4905df010a443f9be"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentDigest.java",
+      "expected": {
+        "size": 1788,
+        "sha256": "6d6c96b719c311110e37ba1b4e4d88a4e9bd9262e7bd4b4b09f3f7a76ded6a09"
+      },
+      "actual": {
+        "size": 1788,
+        "sha256": "6d6c96b719c311110e37ba1b4e4d88a4e9bd9262e7bd4b4b09f3f7a76ded6a09"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentReader.java",
+      "expected": {
+        "size": 7765,
+        "sha256": "15462444cc53159bb26108ab35bd06984a56b2fe6aa6bbc26b89d332eb139f11"
+      },
+      "actual": {
+        "size": 7765,
+        "sha256": "15462444cc53159bb26108ab35bd06984a56b2fe6aa6bbc26b89d332eb139f11"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/DecisionService.java",
+      "expected": {
+        "size": 2513,
+        "sha256": "7b2239fce2b4130da1b22a7e15188ce18148562e2e81c3d66ece5396c4e45389"
+      },
+      "actual": {
+        "size": 2513,
+        "sha256": "7b2239fce2b4130da1b22a7e15188ce18148562e2e81c3d66ece5396c4e45389"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationFailure.java",
+      "expected": {
+        "size": 157,
+        "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad"
+      },
+      "actual": {
+        "size": 157,
+        "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationService.java",
+      "expected": {
+        "size": 6744,
+        "sha256": "2e6354d978601f434811c5c1d09053ba691c49db7a1a4a02f3809d7ef0041c71"
+      },
+      "actual": {
+        "size": 6744,
+        "sha256": "2e6354d978601f434811c5c1d09053ba691c49db7a1a4a02f3809d7ef0041c71"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationStore.java",
+      "expected": {
+        "size": 6203,
+        "sha256": "e8764cea1630cdb81cd9603539568c1512dd71425190b1df6ec268b42d93a61c"
+      },
+      "actual": {
+        "size": 6203,
+        "sha256": "e8764cea1630cdb81cd9603539568c1512dd71425190b1df6ec268b42d93a61c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationWorker.java",
+      "expected": {
+        "size": 9010,
+        "sha256": "686a1112ae376c4deb4f5c94061e9c5acb1ad62f48c954331b89b5a0cc50db05"
+      },
+      "actual": {
+        "size": 9010,
+        "sha256": "686a1112ae376c4deb4f5c94061e9c5acb1ad62f48c954331b89b5a0cc50db05"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/OwnerRegistry.java",
+      "expected": {
+        "size": 784,
+        "sha256": "47a5369a3df74c72eee63e3cbcc53ce92e0b17c9c01381156304d2fa81254035"
+      },
+      "actual": {
+        "size": 784,
+        "sha256": "47a5369a3df74c72eee63e3cbcc53ce92e0b17c9c01381156304d2fa81254035"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewEngine.java",
+      "expected": {
+        "size": 136,
+        "sha256": "7fb7a61b900f02289b039d0745071584665ca1cfb1bff8beb0609781063900f3"
+      },
+      "actual": {
+        "size": 136,
+        "sha256": "7fb7a61b900f02289b039d0745071584665ca1cfb1bff8beb0609781063900f3"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewInput.java",
+      "expected": {
+        "size": 358,
+        "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a"
+      },
+      "actual": {
+        "size": 358,
+        "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewResult.java",
+      "expected": {
+        "size": 1979,
+        "sha256": "9a4cf212875ea7cdd081872f039efefb8a2d235050677b7aa84168d45b9e2124"
+      },
+      "actual": {
+        "size": 1979,
+        "sha256": "9a4cf212875ea7cdd081872f039efefb8a2d235050677b7aa84168d45b9e2124"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticPolicy.java",
+      "expected": {
+        "size": 812,
+        "sha256": "f09f782cb1534ddf23471fc076d9bda17f17e1ba94a02dee2ea4a935eae52062"
+      },
+      "actual": {
+        "size": 812,
+        "sha256": "f09f782cb1534ddf23471fc076d9bda17f17e1ba94a02dee2ea4a935eae52062"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticReviewEngine.java",
+      "expected": {
+        "size": 1277,
+        "sha256": "6b2f0ce6c5a65ff1af6f1066bdee02b6cc4c084bc133e1a224255f8af65abc60"
+      },
+      "actual": {
+        "size": 1277,
+        "sha256": "6b2f0ce6c5a65ff1af6f1066bdee02b6cc4c084bc133e1a224255f8af65abc60"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchOwner.java",
+      "expected": {
+        "size": 3044,
+        "sha256": "650945ebfaad4c503a8e3f71110e10358254ed94e6015c369378ae91450407b2"
+      },
+      "actual": {
+        "size": 3044,
+        "sha256": "650945ebfaad4c503a8e3f71110e10358254ed94e6015c369378ae91450407b2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchService.java",
+      "expected": {
+        "size": 9297,
+        "sha256": "7e0b2a376f73110eeb0f1f9b3f8f433558787e80062e60c1d42b5edfb38ef2de"
+      },
+      "actual": {
+        "size": 9297,
+        "sha256": "7e0b2a376f73110eeb0f1f9b3f8f433558787e80062e60c1d42b5edfb38ef2de"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchStore.java",
+      "expected": {
+        "size": 2423,
+        "sha256": "d8099272849bcee38beb85636d30e423a6faee249f0a8e82a54c8d4e1a307301"
+      },
+      "actual": {
+        "size": 2423,
+        "sha256": "d8099272849bcee38beb85636d30e423a6faee249f0a8e82a54c8d4e1a307301"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/AuthorContext.java",
+      "expected": {
+        "size": 662,
+        "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f"
+      },
+      "actual": {
+        "size": 662,
+        "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentOwner.java",
+      "expected": {
+        "size": 548,
+        "sha256": "be6ac56b2d28af275027dbdfdbabf4e0dbbba5489e0c48b736b42a730f8e2d9c"
+      },
+      "actual": {
+        "size": 548,
+        "sha256": "be6ac56b2d28af275027dbdfdbabf4e0dbbba5489e0c48b736b42a730f8e2d9c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentReference.java",
+      "expected": {
+        "size": 317,
+        "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e"
+      },
+      "actual": {
+        "size": 317,
+        "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ModerationAccess.java",
+      "expected": {
+        "size": 509,
+        "sha256": "5c304cbd2650a5ff7bbe0076c4838ca19a1267905e8a5d4fb0fc0a2e64530e90"
+      },
+      "actual": {
+        "size": 509,
+        "sha256": "5c304cbd2650a5ff7bbe0076c4838ca19a1267905e8a5d4fb0fc0a2e64530e90"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/SurfaceKind.java",
+      "expected": {
+        "size": 318,
+        "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6"
+      },
+      "actual": {
+        "size": 318,
+        "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ContentController.java",
+      "expected": {
+        "size": 1718,
+        "sha256": "0f88ddf44143f847cfb5482e7ad638c410c5a92667e6c6382b0ea1dbe439f753"
+      },
+      "actual": {
+        "size": 1718,
+        "sha256": "0f88ddf44143f847cfb5482e7ad638c410c5a92667e6c6382b0ea1dbe439f753"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationController.java",
+      "expected": {
+        "size": 8320,
+        "sha256": "882392b202590aaacc511229ba2cb7e38b3f8be40eba2ff0fc069f3855f8bff2"
+      },
+      "actual": {
+        "size": 8320,
+        "sha256": "882392b202590aaacc511229ba2cb7e38b3f8be40eba2ff0fc069f3855f8bff2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationErrors.java",
+      "expected": {
+        "size": 1257,
+        "sha256": "d75afebb4302d9bb76f360123817461b559d44f234ff469a178447f212a339de"
+      },
+      "actual": {
+        "size": 1257,
+        "sha256": "d75afebb4302d9bb76f360123817461b559d44f234ff469a178447f212a339de"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationSourceFilter.java",
+      "expected": {
+        "size": 1236,
+        "sha256": "2ad557f381e5696b140f7bc5b452a9820620e400c7b53b316e2f7a3eb8c69ab9"
+      },
+      "actual": {
+        "size": 1236,
+        "sha256": "2ad557f381e5696b140f7bc5b452a9820620e400c7b53b316e2f7a3eb8c69ab9"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationWords.java",
+      "expected": {
+        "size": 2423,
+        "sha256": "7205bb8a85c032f6ccd995ea237913a94e92ca916e8c889b34a71514a87f5e43"
+      },
+      "actual": {
+        "size": 2423,
+        "sha256": "7205bb8a85c032f6ccd995ea237913a94e92ca916e8c889b34a71514a87f5e43"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/AccountPrincipal.java",
+      "expected": {
+        "size": 735,
+        "sha256": "0a286011976d4d8ac2cf7fe49f624967c4c8b299b519d9495098984b3167c1e4"
+      },
+      "actual": {
+        "size": 735,
+        "sha256": "0a286011976d4d8ac2cf7fe49f624967c4c8b299b519d9495098984b3167c1e4"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "expected": {
+        "size": 3532,
+        "sha256": "c8d22862307bf49116f2124eac1a1d5e260e553ae3844388c2f7a17a2ee4eaf2"
+      },
+      "actual": {
+        "size": 3532,
+        "sha256": "c8d22862307bf49116f2124eac1a1d5e260e553ae3844388c2f7a17a2ee4eaf2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionEpochFilter.java",
+      "expected": {
+        "size": 1482,
+        "sha256": "b2bc353aae641c3431a01f550c6c275ffb5b34ff3ebf73428ec28873e5372f8b"
+      },
+      "actual": {
+        "size": 1482,
+        "sha256": "b2bc353aae641c3431a01f550c6c275ffb5b34ff3ebf73428ec28873e5372f8b"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SessionProof.java",
+      "expected": {
+        "size": 1831,
+        "sha256": "53aa4b587c39603c453d6418313177139ec9254e95dd686e0b227c1fb70ad33e"
+      },
+      "actual": {
+        "size": 1831,
+        "sha256": "53aa4b587c39603c453d6418313177139ec9254e95dd686e0b227c1fb70ad33e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteController.java",
+      "expected": {
+        "size": 10854,
+        "sha256": "8c69050ce05991d476336d9980b88f46b8c6763450418a8fc02b270683bfc90b"
+      },
+      "actual": {
+        "size": 10854,
+        "sha256": "8c69050ce05991d476336d9980b88f46b8c6763450418a8fc02b270683bfc90b"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/web/WebsiteErrors.java",
+      "expected": {
+        "size": 881,
+        "sha256": "7644a8b39044d61ab3227b0c5e51cacdb11ff01208df697603b695cac293f748"
+      },
+      "actual": {
+        "size": 881,
+        "sha256": "7644a8b39044d61ab3227b0c5e51cacdb11ff01208df697603b695cac293f748"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "expected": {
+        "size": 1267,
+        "sha256": "9e60364f1235ad2b25a2e16df0b960d26d110458092b10e4cb7323a7393e0d1f"
+      },
+      "actual": {
+        "size": 1267,
+        "sha256": "9e60364f1235ad2b25a2e16df0b960d26d110458092b10e4cb7323a7393e0d1f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V1__identity.sql",
+      "expected": {
+        "size": 4000,
+        "sha256": "308d657bf75a2463a55c7a480afbbbba88fb566e0b76d9c751f30366cea0e12e"
+      },
+      "actual": {
+        "size": 4000,
+        "sha256": "308d657bf75a2463a55c7a480afbbbba88fb566e0b76d9c751f30366cea0e12e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V2__identity_state_integrity.sql",
+      "expected": {
+        "size": 2068,
+        "sha256": "1a78d269a2e736cb936177f776e070bdc4f8db4f9efb23137714358d555b967a"
+      },
+      "actual": {
+        "size": 2068,
+        "sha256": "1a78d269a2e736cb936177f776e070bdc4f8db4f9efb23137714358d555b967a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V3__identity_moderation_roles.sql",
+      "expected": {
+        "size": 281,
+        "sha256": "4465d012e593ff2fdcb91bc4cb0fc8a139fccce41bdb0ea99f4c65b76b7c5635"
+      },
+      "actual": {
+        "size": 281,
+        "sha256": "4465d012e593ff2fdcb91bc4cb0fc8a139fccce41bdb0ea99f4c65b76b7c5635"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V4__moderation_and_private_files.sql",
+      "expected": {
+        "size": 9437,
+        "sha256": "a0623e3dc0d97b240d7174df50e09d1a0e1f83295b9eeed3bb6774487b68c927"
+      },
+      "actual": {
+        "size": 9437,
+        "sha256": "a0623e3dc0d97b240d7174df50e09d1a0e1f83295b9eeed3bb6774487b68c927"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/static/style.css",
+      "expected": {
+        "size": 2877,
+        "sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda"
+      },
+      "actual": {
+        "size": 2877,
+        "sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/account.html",
+      "expected": {
+        "size": 2266,
+        "sha256": "27d778bd9a402093b0b9b70e8689e42496bfee05679b1eeee2660d51ded1c392"
+      },
+      "actual": {
+        "size": 2266,
+        "sha256": "27d778bd9a402093b0b9b70e8689e42496bfee05679b1eeee2660d51ded1c392"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/admin.html",
+      "expected": {
+        "size": 3224,
+        "sha256": "00f9cdef847671515f6f650c0613f5a6a990ac7f8996ac8d725c871f902671d5"
+      },
+      "actual": {
+        "size": 3224,
+        "sha256": "00f9cdef847671515f6f650c0613f5a6a990ac7f8996ac8d725c871f902671d5"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/audit.html",
+      "expected": {
+        "size": 877,
+        "sha256": "f2b3b2191d2bb387742733e5c48b3c5ab0e7624c0ce7a930c65e9937df364b32"
+      },
+      "actual": {
+        "size": 877,
+        "sha256": "f2b3b2191d2bb387742733e5c48b3c5ab0e7624c0ce7a930c65e9937df364b32"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-detail.html",
+      "expected": {
+        "size": 1842,
+        "sha256": "e3ab5876c2ebdcf87c1300c1eeabec7e6038d6da4b1c17aa8863fb3806a9b97c"
+      },
+      "actual": {
+        "size": 1842,
+        "sha256": "e3ab5876c2ebdcf87c1300c1eeabec7e6038d6da4b1c17aa8863fb3806a9b97c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-search.html",
+      "expected": {
+        "size": 1055,
+        "sha256": "8adfd254b400765dbd683384bbe3e5a42af0384115454fa5bc940e8f5a2b1494"
+      },
+      "actual": {
+        "size": 1055,
+        "sha256": "8adfd254b400765dbd683384bbe3e5a42af0384115454fa5bc940e8f5a2b1494"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/failure.html",
+      "expected": {
+        "size": 645,
+        "sha256": "9381cde8fe8257f38f3c7d2628d70a3c69e57624c6b066f07625075ef6c21bcf"
+      },
+      "actual": {
+        "size": 645,
+        "sha256": "9381cde8fe8257f38f3c7d2628d70a3c69e57624c6b066f07625075ef6c21bcf"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/forgot.html",
+      "expected": {
+        "size": 889,
+        "sha256": "71da6a6a92c38a3695c3ee8255c2acb0097a4fad42bae3526d10a9236524bdcf"
+      },
+      "actual": {
+        "size": 889,
+        "sha256": "71da6a6a92c38a3695c3ee8255c2acb0097a4fad42bae3526d10a9236524bdcf"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/guardian.html",
+      "expected": {
+        "size": 2503,
+        "sha256": "f7ee12f54522e1f07861b3ac6bcb1690808f057e546af1c47607181ae6b51620"
+      },
+      "actual": {
+        "size": 2503,
+        "sha256": "f7ee12f54522e1f07861b3ac6bcb1690808f057e546af1c47607181ae6b51620"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/home.html",
+      "expected": {
+        "size": 1435,
+        "sha256": "b82ec0cfb6ccab9be2e9e25cbf57e6691d9b3ac7de3537b51fd33eadc0426069"
+      },
+      "actual": {
+        "size": 1435,
+        "sha256": "b82ec0cfb6ccab9be2e9e25cbf57e6691d9b3ac7de3537b51fd33eadc0426069"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/login.html",
+      "expected": {
+        "size": 1179,
+        "sha256": "1ddfca7f93b234143e166da0f45133f287dbc06099119c3971130c49f37cf281"
+      },
+      "actual": {
+        "size": 1179,
+        "sha256": "1ddfca7f93b234143e166da0f45133f287dbc06099119c3971130c49f37cf281"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/mfa.html",
+      "expected": {
+        "size": 894,
+        "sha256": "bd200cef497d0fecc2707755957f64dd6c2d7de9e1d541987b3945ee5c2aa978"
+      },
+      "actual": {
+        "size": 894,
+        "sha256": "bd200cef497d0fecc2707755957f64dd6c2d7de9e1d541987b3945ee5c2aa978"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-cases.html",
+      "expected": {
+        "size": 1109,
+        "sha256": "7c3c3c894b603e34db40284e428493843fbbbdca971bc7fc6a8dc0ddc46b647e"
+      },
+      "actual": {
+        "size": 1109,
+        "sha256": "7c3c3c894b603e34db40284e428493843fbbbdca971bc7fc6a8dc0ddc46b647e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-evidence.html",
+      "expected": {
+        "size": 1177,
+        "sha256": "8ababb64a55bbffbe6bfc342499d3428d908ae363606fbd1f1c3ca370c8a0016"
+      },
+      "actual": {
+        "size": 1177,
+        "sha256": "8ababb64a55bbffbe6bfc342499d3428d908ae363606fbd1f1c3ca370c8a0016"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator-signin.html",
+      "expected": {
+        "size": 1220,
+        "sha256": "02407ca587df3ef47c71de1c73b95010de8253cb0f6d9c53e5eab983a7493193"
+      },
+      "actual": {
+        "size": 1220,
+        "sha256": "02407ca587df3ef47c71de1c73b95010de8253cb0f6d9c53e5eab983a7493193"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator.html",
+      "expected": {
+        "size": 4322,
+        "sha256": "fcc0bfeda957902c68c19056d1549700900df40b61ad467df525ac663c55b829"
+      },
+      "actual": {
+        "size": 4322,
+        "sha256": "fcc0bfeda957902c68c19056d1549700900df40b61ad467df525ac663c55b829"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-own.html",
+      "expected": {
+        "size": 4166,
+        "sha256": "dafdad98d0de108bbd53779bcfabe99313171cda0434101d7bc13d69250c0efe"
+      },
+      "actual": {
+        "size": 4166,
+        "sha256": "dafdad98d0de108bbd53779bcfabe99313171cda0434101d7bc13d69250c0efe"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-workbench.html",
+      "expected": {
+        "size": 2700,
+        "sha256": "4930c0a2a5475ef6db8c4ff291037c2491f0bc15fa2d8a5a2fa3ebb935eb8fe6"
+      },
+      "actual": {
+        "size": 2700,
+        "sha256": "4930c0a2a5475ef6db8c4ff291037c2491f0bc15fa2d8a5a2fa3ebb935eb8fe6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/reauth.html",
+      "expected": {
+        "size": 919,
+        "sha256": "56983553fac25561710289627f199ef9dfc85631dbd64b81d5ecaccc7f89bc9a"
+      },
+      "actual": {
+        "size": 919,
+        "sha256": "56983553fac25561710289627f199ef9dfc85631dbd64b81d5ecaccc7f89bc9a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/register.html",
+      "expected": {
+        "size": 1012,
+        "sha256": "fcf78114bfb8c05e25b4df948a75b27b2a0452bba9ac983eb045868f8f1ef9fb"
+      },
+      "actual": {
+        "size": 1012,
+        "sha256": "fcf78114bfb8c05e25b4df948a75b27b2a0452bba9ac983eb045868f8f1ef9fb"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/reset.html",
+      "expected": {
+        "size": 1024,
+        "sha256": "d8fc7331e1b211079de3fc3f8fcf60868044cb58c661836a39978802c01ed00c"
+      },
+      "actual": {
+        "size": 1024,
+        "sha256": "d8fc7331e1b211079de3fc3f8fcf60868044cb58c661836a39978802c01ed00c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/shell.html",
+      "expected": {
+        "size": 993,
+        "sha256": "15aa630623aff6147b087e3c4b217a17ca7415ea439592ebb86eb97ccc9346ab"
+      },
+      "actual": {
+        "size": 993,
+        "sha256": "15aa630623aff6147b087e3c4b217a17ca7415ea439592ebb86eb97ccc9346ab"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/support.html",
+      "expected": {
+        "size": 1099,
+        "sha256": "2ea076e2beca7e488d13b2adaa7defbc07d5dace8ccdd8f22b674c224196196c"
+      },
+      "actual": {
+        "size": 1099,
+        "sha256": "2ea076e2beca7e488d13b2adaa7defbc07d5dace8ccdd8f22b674c224196196c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/files/FileInspectorTest.java",
+      "expected": {
+        "size": 2045,
+        "sha256": "ff998681b4711eb48f9b39acaa099472ece90e23a3ecf1d47a95512c23483056"
+      },
+      "actual": {
+        "size": 2045,
+        "sha256": "ff998681b4711eb48f9b39acaa099472ece90e23a3ecf1d47a95512c23483056"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/IdentityMigrationAssertions.java",
+      "expected": {
+        "size": 9583,
+        "sha256": "53faa6634b4d4858732c9944376384ace531a5a602673b6d24d3e1531c0baefc"
+      },
+      "actual": {
+        "size": 9583,
+        "sha256": "53faa6634b4d4858732c9944376384ace531a5a602673b6d24d3e1531c0baefc"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/IdentityPostgresTest.java",
+      "expected": {
+        "size": 38177,
+        "sha256": "aa5a5e0b7f40d07b87843dcd23d5e130620b291a3ea764b8b3a6cc86c5c55464"
+      },
+      "actual": {
+        "size": 38177,
+        "sha256": "aa5a5e0b7f40d07b87843dcd23d5e130620b291a3ea764b8b3a6cc86c5c55464"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/MutableClock.java",
+      "expected": {
+        "size": 608,
+        "sha256": "9f1b959f96696eb98c872e79d78a3951e784cc0299792b79da47926596bc2ce8"
+      },
+      "actual": {
+        "size": 608,
+        "sha256": "9f1b959f96696eb98c872e79d78a3951e784cc0299792b79da47926596bc2ce8"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/PostgresContainerIT.java",
+      "expected": {
+        "size": 2651,
+        "sha256": "65f8bb07eed5cb574383622909d4f85f0c6931c001d2dde65b61904caf133e52"
+      },
+      "actual": {
+        "size": 2651,
+        "sha256": "65f8bb07eed5cb574383622909d4f85f0c6931c001d2dde65b61904caf133e52"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/SandboxSafetyTest.java",
+      "expected": {
+        "size": 1718,
+        "sha256": "27c0343c13df258ec606b8fc33ac9ebbf18a6c9e3e715b61b2aebb5f73399786"
+      },
+      "actual": {
+        "size": 1718,
+        "sha256": "27c0343c13df258ec606b8fc33ac9ebbf18a6c9e3e715b61b2aebb5f73399786"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/TotpTest.java",
+      "expected": {
+        "size": 443,
+        "sha256": "4581b74b96b86b0e29ca405d87c9c5406e91ace3e94ad4013377212a8f9267b9"
+      },
+      "actual": {
+        "size": 443,
+        "sha256": "4581b74b96b86b0e29ca405d87c9c5406e91ace3e94ad4013377212a8f9267b9"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/identity/WebsiteSecurityTest.java",
+      "expected": {
+        "size": 26929,
+        "sha256": "1f0713ddcfcc49463a58f8043adc91d6a20b1c6761bb7a178754b54ea4ce805c"
+      },
+      "actual": {
+        "size": 26929,
+        "sha256": "1f0713ddcfcc49463a58f8043adc91d6a20b1c6761bb7a178754b54ea4ce805c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/IndependentOwner.java",
+      "expected": {
+        "size": 4341,
+        "sha256": "8af07b9ce86faa4d5bd41338c285583482dde03d04473cd87f477b9e3e2c2bed"
+      },
+      "actual": {
+        "size": 4341,
+        "sha256": "8af07b9ce86faa4d5bd41338c285583482dde03d04473cd87f477b9e3e2c2bed"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationContainerIT.java",
+      "expected": {
+        "size": 1827,
+        "sha256": "cb50c955e8529d44a7ed9aee33d23354b71c2b3ebf02642d01ca8a36736ed5ab"
+      },
+      "actual": {
+        "size": 1827,
+        "sha256": "cb50c955e8529d44a7ed9aee33d23354b71c2b3ebf02642d01ca8a36736ed5ab"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationHttpTest.java",
+      "expected": {
+        "size": 11883,
+        "sha256": "6a63a17f3b0734b65ce4209ba12db401c3d217b49be93ac4b66b33f69fa7942b"
+      },
+      "actual": {
+        "size": 11883,
+        "sha256": "6a63a17f3b0734b65ce4209ba12db401c3d217b49be93ac4b66b33f69fa7942b"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+      "expected": {
+        "size": 44428,
+        "sha256": "90587ec1c062c8b8b1a2d65aaf759977301a5ec9a25099dfb8a17c41f1bb076f"
+      },
+      "actual": {
+        "size": 44428,
+        "sha256": "90587ec1c062c8b8b1a2d65aaf759977301a5ec9a25099dfb8a17c41f1bb076f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ReviewValidationTest.java",
+      "expected": {
+        "size": 2658,
+        "sha256": "7cf1ce431c26f2013e54833fa47c65183120264860fa32517b3d2aa649a86d13"
+      },
+      "actual": {
+        "size": 2658,
+        "sha256": "7cf1ce431c26f2013e54833fa47c65183120264860fa32517b3d2aa649a86d13"
+      },
+      "matches": true
+    }
+  ],
+  "developer_complete_manifest": [
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+      "expected": {
+        "size": 2116,
+        "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2"
+      },
+      "actual": {
+        "size": 2116,
+        "sha256": "2e0dccaf9db6d26804fe77b578c314d1ab98665ee714ddbe20efc51ba4105fc2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/F3-integrity.json",
+      "expected": {
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c"
+      },
+      "actual": {
+        "size": 34345,
+        "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/accepted-F3.patch",
+      "expected": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      },
+      "actual": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-ownership.json",
+      "expected": {
+        "size": 91,
+        "sha256": "f9616292eb8941360b03458a595268f75f4d63833c71283225709720fe0d2383"
+      },
+      "actual": {
+        "size": 91,
+        "sha256": "f9616292eb8941360b03458a595268f75f4d63833c71283225709720fe0d2383"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-restored.json",
+      "expected": {
+        "size": 82,
+        "sha256": "d958ddff77865d6a9606f26fd84c925a8a6b8db5719cb48ac311235c326e67b5"
+      },
+      "actual": {
+        "size": 82,
+        "sha256": "d958ddff77865d6a9606f26fd84c925a8a6b8db5719cb48ac311235c326e67b5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-start.log",
+      "expected": {
+        "size": 596,
+        "sha256": "5c76cfa6f4949fe6d1cd009ebb2bb429fdd924b3bb2319567960c094e126eda1"
+      },
+      "actual": {
+        "size": 745,
+        "sha256": "62358cbf6294826295d6413c9fe888862f158763b56a00881206422bed1c5a5d"
+      },
+      "matches": false
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api.pid",
+      "expected": {
+        "size": 8,
+        "sha256": "71e50589aae0586459df8cd6a1954e8c485c06ac96cc567f2ce9bdaa267976a8"
+      },
+      "actual": {
+        "size": 8,
+        "sha256": "71e50589aae0586459df8cd6a1954e8c485c06ac96cc567f2ce9bdaa267976a8"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-final-stop.json",
+      "expected": {
+        "size": 202,
+        "sha256": "2a83bc63639f780ce639c31ef407b7644b12dc671f84aa1efb80ea90372393a3"
+      },
+      "actual": {
+        "size": 202,
+        "sha256": "2a83bc63639f780ce639c31ef407b7644b12dc671f84aa1efb80ea90372393a3"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-final.log",
+      "expected": {
+        "size": 6430,
+        "sha256": "18e7166b4f274dc85f8e6fb7ed54d2a1a924e34ac8991faae1cbf83fd4b22cc9"
+      },
+      "actual": {
+        "size": 6430,
+        "sha256": "18e7166b4f274dc85f8e6fb7ed54d2a1a924e34ac8991faae1cbf83fd4b22cc9"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-first-stop.json",
+      "expected": {
+        "size": 60,
+        "sha256": "e0ad0c8053fb37d5ac80e145e0ba584a5f5f35f0770016c92f9f7d8b57220e67"
+      },
+      "actual": {
+        "size": 60,
+        "sha256": "e0ad0c8053fb37d5ac80e145e0ba584a5f5f35f0770016c92f9f7d8b57220e67"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/app-restart-stop.json",
+      "expected": {
+        "size": 60,
+        "sha256": "5cfb482740ddb8e00302fa5415a93190d5b8be867bcfe9a8fb3faf480d644afb"
+      },
+      "actual": {
+        "size": 60,
+        "sha256": "5cfb482740ddb8e00302fa5415a93190d5b8be867bcfe9a8fb3faf480d644afb"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/baseline-integrity.json",
+      "expected": {
+        "size": 32,
+        "sha256": "eda8b1ccf1cd9009a98c699e3121b2a6d2151f4858ad5ea477e50268eecc6cd4"
+      },
+      "actual": {
+        "size": 32,
+        "sha256": "eda8b1ccf1cd9009a98c699e3121b2a6d2151f4858ad5ea477e50268eecc6cd4"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/baseline289-integrity.json",
+      "expected": {
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2"
+      },
+      "actual": {
+        "size": 61006,
+        "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/before.json",
+      "expected": {
+        "size": 125720,
+        "sha256": "4c95952e26dafadf538c097cde42416bb7b19e11e7d7f9174cebe1c37190f1c0"
+      },
+      "actual": {
+        "size": 125720,
+        "sha256": "4c95952e26dafadf538c097cde42416bb7b19e11e7d7f9174cebe1c37190f1c0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-activation.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-activation.log",
+      "expected": {
+        "size": 303,
+        "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4"
+      },
+      "actual": {
+        "size": 303,
+        "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app-first.log",
+      "expected": {
+        "size": 5485,
+        "sha256": "ae473758aa239f7719d86b167f5e3a20276d0817ef3ac852158416bb5ea3a66d"
+      },
+      "actual": {
+        "size": 5485,
+        "sha256": "ae473758aa239f7719d86b167f5e3a20276d0817ef3ac852158416bb5ea3a66d"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app-restart.log",
+      "expected": {
+        "size": 7011,
+        "sha256": "11669d111b9394cc07d7930977e9658459995800b5728637fd26efc5a37b568b"
+      },
+      "actual": {
+        "size": 7011,
+        "sha256": "11669d111b9394cc07d7930977e9658459995800b5728637fd26efc5a37b568b"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-app.log",
+      "expected": {
+        "size": 6428,
+        "sha256": "d8cb28441ab4853d094223a42f3dc87d0e8d6e884a6c9c316061a138105f93c9"
+      },
+      "actual": {
+        "size": 6428,
+        "sha256": "d8cb28441ab4853d094223a42f3dc87d0e8d6e884a6c9c316061a138105f93c9"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-clean-package.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-clean-package.log",
+      "expected": {
+        "size": 2995,
+        "sha256": "ac8f3f320344bdca24e89d2449b72b8303dab378792b26256be07dc44e89c0f2"
+      },
+      "actual": {
+        "size": 2995,
+        "sha256": "ac8f3f320344bdca24e89d2449b72b8303dab378792b26256be07dc44e89c0f2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-delivery.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-delivery.log",
+      "expected": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "actual": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure-first.json",
+      "expected": {
+        "size": 219,
+        "sha256": "5f8ce26cf862bbdc446288ae101a5aa29dc459c0e5dfae9739b89397304a22b9"
+      },
+      "actual": {
+        "size": 219,
+        "sha256": "5f8ce26cf862bbdc446288ae101a5aa29dc459c0e5dfae9739b89397304a22b9"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure-third.json",
+      "expected": {
+        "size": 355,
+        "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade"
+      },
+      "actual": {
+        "size": 355,
+        "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-failure.json",
+      "expected": {
+        "size": 355,
+        "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade"
+      },
+      "actual": {
+        "size": 355,
+        "sha256": "f598215d2753c0bae5b1981536899799c321afcfc512f30fc7057ac40692fade"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final-visual.json",
+      "expected": {
+        "size": 109,
+        "sha256": "da8f0aab311c83fc67be4fb3639d1ed62afa916b8008e14c5030e8c9c6f54fb8"
+      },
+      "actual": {
+        "size": 109,
+        "sha256": "da8f0aab311c83fc67be4fb3639d1ed62afa916b8008e14c5030e8c9c6f54fb8"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-final.log",
+      "expected": {
+        "size": 303,
+        "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4"
+      },
+      "actual": {
+        "size": 303,
+        "sha256": "a691e9d4d947ddb48da817bef08d7e704baf73bfe8cba2c6432c190cfc0391b4"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-first.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-first.log",
+      "expected": {
+        "size": 13,
+        "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644"
+      },
+      "actual": {
+        "size": 13,
+        "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-desktop.png",
+      "expected": {
+        "size": 277282,
+        "sha256": "1439f99eac3629d50d673963d826b746df7fe468a18d2e5d0a4b2926d58bb9d7"
+      },
+      "actual": {
+        "size": 277282,
+        "sha256": "1439f99eac3629d50d673963d826b746df7fe468a18d2e5d0a4b2926d58bb9d7"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-final-mobile.png",
+      "expected": {
+        "size": 257767,
+        "sha256": "4a4394c761e194d88cea6175748a486f52a50a2ac533aca7b364531415c61849"
+      },
+      "actual": {
+        "size": 257767,
+        "sha256": "4a4394c761e194d88cea6175748a486f52a50a2ac533aca7b364531415c61849"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-operator-mobile.png",
+      "expected": {
+        "size": 253205,
+        "sha256": "0edc9c4080555f40c0ee2443b094edb6980e3b436152cf1839c21f22283a77ac"
+      },
+      "actual": {
+        "size": 253205,
+        "sha256": "0edc9c4080555f40c0ee2443b094edb6980e3b436152cf1839c21f22283a77ac"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-accessibility.yml",
+      "expected": {
+        "size": 2308,
+        "sha256": "b3e17ac0e7846d651766c064daf7209e8af4264af56e452036c9baefa80efe23"
+      },
+      "actual": {
+        "size": 2308,
+        "sha256": "b3e17ac0e7846d651766c064daf7209e8af4264af56e452036c9baefa80efe23"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-desktop.png",
+      "expected": {
+        "size": 170931,
+        "sha256": "b61182802ec5709717a6c766bb4ab21b34806a17dc13044f500ac13651e3929f"
+      },
+      "actual": {
+        "size": 170931,
+        "sha256": "b61182802ec5709717a6c766bb4ab21b34806a17dc13044f500ac13651e3929f"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-final-mobile.png",
+      "expected": {
+        "size": 170077,
+        "sha256": "aba86f74f77f9a1faa18e6e4ec9ec0608c49840857aea741c264fa00a62d1ffb"
+      },
+      "actual": {
+        "size": 170077,
+        "sha256": "aba86f74f77f9a1faa18e6e4ec9ec0608c49840857aea741c264fa00a62d1ffb"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-own-mobile.png",
+      "expected": {
+        "size": 169939,
+        "sha256": "d47d9686dae0f08bc03dca6648f8de66e3dd5ee26b0347e41354790699225ab2"
+      },
+      "actual": {
+        "size": 169939,
+        "sha256": "d47d9686dae0f08bc03dca6648f8de66e3dd5ee26b0347e41354790699225ab2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-package.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-package.log",
+      "expected": {
+        "size": 2893,
+        "sha256": "307b41dd332f348404a8d2a1cd208c6026d47ce986b4be583dc21a3e751fef60"
+      },
+      "actual": {
+        "size": 2893,
+        "sha256": "307b41dd332f348404a8d2a1cd208c6026d47ce986b4be583dc21a3e751fef60"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-provision.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-provision.log",
+      "expected": {
+        "size": 4806,
+        "sha256": "e8003d5ba48e29774fc58f7948ba06a34e8adb9fefed6212fa4b065ad0c56d44"
+      },
+      "actual": {
+        "size": 4806,
+        "sha256": "e8003d5ba48e29774fc58f7948ba06a34e8adb9fefed6212fa4b065ad0c56d44"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-qa.json",
+      "expected": {
+        "size": 347,
+        "sha256": "abaa02af340c0e1de7667018e48c9621ef6193cf3e516c9f48feff4ec135f792"
+      },
+      "actual": {
+        "size": 347,
+        "sha256": "abaa02af340c0e1de7667018e48c9621ef6193cf3e516c9f48feff4ec135f792"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.json",
+      "expected": {
+        "size": 48,
+        "sha256": "88d97b407c8849711892a8e0793a359440fcd5ebadc8b49261895a61bfbbe6ea"
+      },
+      "actual": {
+        "size": 48,
+        "sha256": "88d97b407c8849711892a8e0793a359440fcd5ebadc8b49261895a61bfbbe6ea"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-restart.log",
+      "expected": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "actual": {
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-second.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-second.log",
+      "expected": {
+        "size": 982,
+        "sha256": "1ced4fdc6fa596b20e8a6fa19a3be4c1880663cc5d698df3b0a94b20190c9fcc"
+      },
+      "actual": {
+        "size": 982,
+        "sha256": "1ced4fdc6fa596b20e8a6fa19a3be4c1880663cc5d698df3b0a94b20190c9fcc"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-third.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/browser-third.log",
+      "expected": {
+        "size": 13,
+        "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644"
+      },
+      "actual": {
+        "size": 13,
+        "sha256": "3a6be718f6067efae94ccc9e5deb7d06dea58d4395b47c04de8b5b167e219644"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/changed-paths.json",
+      "expected": {
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0"
+      },
+      "actual": {
+        "size": 15623,
+        "sha256": "a3be3ffa72ff38bf369b2e03e3199e3a410f28acd2d7ee6251ebd45446a854a0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/command-summary.json",
+      "expected": {
+        "size": 10098,
+        "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380"
+      },
+      "actual": {
+        "size": 10098,
+        "sha256": "0a8b73d9b7e373365cb0c9a894ae908e71ced8195b699b87f6baf70b6f1cf380"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/cumulative-original-baseline.patch",
+      "expected": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      },
+      "actual": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/exact-command-catalog.json",
+      "expected": {
+        "size": 12906,
+        "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e"
+      },
+      "actual": {
+        "size": 12906,
+        "sha256": "b3900e8886fe38e656aa527a8b5d3534ae990a56d83c1ab36ccb361597418e9e"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-invalid-input.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-invalid-input.log",
+      "expected": {
+        "size": 8101,
+        "sha256": "96196d17a42b66ec44697d08c0476274b996bafc988870bf92ca756faa2b3ae2"
+      },
+      "actual": {
+        "size": 8101,
+        "sha256": "96196d17a42b66ec44697d08c0476274b996bafc988870bf92ca756faa2b3ae2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/final-test-results.json",
+      "expected": {
+        "size": 11039,
+        "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003"
+      },
+      "actual": {
+        "size": 11039,
+        "sha256": "123e9a6130a79719234075e93f9e625a1aa8e3ce2c3716fe63b8144c73581003"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/history-question-preservation.json",
+      "expected": {
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1"
+      },
+      "actual": {
+        "size": 1142,
+        "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/markdown-check.json",
+      "expected": {
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f"
+      },
+      "actual": {
+        "size": 314,
+        "sha256": "c9656e8f43d83ce743c48beae9a7e9e9abe59c251f67793f12f77982ba82159f"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/moderation-after-F3.patch",
+      "expected": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      },
+      "actual": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/neutral-compile-tests.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/neutral-compile-tests.log",
+      "expected": {
+        "size": 2729,
+        "sha256": "928e6d698d97fcad5587fcb8836b67f59c8a1ef6b53e7b28b168b88d5f650c33"
+      },
+      "actual": {
+        "size": 2729,
+        "sha256": "928e6d698d97fcad5587fcb8836b67f59c8a1ef6b53e7b28b168b88d5f650c33"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/notes-before-final.txt",
+      "expected": {
+        "size": 2539,
+        "sha256": "9a67a27cf094de2dfe13ec289263d6f163e68178f705410740b1e9ac3b290ab0"
+      },
+      "actual": {
+        "size": 2539,
+        "sha256": "9a67a27cf094de2dfe13ec289263d6f163e68178f705410740b1e9ac3b290ab0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-agent.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-agent.log",
+      "expected": {
+        "size": 228353,
+        "sha256": "53a33cca48cfbc89caa13d2f0b058b87338de1ca83fc20e73249a56facdf1f93"
+      },
+      "actual": {
+        "size": 228353,
+        "sha256": "53a33cca48cfbc89caa13d2f0b058b87338de1ca83fc20e73249a56facdf1f93"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-connected.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-connected.log",
+      "expected": {
+        "size": 7194,
+        "sha256": "bde588764f5ee67d1c517ec2eb05e1bceabe055fd23bfb06e2d47ae943150769"
+      },
+      "actual": {
+        "size": 7194,
+        "sha256": "bde588764f5ee67d1c517ec2eb05e1bceabe055fd23bfb06e2d47ae943150769"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-extended.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-extended.log",
+      "expected": {
+        "size": 11969,
+        "sha256": "5fb0525a244dc8cbbbabfe47a3137f76658d9d7372a2a93c6c84ebd512b212ac"
+      },
+      "actual": {
+        "size": 11969,
+        "sha256": "5fb0525a244dc8cbbbabfe47a3137f76658d9d7372a2a93c6c84ebd512b212ac"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-first.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-first.log",
+      "expected": {
+        "size": 16271,
+        "sha256": "06cde62e5abb9c4656fde75f9f96de39af85cec609ef2ebf3d2a33abda903c1a"
+      },
+      "actual": {
+        "size": 16271,
+        "sha256": "06cde62e5abb9c4656fde75f9f96de39af85cec609ef2ebf3d2a33abda903c1a"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-http.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-http.log",
+      "expected": {
+        "size": 13038,
+        "sha256": "f0c3b015f4e761d560d93b99cfa8ab3043e82724134d5a804e38042cb627416e"
+      },
+      "actual": {
+        "size": 13038,
+        "sha256": "f0c3b015f4e761d560d93b99cfa8ab3043e82724134d5a804e38042cb627416e"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-proxy.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/postgres-proxy.log",
+      "expected": {
+        "size": 227643,
+        "sha256": "ae90cf3422d11c9d580243faecf52abadc70268c90947da4d0389874184418ec"
+      },
+      "actual": {
+        "size": 227643,
+        "sha256": "ae90cf3422d11c9d580243faecf52abadc70268c90947da4d0389874184418ec"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-final.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-final.log",
+      "expected": {
+        "size": 263,
+        "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+      },
+      "actual": {
+        "size": 263,
+        "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-first.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-first.log",
+      "expected": {
+        "size": 542,
+        "sha256": "c6792ed4085bc5ecea511e3376a0caaff01232be98ba10091b092860fbe859c6"
+      },
+      "actual": {
+        "size": 542,
+        "sha256": "c6792ed4085bc5ecea511e3376a0caaff01232be98ba10091b092860fbe859c6"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation-summary.json",
+      "expected": {
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf"
+      },
+      "actual": {
+        "size": 5666,
+        "sha256": "8706427bf5e9c97a89e6da57d0c701ed7a3f9b123006006e12ebfeed86672edf"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.log",
+      "expected": {
+        "size": 263,
+        "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+      },
+      "actual": {
+        "size": 263,
+        "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/preservation.py",
+      "expected": {
+        "size": 11906,
+        "sha256": "44851e7695cb3270430c18a2abaee0f9fb9cc00189d46013936e3571a9848cab"
+      },
+      "actual": {
+        "size": 11906,
+        "sha256": "44851e7695cb3270430c18a2abaee0f9fb9cc00189d46013936e3571a9848cab"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/review-test.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/review-test.log",
+      "expected": {
+        "size": 2559,
+        "sha256": "495b59e22e4ac822b9e030dc099322527c9b4790e8745eba935f2fe8e4ac37ba"
+      },
+      "actual": {
+        "size": 2559,
+        "sha256": "495b59e22e4ac822b9e030dc099322527c9b4790e8745eba935f2fe8e4ac37ba"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup-partial.json",
+      "expected": {
+        "size": 293,
+        "sha256": "c4b3619a05e1ed0e0364ccdcd6af60762ca8f1226505f050414d9da2f7cecda1"
+      },
+      "actual": {
+        "size": 293,
+        "sha256": "c4b3619a05e1ed0e0364ccdcd6af60762ca8f1226505f050414d9da2f7cecda1"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.json",
+      "expected": {
+        "size": 902,
+        "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2"
+      },
+      "actual": {
+        "size": 902,
+        "sha256": "1af1c9f1e2f347f2ea7f1a8368384d8f910cf2e2de3d25bfb5b667018bb02ee2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-cleanup.log",
+      "expected": {
+        "size": 192,
+        "sha256": "54a4b75a9e5f2001b1799f0bdbd62f11a4c2111abbbb7588f394ccf1c96b0113"
+      },
+      "actual": {
+        "size": 192,
+        "sha256": "54a4b75a9e5f2001b1799f0bdbd62f11a4c2111abbbb7588f394ccf1c96b0113"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-first.json",
+      "expected": {
+        "size": 574,
+        "sha256": "b2b17c4fb096185c8faf306b620d93afc8150420bf7092f191ddd65cfdf6b722"
+      },
+      "actual": {
+        "size": 574,
+        "sha256": "b2b17c4fb096185c8faf306b620d93afc8150420bf7092f191ddd65cfdf6b722"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-host.json",
+      "expected": {
+        "size": 4638,
+        "sha256": "63051b51e0ae3dd428341704a5c4c3a32619cd6b43c40ede66787c4bae03c2c2"
+      },
+      "actual": {
+        "size": 4638,
+        "sha256": "63051b51e0ae3dd428341704a5c4c3a32619cd6b43c40ede66787c4bae03c2c2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/runtime-prebrowser.json",
+      "expected": {
+        "size": 272,
+        "sha256": "9065a3410b6241ef7b3d9eb3d3aad5106c8a371ae650f1ac39c2676812aa4fef"
+      },
+      "actual": {
+        "size": 272,
+        "sha256": "9065a3410b6241ef7b3d9eb3d3aad5106c8a371ae650f1ac39c2676812aa4fef"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/source-manifest.json",
+      "expected": {
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38"
+      },
+      "actual": {
+        "size": 24488,
+        "sha256": "3d1d9ce93a42023a79fba765448e48eb45a516afb0ba56d78fe677d5e3429a38"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/test-first.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/test-first.log",
+      "expected": {
+        "size": 6984,
+        "sha256": "b4f61550b51d4abd17f679e52913d2e95118ff7a03e694ce9a98810922d4d690"
+      },
+      "actual": {
+        "size": 6984,
+        "sha256": "b4f61550b51d4abd17f679e52913d2e95118ff7a03e694ce9a98810922d4d690"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/unowned-inputs.json",
+      "expected": {
+        "size": 342,
+        "sha256": "79c31abbe1ac5fe3adf11e1f66fe84ea622bffc50b35c9002a84a732ab519413"
+      },
+      "actual": {
+        "size": 342,
+        "sha256": "79c31abbe1ac5fe3adf11e1f66fe84ea622bffc50b35c9002a84a732ab519413"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-policy-tests.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-policy-tests.log",
+      "expected": {
+        "size": 2729,
+        "sha256": "c86996276f87cbd2cc9e4a84106a695c3fa6ee91b5b2a42f67ebec4dbf42e07a"
+      },
+      "actual": {
+        "size": 2729,
+        "sha256": "c86996276f87cbd2cc9e4a84106a695c3fa6ee91b5b2a42f67ebec4dbf42e07a"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-tests.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/validation-tests.log",
+      "expected": {
+        "size": 2729,
+        "sha256": "315614f654f02a97283576425bc977efe322e6762847b286839fd381796770c4"
+      },
+      "actual": {
+        "size": 2729,
+        "sha256": "315614f654f02a97283576425bc977efe322e6762847b286839fd381796770c4"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-delivery.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-delivery.log",
+      "expected": {
+        "size": 53767,
+        "sha256": "ba248605909baee6b696e5516eec90dd89b119c0d3878d3a9b285b47f7c26c91"
+      },
+      "actual": {
+        "size": 53767,
+        "sha256": "ba248605909baee6b696e5516eec90dd89b119c0d3878d3a9b285b47f7c26c91"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-final.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-final.log",
+      "expected": {
+        "size": 54216,
+        "sha256": "b3e53be040f8d20e8b86c09037bbe588888f21a4bdb6b70268ff08b4fb0c38dd"
+      },
+      "actual": {
+        "size": 54216,
+        "sha256": "b3e53be040f8d20e8b86c09037bbe588888f21a4bdb6b70268ff08b4fb0c38dd"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-first.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-first.log",
+      "expected": {
+        "size": 28878,
+        "sha256": "efb5c6c692c7729b2f1ebad3538e3e27852c2d576e5cbd83496551b462815bda"
+      },
+      "actual": {
+        "size": 28878,
+        "sha256": "efb5c6c692c7729b2f1ebad3538e3e27852c2d576e5cbd83496551b462815bda"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-guardian.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-guardian.log",
+      "expected": {
+        "size": 53767,
+        "sha256": "0b00bd3934e0749588fdf158fc3ef06cdac5c8493d399b659e080014ebc533e5"
+      },
+      "actual": {
+        "size": 53767,
+        "sha256": "0b00bd3934e0749588fdf158fc3ef06cdac5c8493d399b659e080014ebc533e5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-races.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/verify-races.log",
+      "expected": {
+        "size": 53687,
+        "sha256": "63c798572b2f96832e8d756614d7b1bc3e963b863131136fa6a354407065cee0"
+      },
+      "actual": {
+        "size": 53687,
+        "sha256": "63c798572b2f96832e8d756614d7b1bc3e963b863131136fa6a354407065cee0"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/web-compile.exit",
+      "expected": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "actual": {
+        "size": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/web-compile.log",
+      "expected": {
+        "size": 3081,
+        "sha256": "5d32524b8a36c2c7636af870285f87cb5d6d111cdaa6664116f68ac95ad134f3"
+      },
+      "actual": {
+        "size": 3081,
+        "sha256": "5d32524b8a36c2c7636af870285f87cb5d6d111cdaa6664116f68ac95ad134f3"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/notes.txt",
+      "expected": {
+        "size": 511,
+        "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7"
+      },
+      "actual": {
+        "size": 511,
+        "sha256": "d3ea444d2efcad6b85acb51e9a8b77782d84105e4d8009d3970c7da21fb783f7"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/questions.txt",
+      "expected": {
+        "size": 591,
+        "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63"
+      },
+      "actual": {
+        "size": 591,
+        "sha256": "e30831f68d82543ec3125a5cacb589d432da28d99818d8cf2f7d6ad4fff94f63"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/developer/report.md",
+      "expected": {
+        "size": 22459,
+        "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5"
+      },
+      "actual": {
+        "size": 22459,
+        "sha256": "e16d019543010ccc18367470ea2cc368fa492f876a050c2f60dfcd9997e4a8f5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/README.md",
+      "expected": {
+        "size": 10704,
+        "sha256": "ff07b5e9c1ed659f0f1b325ce99ff388e097a37ed5a1a02ed8661a27c821a089"
+      },
+      "actual": {
+        "size": 10704,
+        "sha256": "ff07b5e9c1ed659f0f1b325ce99ff388e097a37ed5a1a02ed8661a27c821a089"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "expected": {
+        "size": 13156,
+        "sha256": "73570f1d1d0a44c8988095ed3484e1f78e2ee8034e22668988fcba4d66a686c5"
+      },
+      "actual": {
+        "size": 13156,
+        "sha256": "73570f1d1d0a44c8988095ed3484e1f78e2ee8034e22668988fcba4d66a686c5"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/delivery.md",
+      "expected": {
+        "size": 15119,
+        "sha256": "a1b57184cc5413845da2cfa6f467252c887c6a2222f77e476ea4b18c890007cc"
+      },
+      "actual": {
+        "size": 15119,
+        "sha256": "a1b57184cc5413845da2cfa6f467252c887c6a2222f77e476ea4b18c890007cc"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/payments.md",
+      "expected": {
+        "size": 11600,
+        "sha256": "aca3fad94dffca6974bc4a4296a344c90b049a33e8466048ffb0a99846a025d2"
+      },
+      "actual": {
+        "size": 11600,
+        "sha256": "aca3fad94dffca6974bc4a4296a344c90b049a33e8466048ffb0a99846a025d2"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/questions.md",
+      "expected": {
+        "size": 5414,
+        "sha256": "2e669c66ee0eb896e66817f36c0d716aca97680882e31eb4872ae83f75424a32"
+      },
+      "actual": {
+        "size": 5414,
+        "sha256": "2e669c66ee0eb896e66817f36c0d716aca97680882e31eb4872ae83f75424a32"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "expected": {
+        "size": 14807,
+        "sha256": "64d98536eaf5d70d7fb2ed25f7f84e19a2234f77806742c0f334198bc6b6e401"
+      },
+      "actual": {
+        "size": 14807,
+        "sha256": "64d98536eaf5d70d7fb2ed25f7f84e19a2234f77806742c0f334198bc6b6e401"
+      },
+      "matches": true
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "expected": {
+        "size": 12446,
+        "sha256": "65dcfa6c5581c373f03635d238dfca5568fc4dc646bd2992b5c535ca0c70e3df"
+      },
+      "actual": {
+        "size": 12446,
+        "sha256": "65dcfa6c5581c373f03635d238dfca5568fc4dc646bd2992b5c535ca0c70e3df"
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/moderation-browser-qa.cjs",
+      "expected": {
+        "size": 13825,
+        "sha256": "a61ce96032734de81d6734d18e033624c6c4169f3560bd57c17f6af454857843"
+      },
+      "actual": {
+        "size": 13825,
+        "sha256": "a61ce96032734de81d6734d18e033624c6c4169f3560bd57c17f6af454857843"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/config/ModerationSchedule.java",
+      "expected": {
+        "size": 665,
+        "sha256": "7100817049ddc6ec508a32a346afc8bebce401103cc7195197fbbc51a0fc34b7"
+      },
+      "actual": {
+        "size": 665,
+        "sha256": "7100817049ddc6ec508a32a346afc8bebce401103cc7195197fbbc51a0fc34b7"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/FileInspector.java",
+      "expected": {
+        "size": 2863,
+        "sha256": "9b1cd17f7dd3108f9fdec1db129dcd20d1429af3c0558d8e43a81c902b6e899e"
+      },
+      "actual": {
+        "size": 2863,
+        "sha256": "9b1cd17f7dd3108f9fdec1db129dcd20d1429af3c0558d8e43a81c902b6e899e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/PrivateFileService.java",
+      "expected": {
+        "size": 7772,
+        "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345"
+      },
+      "actual": {
+        "size": 7772,
+        "sha256": "8c07151675adefb63548159dcf974771cd3145a4bfd26c683dc7bb8b28358345"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/AttachmentAccessPolicy.java",
+      "expected": {
+        "size": 159,
+        "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8"
+      },
+      "actual": {
+        "size": 159,
+        "sha256": "bd04821585a7dd9a38371c20abecd412d471d55d58a7286cab9d92a3ed1950d8"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileAccess.java",
+      "expected": {
+        "size": 673,
+        "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051"
+      },
+      "actual": {
+        "size": 673,
+        "sha256": "9c1b5715ffedf5740054abc51037faa84f49e133948b95f4c39d6550f830c051"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/files/api/FileReference.java",
+      "expected": {
+        "size": 422,
+        "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592"
+      },
+      "actual": {
+        "size": 422,
+        "sha256": "13087a7e222c0c63037cc488ad19afd7a744caa5172c5a5e13bbb694e2ec3592"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/Admission.java",
+      "expected": {
+        "size": 717,
+        "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99"
+      },
+      "actual": {
+        "size": 717,
+        "sha256": "2e80b5de57aad47dc7978af6c7ea77ae61a9e2e4cc2004c0a6366e091e81dd99"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/AttachmentPolicyRouter.java",
+      "expected": {
+        "size": 481,
+        "sha256": "73c63931fb5cb1a7c9f81e13e00de5592b6cda770c02b83c5e284879792af957"
+      },
+      "actual": {
+        "size": 481,
+        "sha256": "73c63931fb5cb1a7c9f81e13e00de5592b6cda770c02b83c5e284879792af957"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/CaseService.java",
+      "expected": {
+        "size": 11355,
+        "sha256": "cea76492446b05451f045f8172f388336ee8d29b7077ccf4905df010a443f9be"
+      },
+      "actual": {
+        "size": 11355,
+        "sha256": "cea76492446b05451f045f8172f388336ee8d29b7077ccf4905df010a443f9be"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentDigest.java",
+      "expected": {
+        "size": 1788,
+        "sha256": "6d6c96b719c311110e37ba1b4e4d88a4e9bd9262e7bd4b4b09f3f7a76ded6a09"
+      },
+      "actual": {
+        "size": 1788,
+        "sha256": "6d6c96b719c311110e37ba1b4e4d88a4e9bd9262e7bd4b4b09f3f7a76ded6a09"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ContentReader.java",
+      "expected": {
+        "size": 7765,
+        "sha256": "15462444cc53159bb26108ab35bd06984a56b2fe6aa6bbc26b89d332eb139f11"
+      },
+      "actual": {
+        "size": 7765,
+        "sha256": "15462444cc53159bb26108ab35bd06984a56b2fe6aa6bbc26b89d332eb139f11"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/DecisionService.java",
+      "expected": {
+        "size": 2513,
+        "sha256": "7b2239fce2b4130da1b22a7e15188ce18148562e2e81c3d66ece5396c4e45389"
+      },
+      "actual": {
+        "size": 2513,
+        "sha256": "7b2239fce2b4130da1b22a7e15188ce18148562e2e81c3d66ece5396c4e45389"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationFailure.java",
+      "expected": {
+        "size": 157,
+        "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad"
+      },
+      "actual": {
+        "size": 157,
+        "sha256": "704b297bf96f36d3b55341ed8c4e8fd5f0947ebd6948b7f54be184c9ad8c20ad"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationService.java",
+      "expected": {
+        "size": 6744,
+        "sha256": "2e6354d978601f434811c5c1d09053ba691c49db7a1a4a02f3809d7ef0041c71"
+      },
+      "actual": {
+        "size": 6744,
+        "sha256": "2e6354d978601f434811c5c1d09053ba691c49db7a1a4a02f3809d7ef0041c71"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationStore.java",
+      "expected": {
+        "size": 6203,
+        "sha256": "e8764cea1630cdb81cd9603539568c1512dd71425190b1df6ec268b42d93a61c"
+      },
+      "actual": {
+        "size": 6203,
+        "sha256": "e8764cea1630cdb81cd9603539568c1512dd71425190b1df6ec268b42d93a61c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ModerationWorker.java",
+      "expected": {
+        "size": 9010,
+        "sha256": "686a1112ae376c4deb4f5c94061e9c5acb1ad62f48c954331b89b5a0cc50db05"
+      },
+      "actual": {
+        "size": 9010,
+        "sha256": "686a1112ae376c4deb4f5c94061e9c5acb1ad62f48c954331b89b5a0cc50db05"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/OwnerRegistry.java",
+      "expected": {
+        "size": 784,
+        "sha256": "47a5369a3df74c72eee63e3cbcc53ce92e0b17c9c01381156304d2fa81254035"
+      },
+      "actual": {
+        "size": 784,
+        "sha256": "47a5369a3df74c72eee63e3cbcc53ce92e0b17c9c01381156304d2fa81254035"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewEngine.java",
+      "expected": {
+        "size": 136,
+        "sha256": "7fb7a61b900f02289b039d0745071584665ca1cfb1bff8beb0609781063900f3"
+      },
+      "actual": {
+        "size": 136,
+        "sha256": "7fb7a61b900f02289b039d0745071584665ca1cfb1bff8beb0609781063900f3"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewInput.java",
+      "expected": {
+        "size": 358,
+        "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a"
+      },
+      "actual": {
+        "size": 358,
+        "sha256": "692b63ea431514d4242ae63788c73ec39ab6f38ae7c779ed3cec8eba01572d7a"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/ReviewResult.java",
+      "expected": {
+        "size": 1979,
+        "sha256": "9a4cf212875ea7cdd081872f039efefb8a2d235050677b7aa84168d45b9e2124"
+      },
+      "actual": {
+        "size": 1979,
+        "sha256": "9a4cf212875ea7cdd081872f039efefb8a2d235050677b7aa84168d45b9e2124"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticPolicy.java",
+      "expected": {
+        "size": 812,
+        "sha256": "f09f782cb1534ddf23471fc076d9bda17f17e1ba94a02dee2ea4a935eae52062"
+      },
+      "actual": {
+        "size": 812,
+        "sha256": "f09f782cb1534ddf23471fc076d9bda17f17e1ba94a02dee2ea4a935eae52062"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/SyntheticReviewEngine.java",
+      "expected": {
+        "size": 1277,
+        "sha256": "6b2f0ce6c5a65ff1af6f1066bdee02b6cc4c084bc133e1a224255f8af65abc60"
+      },
+      "actual": {
+        "size": 1277,
+        "sha256": "6b2f0ce6c5a65ff1af6f1066bdee02b6cc4c084bc133e1a224255f8af65abc60"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchOwner.java",
+      "expected": {
+        "size": 3044,
+        "sha256": "650945ebfaad4c503a8e3f71110e10358254ed94e6015c369378ae91450407b2"
+      },
+      "actual": {
+        "size": 3044,
+        "sha256": "650945ebfaad4c503a8e3f71110e10358254ed94e6015c369378ae91450407b2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchService.java",
+      "expected": {
+        "size": 9297,
+        "sha256": "7e0b2a376f73110eeb0f1f9b3f8f433558787e80062e60c1d42b5edfb38ef2de"
+      },
+      "actual": {
+        "size": 9297,
+        "sha256": "7e0b2a376f73110eeb0f1f9b3f8f433558787e80062e60c1d42b5edfb38ef2de"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/WorkbenchStore.java",
+      "expected": {
+        "size": 2423,
+        "sha256": "d8099272849bcee38beb85636d30e423a6faee249f0a8e82a54c8d4e1a307301"
+      },
+      "actual": {
+        "size": 2423,
+        "sha256": "d8099272849bcee38beb85636d30e423a6faee249f0a8e82a54c8d4e1a307301"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/AuthorContext.java",
+      "expected": {
+        "size": 662,
+        "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f"
+      },
+      "actual": {
+        "size": 662,
+        "sha256": "42856f97bf2a7c10ece5aa8e272326680690297dc447aaeebce5dbe4ce8e4a5f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentOwner.java",
+      "expected": {
+        "size": 548,
+        "sha256": "be6ac56b2d28af275027dbdfdbabf4e0dbbba5489e0c48b736b42a730f8e2d9c"
+      },
+      "actual": {
+        "size": 548,
+        "sha256": "be6ac56b2d28af275027dbdfdbabf4e0dbbba5489e0c48b736b42a730f8e2d9c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ContentReference.java",
+      "expected": {
+        "size": 317,
+        "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e"
+      },
+      "actual": {
+        "size": 317,
+        "sha256": "f9b53522b9f0e86cf75b219998dbd5fb78fa7da3ebca08fa288c141296fca72e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/ModerationAccess.java",
+      "expected": {
+        "size": 509,
+        "sha256": "5c304cbd2650a5ff7bbe0076c4838ca19a1267905e8a5d4fb0fc0a2e64530e90"
+      },
+      "actual": {
+        "size": 509,
+        "sha256": "5c304cbd2650a5ff7bbe0076c4838ca19a1267905e8a5d4fb0fc0a2e64530e90"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/api/SurfaceKind.java",
+      "expected": {
+        "size": 318,
+        "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6"
+      },
+      "actual": {
+        "size": 318,
+        "sha256": "4e5f446def0018748c68df9b488a18183b66b70aff5250107dde05dabf0726d6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ContentController.java",
+      "expected": {
+        "size": 1718,
+        "sha256": "0f88ddf44143f847cfb5482e7ad638c410c5a92667e6c6382b0ea1dbe439f753"
+      },
+      "actual": {
+        "size": 1718,
+        "sha256": "0f88ddf44143f847cfb5482e7ad638c410c5a92667e6c6382b0ea1dbe439f753"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationController.java",
+      "expected": {
+        "size": 8320,
+        "sha256": "882392b202590aaacc511229ba2cb7e38b3f8be40eba2ff0fc069f3855f8bff2"
+      },
+      "actual": {
+        "size": 8320,
+        "sha256": "882392b202590aaacc511229ba2cb7e38b3f8be40eba2ff0fc069f3855f8bff2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationErrors.java",
+      "expected": {
+        "size": 1257,
+        "sha256": "d75afebb4302d9bb76f360123817461b559d44f234ff469a178447f212a339de"
+      },
+      "actual": {
+        "size": 1257,
+        "sha256": "d75afebb4302d9bb76f360123817461b559d44f234ff469a178447f212a339de"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationSourceFilter.java",
+      "expected": {
+        "size": 1236,
+        "sha256": "2ad557f381e5696b140f7bc5b452a9820620e400c7b53b316e2f7a3eb8c69ab9"
+      },
+      "actual": {
+        "size": 1236,
+        "sha256": "2ad557f381e5696b140f7bc5b452a9820620e400c7b53b316e2f7a3eb8c69ab9"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/moderation/web/ModerationWords.java",
+      "expected": {
+        "size": 2423,
+        "sha256": "7205bb8a85c032f6ccd995ea237913a94e92ca916e8c889b34a71514a87f5e43"
+      },
+      "actual": {
+        "size": 2423,
+        "sha256": "7205bb8a85c032f6ccd995ea237913a94e92ca916e8c889b34a71514a87f5e43"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/java/ar/changeo/security/SecurityConfig.java",
+      "expected": {
+        "size": 3532,
+        "sha256": "c8d22862307bf49116f2124eac1a1d5e260e553ae3844388c2f7a17a2ee4eaf2"
+      },
+      "actual": {
+        "size": 3532,
+        "sha256": "c8d22862307bf49116f2124eac1a1d5e260e553ae3844388c2f7a17a2ee4eaf2"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "expected": {
+        "size": 1267,
+        "sha256": "9e60364f1235ad2b25a2e16df0b960d26d110458092b10e4cb7323a7393e0d1f"
+      },
+      "actual": {
+        "size": 1267,
+        "sha256": "9e60364f1235ad2b25a2e16df0b960d26d110458092b10e4cb7323a7393e0d1f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/db/migration/V4__moderation_and_private_files.sql",
+      "expected": {
+        "size": 9437,
+        "sha256": "a0623e3dc0d97b240d7174df50e09d1a0e1f83295b9eeed3bb6774487b68c927"
+      },
+      "actual": {
+        "size": 9437,
+        "sha256": "a0623e3dc0d97b240d7174df50e09d1a0e1f83295b9eeed3bb6774487b68c927"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/static/style.css",
+      "expected": {
+        "size": 2877,
+        "sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda"
+      },
+      "actual": {
+        "size": 2877,
+        "sha256": "10406b1dc264d407c2582ce4925871fc844f0ab5298c12c795f798b216d9adda"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-detail.html",
+      "expected": {
+        "size": 1842,
+        "sha256": "e3ab5876c2ebdcf87c1300c1eeabec7e6038d6da4b1c17aa8863fb3806a9b97c"
+      },
+      "actual": {
+        "size": 1842,
+        "sha256": "e3ab5876c2ebdcf87c1300c1eeabec7e6038d6da4b1c17aa8863fb3806a9b97c"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/content-search.html",
+      "expected": {
+        "size": 1055,
+        "sha256": "8adfd254b400765dbd683384bbe3e5a42af0384115454fa5bc940e8f5a2b1494"
+      },
+      "actual": {
+        "size": 1055,
+        "sha256": "8adfd254b400765dbd683384bbe3e5a42af0384115454fa5bc940e8f5a2b1494"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/home.html",
+      "expected": {
+        "size": 1435,
+        "sha256": "b82ec0cfb6ccab9be2e9e25cbf57e6691d9b3ac7de3537b51fd33eadc0426069"
+      },
+      "actual": {
+        "size": 1435,
+        "sha256": "b82ec0cfb6ccab9be2e9e25cbf57e6691d9b3ac7de3537b51fd33eadc0426069"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-cases.html",
+      "expected": {
+        "size": 1109,
+        "sha256": "7c3c3c894b603e34db40284e428493843fbbbdca971bc7fc6a8dc0ddc46b647e"
+      },
+      "actual": {
+        "size": 1109,
+        "sha256": "7c3c3c894b603e34db40284e428493843fbbbdca971bc7fc6a8dc0ddc46b647e"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-evidence.html",
+      "expected": {
+        "size": 1177,
+        "sha256": "8ababb64a55bbffbe6bfc342499d3428d908ae363606fbd1f1c3ca370c8a0016"
+      },
+      "actual": {
+        "size": 1177,
+        "sha256": "8ababb64a55bbffbe6bfc342499d3428d908ae363606fbd1f1c3ca370c8a0016"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator-signin.html",
+      "expected": {
+        "size": 1220,
+        "sha256": "02407ca587df3ef47c71de1c73b95010de8253cb0f6d9c53e5eab983a7493193"
+      },
+      "actual": {
+        "size": 1220,
+        "sha256": "02407ca587df3ef47c71de1c73b95010de8253cb0f6d9c53e5eab983a7493193"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-operator.html",
+      "expected": {
+        "size": 4322,
+        "sha256": "fcc0bfeda957902c68c19056d1549700900df40b61ad467df525ac663c55b829"
+      },
+      "actual": {
+        "size": 4322,
+        "sha256": "fcc0bfeda957902c68c19056d1549700900df40b61ad467df525ac663c55b829"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-own.html",
+      "expected": {
+        "size": 4166,
+        "sha256": "dafdad98d0de108bbd53779bcfabe99313171cda0434101d7bc13d69250c0efe"
+      },
+      "actual": {
+        "size": 4166,
+        "sha256": "dafdad98d0de108bbd53779bcfabe99313171cda0434101d7bc13d69250c0efe"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/moderation-workbench.html",
+      "expected": {
+        "size": 2700,
+        "sha256": "4930c0a2a5475ef6db8c4ff291037c2491f0bc15fa2d8a5a2fa3ebb935eb8fe6"
+      },
+      "actual": {
+        "size": 2700,
+        "sha256": "4930c0a2a5475ef6db8c4ff291037c2491f0bc15fa2d8a5a2fa3ebb935eb8fe6"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/main/resources/templates/shell.html",
+      "expected": {
+        "size": 993,
+        "sha256": "15aa630623aff6147b087e3c4b217a17ca7415ea439592ebb86eb97ccc9346ab"
+      },
+      "actual": {
+        "size": 993,
+        "sha256": "15aa630623aff6147b087e3c4b217a17ca7415ea439592ebb86eb97ccc9346ab"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/files/FileInspectorTest.java",
+      "expected": {
+        "size": 2045,
+        "sha256": "ff998681b4711eb48f9b39acaa099472ece90e23a3ecf1d47a95512c23483056"
+      },
+      "actual": {
+        "size": 2045,
+        "sha256": "ff998681b4711eb48f9b39acaa099472ece90e23a3ecf1d47a95512c23483056"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/IndependentOwner.java",
+      "expected": {
+        "size": 4341,
+        "sha256": "8af07b9ce86faa4d5bd41338c285583482dde03d04473cd87f477b9e3e2c2bed"
+      },
+      "actual": {
+        "size": 4341,
+        "sha256": "8af07b9ce86faa4d5bd41338c285583482dde03d04473cd87f477b9e3e2c2bed"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationContainerIT.java",
+      "expected": {
+        "size": 1827,
+        "sha256": "cb50c955e8529d44a7ed9aee33d23354b71c2b3ebf02642d01ca8a36736ed5ab"
+      },
+      "actual": {
+        "size": 1827,
+        "sha256": "cb50c955e8529d44a7ed9aee33d23354b71c2b3ebf02642d01ca8a36736ed5ab"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationHttpTest.java",
+      "expected": {
+        "size": 11883,
+        "sha256": "6a63a17f3b0734b65ce4209ba12db401c3d217b49be93ac4b66b33f69fa7942b"
+      },
+      "actual": {
+        "size": 11883,
+        "sha256": "6a63a17f3b0734b65ce4209ba12db401c3d217b49be93ac4b66b33f69fa7942b"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+      "expected": {
+        "size": 44428,
+        "sha256": "90587ec1c062c8b8b1a2d65aaf759977301a5ec9a25099dfb8a17c41f1bb076f"
+      },
+      "actual": {
+        "size": 44428,
+        "sha256": "90587ec1c062c8b8b1a2d65aaf759977301a5ec9a25099dfb8a17c41f1bb076f"
+      },
+      "matches": true
+    },
+    {
+      "path": "src/test/java/ar/changeo/moderation/ReviewValidationTest.java",
+      "expected": {
+        "size": 2658,
+        "sha256": "7cf1ce431c26f2013e54833fa47c65183120264860fa32517b3d2aa649a86d13"
+      },
+      "actual": {
+        "size": 2658,
+        "sha256": "7cf1ce431c26f2013e54833fa47c65183120264860fa32517b3d2aa649a86d13"
+      },
+      "matches": true
+    }
+  ],
+  "patch_equality": [
+    {
+      "path": "cumulative-original-baseline.patch",
+      "matches": true,
+      "reviewer": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      },
+      "developer": {
+        "size": 296617,
+        "sha256": "1698e97d5f749c197f783d8ed112c2b7ee795c28040199ae08f8833684bc9554"
+      }
+    },
+    {
+      "path": "accepted-F3.patch",
+      "matches": true,
+      "reviewer": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      },
+      "developer": {
+        "size": 42902,
+        "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+      }
+    },
+    {
+      "path": "moderation-after-F3.patch",
+      "matches": true,
+      "reviewer": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      },
+      "developer": {
+        "size": 256612,
+        "sha256": "04c60d2d21a1c3be01dc84ce059a46bada6b105c67e2dd861a0327ba0c60ad8f"
+      }
+    }
+  ],
+  "source_manifest_equal": true,
+  "app_native_session": {
+    "id": 16306,
+    "exit": 143,
+    "recovered": true
+  },
+  "counts": {
+    "developer_seals": 19,
+    "source_hashes": 143,
+    "developer_complete_manifest": 178
+  },
+  "passed": false
+}

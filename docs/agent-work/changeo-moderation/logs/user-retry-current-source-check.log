@@ -1,0 +1,3 @@
+src/main/java/ar/changeo/moderation/ModerationWorker.java: OK
+src/main/java/ar/changeo/moderation/ReviewResult.java: OK
+two partial tests identical to saved attempt3 snapshots; production worker/result unchanged

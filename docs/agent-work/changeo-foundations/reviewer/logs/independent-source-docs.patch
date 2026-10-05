@@ -1,0 +1,168 @@
+--- baseline/docs/README.md
++++ docs/README.md
+@@ -1,6 +1,6 @@
+ # Changeo planning documentation
+ 
+-Status: planning and discovery program accepted; product implementation is gated. Updated: 30 September 2026.
++Status: private synthetic foundation implementation under review. Updated: 1 October 2026. Production and real money remain gated.
+ 
+ Changeo is an Argentina-wide marketplace where people offer services or publish requests for services they need. The two starting journeys are **Ofrezco** and **Necesito**. Service names are freeform; fulfillment can be local, remote or shipped. Customers pay the agreed service price; providers fund the platform through subscriptions, with Changeo covering processing costs.
+ 
+@@ -32,7 +32,7 @@
+ | --- | --- |
+ | Market | Argentina only; broad permitted services, named by their publishers. |
+ | Delivery | In-person, remote and shipped custom outputs. |
+-| Launch | One public production launch with real payments; resolve payment feasibility before product implementation. |
++| Launch | One public production launch with real payments; resolve payment feasibility before production and real money; private synthetic development authorized under S1. |
+ | Money | Negotiate full job price; fund upfront; final-only release under accepted per-job terms; Changeo absorbs processing costs. |
+ | Payment provider | Mercado Pago selected for job-payment and provider-billing planning; exact supported arrangement and commercial approval remain Gate0 outputs. |
+ | Refunds | Original payment method or explicitly chosen customer credits. |
+@@ -48,7 +48,7 @@
+ | Operations | Founder/small team initially handles support and disputes. |
+ | Growth | Founder recruitment plus substantial marketing investment, with budget modeled before spending. |
+ | Technology | Prefer Java and low-maintenance hosting. |
+-| Agents | All Astra; distinct coordination, implementation and independent review roles. |
++| Agents | Current GPT-6.1 Sol/high; distinct coordination, implementation and independent review roles. Historical Astra preference is superseded for this goal. |
+ 
+ ## Planning defaults and boundaries
+ 
+@@ -63,3 +63,9 @@
+ Establish a supported Mercado Pago Argentina arrangement for full-price funding, accepted final release, refunds, credit backing, eligible users and processing-cost subsidy. The [selected-provider research](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) has not publicly established the complete required flow. A normal marketplace split, temporary card authorization or scheduled transfer is not proof of the requested custody mechanism.
+ 
+ If the gate fails, return to the founder for a product-model decision. Do not silently weaken payment protection or promise an unverified launch.
++
++## Private development authorization and current foundations
++
++The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
++
++The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Independent final acceptance is pending; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.
+--- baseline/docs/architecture.md
++++ docs/architecture.md
+@@ -1,6 +1,6 @@
+ # Architecture and shared contracts
+ 
+-Status: architecture baseline for later bounded feature plans. No application exists yet. Mercado Pago is selected for job-payment and provider-billing planning; supported account/financial contracts, age, remaining vendor and business contracts must pass [Gate0](delivery.md#gate0-feasibility-before-product-implementation) before implementation.
++Status: private synthetic Java 25 / Spring Boot 4.1.1 foundation application implemented, awaiting independent final review. Mercado Pago remains selected for planning; all production and real-money contracts remain Gate0. Current private identity contracts are S1/F1/F2 below.
+ 
+ ## Stack and deployment shape
+ 
+@@ -41,7 +41,7 @@
+ - **Subscription/reward:** commercial entitlement and promotion state, separate from customer principal.
+ - **Moderation decision/case:** content revision, policy/model version, reason, review status, appeal and responsible operator.
+ 
+-Specific endpoint paths and persistence schemas belong in accepted feature briefs after Gate0; this document intentionally fixes ownership and invariants before provider-specific wire contracts are known. No public third-party developer API is a launch requirement.
++Specific endpoint paths and persistence schemas belong in accepted feature briefs under S1 for private synthetic development, and after Gate0 for production; this document intentionally fixes ownership and invariants before provider-specific wire contracts are known. No public third-party developer API is a launch requirement.
+ 
+ ## Financial and asynchronous correctness
+ 
+@@ -70,3 +70,9 @@
+ ## Required coding guidance
+ 
+ Every planner, implementer and reviewer loads the current shared policy at `/home/paradis/.agents/skills/astra-flash-orchestrator/references/code-quality.md`. Java work also loads `/home/paradis/.agents/skills/java-coding-standards/SKILL.md` and relevant testing work loads `/home/paradis/.agents/skills/java-junit/SKILL.md`. Record actual reads and validation evidence in role reports. There are no existing project implementations to cite as local reference patterns.
++
++## Private development authorization and current foundations
++
++The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
++
++The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Independent final acceptance is pending; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.
+--- baseline/docs/delivery.md
++++ docs/delivery.md
+@@ -2,13 +2,13 @@
+ 
+ ## Current status and scope
+ 
+-The planning program has [independent acceptance](agent-work/changeo-planning/planning-review.md). The product and payment implementation do not. This documentation task saves the accepted direction under `docs/`; no application feature, deployment, external outreach or spending is authorized by the instruction “write to docs.”
++The planning program has [independent acceptance](agent-work/changeo-planning/planning-review.md). Private foundations are implemented and await independent acceptance; production and payment readiness are unestablished. This documentation task saves the accepted direction under `docs/`; no application feature, deployment, external outreach or spending is authorized by the instruction “write to docs.”
+ 
+-Baseline: no application code or usable Git repository was exposed during planning. Protected workspace metadata must not be replaced. Establish a permitted baseline before future code work and preserve any intervening user changes.
++Historical planning baseline: no application code or usable Git repository was exposed. Current S1 development uses the user-approved unborn Git master and preserved complete dirty snapshots. Protected workspace metadata must not be replaced. Establish a permitted baseline before future code work and preserve any intervening user changes.
+ 
+ ## Gate0: feasibility before product implementation
+ 
+-The founder starts from no established business/payment arrangement. An Astra research coordinator prepares evidence and bounded questions; the founder obtains commercial/professional decisions where required. External communications, service purchases and registrations are separate authorized actions.
++The founder starts from no established business/payment arrangement. A coordinator prepares evidence and bounded questions; the founder obtains commercial/professional decisions where required. External communications, service purchases and registrations are separate authorized actions.
+ 
+ | Gate | Decision owner | Required evidence/output | Failure consequence |
+ | --- | --- | --- | --- |
+@@ -23,7 +23,7 @@
+ 
+ Before closing Gate0, record exact values and selected providers in the affected docs and publish a revision of the shared contracts. No builder chooses unresolved commercial/legal policy on behalf of the founder. No launch date is inferred from agent availability.
+ 
+-## Ordered delivery bundles after Gate0
++## Ordered delivery bundles
+ 
+ | Order | Bundle | Accepted prerequisites | Completion outcome |
+ | --- | --- | --- | --- |
+@@ -38,11 +38,11 @@
+ | 8 | Single public production launch | Founder-authorized launch; partner/legal/operational gates passed | Real payments and required trust/support capabilities work for public users. |
+ | 9 | Loyalty and acquisition expansion | Postlaunch evidence and approved budgets | Cash bonuses, visibility benefits and expanded marketing with measured controls. |
+ 
+-Bundles are dependency milestones, not permission to build disconnected scaffolding. Feature coordinators may size cohesive end-to-end tasks within them. Preserve the order and accepted shared contracts. Private staging and payment sandboxes are required verification environments, not a second public release or prototype.
++The table states production prerequisites. S1 separately authorizes private synthetic delivery in the same order, beginning with independently reviewed foundations under F1/F2; no production gate is closed. Bundles are dependency milestones, not permission to build disconnected scaffolding. Feature coordinators may size cohesive end-to-end tasks within them. Preserve the order and accepted shared contracts. Private staging and payment sandboxes are required verification environments, not a second public release or prototype.
+ 
+-## Astra-only execution workflow
++## Current Sol/high execution workflow
+ 
+-The user's explicit Astra-only instruction overrides the installed orchestration skill's default Flash implementer. Use explicit `gpt-6-astra` for root, fresh feature coordinator, separate implementer and separate independent final reviewer. Verify actual host attribution when available; a selected model name alone is not proof of provider routing. Do not silently substitute models or run paid setup probes.
++The current goal's explicit GPT-6.1 Sol/high instruction supersedes the historical Astra-only preference. Use explicit `gpt-6.1-sol` with `high` reasoning for the root, fresh feature coordinator, sole `astra_flash_builder` implementer and separate independent final reviewer. Verify actual host attribution when available; a selected model name alone is not proof of provider routing. Do not silently substitute models or run paid setup probes.
+ 
+ The root owns global originals, dependencies, shared contract revisions and the compact ledger. Each fresh feature coordinator owns its detailed inspection/plan/corrections, and dispatches one bounded implementer plus an independent final reviewer. Coordinators do not implement or self-accept. Keep the same feature roles through corrections; do not impose a retry cap or weaken verification to save tokens. Use one active code writer per workspace, or isolated accepted workspaces with explicit integration boundaries.
+ 
+@@ -76,3 +76,9 @@
+ Launch requires accepted feature reviews, successful end-to-end and recovery evidence, resolved payment/identity/moderation vendor onboarding, funded reserves and support, published terms/privacy/service rules, approved marketing spend, and explicit authority for production changes. No “scam-proof,” guaranteed-yield or guaranteed-provider-safety claims are permitted in product copy.
+ 
+ After launch, monitor matches, completed jobs, contribution, renewal/churn, refunds/chargebacks, moderation and support capacity. Expand rewards and advertising only under the approved budget and operating thresholds.
++
++## Private development authorization and current foundations
++
++The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
++
++The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Independent final acceptance is pending; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.
+--- baseline/docs/payments.md
++++ docs/payments.md
+@@ -1,6 +1,6 @@
+ # Payments, refunds and held funds
+ 
+-Status: Mercado Pago selected for job payments and provider billing planning on 30 September 2026; custody/credit capability, legal structure, account eligibility and commercial terms remain unverified. No real-money implementation may start before [Gate0](delivery.md#gate0-feasibility-before-product-implementation) passes.
++Status: Mercado Pago selected for job payments and provider billing planning on 30 September 2026; custody/credit capability, legal structure, account eligibility and commercial terms remain unverified. Private synthetic development is authorized under S1 with real money disabled; no real-money operation or production release may start before [Gate0](delivery.md#gate0-feasibility-before-product-implementation) passes.
+ 
+ ## Required money flow
+ 
+@@ -23,7 +23,7 @@
+ 
+ The public [Mercado Pago split flow](https://www.mercadopago.com.ar/developers/es/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace) allocates payment to seller/marketplace and deducts processing commission from seller proceeds. It does not establish the requested final-acceptance custody control; its localized examples include BRL and do not establish this account's Argentina eligibility. Its [seven-day card authorization](https://www.mercadopago.com.ar/developers/es/docs/checkout-api-payments/payment-management/make-value-reserve?scope=prod) is not collected escrow and cannot be assumed to cover long jobs. The [R3 findings](gate0-research.md#mercado-pago-selection-and-remaining-capability--r3) distinguish Argentina/ARS Payouts and seller-balance availability from approved custody, and original-method refunds from backed reusable credits. Historical alternative-provider comparisons remain research provenance; Mercado Pago is the selected provider.
+ 
+-If no arrangement satisfies the requirements, stop product implementation and return for a product-model decision. Do not route customer funds through an ordinary Changeo operating account or silently substitute immediate split payments.
++If no arrangement satisfies the requirements, hold affected production/money work and return for a product-model decision. Do not route customer funds through an ordinary Changeo operating account or silently substitute immediate split payments.
+ 
+ ## Agreement and release contract
+ 
+@@ -87,3 +87,9 @@
+ - Mixed funding, concurrent credit spending and successive one-cent partial refunds.
+ - Feedback-stage approval never releases money; an unaccepted quote revision cannot be funded.
+ - Restrictions, guardian revocation and subscription expiry do not strand valid financial obligations.
++
++## Private development authorization and current foundations
++
++The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
++
++The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Independent final acceptance is pending; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.
+--- baseline/docs/questions.md
++++ docs/questions.md
+@@ -8,8 +8,14 @@
+ 
+ You also said **“they do. i checked”**, **“just their public api”**, and that money would be held in **your personal checking account for now**, with a Changeo account planned later. [Complete clarification](agent-work/changeo-implementation/originals/user-mercadopago-capability-and-account.md). API choice and account ownership are answered. This records your verification claim and proposed holding flow; approved bank/provider custody, separation of customer funds and executable release/refund/credit contracts remain unestablished. It establishes neither legal suitability nor illegality, and does not waive the ordinary-account restriction or Gate0.
+ 
+-The remaining payment evidence must establish the exact Argentina/ARS account and funds arrangement for **already-collected full job funds released only under final-acceptance terms**, with lawful dispute/inactivity limits, and **fully backed reusable legal-payer/guardian credits**. Public API access, splits, seven-day authorization, Payouts scheduling and original-method refunds do not establish that complete arrangement. The [prepared Mercado Pago inquiry](gate0-research.md#mercado-pago-inquiry--prepared-not-sent) remains historical and unsent; its generic outreach-approval request is superseded as the immediate next action. No manual-payout acceptance or permission for sandbox implementation before Gate0 is inferred. No public proof is not proof of impossibility.
++The remaining payment evidence must establish the exact Argentina/ARS account and funds arrangement for **already-collected full job funds released only under final-acceptance terms**, with lawful dispute/inactivity limits, and **fully backed reusable legal-payer/guardian credits**. Public API access, splits, seven-day authorization, Payouts scheduling and original-method refunds do not establish that complete arrangement. The [prepared Mercado Pago inquiry](gate0-research.md#mercado-pago-inquiry--prepared-not-sent) remains historical and unsent; its generic outreach-approval request is superseded as the immediate next action. No manual-payout acceptance is inferred. The later explicit S1 approval permits private sandbox development before Gate0 with real money disabled. No public proof is not proof of impossibility.
+ 
+ The [complete original-ID map](gate0-research.md#original-question-coverage-and-remaining-evidence) assigns remaining fees/subsidy/account evidence; professional entity/tax, age/guardian and privacy/retention outputs; then actual costs, production/recovery requirements and measured solo capacity. The proposed solo routine prioritizes urgent payment/dispute/guardian cases without promising continuous coverage.
+ 
+-**No further private answer blocks this documentation round.** All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) remain open; the map retains all 24 mandatory IDs plus optional yield. Mercado Pago selection is answered; its commercial/account approval, remaining service selections, holding/retention values, funded operating limits and a launch date remain unapproved. The coordinator/root owns the next external-evidence and source-contract decisions under actual authority; product implementation still waits for every gate to close. Spending and the single production launch require their own authority; yield contributes zero to base economics.
++**No further private answer blocks this documentation round.** All six [Gate0 groups](delivery.md#gate0-feasibility-before-product-implementation) remain open; the map retains all 24 mandatory IDs plus optional yield. Mercado Pago selection is answered; its commercial/account approval, remaining service selections, holding/retention values, funded operating limits and a launch date remain unapproved. The coordinator/root owns the next external-evidence and source-contract decisions under actual authority; production and real-money readiness still wait for every gate to close; private synthetic foundations follow S1. Spending and the single production launch require their own authority; yield contributes zero to base economics.
++
++## Private development authorization and current foundations
++
++The [complete sandbox scope S1](agent-work/changeo-implementation/sandbox-scope-contract.md) records explicit authorization for private synthetic development before Gate0, with real money disabled. Current [identity contract F1](agent-work/changeo-implementation/foundations-contract-F1.md) and [protected-transaction/security contract F2](agent-work/changeo-implementation/foundations-contract-F2.md) apply to later callers. Advisory permission decisions never replace a resource owner's membership, moderation, terms, billing or money checks. Protected writes use the same caller transaction and current identity locks through commit; historical legal-payer rights are preserved.
++
++The local foundation provides contact verification, authentication/recovery, preferences, guardian/consent exercises and MFA-protected identity administration. Synthetic evidence never certifies production eligibility. [Runtime instructions](sandbox-runtime.md) describe local tools, private token/factor files and loopback operation. Independent final acceptance is pending; Gate0, vendors, production policies, public deployment and real money remain unapproved. Current execution uses GPT-6.1 Sol/high; historical sealed planning/checkpoint/routing records remain unchanged.

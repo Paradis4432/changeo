@@ -1,0 +1,25 @@
+{
+  "role": "feature coordinator",
+  "authority": "Root explicitly authorized cleanup of exact verified reviewer-owned app2287567; no other process mutation.",
+  "time_utc": "2026-10-01 09:20:17 UTC",
+  "pid": 2287567,
+  "revalidated_before_signal": {
+    "uid": 1000,
+    "executable": "/home/paradis/changeo/.local-tools/jdk-25.0.4.1+1/bin/java",
+    "cwd": "/home/paradis/changeo",
+    "jar": "target/changeo-0.1.0-SNAPSHOT.jar",
+    "listener": "loopback8080 associated with pid2287567"
+  },
+  "signal": "TERM",
+  "signal_exit": 0,
+  "underlying_cleanup_command_exit": 0,
+  "after_bounded_shutdown": {
+    "reviewer_app_present": false,
+    "8080_listener": false,
+    "postgres": {"pid": 1730365, "uid": 1000, "command": "postgres", "loopback55432_listener": true},
+    "podman_api": {"pid": 2094717, "uid": 1000, "command": "podman", "present": true}
+  },
+  "native_app_session_exit": "Unavailable to coordinator; TERM command and host-visible absence established, no fabricated app session exit.",
+  "other_runtime": "No browser process/container mutation. Saved browser script success closes contexts; reviewer must finish its complete cleanup assessment.",
+  "next_action": "After approximately five minutes of backoff, resume same retained reviewer once for required saved-evidence/verdict recovery. Preserve existing provider blocker if configured route again fails."
+}

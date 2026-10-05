@@ -1,0 +1,92 @@
+[
+  {
+    "name": "browser-first",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/browser-first.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/browser-first.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "name": "evidence-integrity-command",
+    "exit": 1,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/evidence-integrity-command.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/evidence-integrity-command.log",
+      "size": 134,
+      "sha256": "e3e5c8af79210e24f43b0986290bcce234c79a2ce89647c4aa471d7dadbf6e27"
+    }
+  },
+  {
+    "name": "preservation-first",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/preservation-first.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/preservation-first.log",
+      "size": 263,
+      "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+    }
+  },
+  {
+    "name": "probe-compile-final",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile-final.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile-final.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "name": "probe-compile",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/probe-compile.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "name": "regression-probe-final",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe-final.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe-final.log",
+      "size": 5616,
+      "sha256": "86feb9a63fe648d595a1e021f853574ba3d02b50fdfa57952dd2654baedab6af"
+    }
+  },
+  {
+    "name": "regression-probe",
+    "exit": 1,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/regression-probe.log",
+      "size": 12127,
+      "sha256": "7813d8cb5a592e269e0578450dfd85044c123ea5595086313fd542303420d56a"
+    }
+  },
+  {
+    "name": "verify-first",
+    "exit": 1,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/verify-first.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-first.log",
+      "size": 1835176,
+      "sha256": "04a80bcd74753116192967533660a29351439628f4a774b6c8c755d33f72454e"
+    }
+  },
+  {
+    "name": "verify-host",
+    "exit": 0,
+    "exit_file": "docs/agent-work/changeo-moderation/reviewer/logs/verify-host.exit",
+    "log": {
+      "path": "docs/agent-work/changeo-moderation/reviewer/logs/verify-host.log",
+      "size": 53580,
+      "sha256": "49e2a1aa0a430cb2b8b9c150039457f62bfb623d9b84e80d8ede9c1680ba8f89"
+    }
+  }
+]

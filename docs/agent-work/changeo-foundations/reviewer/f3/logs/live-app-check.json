@@ -1,0 +1,49 @@
+{
+  "exit": 0,
+  "commands": [
+    {
+      "command": [
+        "curl",
+        "-fsS",
+        "-o",
+        "/dev/null",
+        "-w",
+        "%{http_code}",
+        "http://127.0.0.1:8080/"
+      ],
+      "exit": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ss",
+        "-ltn",
+        "sport = :8080 or sport = :55432"
+      ],
+      "exit": 0,
+      "stdout": "State  Recv-Q Send-Q      Local Address:Port  Peer Address:Port\nLISTEN 0      200             127.0.0.1:55432      0.0.0.0:*   \nLISTEN 0      100    [::ffff:127.0.0.1]:8080             *:*   \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".local-tools/postgres/bin/psql",
+        "-X",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "55432",
+        "-U",
+        "changeo",
+        "-d",
+        "changeo",
+        "-Atc",
+        "select version,script,checksum,success from sandbox.flyway_schema_history where version is not null order by version; select 'accounts',count(*) from sandbox.identity_account; select role,count(*) from sandbox.identity_account_role group by role order by role; select 'tokens',count(*) from sandbox.identity_contact_token; select 'audit',count(*) from sandbox.identity_audit_event"
+      ],
+      "exit": 0,
+      "stdout": "1|V1__identity.sql|-1226493069|t\n2|V2__identity_state_integrity.sql|1060451969|t\n3|V3__identity_moderation_roles.sql|-1152207325|t\naccounts|15\nAUDIT_READER|1\nIDENTITY_ADMIN|1\nRESTRICTION_ADMIN|1\ntokens|30\naudit|55\n",
+      "stderr": ""
+    }
+  ],
+  "preserved_builder_sandbox_records_counts": true
+}

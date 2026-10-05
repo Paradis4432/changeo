@@ -1,0 +1,25 @@
+{
+  "status": "static-configured",
+  "runtime_verified": false,
+  "inference_request_made": false,
+  "root_model_observed": "gpt-6.1-sol",
+  "root_effort_observed": "high",
+  "worker_model": "gpt-6.1-sol",
+  "worker_provider": "inherited",
+  "host_transport_observed": "codex-router-signed",
+  "worker_effort": "high",
+  "custom_agent": "astra_flash_builder",
+  "profile_inspected": null,
+  "catalog_contains_worker": true,
+  "catalog_advertises_subagent": true,
+  "loopback_router_configured": true,
+  "input_hashes": {
+    "/home/paradis/.codex/config.toml": "ff08656110f471a607fab9fa0823647bdbe49e5d068cb7c8cec55e3251634c88",
+    "/home/paradis/.codex/agents/astra_flash_builder.toml": "9b99c7c4fffb8040be90e704e80083b9e048335433e7403c0d860036c0006ea2"
+  },
+  "warnings": [
+    "Project, CLI, UI and managed-policy overrides are not resolved by this static inspection."
+  ]
+}
+
+exit_status=0

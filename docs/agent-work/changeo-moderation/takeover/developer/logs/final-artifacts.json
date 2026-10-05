@@ -1,0 +1,394 @@
+{
+  "status": "ready_for_review",
+  "task_id": "M1/MFR1-MFR3",
+  "workspace": "/home/paradis/changeo",
+  "worker": "/root/moderation_takeover/moderation_builder_takeover",
+  "host_id": "01a0f991-38ed-7da3-994e-1101f01350f7",
+  "coordinator": "/root/moderation_takeover",
+  "acceptance": "pending separate independent final reviewer",
+  "checks": {
+    "passed": true,
+    "exit_expectations_match": true,
+    "source_fingerprints": 143,
+    "current_sources_match": true,
+    "executions": 161,
+    "actual_container_executions": 56,
+    "baseline289_preserved": true,
+    "F3_source87_and_seals6_preserved": true,
+    "history_api_append": {
+      "path": "docs/agent-work/changeo-moderation/developer/logs/api-start.log",
+      "sealed_size": 596,
+      "takeover_start_size": 745,
+      "current_size": 894,
+      "sealed_prefix_matches": true,
+      "takeover_start_prefix_matches": true,
+      "full_file_matches": false
+    },
+    "historical_checkpoint": {
+      "current_path": "docs/agent-work/changeo-moderation/developer/CHECKPOINT.md",
+      "current_matches_old_seal": false,
+      "archive_path": "docs/agent-work/changeo-moderation/developer/logs/pre-MFR1-MFR3/CHECKPOINT.md",
+      "archive_matches_old_seal": true,
+      "current_unchanged_since_takeover": true
+    }
+  },
+  "takeover_product_paths": [
+    "src/test/java/ar/changeo/moderation/ModerationPostgresTest.java"
+  ],
+  "decisions_required": [],
+  "runtime": {
+    "results": [
+      {
+        "command": [
+          "ps",
+          "-p",
+          "1730365,2094717",
+          "-o",
+          "pid,uid,comm,args"
+        ],
+        "exit": 0,
+        "stdout": "    PID   UID COMMAND         COMMAND\n1730365  1000 postgres        /home/paradis/changeo/.local-tools/postgres/bin/postgres -D /home/paradis/changeo/.runtime/pgdata -h 127.0.0.1 -p 55432 -k /home/paradis/changeo/.runtime/socket\n2094717  1000 podman          podman --root /tmp/changeo-podman-store --runroot /tmp/changeo-podman-run system service --time=0 unix:///tmp/changeo-podman/podman.sock\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "ss",
+          "-ltn",
+          "( sport = :55432 or sport = :8080 )"
+        ],
+        "exit": 0,
+        "stdout": "State  Recv-Q Send-Q Local Address:Port  Peer Address:Port\nLISTEN 0      200        127.0.0.1:55432      0.0.0.0:*   \n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "curl",
+          "--silent",
+          "--show-error",
+          "--noproxy",
+          "*",
+          "--max-time",
+          "5",
+          "--unix-socket",
+          "/tmp/changeo-podman/podman.sock",
+          "http://localhost/_ping"
+        ],
+        "exit": 0,
+        "stdout": "OK",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "podman",
+          "--root",
+          "/tmp/changeo-podman-store",
+          "--runroot",
+          "/tmp/changeo-podman-run",
+          "ps",
+          "-a",
+          "--format",
+          "json"
+        ],
+        "exit": 0,
+        "stdout": "[]\n",
+        "stderr": ""
+      }
+    ],
+    "passed": true,
+    "owned_app_browser_started": false,
+    "retained_postgres": 1730365,
+    "retained_podman": 2094717,
+    "owned_containers_remaining": 0
+  },
+  "seals": [
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/CHECKPOINT.md",
+      "size": 1903,
+      "sha256": "28ef3bc5006f6d92238d0c97b135f3c5754efdf661d2c7584e9799263efbfe07"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/baseline/src/main/java/ar/changeo/moderation/ModerationWorker.java",
+      "size": 9078,
+      "sha256": "72156ce42c4fd1169bd526f188d98218f1f13e8b01a3812c8c65176d224082ca"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/baseline/src/main/java/ar/changeo/moderation/ReviewResult.java",
+      "size": 2288,
+      "sha256": "0d98c1a1a48cb36a4a35b8b4e040e20137078933b127bdd55367ed76c8e73f55"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/baseline/src/test/java/ar/changeo/moderation/ModerationPostgresTest.java",
+      "size": 49950,
+      "sha256": "86355e7c8d35560f0c879caecafbe9799d95094b0a96cc12c51c165ac4c06f3f"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/baseline/src/test/java/ar/changeo/moderation/ReviewValidationTest.java",
+      "size": 4515,
+      "sha256": "d92a82d71fb35bd4cbe162173a427799c8d1b2f7ba5f9a3dc888a35acfa0435f"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/F3-integrity.json",
+      "size": 34345,
+      "sha256": "72969bf4ba46d0ff1b02f5f3ec831e3da4970b46efdd9c93899c12725fbf060c"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-first.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-first.log",
+      "size": 348830,
+      "sha256": "a12399882df6570cf085d5eb27d8202ce0c6552c80f81e680e6a4beba46ff65f"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-host-first.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/MFR3-host-first.log",
+      "size": 7194,
+      "sha256": "a8d49c3cce9070b49c798cb091243ccb6138777589dd0a9f9bbfc69deb9cd849"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/accepted-F3.patch",
+      "size": 42902,
+      "sha256": "8487843023fe482d884162e3605a67d810ae7e341574f04b12af63732b4093d0"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/baseline289-integrity.json",
+      "size": 61006,
+      "sha256": "5bff9e23b82c0d0859825b52eaa398009476194f2f6b168e29d57e3feacc58c2"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/changed-paths.json",
+      "size": 15623,
+      "sha256": "500bc7673c94279f214eba6db1d92e70945ea1b67ab06af80862999df45c18e1"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/checkpoint-before-delivery.md",
+      "size": 1812,
+      "sha256": "934eefa603dc284f8af493178ce4a699bf0a9fd8dfa511306bc8c2e68c2a5d71"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/command-summary.json",
+      "size": 2691,
+      "sha256": "82a52a49147ddba7d2040c0c45cb7f4be47b47fa1840ca674f5efa8075098c96"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/commands.txt",
+      "size": 1985,
+      "sha256": "0567e5451d3953306c6298e06ff452b43dd37749526f57dab489a6f0ffd6b71a"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction-integrity.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction-integrity.json",
+      "size": 1525,
+      "sha256": "c3999657b82aa5f5583165572e6a3535ae0c316dee0a0ca4a124f103d80c6681"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction-integrity.log",
+      "size": 1399,
+      "sha256": "96d992493bfd2492dfd2e257badd9a3e5812dc2c5525506508523a0f2bdc8920"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/correction_integrity.py",
+      "size": 4384,
+      "sha256": "e26673c8fa931309f74ad5cfbd820de76e0818184fc1f215af7f6fcb50b39796"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/cumulative-original-baseline.patch",
+      "size": 311709,
+      "sha256": "10a39e4147e0a1d2c8a40fdd7cf4e02b3d2a3b506a81504bb0a022968266f815"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/finalize_delivery.py",
+      "size": 4652,
+      "sha256": "2917882b3485d33eccddec4a60e37cfdbba65b50b83dfd94ff45f10bedecc6dd"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-command-summary.json",
+      "size": 2025,
+      "sha256": "2d7ccaaf730d4e8d29bca04b23367b591f2be0e3be6c2a728d7b33008d2f5e96"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-correction-integrity.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-correction-integrity.json",
+      "size": 1100,
+      "sha256": "bd245ef4661e2261ec5743430ca752ae9f98d56bd32bdd715c00c8a2b210405d"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-correction-integrity.log",
+      "size": 1008,
+      "sha256": "d77c4ec16e37f005b86dcd78c89a0fde932d0e28b051f6b9c84a9a63c8802352"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-history1349-integrity.json",
+      "size": 318161,
+      "sha256": "b3a2f2666885375d97947af68584d65e285bcf7065150efaa6c47232526c07f8"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-markdown-check.json",
+      "size": 668,
+      "sha256": "fe94d77aa98613b0511cbdf34ad7d8a6933194548675995bf1f9f97821c58e37"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-old-artifact-integrity.json",
+      "size": 66354,
+      "sha256": "d102831d9f22ee6e698ef8406b71c0b7e19e5f01e6030239e91825e65dcab2ac"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-preservation-summary.json",
+      "size": 6073,
+      "sha256": "b4b73248776f7954b3098f021f7f9b1edc93d867557ed814b896ecec59ec0c10"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-preservation.exit",
+      "size": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/first-preservation.log",
+      "size": 572,
+      "sha256": "31071f3bd473bb1f741d91be0a5128031a4d87fe8c7e0e3d3616976e3ad8a907"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/history-question-preservation.json",
+      "size": 1142,
+      "sha256": "f9813483e8ba5356d6d280078b63e67f60a19ac29b9d2b1a89f5663177a0c1c1"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/history1349-integrity.json",
+      "size": 318161,
+      "sha256": "b3a2f2666885375d97947af68584d65e285bcf7065150efaa6c47232526c07f8"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/markdown-check.json",
+      "size": 323,
+      "sha256": "7812d611e56dd1e4e81f2a89f0d45e2afb4a312f72310f3b6aa0bec91a56990d"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/moderation-after-F3.patch",
+      "size": 271704,
+      "sha256": "88f952725d6dee89114e1bbc6567119519d4c17fdeee22081e0a759dca3f00c4"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/old-artifact-integrity.json",
+      "size": 66780,
+      "sha256": "16bb37afb728935f7cc1bd6d5d049360b435bc3335f04fb7e418b74f0b29b024"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/preservation-summary.json",
+      "size": 5675,
+      "sha256": "8f79884d184114c56c87621ef5ddd4f369d63e400c6f41eccd28c9aff7ee6804"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/preservation.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/preservation.log",
+      "size": 263,
+      "sha256": "e09aecf39f8c7715515b35d10ab737bf2821611c5bd04582b03ff0152d3d8f68"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/preservation.py",
+      "size": 12580,
+      "sha256": "21fd31b7e582b6712e635dca8795a98183ca860cfbe5d97c2ea69304627b4f4b"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/runtime-cleanup.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/runtime-cleanup.json",
+      "size": 1683,
+      "sha256": "9fabab850371ad35ab0ec1fdcf7b053a61ce262fd42642647455f23018713907"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/runtime-cleanup.log",
+      "size": 519,
+      "sha256": "edec931813345e7e69cf8f45a09b570362e4f10f3c180932ca2d02e3a1a5b468"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/source-manifest.json",
+      "size": 24488,
+      "sha256": "320dc5444485656c63512d3a1c3717d68d3aac2b3e98f08b1768be591a798e32"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/start-git.json",
+      "size": 496,
+      "sha256": "ed27767f874951c1c26898bdda5de855389e6dc06d465853fccf072dcba56545"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/start-history-manifest.json",
+      "size": 289831,
+      "sha256": "312d40549d94c93f569e412f7dcf4adbd53d2fbbf7f1bd29592456094e8cd43e"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/start-source-manifest.json",
+      "size": 24488,
+      "sha256": "5eea8729f946f2f5f9bf1dcb9e829f3fa343223cc99062da596bf6c97ca3728f"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/takeover.patch",
+      "size": 15161,
+      "sha256": "755d2b4d71610b77109c37ce67982ebc1847d6337ba325aed9ebc037821a6f46"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/unowned-inputs.json",
+      "size": 778,
+      "sha256": "0db4fea4d6d2d19deaa64f7b62fa366864ae4e2f0309514c8bc109d59a906ad3"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/verification-summary.json",
+      "size": 15313,
+      "sha256": "eb225bacc3a6d76f4341a7eb6d61e36616a6eeef1302cb6726bbf97e93119ad6"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/verify-first.exit",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/verify-first.log",
+      "size": 53765,
+      "sha256": "81c4b9ea3ae81e771a269770b8f3632d2083cd7074c655d8cb73e2a96c64f058"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/notes.txt",
+      "size": 1124,
+      "sha256": "e67297ccdc2d1872e0d2acbbb86c4dd82c07c17f70982788cd331aa6a29a569f"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/questions.txt",
+      "size": 389,
+      "sha256": "b928e748b6d12d5febbaedb7516a55803e9ac392308bd73cb3752ddcda6c864b"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/report.md",
+      "size": 17530,
+      "sha256": "8d3f765134b2dd7808dacc7c901882763be3ceaa9ec230582319f662009e22ce"
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/takeover/developer/logs/complete-change-manifest.json",
+      "size": 38482,
+      "sha256": "22ea7b649f41f0449d86a6cd798309213bffd624c50467f10c78731b9f304401"
+    }
+  ],
+  "self_hash_exclusions": [
+    "docs/agent-work/changeo-moderation/takeover/developer/logs/final-artifacts.json"
+  ],
+  "next_action": "Coordinator checks durable handoff and dispatches fresh independent cumulative final reviewer; same writer receives corrections."
+}

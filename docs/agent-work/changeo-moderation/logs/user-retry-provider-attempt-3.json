@@ -1,0 +1,14 @@
+{
+  "authority": "Second fresh resumed overall-goal turn; one useful same-writer recovery authorized after prior five-minute backoff.",
+  "builder": "/root/changeo_moderation/moderation_builder",
+  "host_id": "01a0f63e-8e08-7402-b9f2-7890bc50902c",
+  "status": "terminal_upstream503_after_partial_product_fixes",
+  "error": "unexpected status 503 Service Unavailable: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure",
+  "route": "http://127.0.0.1:4202/v1/responses",
+  "error_reference": "a43dfea0afa5487e-EZE",
+  "dispatch": "Exact errored retained builder reconciled, then one useful existing correction followup; no new role/probe/substitution or repeated discovery/red check.",
+  "source_state": "Full current comparison:139 initial source hashes unchanged, four approved files changed (two exact saved red tests plus worker/result). Partial product snapshots/comparison under user-retry-second-turn-partial. Scoped comparison against old worker/result hashes correctly exits1; this is evidence of authorized partial fixes, not preservation failure or green behavior verification.",
+  "progress": "Worker transient ACTIVATE failure now retains APPROVED with distinct truthful terminal states; ReviewResult now checks machine action/label/reason coherence and excludes human reasons. Coordinator inspected these partial source changes but does not accept them. No green correction/full checks/MFR3 race delivery or accepted re-review yet. Red tests/full first logs preserved.",
+  "native_state": "Terminal errored confirmed then interrupted; same writer/reviewer retained.",
+  "next_owner": "Root owns fresh resumed audit2/lifecycle and continuation; coordinator remains sole correction dispatcher. No rapid extra recovery in this turn."
+}

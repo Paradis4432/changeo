@@ -1,0 +1,1000 @@
+{
+  "task": "/root/changeo_gate0/developer",
+  "source_date": "2026-09-30",
+  "source_count": 36,
+  "sources": [
+    {
+      "url": "https://developers.cloudflare.com/r2/buckets/public-buckets/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Private by default; application authorization untested.",
+      "claim_locations": [
+        {
+          "line": 55,
+          "text": "| Private objects | Cloudflare R2 Standard: USD0.015/GB-month, Class A USD4.50/million and B USD0.36/million; monthly free 10 GB-month/1m A/10m B. Direct egress is free; other services can charge. Buckets private by default. [Pricing](https://developers.cloudflare.com/r2/pricing/), [private buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/). | Unit rounding, authenticated access, scanning/extraction and backup cost. Location hints are best effort, not a jurisdiction guarantee; documented jurisdiction restrictions differ. No Argentina residency claim. [Location rules](https://developers.cloudflare.com/r2/reference/data-location/). |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 12,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Standard0.015USD/GB-month,A4.50USD/million,B0.36USD/million,free10GB-month/1mA/10mB,direct egress free; billing rounding/other-service charges.",
+      "claim_locations": [
+        {
+          "line": 55,
+          "text": "| Private objects | Cloudflare R2 Standard: USD0.015/GB-month, Class A USD4.50/million and B USD0.36/million; monthly free 10 GB-month/1m A/10m B. Direct egress is free; other services can charge. Buckets private by default. [Pricing](https://developers.cloudflare.com/r2/pricing/), [private buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/). | Unit rounding, authenticated access, scanning/extraction and backup cost. Location hints are best effort, not a jurisdiction guarantee; documented jurisdiction restrictions differ. No Argentina residency claim. [Location rules](https://developers.cloudflare.com/r2/reference/data-location/). |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 7,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "supplemental-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.cloudflare.com/r2/reference/data-location/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Hints best effort, jurisdiction restrictions separate; no Argentine residency selected.",
+      "claim_locations": [
+        {
+          "line": 55,
+          "text": "| Private objects | Cloudflare R2 Standard: USD0.015/GB-month, Class A USD4.50/million and B USD0.36/million; monthly free 10 GB-month/1m A/10m B. Direct egress is free; other services can charge. Buckets private by default. [Pricing](https://developers.cloudflare.com/r2/pricing/), [private buckets](https://developers.cloudflare.com/r2/buckets/public-buckets/). | Unit rounding, authenticated access, scanning/extraction and backup cost. Location hints are best effort, not a jurisdiction guarantee; documented jurisdiction restrictions differ. No Argentina residency claim. [Location rules](https://developers.cloudflare.com/r2/reference/data-location/). |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 12,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/moderation",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Free standalone text/image moderation,category modality limits;do not send known/suspected CSAM,dedicated safeguards;full policy/file/Spanish capability unvalidated.",
+      "claim_locations": [
+        {
+          "line": 58,
+          "text": "| Automated review | OpenAI standalone moderation is free and accepts text/images; some categories are text-only. A GPT-4.1 mini policy-classifier option supports structured output and text/image input; published ordinary input USD0.40/million tokens, output USD1.60/million. [Moderation](https://developers.openai.com/api/docs/guides/moderation), [model](https://developers.openai.com/api/docs/models/gpt-4.1-mini), [pricing](https://developers.openai.com/api/docs/pricing). | Generic moderation categories do not implement Changeo's full policy, Spanish calibration or arbitrary-file review. Do not send known/suspected CSAM to the moderation endpoint; dedicated safeguards required. Supported extraction, quarantine/manual fallback, appeals and latency remain to validate. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/your-data",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "No training by default unless opted in;generative default30day abuse logs,approvedZDR conditions;moderations table none abuse/application retention;image/file safety exceptions and legal processing review remain.",
+      "claim_locations": [
+        {
+          "line": 60,
+          "text": "OpenAI API data is not used for training by default unless opted in. Generative endpoints normally have 30-day abuse logs; approved zero-retention controls have conditions. The retrieved table specifically gives `/v1/moderations` no abuse-monitoring or application-state retention; do not assign the generative 30-day default to standalone moderation. Image/file safety exceptions and contractual/transfer suitability still need review. [Official data controls](https://developers.openai.com/api/docs/guides/your-data). No paid inference, API key, account test or production-model selection occurred."
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Text/image input,structured outputs;no model selection or inference test.",
+      "claim_locations": [
+        {
+          "line": 58,
+          "text": "| Automated review | OpenAI standalone moderation is free and accepts text/images; some categories are text-only. A GPT-4.1 mini policy-classifier option supports structured output and text/image input; published ordinary input USD0.40/million tokens, output USD1.60/million. [Moderation](https://developers.openai.com/api/docs/guides/moderation), [model](https://developers.openai.com/api/docs/models/gpt-4.1-mini), [pricing](https://developers.openai.com/api/docs/pricing). | Generic moderation categories do not implement Changeo's full policy, Spanish calibration or arbitrary-file review. Do not send known/suspected CSAM to the moderation endpoint; dedicated safeguards required. Supported extraction, quarantine/manual fallback, appeals and latency remain to validate. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 7,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Standard ordinary gpt-4.1-mini input0.40USD/million/output1.60USD/million;conditional text-only math,no retries/media/tools/cache discount.",
+      "claim_locations": [
+        {
+          "line": 58,
+          "text": "| Automated review | OpenAI standalone moderation is free and accepts text/images; some categories are text-only. A GPT-4.1 mini policy-classifier option supports structured output and text/image input; published ordinary input USD0.40/million tokens, output USD1.60/million. [Moderation](https://developers.openai.com/api/docs/guides/moderation), [model](https://developers.openai.com/api/docs/models/gpt-4.1-mini), [pricing](https://developers.openai.com/api/docs/pricing). | Generic moderation categories do not implement Changeo's full policy, Spanish calibration or arbitrary-file review. Do not send known/suspected CSAM to the moderation endpoint; dedicated safeguards required. Supported extraction, quarantine/manual fallback, appeals and latency remain to validate. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "openai-docs-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://docs.digitalocean.com/products/app-platform/details/pricing/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Current shared1vCPU2GiB app25USD/month,200GiB outbound,0.02USD/GiB overage; not measured sizing.",
+      "claim_locations": [
+        {
+          "line": 52,
+          "text": "| Always-on Java application | DigitalOcean App Platform shared 1 vCPU/2 GiB container: USD25/month, 200 GiB outbound allowance, USD0.02/GiB overage. Managed Linux AMD64 containers make the Java approach plausible. [Pricing](https://docs.digitalocean.com/products/app-platform/details/pricing/), [container support](https://docs.digitalocean.com/products/app-platform/how-to/deploy-from-container-images/). | Region/Argentina latency, actual JVM memory/startup/load, privacy and spending cap. Two GiB is a draft measurement starting point, not demonstrated sizing. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 12,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 13,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://docs.digitalocean.com/products/app-platform/how-to/deploy-from-container-images/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Managed LinuxAMD64 containers; Java feasibility inference, no actual build.",
+      "claim_locations": [
+        {
+          "line": 52,
+          "text": "| Always-on Java application | DigitalOcean App Platform shared 1 vCPU/2 GiB container: USD25/month, 200 GiB outbound allowance, USD0.02/GiB overage. Managed Linux AMD64 containers make the Java approach plausible. [Pricing](https://docs.digitalocean.com/products/app-platform/details/pricing/), [container support](https://docs.digitalocean.com/products/app-platform/how-to/deploy-from-container-images/). | Region/Argentina latency, actual JVM memory/startup/load, privacy and spending cap. Two GiB is a draft measurement starting point, not demonstrated sizing. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 13,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 14,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://docs.digitalocean.com/products/databases/postgresql/details/pricing/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "NonHA1GiB single node15USD development/testing reference; HA30USD primary+30USD standby; announced15Oct/30Nov2026 Standard plan changes require new launch quote.",
+      "claim_locations": [
+        {
+          "line": 53,
+          "text": "| PostgreSQL/recovery | DigitalOcean single-node 1 GiB starts USD15/month; vendor recommends preliminary development/testing and says it is not HA. Published HA is USD30 primary + at least USD30 standby. Daily backups retained seven days; restore creates a new primary. [DB pricing](https://docs.digitalocean.com/products/databases/postgresql/details/pricing/), [backup restore](https://docs.digitalocean.com/products/databases/postgresql/how-to/restore-from-backups/). | Requote production: announced 15 October 2026/new-account and 30 November/all-account changes prevent new Standard clusters adding standby/read-only nodes or exceeding 4 GiB. USD60 is a current comparison, not a durable launch quote. Approved recovery/HA requirements and restore drill remain pending. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 12,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 13,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "supplemental-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://docs.digitalocean.com/products/databases/postgresql/how-to/restore-from-backups/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Daily backups retained7days, new primary restore, no restoration performed.",
+      "claim_locations": [
+        {
+          "line": 53,
+          "text": "| PostgreSQL/recovery | DigitalOcean single-node 1 GiB starts USD15/month; vendor recommends preliminary development/testing and says it is not HA. Published HA is USD30 primary + at least USD30 standby. Daily backups retained seven days; restore creates a new primary. [DB pricing](https://docs.digitalocean.com/products/databases/postgresql/details/pricing/), [backup restore](https://docs.digitalocean.com/products/databases/postgresql/how-to/restore-from-backups/). | Requote production: announced 15 October 2026/new-account and 30 November/all-account changes prevent new Standard clusters adding standby/read-only nodes or exceeding 4 GiB. USD60 is a current comparison, not a durable launch quote. Approved recovery/HA requirements and restore drill remain pending. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 13,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 14,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://psp.bind.com.ar/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Tailored B2B2C white-label PSP/payment products, not financial-institution status; no Changeo-account custody approval.",
+      "claim_locations": [
+        {
+          "line": 16,
+          "text": "| BIND PSP | Advertises tailored B2B2C white-label payment infrastructure and identifies itself as a PSP, not a financial institution. APIs offer daily approved/liquidation/refund reconciliation files; the integrating entity owns consistency checks. [Product](https://psp.bind.com.ar/), [reconciliation](https://psp.bind.com.ar/developers/apis/guia-conciliarcobro). | Worth a capability inquiry. APIs and tailored infrastructure do not establish accepted custody, credit backing, guardian/service scope, fees or holding limits for Changeo. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 14,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "supplemental-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://psp.bind.com.ar/developers/apis/guia-conciliarcobro",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Approved/liquidation/refund reconciliation files each business day; integrating entity responsible for consistency.",
+      "claim_locations": [
+        {
+          "line": 16,
+          "text": "| BIND PSP | Advertises tailored B2B2C white-label payment infrastructure and identifies itself as a PSP, not a financial institution. APIs offer daily approved/liquidation/refund reconciliation files; the integrating entity owns consistency checks. [Product](https://psp.bind.com.ar/), [reconciliation](https://psp.bind.com.ar/developers/apis/guia-conciliarcobro). | Worth a capability inquiry. APIs and tailored infrastructure do not establish accepted custody, credit backing, guardian/service scope, fees or holding limits for Changeo. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 14,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "supplemental-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://render.com/docs/docker",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Docker supports JVM/Java deployments; no application deployed.",
+      "claim_locations": [
+        {
+          "line": 54,
+          "text": "| Hosting alternative | Render explicitly supports JVM applications through Docker and paid PostgreSQL PITR: three days on Hobby workspace, seven on Pro or higher. Regions listed: Oregon, Ohio, Virginia, Frankfurt, Singapore. [Docker](https://render.com/docs/docker), [backups](https://render.com/docs/postgresql-backups), [regions](https://render.com/docs/regions). | No South America region listed; Argentina latency unmeasured. Pricing page extraction did not expose the relevant numeric table, so no Render quote is claimed. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://render.com/docs/postgresql-backups",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Paid PostgreSQL PITR Hobby3days/Pro+7days; no restore performed.",
+      "claim_locations": [
+        {
+          "line": 54,
+          "text": "| Hosting alternative | Render explicitly supports JVM applications through Docker and paid PostgreSQL PITR: three days on Hobby workspace, seven on Pro or higher. Regions listed: Oregon, Ohio, Virginia, Frankfurt, Singapore. [Docker](https://render.com/docs/docker), [backups](https://render.com/docs/postgresql-backups), [regions](https://render.com/docs/regions). | No South America region listed; Argentina latency unmeasured. Pricing page extraction did not expose the relevant numeric table, so no Render quote is claimed. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://render.com/docs/regions",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Oregon,Ohio,Virginia,Frankfurt,Singapore listed, no SouthAmerica; no Argentina latency measurement.",
+      "claim_locations": [
+        {
+          "line": 54,
+          "text": "| Hosting alternative | Render explicitly supports JVM applications through Docker and paid PostgreSQL PITR: three days on Hobby workspace, seven on Pro or higher. Regions listed: Oregon, Ohio, Virginia, Frankfurt, Singapore. [Docker](https://render.com/docs/docker), [backups](https://render.com/docs/postgresql-backups), [regions](https://render.com/docs/regions). | No South America region listed; Argentina latency unmeasured. Pricing page extraction did not expose the relevant numeric table, so no Render quote is claimed. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 7,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://resend.com/pricing",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Pro20USD/50k transactional emails,0.90USD/1k enabled overages;Free3k/month100/day;Pro no daily cap; no vendor processing approval.",
+      "claim_locations": [
+        {
+          "line": 56,
+          "text": "| Transactional email | Resend Pro USD20/month for 50,000 emails; enabled overages USD0.90 per 1,000-email bucket. Free plan 3,000/month and 100/day; Pro has no daily cap. [Pricing](https://resend.com/pricing). | Burst delivery, domain authentication, vendor/DPA/transfer terms and monitoring. Published vendor retention is not Changeo's approved schedule. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 7,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "supplemental-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "resend-confirmation.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.arca.gob.ar/facturacion/monotributo/comprobantes.asp",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Monotributo C invoices, exports E, electronic final-consumer invoicing; entity/tax selection pending.",
+      "claim_locations": [
+        {
+          "line": 42,
+          "text": "| Consumer cancellation and invoices | Disposition 3/2026 is dated 5 February 2026, published 6 February: it interprets withdrawal/cancellation mechanisms and permits reasonable usual-method identity/security checks. ARCA says monotributo uses C invoices, exports E, and electronic invoicing for final-consumer operations. [Disposition](https://www.argentina.gob.ar/normativa/nacional/disposici%C3%B3n-3-2026-423007/texto), [ARCA](https://www.arca.gob.ar/facturacion/monotributo/comprobantes.asp). | Actual entity/tax regime, job/provider/platform invoice allocation, withholding, service-specific withdrawal rights/exceptions and compliant recurring cancellation UX. No monotributo choice or new cancellation barrier follows. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/node/436471",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "16Aug2024 material is a reform proposal; no enacted universal age16 digital-consent rule established.",
+      "claim_locations": [
+        {
+          "line": 41,
+          "text": "| Foreign processing | AAIP describes approved model clauses and other transfer mechanisms for nonadequate destinations. Its August 2024 age-16 digital-consent page describes a **proposal**, not an enacted universal rule. [Transfers](https://www.argentina.gob.ar/transferencias-internacionales), [proposal](https://www.argentina.gob.ar/node/436471). | Vendor contracts/subprocessors, destinations, training/retention terms and lawful transfer mechanism for hosting, identity, storage, email and AI. Signup alone supplies none of this approval. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/normativa/nacional/64790/actualizacion",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Purpose/minimization/consent/security/sensitive-data principles, unnecessary-data destruction,10calendar-day access and5working-day correction/suppression with exceptions.",
+      "claim_locations": [
+        {
+          "line": 39,
+          "text": "| Data purpose, consent and sensitive information | Law 25,326 sets purpose/minimization, consent and exceptions, sensitive-data restrictions and security duties; unnecessary data must be destroyed. Articles 14/16 state ten calendar days for access and five working days for rectification/suppression, with lawful-retention/third-party-right exceptions. [Data law](https://www.argentina.gob.ar/normativa/nacional/64790/actualizacion). | Reviewed bases/notices/access and rights workflow for each actual data class; guardian involvement is not blanket permission. These published deadlines do not approve an entire Changeo procedure. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/normativa/nacional/disposici%C3%B3n-3-2026-423007/texto",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Actual5Feb2026/pub6Feb2026 interpretive disposition on reasonable usual-method security/identity checks for cancellation/withdrawal, not entire regime.",
+      "claim_locations": [
+        {
+          "line": 42,
+          "text": "| Consumer cancellation and invoices | Disposition 3/2026 is dated 5 February 2026, published 6 February: it interprets withdrawal/cancellation mechanisms and permits reasonable usual-method identity/security checks. ARCA says monotributo uses C invoices, exports E, and electronic invoicing for final-consumer operations. [Disposition](https://www.argentina.gob.ar/normativa/nacional/disposici%C3%B3n-3-2026-423007/texto), [ARCA](https://www.arca.gob.ar/facturacion/monotributo/comprobantes.asp). | Actual entity/tax regime, job/provider/platform invoice allocation, withholding, service-specific withdrawal rights/exceptions and compliant recurring cancellation UX. No monotributo choice or new cancellation barrier follows. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26390-141792/texto",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Under16 work restriction, remunerated or not, narrow family exception, adolescent work restrictions; no online exception established.",
+      "claim_locations": [
+        {
+          "line": 38,
+          "text": "| Minor work and authority | Law 26,390 prohibits work under 16 in all forms, remunerated or not, with a narrow family exception; adolescent work is restricted. Online delivery is not a general exemption. Civil Code articles 25–26 set adulthood at 18 and legal-representation rules with limited exceptions. [Law 26,390](https://www.argentina.gob.ar/normativa/nacional/ley-26390-141792/texto), [Civil Code](https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion). | Eligibility by age/service/mode and proof of guardian relationship/authority. An adult ID alone does not establish that relationship. Preserve guardian agreements, money, messages and job-specific meeting permission; revocation routes existing obligations to support. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Articles25/26 age/capacity,1666/1667 trust definition/terms,1685 separate property,328 ten-year accounting conservation and triggers; not approved structure or universal retention.",
+      "claim_locations": [
+        {
+          "line": 18,
+          "text": "**Structure hypothesis for counsel:** compare a regulated partner arrangement with a properly structured fiduciary arrangement. Civil Code articles 1666–1667 define trust arrangements; article 1685 separates trust assets. That makes a counsel-led comparison reasonable, not a ready custody product or permission for Changeo to hold funds. [Civil and Commercial Code](https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion)."
+        },
+        {
+          "line": 38,
+          "text": "| Minor work and authority | Law 26,390 prohibits work under 16 in all forms, remunerated or not, with a narrow family exception; adolescent work is restricted. Online delivery is not a general exemption. Civil Code articles 25–26 set adulthood at 18 and legal-representation rules with limited exceptions. [Law 26,390](https://www.argentina.gob.ar/normativa/nacional/ley-26390-141792/texto), [Civil Code](https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion). | Eligibility by age/service/mode and proof of guardian relationship/authority. An adult ID alone does not establish that relationship. Preserve guardian agreements, money, messages and job-specific meeting permission; revocation routes existing obligations to support. |"
+        },
+        {
+          "line": 40,
+          "text": "| Record retention | Civil Code article 328 sets ten-year conservation for accounting books, records and supporting instruments, with distinct triggers and possible longer special-law periods. [Civil Code](https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion). | Decide which actual records fall under these obligations and exact per-class triggers, backups, legal holds and deletion exceptions. This is not ten-year retention for all messages or identity images. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.argentina.gob.ar/transferencias-internacionales",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "AAIP model-clause and other transfer mechanisms for nonadequate destinations; actual vendor mechanism pending.",
+      "claim_locations": [
+        {
+          "line": 41,
+          "text": "| Foreign processing | AAIP describes approved model clauses and other transfer mechanisms for nonadequate destinations. Its August 2024 age-16 digital-consent page describes a **proposal**, not an enacted universal rule. [Transfers](https://www.argentina.gob.ar/transferencias-internacionales), [proposal](https://www.argentina.gob.ar/node/436471). | Vendor contracts/subprocessors, destinations, training/retention terms and lawful transfer mechanism for hosting, identity, storage, email and AI. Signup alone supplies none of this approval. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Retrieved actual 14Jul2026/A8454 header and section4.1 payment-account availability/backing/customer instruction/separate operating funds; classification and custody compatibility pending.",
+      "claim_locations": [
+        {
+          "line": 20,
+          "text": "The retrieved BCRA PSP text is genuinely ordered **14 July 2026**, incorporating A8454. Section 4.1 requires applicable payment-account funds to be immediately available on customer request, 100% backed in domestic peso sight accounts, and separate from operating funds; customer-directed domestic money-market allocation requires express instruction and separate presentation. Counsel must resolve classification and compatibility with job custody. A8038 repealed A7825 effective 7 June 2024; neither text grants Changeo blanket authority to invest or retain returns. Base economics stay at zero yield. [Current PSP rules](https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf), [A8038](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8038.pdf)."
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8038.pdf",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Repeal A7825 effective7Jun2024, no blanket authority to invest/retain returns.",
+      "claim_locations": [
+        {
+          "line": 20,
+          "text": "The retrieved BCRA PSP text is genuinely ordered **14 July 2026**, incorporating A8454. Section 4.1 requires applicable payment-account funds to be immediately available on customer request, 100% backed in domestic peso sight accounts, and separate from operating funds; customer-directed domestic money-market allocation requires express instruction and separate presentation. Counsel must resolve classification and compatibility with job custody. A8038 repealed A7825 effective 7 June 2024; neither text grants Changeo blanket authority to invest or retain returns. Base economics stay at zero yield. [Current PSP rules](https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-psp.pdf), [A8038](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8038.pdf)."
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 5,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 6,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.escrow.com/milestones/how-it-works",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Acceptance/inspection then payout after each milestone.",
+      "claim_locations": [
+        {
+          "line": 14,
+          "text": "| Escrow.com | Argentina is listed in country coverage, but supported currencies are USD, AUD, CAD, EUR and GBP, excluding ARS. Milestones pay out after each accepted milestone. [Countries](https://www.escrow.com/support/faqs/what-countries-regions-does-escrowcom-support), [currencies](https://www.escrow.com/support/supported-currencies), [milestones](https://www.escrow.com/milestones/how-it-works). | Country coverage is not marketplace onboarding. The published currency/stage flow does not match ARS and final-only release. No launch solution selected. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.escrow.com/support/faqs/what-countries-regions-does-escrowcom-support",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Argentina in country list, not marketplace account approval.",
+      "claim_locations": [
+        {
+          "line": 14,
+          "text": "| Escrow.com | Argentina is listed in country coverage, but supported currencies are USD, AUD, CAD, EUR and GBP, excluding ARS. Milestones pay out after each accepted milestone. [Countries](https://www.escrow.com/support/faqs/what-countries-regions-does-escrowcom-support), [currencies](https://www.escrow.com/support/supported-currencies), [milestones](https://www.escrow.com/milestones/how-it-works). | Country coverage is not marketplace onboarding. The published currency/stage flow does not match ARS and final-only release. No launch solution selected. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 4,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.escrow.com/support/supported-currencies",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "USD, AUD, CAD, EUR, GBP; ARS absent.",
+      "claim_locations": [
+        {
+          "line": 14,
+          "text": "| Escrow.com | Argentina is listed in country coverage, but supported currencies are USD, AUD, CAD, EUR and GBP, excluding ARS. Milestones pay out after each accepted milestone. [Countries](https://www.escrow.com/support/faqs/what-countries-regions-does-escrowcom-support), [currencies](https://www.escrow.com/support/supported-currencies), [milestones](https://www.escrow.com/milestones/how-it-works). | Country coverage is not marketplace onboarding. The published currency/stage flow does not match ARS and final-only release. No launch solution selected. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.mercadopago.com.ar/developers/es/docs/checkout-api-payments/payment-management/make-value-reserve?scope=prod",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "capture=false authorization; seven-day validity and cancellation if uncaptured; not collected escrow.",
+      "claim_locations": [
+        {
+          "line": 12,
+          "text": "| Mercado Pago card authorization | `capture=false` reserves card capacity; the documented authorization expires after seven days if uncaptured. [Reserve funds](https://www.mercadopago.com.ar/developers/es/docs/checkout-api-payments/payment-management/make-value-reserve?scope=prod). | This is not full-price collected custody and cannot be assumed to cover longer jobs. Seven days is a vendor authorization limit, not an approved Changeo holding period. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.mercadopago.com.ar/developers/es/docs/sales-processing/cancellations-and-refunds",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Full/partial refunds, 180 days after approval, available balance; localized page includes Pix/Brazil examples, account/method applicability pending.",
+      "claim_locations": [
+        {
+          "line": 13,
+          "text": "| Mercado Pago refunds | Published full/partial refund flow states a 180-day period from approval and sufficient available account balance. [Refunds](https://www.mercadopago.com.ar/developers/es/docs/sales-processing/cancellations-and-refunds). | Useful capability evidence, but the localized page includes Brazilian method examples. Argentine methods, post-payout liability and this marketplace's account terms still need confirmation. It proves neither backed reusable credits nor an approved consumer deadline. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.mercadopago.com.ar/developers/es/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Automatic split, seller OAuth, processor commission deducted from seller before marketplace fee; no final-acceptance custody established by reviewed flow.",
+      "claim_locations": [
+        {
+          "line": 11,
+          "text": "| Mercado Pago Split 1:1 | Automatically distributes between seller and marketplace; processor commission is deducted from seller funds before marketplace fees. Seller OAuth is part of integration. [Split integration](https://www.mercadopago.com.ar/developers/es/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace). | The reviewed flow does not establish final-acceptance custody. Its fee allocation also needs a separately funded mechanism to preserve the agreed provider amount. Ordinary splits cannot replace the requirement. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 2,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.mobbex.com/faq/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "General payments/marketplace FAQ; no acceptance-custody capability established. Modality distinctions remain necessary.",
+      "claim_locations": [
+        {
+          "line": 15,
+          "text": "| Mobbex | Terms distinguish gateway, aggregator and multivendor operations, require provider onboarding, assign split service cost to the originator and group refunds/chargebacks. Gateway tariff: 1% + IVA, minimum ARS90,000 + IVA/month below ARS9m approved monthly processing; published table effective 1 December 2025, subject to update. [Terms, VIII/XXV](https://www.mobbex.com/terminos-y-condiciones/). | Worth a capability inquiry. Gateway price excludes acquiring/processor costs and is not an all-in custody quote. Security-related holds are not acceptance escrow. The [FAQ](https://www.mobbex.com/faq/) and terms must be read by modality; they do not prove this required funds flow. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.mobbex.com/terminos-y-condiciones/",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Gateway/aggregator distinction, multivendor onboarding and split-originator cost/refund liability; gateway 1% plus IVA/minimum ARS90000 plus IVA below ARS9m, effective 1 Dec 2025 and subject update; not all-in custody price.",
+      "claim_locations": [
+        {
+          "line": 15,
+          "text": "| Mobbex | Terms distinguish gateway, aggregator and multivendor operations, require provider onboarding, assign split service cost to the originator and group refunds/chargebacks. Gateway tariff: 1% + IVA, minimum ARS90,000 + IVA/month below ARS9m approved monthly processing; published table effective 1 December 2025, subject to update. [Terms, VIII/XXV](https://www.mobbex.com/terminos-y-condiciones/). | Worth a capability inquiry. Gateway price excludes acquiring/processor costs and is not an all-in custody quote. Security-related holds are not acceptance escrow. The [FAQ](https://www.mobbex.com/faq/) and terms must be read by modality; they do not prove this required funds flow. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 0,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 1,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 3,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.veriff.com/plans/self-serve",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Headline Essential0.80USD/check49USD minimum;Plus1.39USD/check99USD minimum;hybrid vs automated; fetched calculator inconsistent, arithmetic conditional.",
+      "claim_locations": [
+        {
+          "line": 57,
+          "text": "| Hosted identity | Veriff lists Argentina ID/passport/driving-licence coverage and Latin-American Spanish. Essential automated checks USD0.80 each, USD49/month minimum; Plus hybrid checks USD1.39 each, USD99 minimum. [Coverage](https://www.veriff.com/supported-countries), [plans](https://www.veriff.com/plans/self-serve). | Compare Plus for risk/manual coverage; Essential's low-risk positioning is not established suitable here. Neither proves guardian authority. Account eligibility, failed/repeated checks, add-ons, biometric/privacy terms remain pending; calculator output was inconsistent with headline arithmetic. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 8,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 9,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 10,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    },
+    {
+      "url": "https://www.veriff.com/supported-countries",
+      "retrieved_date": "2026-09-30",
+      "source_supported_claim": "Argentina ID/passport/driving-licence and Latin-American Spanish coverage; no guardian relationship proof.",
+      "claim_locations": [
+        {
+          "line": 57,
+          "text": "| Hosted identity | Veriff lists Argentina ID/passport/driving-licence coverage and Latin-American Spanish. Essential automated checks USD0.80 each, USD49/month minimum; Plus hybrid checks USD1.39 each, USD99 minimum. [Coverage](https://www.veriff.com/supported-countries), [plans](https://www.veriff.com/plans/self-serve). | Compare Plus for risk/manual coverage; Essential's low-risk positioning is not established suitable here. Neither proves guardian authority. Account eligibility, failed/repeated checks, add-ons, biometric/privacy terms remain pending; calculator output was inconsistent with headline arithmetic. |"
+        }
+      ],
+      "evidence_candidates": [
+        {
+          "log": "web-evidence.json",
+          "entry": 11,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        },
+        {
+          "log": "web-evidence.json",
+          "entry": 12,
+          "note": "Search hits alone insufficient; use actual opened/fetched supporting text among recorded entries."
+        }
+      ],
+      "status": "Primary page reached/opened or official document fetched; claim-specific limits retained."
+    }
+  ],
+  "access_limits": [
+    "Render main/trailing-slash pricing reached but relevant numeric table absent;query variant Internal Error;no price quoted.",
+    "Veriff fetched calculator inconsistent with headline;conditional arithmetic only.",
+    "Prior Boot4.1.1/CNV1147 not revalidated or relied on."
+  ],
+  "verification_limit": "Manifest locates saved evidence; developer manually checked claim support and professional/account/runtime limits. Independent review pending."
+}

@@ -1,0 +1,454 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/paradis/changeo/.local-tools/maven-user/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< ar.changeo:changeo >-------------------------
+[INFO] Building changeo 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ changeo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 27 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ changeo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 81 source files with javac [debug parameters release 25] to target/classes
+[INFO] /home/paradis/changeo/src/main/java/ar/changeo/moderation/web/ModerationErrors.java: /home/paradis/changeo/src/main/java/ar/changeo/moderation/web/ModerationErrors.java uses or overrides a deprecated API.
+[INFO] /home/paradis/changeo/src/main/java/ar/changeo/moderation/web/ModerationErrors.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ changeo ---
+[INFO] skip non existing resourceDirectory /home/paradis/changeo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ changeo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 13 source files with javac [debug parameters release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ changeo ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ar.changeo.files.FileInspectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in ar.changeo.files.FileInspectorTest
+[INFO] Running ar.changeo.identity.IdentityPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:15:46.741-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Starting IdentityPostgresTest using Java 25.0.4.1 with PID 2192028 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:15:46.743-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:15:47.003-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:15:47.014-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-10-01T05:15:47.494-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T05:15:47.575-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f60e66a
+2026-10-01T05:15:47.575-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T05:15:47.585-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:47.618-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.011s)
+2026-10-01T05:15:47.633-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "foundation_test": 4
+2026-10-01T05:15:47.635-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "foundation_test" is up to date. No migration necessary.
+2026-10-01T05:15:47.679-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:15:47.698-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01T05:15:47.785-03:00  INFO 2192028 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:15:47.814-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/foundation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:15:48.157-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:15:48.179-03:00  INFO 2192028 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:15:48.478-03:00  INFO 2192028 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:15:48.663-03:00  INFO 2192028 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:15:48.663-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:15:48.664-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T05:15:48.703-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.IdentityPostgresTest  : Started IdentityPostgresTest in 2.07 seconds (process running for 2.545)
+2026-10-01T05:15:50.056-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.059-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" ...
+2026-10-01T05:15:50.059-03:00  INFO 2192028 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307"."flyway_schema_history" ...
+2026-10-01T05:15:50.073-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307": null
+2026-10-01T05:15:50.083-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" to version "1 - identity"
+2026-10-01T05:15:50.097-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" to version "2 - identity state integrity"
+2026-10-01T05:15:50.107-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307", now at version v2 (execution time 00:00.010s)
+2026-10-01T05:15:50.109-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.112-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:15:50.137-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.143-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.146-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.000s)
+2026-10-01T05:15:50.147-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307": 2
+2026-10-01T05:15:50.148-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" to version "3 - identity moderation roles"
+2026-10-01T05:15:50.157-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" to version "4 - moderation and private files"
+2026-10-01T05:15:50.183-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307", now at version v4 (execution time 00:00.020s)
+2026-10-01T05:15:50.184-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.186-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.000s)
+2026-10-01T05:15:50.188-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:50.190-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:15:50.191-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307": 4
+2026-10-01T05:15:50.191-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "f3_upgrade_9073ee5bbcaa48fb86ae14c7d1c09307" is up to date. No migration necessary.
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.268 s -- in ar.changeo.identity.IdentityPostgresTest
+[INFO] Running ar.changeo.identity.SandboxSafetyTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in ar.changeo.identity.SandboxSafetyTest
+[INFO] Running ar.changeo.identity.TotpTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in ar.changeo.identity.TotpTest
+[INFO] Running ar.changeo.identity.WebsiteSecurityTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:15:53.800-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : Starting WebsiteSecurityTest using Java 25.0.4.1 with PID 2192028 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:15:53.801-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:15:53.897-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:15:53.900-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T05:15:53.931-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-01T05:15:53.939-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1540be61
+2026-10-01T05:15:53.939-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-01T05:15:53.940-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:53.947-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.002s)
+2026-10-01T05:15:53.958-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "foundation_web_test": 4
+2026-10-01T05:15:53.958-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "foundation_web_test" is up to date. No migration necessary.
+2026-10-01T05:15:53.969-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:15:53.982-03:00  INFO 2192028 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:15:53.985-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/foundation_web_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:15:54.022-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:15:54.027-03:00  INFO 2192028 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:15:54.059-03:00  INFO 2192028 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:15:54.102-03:00  INFO 2192028 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:15:54.102-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:15:54.103-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T05:15:54.114-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.identity.WebsiteSecurityTest   : Started WebsiteSecurityTest in 0.321 seconds (process running for 7.956)
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.920 s -- in ar.changeo.identity.WebsiteSecurityTest
+[INFO] Running ar.changeo.moderation.ModerationPostgresTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:15:59.719-03:00  INFO 2192028 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : Starting ModerationPostgresTest using Java 25.0.4.1 with PID 2192028 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:15:59.719-03:00  INFO 2192028 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:15:59.766-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:15:59.768-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T05:15:59.790-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-01T05:15:59.799-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@7548f7cd
+2026-10-01T05:15:59.799-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-01T05:15:59.799-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:15:59.803-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:15:59.809-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_test": 4
+2026-10-01T05:15:59.809-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "moderation_test" is up to date. No migration necessary.
+2026-10-01T05:15:59.813-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:15:59.818-03:00  INFO 2192028 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:15:59.820-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/moderation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:15:59.840-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:15:59.845-03:00  INFO 2192028 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:15:59.936-03:00  INFO 2192028 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:15:59.960-03:00  INFO 2192028 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:15:59.960-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:15:59.960-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-01T05:15:59.967-03:00  INFO 2192028 --- [changeo] [           main] a.c.moderation.ModerationPostgresTest    : Started ModerationPostgresTest in 0.253 seconds (process running for 13.809)
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.323 s -- in ar.changeo.moderation.ModerationPostgresTest
+[INFO] Running ar.changeo.moderation.ModerationHttpTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:16:04.041-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : Starting ModerationHttpTest using Java 25.0.4.1 with PID 2192028 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:16:04.041-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:16:04.075-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:16:04.076-03:00  INFO 2192028 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T05:16:04.099-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-01T05:16:04.104-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@3ae31a0f
+2026-10-01T05:16:04.104-03:00  INFO 2192028 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-01T05:16:04.105-03:00  INFO 2192028 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://127.0.0.1:55432/changeo (PostgreSQL 18.0)
+2026-10-01T05:16:04.111-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.002s)
+2026-10-01T05:16:04.117-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_http_test": 4
+2026-10-01T05:16:04.118-03:00  INFO 2192028 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "moderation_http_test" is up to date. No migration necessary.
+2026-10-01T05:16:04.122-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:16:04.127-03:00  INFO 2192028 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:16:04.129-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:55432/changeo]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: changeo/moderation_http_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:16:04.149-03:00  INFO 2192028 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:16:04.154-03:00  INFO 2192028 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:16:04.171-03:00  INFO 2192028 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:16:04.194-03:00  INFO 2192028 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:16:04.194-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:16:04.195-03:00  INFO 2192028 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T05:16:04.201-03:00  INFO 2192028 --- [changeo] [           main] a.changeo.moderation.ModerationHttpTest  : Started ModerationHttpTest in 0.165 seconds (process running for 18.043)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.548 s -- in ar.changeo.moderation.ModerationHttpTest
+[INFO] Running ar.changeo.moderation.ReviewValidationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in ar.changeo.moderation.ReviewValidationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 72, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ changeo ---
+[INFO] Building jar: /home/paradis/changeo/target/changeo-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ changeo ---
+[INFO] Replacing main artifact /home/paradis/changeo/target/changeo-0.1.0-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/paradis/changeo/target/changeo-0.1.0-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.6:integration-test (default) @ changeo ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ar.changeo.identity.PostgresContainerIT
+05:16:06.367 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+05:16:06.368 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+05:16:06.376 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+05:16:06.653 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///tmp/changeo-podman/podman.sock
+05:16:06.653 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+05:16:06.720 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 5.8.1
+  API Version: 1.44
+  Operating System: fedora
+  Total Memory: 64046 MB
+05:16:06.721 [main] WARN org.testcontainers.utility.ResourceReaper -- 
+********************************************************************************
+Ryuk has been disabled. This can cause unexpected behavior in your environment.
+********************************************************************************
+05:16:06.723 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+05:16:06.723 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+05:16:06.729 [main] INFO tc.docker.io/library/postgres:18.0 -- Creating container for image: docker.io/library/postgres:18.0
+05:16:06.731 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: docker.io/library/postgres:18.0, configFile: /home/paradis/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/paradis/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+05:16:06.760 [main] INFO tc.docker.io/library/postgres:18.0 -- Container docker.io/library/postgres:18.0 is starting: 298fbce769ca10ec8cd72f6a17908a0b3246935d49541c6174f86346bd5dc0fa
+05:16:07.721 [main] INFO tc.docker.io/library/postgres:18.0 -- Container docker.io/library/postgres:18.0 started in PT0.992063879S
+05:16:07.721 [main] INFO tc.docker.io/library/postgres:18.0 -- Container is started (JDBC URL: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:16:07.830-03:00  INFO 2192848 --- [changeo] [           main] a.changeo.identity.PostgresContainerIT   : Starting PostgresContainerIT using Java 25.0.4.1 with PID 2192848 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:16:07.831-03:00  INFO 2192848 --- [changeo] [           main] a.changeo.identity.PostgresContainerIT   : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:16:08.095-03:00  INFO 2192848 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:16:08.107-03:00  INFO 2192848 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-10-01T05:16:08.537-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T05:16:08.604-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@662061e3
+2026-10-01T05:16:08.605-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T05:16:08.616-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:08.639-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "foundation_test" ...
+2026-10-01T05:16:08.642-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "foundation_test"."flyway_schema_history" ...
+2026-10-01T05:16:08.674-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "foundation_test": null
+2026-10-01T05:16:08.687-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_test" to version "1 - identity"
+2026-10-01T05:16:08.705-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_test" to version "2 - identity state integrity"
+2026-10-01T05:16:08.711-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_test" to version "3 - identity moderation roles"
+2026-10-01T05:16:08.716-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "foundation_test" to version "4 - moderation and private files"
+2026-10-01T05:16:08.740-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "foundation_test", now at version v4 (execution time 00:00.034s)
+2026-10-01T05:16:08.791-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:16:08.812-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-01T05:16:08.902-03:00  INFO 2192848 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:16:08.932-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:34627/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: test/foundation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:16:09.248-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:16:09.268-03:00  INFO 2192848 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:16:09.545-03:00  INFO 2192848 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:16:09.725-03:00  INFO 2192848 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:16:09.725-03:00  INFO 2192848 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:16:09.726-03:00  INFO 2192848 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-01T05:16:09.768-03:00  INFO 2192848 --- [changeo] [           main] a.changeo.identity.PostgresContainerIT   : Started PostgresContainerIT in 2.032 seconds (process running for 3.799)
+2026-10-01T05:16:11.094-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.097-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" ...
+2026-10-01T05:16:11.097-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a"."flyway_schema_history" ...
+2026-10-01T05:16:11.101-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a": null
+2026-10-01T05:16:11.102-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" to version "1 - identity"
+2026-10-01T05:16:11.113-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" to version "2 - identity state integrity"
+2026-10-01T05:16:11.116-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a", now at version v2 (execution time 00:00.008s)
+2026-10-01T05:16:11.117-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.120-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:11.129-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.135-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.137-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:11.138-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a": 2
+2026-10-01T05:16:11.139-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" to version "3 - identity moderation roles"
+2026-10-01T05:16:11.143-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" to version "4 - moderation and private files"
+2026-10-01T05:16:11.157-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a", now at version v4 (execution time 00:00.013s)
+2026-10-01T05:16:11.158-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.161-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.000s)
+2026-10-01T05:16:11.162-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:11.165-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:11.166-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a": 4
+2026-10-01T05:16:11.167-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "f3_upgrade_729f88a3d03c4193bff5d6eb21c06b9a" is up to date. No migration necessary.
+2026-10-01T05:16:14.508-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:14.512-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "migration_contract"."flyway_schema_history" does not exist yet
+2026-10-01T05:16:14.531-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:14.534-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "migration_contract" ...
+2026-10-01T05:16:14.535-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "migration_contract"."flyway_schema_history" ...
+2026-10-01T05:16:14.545-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "migration_contract": null
+2026-10-01T05:16:14.546-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "migration_contract" to version "1 - identity"
+2026-10-01T05:16:14.556-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "migration_contract" to version "2 - identity state integrity"
+2026-10-01T05:16:14.561-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "migration_contract" to version "3 - identity moderation roles"
+2026-10-01T05:16:14.566-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "migration_contract" to version "4 - moderation and private files"
+2026-10-01T05:16:14.587-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "migration_contract", now at version v4 (execution time 00:00.030s)
+2026-10-01T05:16:14.595-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:14.598-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:14.618-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34627/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:14.622-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:14.629-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "migration_contract": 4
+2026-10-01T05:16:14.630-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "migration_contract" is up to date. No migration necessary.
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.584 s -- in ar.changeo.identity.PostgresContainerIT
+[INFO] Running ar.changeo.moderation.ModerationContainerIT
+2026-10-01T05:16:14.833-03:00  INFO 2192848 --- [changeo] [           main] tc.docker.io/library/postgres:18.0       : Creating container for image: docker.io/library/postgres:18.0
+2026-10-01T05:16:14.838-03:00  INFO 2192848 --- [changeo] [           main] tc.docker.io/library/postgres:18.0       : Container docker.io/library/postgres:18.0 is starting: d8950ef1b1718b342c8eb50b0b37af059d4fde92d41af903e6ae69ddc3fb149d
+2026-10-01T05:16:15.720-03:00  INFO 2192848 --- [changeo] [           main] tc.docker.io/library/postgres:18.0       : Container docker.io/library/postgres:18.0 started in PT0.887008028S
+2026-10-01T05:16:15.720-03:00  INFO 2192848 --- [changeo] [           main] tc.docker.io/library/postgres:18.0       : Container is started (JDBC URL: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-01T05:16:15.733-03:00  INFO 2192848 --- [changeo] [           main] a.c.moderation.ModerationContainerIT     : Starting ModerationContainerIT using Java 25.0.4.1 with PID 2192848 (started by paradis in /home/paradis/changeo)
+2026-10-01T05:16:15.733-03:00  INFO 2192848 --- [changeo] [           main] a.c.moderation.ModerationContainerIT     : No active profile set, falling back to 1 default profile: "sandbox"
+2026-10-01T05:16:15.793-03:00  INFO 2192848 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T05:16:15.796-03:00  INFO 2192848 --- [changeo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-01T05:16:15.826-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-01T05:16:15.834-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@42bfafcc
+2026-10-01T05:16:15.834-03:00  INFO 2192848 --- [changeo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-01T05:16:15.834-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:15.840-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "moderation_test" ...
+2026-10-01T05:16:15.841-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "moderation_test"."flyway_schema_history" ...
+2026-10-01T05:16:15.854-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_test": null
+2026-10-01T05:16:15.856-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_test" to version "1 - identity"
+2026-10-01T05:16:15.867-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_test" to version "2 - identity state integrity"
+2026-10-01T05:16:15.872-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_test" to version "3 - identity moderation roles"
+2026-10-01T05:16:15.876-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_test" to version "4 - moderation and private files"
+2026-10-01T05:16:15.891-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "moderation_test", now at version v4 (execution time 00:00.024s)
+2026-10-01T05:16:15.896-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T05:16:15.902-03:00  INFO 2192848 --- [changeo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T05:16:15.904-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:34935/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: test/moderation_test
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T05:16:15.927-03:00  INFO 2192848 --- [changeo] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T05:16:15.932-03:00  INFO 2192848 --- [changeo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T05:16:16.022-03:00  INFO 2192848 --- [changeo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-01T05:16:16.051-03:00  INFO 2192848 --- [changeo] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-01T05:16:16.051-03:00  INFO 2192848 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-01T05:16:16.051-03:00  INFO 2192848 --- [changeo] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-01T05:16:16.060-03:00  INFO 2192848 --- [changeo] [           main] a.c.moderation.ModerationContainerIT     : Started ModerationContainerIT in 0.337 seconds (process running for 10.09)
+2026-10-01T05:16:19.524-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:19.528-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.database.base.Schema   : Creating schema "moderation_migration_contract" ...
+2026-10-01T05:16:19.529-03:00  INFO 2192848 --- [changeo] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "moderation_migration_contract"."flyway_schema_history" ...
+2026-10-01T05:16:19.540-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_migration_contract": null
+2026-10-01T05:16:19.541-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_migration_contract" to version "1 - identity"
+2026-10-01T05:16:19.554-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_migration_contract" to version "2 - identity state integrity"
+2026-10-01T05:16:19.559-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_migration_contract" to version "3 - identity moderation roles"
+2026-10-01T05:16:19.563-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "moderation_migration_contract" to version "4 - moderation and private files"
+2026-10-01T05:16:19.580-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "moderation_migration_contract", now at version v4 (execution time 00:00.029s)
+2026-10-01T05:16:19.583-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:19.587-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:19.596-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF (PostgreSQL 18.0)
+2026-10-01T05:16:19.601-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.001s)
+2026-10-01T05:16:19.608-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "moderation_migration_contract": 4
+2026-10-01T05:16:19.608-03:00  INFO 2192848 --- [changeo] [           main] o.f.core.internal.command.DbMigrate      : Schema "moderation_migration_contract" is up to date. No migration necessary.
+2026-10-01T05:16:19.613-03:00  INFO 2192848 --- [changeo] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:34935/test?loggerLevel=OFF (PostgreSQL 18.0)
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.995 s -- in ar.changeo.moderation.ModerationContainerIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 41, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.6:verify (default) @ changeo ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.295 s
+[INFO] Finished at: 2026-10-01T05:16:19-03:00
+[INFO] ------------------------------------------------------------------------

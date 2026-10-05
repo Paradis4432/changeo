@@ -1,0 +1,8 @@
+Task /root/changeo_gate0/reviewer; R3 selected Mercado Pago.
+Accepted documentation only; full outcome report.md. No material finding/developer correction.
+Independent complete current/delta/primary/preservation review;12 untouched originals,162 immutable artifacts,7snapshots,39links,25IDs,contract tails,R2 trust/marketing/history pass.
+Original Git preservation EXCEPTION/UNVERIFIED; actor UNKNOWN. Root explicit scoped exception. First1 retained (Git + reviewer regex mismatch), corrected original1 Git only, scoped0. No Git mutation/provenance approval inferred.
+MP final-acceptance custody of already-collected funds and backed reusable legal-payer/guardian mixed credits require written Argentina product/account/contract and professional evidence. Public absence not impossibility; safeguards unchanged.
+Single prepared MP-only inquiry unsent; official Argentina support route exists, contact click Internal Error, form/login/commercial routing unverified. Root owns contact authority, Git question/baseline and paused goal. No product/test/spending/accounts/outreach/delegation/goals. All Gate0/product held.
+Evidence source-support.md; logs/web-evidence*.json, verification*.json, independent-seven-file.patch,cumulative-source.patch,accepted-artifacts.json. Same writer/reviewer retained corrections; coordinator cleanup next.
+

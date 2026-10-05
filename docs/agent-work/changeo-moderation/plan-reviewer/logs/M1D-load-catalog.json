@@ -1,0 +1,356 @@
+{
+  "underlying_exit": 0,
+  "reads": [
+    {
+      "path": "docs/README.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "86386640157dbfa720b2e67aea5c3103a1033cd30bb7c20e0939fc25a3325f39",
+      "size": 7660,
+      "lines": 71
+    },
+    {
+      "path": "docs/product-design.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "d323fca39938f5349713c4c4487d6fc1d169512e8a8196a82101ab031eaae53d",
+      "size": 7672,
+      "lines": 89
+    },
+    {
+      "path": "docs/payments.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "8b7aac1ac2c42697d56880e0325cc4ca003c31dcbef1f3cdf5e26d5e7edf2df7",
+      "size": 11543,
+      "lines": 95
+    },
+    {
+      "path": "docs/business.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "58cb1df2272508101af04c18c8d7a5766c769c2e11d0a36d9e7fef87091feefd",
+      "size": 6713,
+      "lines": 70
+    },
+    {
+      "path": "docs/trust-operations.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "936d52936035d1b43a0572bdd0b3a59aac40eee84225a71bfec6579f07a23a0b",
+      "size": 9511,
+      "lines": 74
+    },
+    {
+      "path": "docs/architecture.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "3d56c49c0e98a21af3ae103a33992374d8f7edc1b6396818a47f9d93a00d5c54",
+      "size": 10147,
+      "lines": 78
+    },
+    {
+      "path": "docs/marketing.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "5b74efe35bfe4b257c0a7711ad951ba42f7c59e31f69e7078b0f0eeb26fd9917",
+      "size": 5936,
+      "lines": 59
+    },
+    {
+      "path": "docs/delivery.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "780c8fb0340869527d213358d1506a2bf89673df00e8bb85a18455143ee023fe",
+      "size": 12099,
+      "lines": 84
+    },
+    {
+      "path": "docs/questions.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "705c7da3f80b9b766721de9876138d99c3e3537eec753df44bafb0965e8266af",
+      "size": 5357,
+      "lines": 21
+    },
+    {
+      "path": "docs/sandbox-runtime.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "7d40ebb4ec3f28375db508851a8c7ee56faeba7aa923b6979d077dca6907730c",
+      "size": 10047,
+      "lines": 64
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/requirements.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "7aa1dfec61d882f4087da290006e4371143f2ddf95e02f7a3ee6d85bed71d46e",
+      "size": 9477,
+      "lines": 137
+    },
+    {
+      "path": "docs/agent-work/changeo-planning/CHECKPOINT.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "b25e433deb8ace7fdf59560d849bcc960e5e5e7a2ea5ffdf8672acdad8fb264b",
+      "size": 3592,
+      "lines": 44
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-coordinator-brief.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "6562b2e36ede19403d3d46fca5498266a7dcfc4274c4c981fa4fc03a8f1f9877",
+      "size": 12780,
+      "lines": 49
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/shared-contract-proposal-M1.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "8f697f04cb76f13c1a1318237332b104a239f01e22764af0c109cd721a61978e",
+      "size": 11434,
+      "lines": 41
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/plan.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "e3e789f7bc61748874288e756004eb344366e1671f0d94f33834efcd4338bf9b",
+      "size": 12495,
+      "lines": 56
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/design-amendment-F2.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "fb48694b1f95cb5df4e84f0a5e96987ad8cd6e1c01e6944c19e1c3de182d5099",
+      "size": 12631,
+      "lines": 67
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/report.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "b29cb113f5cff71667e490cb24c5b24e3a569ba269f8ee1bcf8ee44533cd418e",
+      "size": 16932,
+      "lines": 91
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/coordinator-report.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "a05912da42f995d6f41329a7913964971a53812038599bf3a454785fe4de6eb0",
+      "size": 8414,
+      "lines": 35
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/reviewer/f3/report.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "681c3174b154b6b00bd975a6cbca6e07bda7cff4b24a842dd37862ceef42ed1f",
+      "size": 15700,
+      "lines": 69
+    },
+    {
+      "path": "docs/agent-work/changeo-foundations/f3/coordinator-report.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "292d9ee4af9e043e1f0c3b17445175aa83b8de81d510a984f9990dc3b07d22b2",
+      "size": 3964,
+      "lines": 13
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/role-routing.json",
+      "load": "complete bounded read after compaction",
+      "sha256": "2271c3dad26b4f78462a16348679661ec705613138f408c8e464fdeb220626f3",
+      "size": 1163,
+      "lines": 28
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-agents-and-environment.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "20d796cc2d4ae82211abb8e9f623a83ddfafa56d7a93da99fc7f694fcde38a78",
+      "size": 8091,
+      "lines": 117
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-goal.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "42f37aca5542dbd1099b4bc443763ccf646f87046f0b987618e164274bde4cae",
+      "size": 20514,
+      "lines": 309
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-amendment-research.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "1250b88f5a6c8d4434ca660109c995e9ef7d7ad0a5cab1270cfbd6fa135f44bd",
+      "size": 67,
+      "lines": 1
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-budget-and-support.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "ced31d321dc118274cb8d4e4c02f7612f5c124b025fc7ac7fc54a1afcece8408",
+      "size": 53,
+      "lines": 2
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-mercadopago-choice.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "c50c0ef943cea6402f9bc27712750140548a60a2c5e2601f7a4c2e1c6e5a07c1",
+      "size": 29,
+      "lines": 1
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-git-initialization-confirmation.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "2648f329b5e6427ab53be474be712f3ebf9d31baea30688c3d2967870e95e2a3",
+      "size": 362,
+      "lines": 3
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-mercadopago-capability-and-account.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "f09314e34e26d07a661cced40cc94006e67721daea5e7227ad53d3e1b19496bd",
+      "size": 1289,
+      "lines": 23
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/originals/user-sandbox-development-approval.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "af3809a6952201fcc9341a4f6a20a4be718addc092d2eccb72628ff39ceeb32e",
+      "size": 721,
+      "lines": 15
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/sandbox-scope-contract.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "a0b531b0663876117be89fac9a5c74bdae7276924f2984cc48d699624f57e106",
+      "size": 3567,
+      "lines": 15
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F1.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "2331a40641fa69f473e0e41dd4b0242631972d745a3d93aca5ca1d78fb366967",
+      "size": 3283,
+      "lines": 13
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F2.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "f9c277316a9b60e023b1e4b78c14e1db796dad72f608989e114638bee523183e",
+      "size": 4201,
+      "lines": 17
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/foundations-contract-F3.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "d210c5bc9d38c630f771f23751a310052276f2e717ee72373357875480313084",
+      "size": 2965,
+      "lines": 13
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "46be04aa2e81fb27e8b6f9ae00099bd9cb7ef708fb7e603b0983c354f983f180",
+      "size": 4201,
+      "lines": 15
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1A.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "a66e6d377373a5bdccea6dd13d9065b9c484f91e49f354661af7e0bd75444d0b",
+      "size": 2233,
+      "lines": 9
+    },
+    {
+      "path": "docs/agent-work/changeo-implementation/moderation-contract-M1B.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "94b8ee11f36e48459ff965894daac64d7685fc15f55aac4492386105369c1e1e",
+      "size": 2221,
+      "lines": 9
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/design-amendment-M1A.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "1f8b6fc812cbae045338c73ee095e55ba877f0fd375c3cbbe385e56d31e2e718",
+      "size": 4926,
+      "lines": 19
+    },
+    {
+      "path": "docs/agent-work/changeo-moderation/design-amendment-M1B.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "65f7fdf097a7acb4030307975877baa60b39b24eca218795255e07dfdd38d1c2",
+      "size": 3867,
+      "lines": 15
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/SKILL.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "39294368c99b47e3204a2ddcf33f1cb88e55ce070545bbe920bef21ea9adefdb",
+      "size": 10802,
+      "lines": 166
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/routing.json",
+      "load": "complete bounded read after compaction",
+      "sha256": "2857c585a7d7bf91ab0d6bd92c0d21a5bc434af0fb200c62815e393ef394acd7",
+      "size": 167,
+      "lines": 7
+    },
+    {
+      "path": "/home/paradis/.agents/skills/java-coding-standards/SKILL.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "687d56b0001f4588227e80e048d9d5605269f3bd7a31f6ced79b04b7379255e7",
+      "size": 3872,
+      "lines": 147
+    },
+    {
+      "path": "/home/paradis/.agents/skills/java-junit/SKILL.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "beeae246a2b1a8debffb53b005eba0e025f70923fa26a11f3c4bfefd99388fa3",
+      "size": 2981,
+      "lines": 63
+    },
+    {
+      "path": "/home/paradis/.agents/skills/caveman/SKILL.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "6a6de97d4ffc91ef523021b786e245d6d85fa6a33dfc0506fd04e4c5d34b0a06",
+      "size": 3655,
+      "lines": 67
+    },
+    {
+      "path": "/home/paradis/.codex/plugins/cache/personal/ponytail/4.10.0+codex.20260924041343/skills/ponytail/SKILL.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "288b8d7cb209197ce042bc5e06854ec1ba0837b0305a4f12456ab9b69ae03f2f",
+      "size": 1678,
+      "lines": 40
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/code-quality.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "96d33404d1bb704365e2496785d3c7a85e121a8effa58630a296437899489c81",
+      "size": 6291,
+      "lines": 102
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/review.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "4e1d09e08cf1d66a21224365493fea18dd42132739621fdb97e7edc11a135ad3",
+      "size": 4842,
+      "lines": 77
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/coordination.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "b5d993d536bf6d463907adaf2a3d78b0947b29b0e266a6c2b7cf17a90b18a48d",
+      "size": 7316,
+      "lines": 119
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/routing.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "07f49640355d818b4a5725713dcc6acecca150762bcac9876ac08c541f0cf593",
+      "size": 5058,
+      "lines": 89
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/planning.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "8d9103e2828d69606dbade98fa072a1774a87bfbb42eaec5134b0aa1c7400670",
+      "size": 8264,
+      "lines": 133
+    },
+    {
+      "path": "/home/paradis/.agents/skills/astra-flash-orchestrator/references/execution.md",
+      "load": "complete bounded read after compaction",
+      "sha256": "b6dd6f1486bb883111cb1b058822b5f820c1c0d1b62c9a809a143c88ed8c594b",
+      "size": 12286,
+      "lines": 189
+    }
+  ],
+  "native_transcript": "Full exact commands/read outputs retained in same reviewer host session identified by ../role-routing.json. Combined truncated reads were followed by bounded complete reads; initial guessed filename failures recorded in M1D-commands.json."
+}

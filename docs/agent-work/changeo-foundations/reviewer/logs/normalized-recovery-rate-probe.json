@@ -1,0 +1,44 @@
+[
+  {
+    "attempt": 1,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  },
+  {
+    "attempt": 2,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  },
+  {
+    "attempt": 3,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  },
+  {
+    "attempt": 4,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  },
+  {
+    "attempt": 5,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  },
+  {
+    "attempt": 6,
+    "distinct_loopback_source": true,
+    "same_normalized_account": true,
+    "status": 302,
+    "location": "http://127.0.0.1:8080/password/forgot"
+  }
+]

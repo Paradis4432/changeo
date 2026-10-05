@@ -1,0 +1,42 @@
+- banner:
+  - link "Ir al contenido":
+    - /url: "#main"
+  - text: Entorno privado · Datos sintéticos · Dinero real deshabilitado
+  - navigation "Principal":
+    - link "Changeo":
+      - /url: /
+    - link "Mi cuenta":
+      - /url: /account
+    - link "Guardianes":
+      - /url: /account/guardian
+    - link "Ayuda":
+      - /url: /support
+    - link "Derechos":
+      - /url: /rights
+    - link "Administración":
+      - /url: /admin/mfa
+    - button "Salir"
+- main:
+  - heading "Mi cuenta" [level=1]
+  - status: Preferencias guardadas.
+  - paragraph:
+    - text: "Identificador sintético:"
+    - code: b1d8dc82-8aa3-48ae-82c5-17880c77100f
+  - term: Contacto
+  - definition: Verificado en el entorno sintético
+  - term: Edad
+  - definition: Pendiente
+  - term: Participación
+  - definition: Sujeta a permisos actuales
+  - term: Producción
+  - definition: Producción pendiente
+  - heading "Preferencias de contenido" [level=2]
+  - checkbox "Ver contenido sensible con advertencia" [checked]
+  - text: Ver contenido sensible con advertencia
+  - checkbox "Preferencia adulta (requiere evidencia adulta vigente)"
+  - text: Preferencia adulta (requiere evidencia adulta vigente)
+  - paragraph: Una preferencia no habilita contenido prohibido ni reemplaza la verificación.
+  - button "Guardar preferencias"
+  - group: Servicios y dinero
+- contentinfo:
+  - paragraph: Prueba local. No ingresar personas, menores reales ni datos personales. Sin servicios publicados, contratos, saldos ni pagos.

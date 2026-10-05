@@ -1,0 +1,23 @@
+{
+  "exit": 0,
+  "verdict": "accepted",
+  "errors": [],
+  "commands": {
+    "verify": 0,
+    "inspection": 0,
+    "live_app_harness": 0,
+    "term": 0,
+    "app_expected_termination": 143,
+    "host_cleanup": 0
+  },
+  "current_source_files": 87,
+  "test_executions": 68,
+  "test_failures_errors_skips": 0,
+  "packaged_test_consumers_absent": true,
+  "packaged_v3_present": true,
+  "report_sha256": "681c3174b154b6b00bd975a6cbca6e07bda7cff4b24a842dd37862ceef42ed1f",
+  "historical_report_sha256": "b29cb113f5cff71667e490cb24c5b24e3a569ba269f8ee1bcf8ee44533cd418e",
+  "app_stopped": true,
+  "db_retained": 1730365,
+  "private_api_native_session_retained": 29315
+}
