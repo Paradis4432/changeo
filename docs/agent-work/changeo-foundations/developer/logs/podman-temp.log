@@ -1,3 +1,0 @@
-time="2026-10-01T00:55:50-03:00" level=warning msg="\"/\" is not a shared mount, this could cause issues or missing mounts with rootless containers"
-time="2026-10-01T00:55:50-03:00" level=error msg="running `/usr/bin/newuidmap 18 0 1000 1 1 524288 65536`: newuidmap: write to uid_map failed: Operation not permitted\n"
-Error: cannot set up namespace using "/usr/bin/newuidmap": exit status 1

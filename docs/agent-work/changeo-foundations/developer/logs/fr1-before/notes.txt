@@ -1,7 +1,0 @@
-Task foundations F-A1–F-A8 + F2; authoritative evidence is report.md.
-No model/routing substitution, recursive agent, goal, host configuration, real data/vendor/money, staging/commit/deploy.
-Coordinator approved PostgreSQL stable-row locking before JPA refresh after the concurrent role-removal regression exposed Hibernate follow-on lock stale reads; no F2 API or ownership change.
-Native browser VM cannot import filesystem modules. Switched to workspace-local Playwright and read private token/factor files internally; all returned logs/screenshots sanitized. Shared native page closed and local contexts close in finally.
-Initial PostgreSQL configure accidentally created out-of-tree build files beside application sources. All those developer-generated files were relocated to ignored .local-tools/pg-build, including src/test Makefile leftovers; baseline source/user files were preserved.
-
-Resume handoff check: 85 source fingerprints match, report/checkpoint ready_for_review agree, report links exist. No tests rerun/source changes. Recorded app PID absent (ps exit1); handoff updated to require documented restart. Podman socket exists; ss netlink access denied, so database/listener availability unverified. Evidence logs/resume-handoff-check.json.

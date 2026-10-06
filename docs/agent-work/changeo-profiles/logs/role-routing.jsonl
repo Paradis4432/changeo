@@ -1,6 +1,0 @@
-{"type":"session_meta","id":"01a0f9ba-eb40-7f72-8cb4-da194c9493a1","source":{"subagent":{"thread_spawn":{"parent_thread_id":"01a0f959-d9b3-7040-a5bd-32fd5122ccf6","depth":1,"agent_path":"/root/profiles_listings","agent_nickname":"Aquinas","agent_role":"default"}}},"host_transport":"codex-router-signed"}
-{"type":"turn_context","model":"gpt-6.1-sol","effort":"high"}
-{"type":"session_meta","id":"01a0f9c3-fa84-7713-a241-ca17a887897b","source":{"subagent":{"thread_spawn":{"parent_thread_id":"01a0f9ba-eb40-7f72-8cb4-da194c9493a1","depth":2,"agent_path":"/root/profiles_listings/profiles_plan_review","agent_nickname":"Epicurus","agent_role":"default"}}},"host_transport":"codex-router-signed"}
-{"type":"turn_context","model":"gpt-6.1-sol","effort":"high"}
-{"type":"session_meta","id":"01a0f9d1-4c85-73d1-81ea-e5e822f5061b","source":{"subagent":{"thread_spawn":{"parent_thread_id":"01a0f9ba-eb40-7f72-8cb4-da194c9493a1","depth":2,"agent_path":"/root/profiles_listings/profiles_builder","agent_nickname":"Avicenna","agent_role":"astra_flash_builder"}}},"host_transport":"codex-router-signed"}
-{"type":"turn_context","model":"gpt-6.1-sol","effort":"high"}

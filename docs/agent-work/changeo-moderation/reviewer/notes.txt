@@ -1,8 +1,0 @@
-M1 independent final reviewer verdict: changes_requested. Authoritative details: report.md.
-MFR1 transient ACTIVATE failure loses APPROVED state and strands PENDING revision.
-MFR2 contradictory APPROVE/GENERAL/PROHIBITED structured output accepted.
-MFR3 required file-read restriction/preference/private membership races need both applicable PostgreSQL orders.
-121 existing tests passed; completed independent probe proves uncovered defects. No product edits/delegation/goals.
-19 delivery seals/143 source hashes/three patches match. Full178 artifact hashes:177 match; retained api-start.log appended149 bytes, sealed596-byte prefix preserved.
-Runtime app2287567 released; native16306 exit143 recovered; PG1730365/API2094717 retained.
-Same reviewer and same builder retained. Coordinator owns next correction dispatch; listings gated.

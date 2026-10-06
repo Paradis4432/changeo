@@ -1,9 +1,0 @@
-# Foundations developer checkpoint
-
-STATUS ready_for_review. Authoritative evidence: [report.md](report.md). Task F-A1–F-A8 plus accepted F2; workspace /home/paradis/changeo; sole developer /root/changeo_foundations/foundation_builder. Full originals/contracts/guidance loaded; no delegation/goals/commit/deploy.
-
-Implemented private Java25/Boot4.1.1 foundation app and owned source status amendments. Final wrapper verify-delivery.log exit0: 25 local/unit/HTTP +15 actual PostgreSQL Testcontainers tests, none skipped. Browser-final.log exit0 with private contact/MFA material read internally; mobile/account/admin and accessibility evidence saved. Browser-restart exit0, actual startup refusal matrix complete. Sorted native stable-row locks before JPA refresh corrected coordinator-approved Hibernate stale-role regression without F2 contract change. Full first failures retained.
-
-Source manifest/preservation/docs checks in developer/logs. Original 271 snapshots preserved except five assigned current docs and independently root-owned GOAL-CHECKPOINT; original-ID map/history untouched. No production permission or readiness inferred.
-
-Next owner: coordinator dispatches distinct independent final reviewer; same developer available for corrections. Original runtime references: private app PID1774171/session54008, local PostgreSQL55432 and temp Podman API88823. Resume inspection found the application PID absent; reviewer must restart through docs/sandbox-runtime.md. Podman socket exists; database/listener availability unverified after denied sandbox netlink inspection. Saved container cleanup evidence remains empty. Native browser closed, local contexts closed, browser ownership released. Private keys/enrollment/tokens remain solely ignored .runtime; never copy to reports. Reload originals/latest contracts/this checkpoint/report after interruption.

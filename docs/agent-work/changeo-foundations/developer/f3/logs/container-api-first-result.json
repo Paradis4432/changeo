@@ -1,8 +1,0 @@
-{
-  "command": "curl -fsS --unix-socket /tmp/changeo-podman/podman.sock http://localhost/_ping",
-  "exit": 7,
-  "stdout": "",
-  "stderr_from_native_exec_result": "curl: (7) Failed to connect to localhost port 80 after 0 ms: Could not connect to server",
-  "diagnosis": "Previously assigned temporary API was stopped; restarted same private temp-owned service.",
-  "raw_stdout_log": "container-api-first.log"
-}

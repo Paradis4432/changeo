@@ -1,8 +1,0 @@
-{
-  "path": "docs/agent-work/changeo-moderation/developer/logs/api-start.log",
-  "sealed_size": 596,
-  "current_size": 745,
-  "sealed_prefix_matches": true,
-  "added_bytes": 149,
-  "observation": "Retained private Podman API appended one IdleTracker warning at independent Maven execution time; historical prefix untouched. Full manifest check remains exit1."
-}

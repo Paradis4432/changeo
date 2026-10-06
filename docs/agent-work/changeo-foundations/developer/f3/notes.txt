@@ -1,7 +1,0 @@
-Task F3-A1–A5; same sole builder; authoritative report.md.
-Root-approved exact role/capability shape and migration assertion refinement applied. V1/V2 untouched; no fixed total3, expected identity records/checksums validated with real apply/repeat0/populated preservation.
-Existing natural owners provide provisioning/removal/epoch/MFA/lock lifecycle without new framework. Test-only consumer under src/test proves HTTP SessionProof, not moderation integration.
-First6 F3 behaviors fail1 on missing roles/capabilities; after implementation local21/HTTP17 pass; full verify0/68 no skips.
-Old temporary API ping7 indicated stopped service, then same private temp-owned API restarted session 29315. Initial stderr retained from native response in logs/container-api-first-result.json; service/cleanup evidence durable.
-Actual app V3 upgrade/repeat and synthetic counts/checksums verified. Exact owned app PIDs stopped; database/API retained, containers[]. No browser opened, no secrets copied.
-Cumulative source delta/manifests/preservation saved; earlier accepted reports/manifests/logs remain untouched. Same independent reviewer next; no acceptance claim.

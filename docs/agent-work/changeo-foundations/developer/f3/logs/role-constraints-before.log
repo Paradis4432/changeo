@@ -1,5 +1,0 @@
-identity_account_role_account_id_fkey|f|FOREIGN KEY (account_id) REFERENCES sandbox.identity_account(id)
-identity_account_role_account_id_not_null|n|NOT NULL account_id
-identity_account_role_pkey|p|PRIMARY KEY (account_id, role)
-identity_account_role_role_check|c|CHECK (((role)::text = ANY ((ARRAY['IDENTITY_ADMIN'::character varying, 'RESTRICTION_ADMIN'::character varying, 'AUDIT_READER'::character varying])::text[])))
-identity_account_role_role_not_null|n|NOT NULL role

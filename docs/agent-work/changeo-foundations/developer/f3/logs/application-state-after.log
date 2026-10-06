@@ -1,9 +1,0 @@
-1|V1__identity.sql|-1226493069|t
-2|V2__identity_state_integrity.sql|1060451969|t
-3|V3__identity_moderation_roles.sql|-1152207325|t
-accounts|15
-AUDIT_READER|1
-IDENTITY_ADMIN|1
-RESTRICTION_ADMIN|1
-tokens|30
-audit|55

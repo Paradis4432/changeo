@@ -1,5 +1,0 @@
-F3-A1–A5 accepted; authoritative report.md and logs/inspection.json.
-Same independent reviewer, original writer and sole coordinator retained; no source fixes or new roles.
-Exact focused role checks preserve old admin/ordinary F2 behavior. V3 precise CHECK only; expected identity migration history/checksums verified with real apply/validate/repeat-zero and populated preservation.
-Independent verify exit0/68, no skips; packaged loopback HTTP200, current history/counts unchanged. Own app stopped, DB/private API retained, containers empty, browser unused.
-Historical accepted report preserved. Actual moderation/file safety/case/resource integration remains dependent; root releases after this acceptance.

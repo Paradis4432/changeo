@@ -1,1 +1,0 @@
-use mercadopago for payments

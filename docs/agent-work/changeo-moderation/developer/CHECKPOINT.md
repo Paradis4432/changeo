@@ -1,7 +1,0 @@
-# Moderation developer checkpoint
-
-STATUS active correction, not ready for review. Same sole M1 builder /root/changeo_moderation/moderation_builder in /home/paradis/changeo; coordinator /root/changeo_moderation. Actual independent reviewer requested MFR1–MFR3. Full correction brief/report/probe/checkpoint read; original brief/contracts/guidance remain loaded. Exact first delivery reports/manifests/seals/patches39 plus four affected source files archived in logs/pre-MFR1-MFR3 before replacing.
-
-Next: test-first PostgreSQL activation transient recovery/exhaustion and incoherent machine tuple regressions; restore existing state owner/validation without API/schema/lock-order changes. Then add both-order real files-owned byte-read restriction/Sensitive+Adult preference/private membership races with current bridge/identity/canonical locks. Focused and whole actual PostgreSQL/Testcontainers checks, regeneration/seals/cleanup, same independent review required. Existing historical API log596-byte sealed prefix now append-only; do not claim original full hash unchanged. No source overlap/delegation/goals/Git/deploy/provider change.
-
-No app/browser retained. Assigned PG1730365/API2094717 revalidate before runtime checks. Unchanged prior browser/layout evidence reusable only within stated coverage; current lifecycle corrections require new behavior evidence. Gate0 and real money remain gated.

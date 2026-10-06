@@ -1,2 +1,0 @@
-Task foundations F-A1–F-A8/F2 + FR1. No new founder question or local blocker; independent implementation verdict accepted in report.md.
-Production legal/age/guardian/retention/vendor/custody/commercial/capacity/public-launch questions remain docs/questions.md under S1. Sandbox acceptance does not select answers or authorize live money/public deployment.

@@ -1,9 +1,0 @@
-{
-  "keyboardRegistrationVerification": true,
-  "passwordOnlyDenied": true,
-  "currentIdentityEvidence": true,
-  "exactApprovedFile": true,
-  "reportCreated": true,
-  "appealCreated": true,
-  "failure": "TimeoutError"
-}

@@ -1,6 +1,0 @@
-history_matches=1611
-history_expected_differences=2
-api_original_prefix_bytes=1043
-api_current_bytes=1341
-api_original_prefix_match=true
-other_difference=root_owned_takeover_GOAL_CHECKPOINT

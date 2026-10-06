@@ -1,9 +1,0 @@
-# Moderation correction developer checkpoint
-
-Task MFR1–MFR3, workspace `/home/paradis/changeo`, sole writer `/root/moderation_takeover/moderation_builder_takeover`. Coordinator `/root/moderation_takeover` owns dispatch; separate final reviewer owns acceptance. Status: implementation complete, integrated verification running in native exec session96258.
-
-Eight new actual local PostgreSQL executions passed in `logs/MFR3-host-first.log` with underlying exit0. Both byte-read orders cover participant restriction, Sensitive/Adult preference withdrawal and private membership removal. Installed trusted bridge calls real guards; mutations use their existing owners. Gate release precedes executor close; actors clear in finally. Existing recall tests retain assertions and now release gates before executor close. No production source changed by takeover; retained MFR1/MFR2 fixes remain.
-
-First restricted invocation retained in `logs/MFR3-first.log`/exit1: socket permission prevented context startup, eight errors and no behavioral execution. Approved host invocation passed. PostgreSQL1730365 and Podman2094717 ownership confirmed, loopback55432, API ping OK, no8080. No app/browser started. New tests use synthetic files cleaned by existing afterEach; Testcontainers cleanup will be checked after verify.
-
-Original baseline289, accepted F3 supplement87/six seals, old evidence, four retained partial source snapshots remain read-only. Takeover start source143/history1349 fingerprints and own four-file baseline are in `logs/start-*.json` and `baseline/`. Exact next action: collect session96258 completion; diagnose any failure; regenerate cumulative patches, preservation/source/history evidence and actual report/notes/questions/seals before ready_for_review. No unsaved handoff promise or acceptance.

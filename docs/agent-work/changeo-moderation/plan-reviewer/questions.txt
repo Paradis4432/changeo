@@ -1,1 +1,0 @@
-changeo-moderation M1C/M1D: no unresolved private design/user authority question. Production Gate0 questions remain at docs/questions.md and docs/delivery.md#gate0-feasibility-before-product-implementation; no production approval inferred. Future owner integration remains an explicit per-owner implementation/test obligation, not a missing decision for this private workbench.

@@ -1,5 +1,0 @@
-<!doctype html><html lang="es-AR" xmlns:th="http://www.thymeleaf.org"><body>
-<header th:fragment="header"><a class="skip" href="#main">Ir al contenido</a><div class="banner">Entorno privado · Datos sintéticos · Dinero real deshabilitado</div><nav aria-label="Principal"><a class="brand" href="/">Changeo</a><a href="/account">Mi cuenta</a><a href="/account/guardian">Guardianes</a><a href="/support">Ayuda</a><a href="/rights">Derechos</a><a href="/admin/mfa">Administración</a><form th:action="@{/logout}" method="post"><button class="secondary" type="submit">Salir</button></form></nav></header>
-<div th:fragment="notice" th:if="${notice}" class="notice" role="status" th:text="${notice}"></div>
-<footer th:fragment="footer"><p>Prueba local. No ingresar personas, menores reales ni datos personales. Sin servicios publicados, contratos, saldos ni pagos.</p></footer>
-</body></html>
