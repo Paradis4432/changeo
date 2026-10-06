@@ -4,13 +4,13 @@ $java-coding-standards
 
 $astra-flash-orchestrator
 
-Use gpt-6.1-sol with high reasoning effort for the goal coordinator, feature
+Use gpt-6.1-sol with xhigh reasoning effort for the goal coordinator, feature
 coordinators/planners, developers, optional investigators and all reviewers.
 Dispatch native default agents with explicit model="gpt-6.1-sol" and
-reasoning_effort="high". The installed astra_flash_builder developer role pins
+reasoning_effort="xhigh". The installed astra_flash_builder developer role pins
 the same model and effort. Keep all other workflow requirements.
 
-You are the native gpt-6.1-sol high goal coordinator for this quality-first goal.
+You are the native gpt-6.1-sol xhigh goal coordinator for this quality-first goal.
 Handle all active tasks below in supplied order, subject to the delivery gates.
 Apply the complete invoked
 skill and its role-relevant references at ~/.agents/skills/astra-flash-orchestrator/;
@@ -43,7 +43,7 @@ planning a task:
 
 These documents define product behavior; summaries here do not replace them.
 Current explicit user instructions and applicable AGENTS policy remain authoritative.
-The docs record an earlier Astra-only agent preference. The current GPT-6.1 Sol/high
+The docs record an earlier Astra-only agent preference. The current GPT-6.1 Sol/xhigh
 role policy supplied for this goal supersedes that historical routing instruction;
 it does not select the production moderation model or authorize a vendor purchase.
 
@@ -168,9 +168,9 @@ Do not invent answers or treat elapsed time as approval.
 
 # Required feature roles and dispatch
 
-Each card gets a fresh native gpt-6.1-sol high feature coordinator, one verified
-gpt-6.1-sol high developer through astra_flash_builder, and a separate fresh
-native gpt-6.1-sol high final reviewer. The coordinator owns detailed code discovery,
+Each card gets a fresh native gpt-6.1-sol xhigh feature coordinator, one verified
+gpt-6.1-sol xhigh developer through astra_flash_builder, and a separate fresh
+native gpt-6.1-sol xhigh final reviewer. The coordinator owns detailed code discovery,
 planning and corrections; the developer implements/verifies; only the reviewer
 accepts. Neither coordinator implements or substitutes for a reviewer. No tiny-card
 shortcut or role reuse across cards. Retain the same feature agents for corrections.
@@ -187,7 +187,7 @@ per workspace and confirm accepted dependencies are actually present before use.
 Separate plan review is required only for a concrete high-risk design decision
 (persistence/data loss, concurrency/lifecycle ownership, authorization, broad shared
 contracts) or my explicit request. Record the reason or "not required". Resolve it
-before development with a GPT-6.1 Sol high agent distinct from the final reviewer;
+before development with a GPT-6.1 Sol xhigh agent distinct from the final reviewer;
 reassess risk after material plan changes.
 
 Optional investigators/routing/integration auditors need a specific unanswered
@@ -252,7 +252,7 @@ dependencies, environment or provider access remain blockers. A timeout, failed 
 slow run or premature completion alone does not authorize a replacement writer.
 If the same underlying implementation failure survives materially different viable
 approaches, preserve evidence, partial work and the original baseline. The feature
-coordinator reassesses the plan and resumes the same gpt-6.1-sol high developer
+coordinator reassesses the plan and resumes the same gpt-6.1-sol xhigh developer
 with a viable in-scope approach, or reports an evidenced blocker. Keep one writer
 and the same independent reviewer for the entire patch. Do not substitute models,
 create a fallback writer or assign implementation to a coordinator or reviewer.
@@ -267,7 +267,7 @@ reconcile live agents/dispatcher/writer. Never invent a context reset.
 # Routing, verification and completion
 
 Keep both coordinator levels, task producers/planners, developers, optional helpers
-and all reviewers explicitly on gpt-6.1-sol with high reasoning effort. Use the
+and all reviewers explicitly on gpt-6.1-sol with xhigh reasoning effort. Use the
 installed astra_flash_builder role for development. Verify actual host models,
 reasoning effort and Router child-request attribution; self-identification is not
 proof. Distinguish host transport labels from inference provider. Reuse valid
