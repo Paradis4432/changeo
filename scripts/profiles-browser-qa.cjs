@@ -4,8 +4,9 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-const logs = path.join(root, 'docs/agent-work/changeo-profiles/developer/logs');
+const logs = path.resolve(root, process.env.P1_QA_LOGS || 'docs/agent-work/changeo-profiles/developer/logs');
 const runtime = path.join(root, '.runtime');
+const fixturePath = path.resolve(root, process.env.P1_QA_FIXTURE || '.runtime/p1-browser-fixture.private');
 const base = 'http://127.0.0.1:8080';
 const checks = {};
 const mutationTimes = [];
@@ -140,7 +141,25 @@ async function publicView(page, route, title) {
 async function bytes(page) {
   const waiting = page.waitForEvent('download');
   await page.getByRole('link', { name: 'Descargar archivo aprobado' }).click();
-  const download = await waiting; assert.equal(await fs.readFile(await download.path(), 'utf8'), 'synthetic:clear');
+  const download = await waiting;
+  const content = await fs.readFile(await download.path());
+  assert.equal(content.toString('utf8'), 'synthetic:clear');
+  return crypto.createHash('sha256').update(content).digest('hex');
+}
+
+async function projection(context, route) {
+  const response = await context.request.get(base + route + '/share');
+  assert.equal(response.status(), 200);
+  return response.json();
+}
+
+function retainedProjection(view) {
+  return { ...view, details: { ...view.details, modes: [...view.details.modes].sort() } };
+}
+
+async function searchSelection(page, title) {
+  await page.goto(base + '/marketplace?q=' + encodeURIComponent(title));
+  return page.locator('main a[href^="/listings/"]').evaluateAll(elements => elements.map(element => ({ href: element.getAttribute('href'), title: element.textContent.trim() })));
 }
 
 async function state(page, id, action) {
@@ -151,6 +170,7 @@ async function state(page, id, action) {
 }
 
 async function run() {
+  await fs.mkdir(logs, { recursive: true });
   const browser = await firefox.launch({ executablePath: '/home/paradis/.cache/ms-playwright/firefox-1553/firefox/firefox', headless: true });
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
   const operatorContext = await browser.newContext({ viewport: { width: 1280, height: 900 } });
@@ -158,12 +178,17 @@ async function run() {
   page.on('pageerror', () => { checks.pageError = true; }); operator.on('pageerror', () => { checks.pageError = true; });
   try {
     if (process.argv.includes('--restart-check')) {
-      const fixture = JSON.parse(await fs.readFile(path.join(runtime, 'p1-browser-fixture.private'), 'utf8'));
+      const fixture = JSON.parse(await fs.readFile(fixturePath, 'utf8'));
       await login(page, fixture.provider);
-      await publicView(page, '/profiles/' + fixture.profile, fixture.profileTitle); await bytes(page);
-      await publicView(page, '/listings/' + fixture.offer, fixture.offerTitle); await bytes(page);
-      await page.goto(base + '/marketplace?q=' + encodeURIComponent(fixture.offerTitle));
-      assert.equal(await page.getByRole('link', { name: fixture.offerTitle, exact: true }).count(), 1);
+      await publicView(page, '/profiles/' + fixture.profile, fixture.profileTitle);
+      assert.equal(await bytes(page), fixture.profileBytes);
+      await publicView(page, '/listings/' + fixture.offer, fixture.offerTitle);
+      assert.equal(await bytes(page), fixture.offerBytes);
+      assert.deepEqual(retainedProjection(await projection(context, '/profiles/' + fixture.profile)), retainedProjection(fixture.profileProjection));
+      assert.deepEqual(retainedProjection(await projection(context, '/profiles/' + fixture.requesterProfile)), retainedProjection(fixture.requesterProjection));
+      assert.deepEqual(retainedProjection(await projection(context, '/listings/' + fixture.offer)), retainedProjection(fixture.offerProjection));
+      assert.deepEqual(await searchSelection(page, fixture.offerTitle), fixture.searchSelection);
+      assert.equal((await context.request.get(base + '/listings/' + fixture.closedRequest)).status(), 403);
       checks.packagedRestartRetainedProfileListingSearchAndBytes = true;
       await fs.writeFile(path.join(logs, 'browser-restart.json'), JSON.stringify(checks, null, 2));
       return;
@@ -197,8 +222,10 @@ async function run() {
     checks.stage = 'requesterRegistration'; fixture.requester = await register(page, operator, false);
     const requesterTitle = 'Restauración de instrumento raro ' + token;
     const requesterProfile = await compose(page, 'CUSTOMER_PROFILE', 'Perfil solicitante ' + token);
+    fixture.requesterProfile = requesterProfile;
     await approve(operator, await submit(page, requesterProfile));
     const request = await compose(page, 'REQUEST', requesterTitle);
+    fixture.closedRequest = request;
     await approve(operator, await submit(page, request)); await publicView(page, '/listings/' + request, requesterTitle);
     await page.goto(base + '/marketplace?type=REQUEST&q=' + encodeURIComponent(token));
     assert.equal(await page.getByRole('link', { name: requesterTitle, exact: true }).count(), 1);
@@ -231,7 +258,14 @@ async function run() {
       await page.screenshot({ path: path.join(logs, 'browser-' + name + '-mobile.png'), fullPage: true });
     }
     checks.keyboardFocusMobileEscaping = true; assert.equal(checks.pageError, undefined);
-    await fs.writeFile(path.join(runtime, 'p1-browser-fixture.private'), JSON.stringify(fixture), { mode: 0o600 });
+    fixture.profileProjection = await projection(context, '/profiles/' + fixture.profile);
+    fixture.requesterProjection = await projection(context, '/profiles/' + fixture.requesterProfile);
+    fixture.offerProjection = await projection(context, '/listings/' + fixture.offer);
+    await publicView(page, '/profiles/' + fixture.profile, fixture.profileTitle); fixture.profileBytes = await bytes(page);
+    await publicView(page, '/listings/' + fixture.offer, fixture.offerTitle); fixture.offerBytes = await bytes(page);
+    fixture.searchSelection = await searchSelection(page, fixture.offerTitle);
+    assert.equal(fixture.searchSelection.length, 1);
+    await fs.writeFile(fixturePath, JSON.stringify(fixture), { mode: 0o600, flag: 'wx' });
     await fs.writeFile(path.join(logs, 'browser-qa.json'), JSON.stringify(checks, null, 2)); console.log(JSON.stringify(checks));
   } finally { await context.close(); await operatorContext.close(); await browser.close(); }
 }

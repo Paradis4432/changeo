@@ -2,6 +2,9 @@ package ar.changeo.marketplace;
 
 import ar.changeo.files.api.*;
 import ar.changeo.identity.api.JobContext.FulfillmentMode;
+import ar.changeo.identity.GuardianService;
+import ar.changeo.conversations.MessageReader;
+import ar.changeo.jobs.api.ReputationCursor;
 import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
 import ar.changeo.security.AccountPrincipal;
@@ -10,6 +13,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -28,10 +32,16 @@ public class MarketplaceController {
     private final CaseService cases;
     private final FileAccess files;
     private final Admission admission;
+    private final MessageReader discussions;
+    private final GuardianService guardians;
+    private final boolean syntheticSubscriptions;
 
     MarketplaceController(MarketplaceService service, MarketplaceReader reader, DiscoveryService discovery, ModerationService moderation,
-                          CaseService cases, FileAccess files, Admission admission) {
+                          CaseService cases, FileAccess files, Admission admission, MessageReader discussions, GuardianService guardians,
+                          @Value("${changeo.synthetic-subscriptions:false}") boolean syntheticSubscriptions) {
         this.service=service; this.reader=reader; this.discovery=discovery; this.moderation=moderation; this.cases=cases; this.files=files; this.admission=admission;
+        this.discussions=discussions; this.guardians=guardians;
+        this.syntheticSubscriptions=syntheticSubscriptions;
     }
 
     @GetMapping("/marketplace") public String search(@RequestParam(defaultValue="OFFER") PresenceType type,
@@ -42,7 +52,9 @@ public class MarketplaceController {
         model.addAttribute("provinces",MarketplaceDetails.PROVINCES);
         return "marketplace-search";
     }
-    @GetMapping("/marketplace/mine") public String mine(Model model) { model.addAttribute("resources",reader.ownResources()); return "marketplace-mine"; }
+    @GetMapping("/marketplace/mine") public String mine(Model model) {
+        model.addAttribute("resources",reader.ownResources()); model.addAttribute("syntheticSubscriptions",syntheticSubscriptions); return "marketplace-mine";
+    }
 
     @GetMapping({"/marketplace/create","/profiles/create"}) public String create(@RequestParam PresenceType type,
             @RequestParam(required=false) UUID subject,@AuthenticationPrincipal AccountPrincipal principal,Model model) {
@@ -125,9 +137,19 @@ public class MarketplaceController {
             @RequestParam String kind,@RequestParam String reason,@RequestParam(defaultValue="") String note,HttpServletRequest request) {
         source(request); cases.open(command,service.reference(resource,revision),kind,reason,note); return "redirect:/moderation/cases";
     }
-    @GetMapping("/listings/{id}") public String listing(@PathVariable UUID id,Model model) { return detail(reader.publicView(id),false,model); }
-    @GetMapping("/profiles/{id}") public String profile(@PathVariable UUID id,Model model) { return detail(reader.publicView(id),true,model); }
-    @GetMapping("/profiles/account/{subject}/{type}") public String subjectProfile(@PathVariable UUID subject,@PathVariable PresenceType type,Model model) { return detail(reader.publicProfile(subject,type),true,model); }
+    @GetMapping("/listings/{id}") public String listing(@PathVariable UUID id,@AuthenticationPrincipal AccountPrincipal principal,Model model) {
+        var view=reader.publicView(id);model.addAttribute("discussion",discussions.discussion(view.reference()));model.addAttribute("self",principal==null ? null : principal.id());
+        model.addAttribute("guardianSubjects",principal==null ? List.of() : guardians.own(principal.id()));return detail(view,false,model);
+    }
+    @GetMapping("/profiles/{id}") public String profile(@PathVariable UUID id,@RequestParam(required=false) Long offset,@RequestParam(required=false) Long cohort,Model model) {
+        if ((offset==null)!=(cohort==null)) { throw new IllegalArgumentException("Continuación incompleta"); }
+        var composed=reader.composedProfile(id,offset==null ? Optional.empty() : Optional.of(new ReputationCursor(offset,cohort)));
+        model.addAttribute("reputation",composed.reputation());model.addAttribute("achievement",composed.achievement());return detail(composed.profile(),true,model);
+    }
+    @GetMapping("/profiles/account/{subject}/{type}") public String subjectProfile(@PathVariable UUID subject,@PathVariable PresenceType type,Model model) {
+        var found=reader.publicProfile(subject,type);var composed=reader.composedProfile(found.reference().resourceId(),Optional.empty());
+        model.addAttribute("reputation",composed.reputation());model.addAttribute("achievement",composed.achievement());return detail(composed.profile(),true,model);
+    }
     @GetMapping({"/listings/{id}/preview","/listings/{id}/share","/profiles/{id}/preview","/profiles/{id}/share"}) @ResponseBody
     public MarketplaceReader.PublicView projection(@PathVariable UUID id) { return reader.publicView(id); }
     @GetMapping("/marketplace/files/{id}") public ResponseEntity<byte[]> file(@PathVariable UUID id,@RequestParam UUID resource,@RequestParam UUID revision,@RequestParam String digest) {

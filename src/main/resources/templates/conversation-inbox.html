@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Conversaciones · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body><header th:replace="~{shell :: header}"></header><main id="main">
+<h1>Conversaciones</h1><div th:replace="~{shell :: notice}"></div>
+<form action="/conversations" method="get"><label for="subject">Actuar por</label><select id="subject" name="subject"><option th:value="${self}" th:selected="${subject == self}">Mi cuenta</option><option th:each="link : ${guardianSubjects}" th:if="${link.guardianId == self and link.status == 'VERIFIED'}" th:value="${link.minorId}" th:selected="${subject == link.minorId}">Cuenta sintética bajo mi autoridad</option></select><button>Consultar</button></form>
+<p>Solo participantes autorizados. Los mensajes pendientes no se muestran a la contraparte.</p>
+<p th:if="${threads.isEmpty()}">No hay conversaciones disponibles. Podés comenzar desde una oferta o solicitud aprobada.</p>
+<article class="card" th:each="thread : ${threads}"><h2 th:text="${thread.listingTitle}"></h2><p th:text="${@conversationWords.mode(thread.mode)}"></p><a th:href="@{/conversations/{id}(id=${thread.id},subject=${subject})}">Abrir conversación</a></article>
+<p><a href="/marketplace">Buscar servicios</a> · <a href="/jobs/support">Obligaciones y ayuda conservada</a> · <a href="/notifications">Estado de avisos</a></p>
+</main><footer th:replace="~{shell :: footer}"></footer></body></html>

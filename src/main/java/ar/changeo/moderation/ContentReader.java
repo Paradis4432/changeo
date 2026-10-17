@@ -14,8 +14,8 @@ public class ContentReader {
     private final ModerationStore moderation;
     private final IdentityAccess identity;
     private final SecurityProof proof;
-    private final OwnerRegistry owners;
-    ContentReader(WorkbenchStore workbench,ModerationStore moderation,IdentityAccess identity,SecurityProof proof,OwnerRegistry owners) { this.workbench=workbench;this.moderation=moderation;this.identity=identity;this.proof=proof;this.owners=owners; }
+    private final OwnerProtection protection;
+    ContentReader(WorkbenchStore workbench,ModerationStore moderation,IdentityAccess identity,SecurityProof proof,OwnerProtection protection) { this.workbench=workbench;this.moderation=moderation;this.identity=identity;this.proof=proof;this.protection=protection; }
     @Transactional public ContentView retrieve(UUID resourceId) {
         var discovered=workbench.resource(resourceId,false);
         if(discovered.approved()==null) { throw ModerationStore.unavailable(); }
@@ -28,9 +28,8 @@ public class ContentReader {
         checkOrdinary(resource,submission,expected.label());return view(resource,submission);
     }
     @Transactional public ContentView evidence(ContentReference reference) {
-        identity.requireForUpdate(operator(Capability.ADMIN_MODERATION_REVIEW));
         var discovered=moderation.submission(reference,false);
-        var canonical=owners.require(reference).lockRevision(discovered.author(),reference);
+        var canonical=protection.protect(operator(Capability.ADMIN_MODERATION_REVIEW),discovered.author(),reference).canonical();
         moderation.barrier(reference,false);var submission=moderation.submission(reference,true);var snapshot=moderation.input(submission);
         if(!discovered.author().equals(submission.author()) || !canonical.reference().equals(reference)
                 || !canonical.text().equals(snapshot.text()) || !canonical.declaredLabel().equals(snapshot.declaredLabel())

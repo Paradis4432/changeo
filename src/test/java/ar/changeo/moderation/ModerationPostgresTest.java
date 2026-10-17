@@ -50,6 +50,8 @@ class ModerationPostgresTest {
     @Autowired IndependentOwner independent;
     @Autowired Admission admission;
     @Autowired OwnerRegistry ownerRegistry;
+    @Autowired OwnerProtection ownerProtection;
+    @Autowired org.springframework.beans.factory.ObjectProvider<ar.changeo.moderation.api.ModerationAccess> moderationAccess;
     @Autowired ReviewEngine reviewEngine;
     @MockitoBean SessionProof proof;
     @MockitoBean TokenDelivery delivery;
@@ -460,7 +462,7 @@ class ModerationPostgresTest {
 
     @Test void shouldLeaveDurableTasksUntouchedWhenSyntheticWorkerIsDisabled() {
         actor.set(verified(30));var ref=save("synthetic:clear");submit(ref);
-        var disabled=new ModerationWorker(store,decisions,identity,ownerRegistry,files,reviewEngine,transactions,clock,false);
+        var disabled=new ModerationWorker(store,decisions,identity,ownerProtection,moderationAccess,files,reviewEngine,transactions,clock,false);
         assertThat(disabled.claim()).isEmpty();assertThat(disabled.processOne()).isFalse();assertThat(moderation.approval(ref).state()).isEqualTo("PENDING");
         assertThat(jdbc.queryForObject("select attempts from moderation_task where submission_id=(select id from moderation_snapshot where revision_id=?)",Integer.class,ref.revisionId())).isZero();
     }
@@ -475,7 +477,7 @@ class ModerationPostgresTest {
         assertThat(tx(()->canonical.resource(ref.resourceId(),false).approved())).isNull();assertThat(reader.own(ref.resourceId()).version()).isEqualTo(version);
         assertThat(jdbc.queryForObject("select count(*) from moderation_signal where snapshot_id=?",Long.class,first.submission())).isZero();
         reset(owner);clock.advance(6);var retry=worker.claim().orElseThrow();assertThat(retry.id()).isEqualTo(first.id());
-        var recovered=new ModerationWorker(store,decisions,identity,ownerRegistry,files,reviewEngine,transactions,clock,true);
+        var recovered=new ModerationWorker(store,decisions,identity,ownerProtection,moderationAccess,files,reviewEngine,transactions,clock,true);
         recovered.process(retry);recovered.process(retry);
         assertThat(reader.retrieve(ref.resourceId()).reference()).isEqualTo(ref);assertThat(reader.own(ref.resourceId()).version()).isEqualTo(version+1);
         assertThat(moderation.generation(ref)).isEqualTo(generation);assertThat(worker.claim()).isEmpty();
@@ -501,7 +503,7 @@ class ModerationPostgresTest {
     @Test void shouldPersistNonpositiveInvalidDecisionForExactlyBoundContradictoryAdapterOutput() {
         actor.set(verified(30));var ref=save("synthetic:clear");submit(ref);
         ReviewEngine contradictory=input->{var result=new HashMap<>(reviewEngine.review(input));result.put("reason","PROHIBITED");return result;};
-        var guardedWorker=new ModerationWorker(store,decisions,identity,ownerRegistry,files,contradictory,transactions,clock,true);
+        var guardedWorker=new ModerationWorker(store,decisions,identity,ownerProtection,moderationAccess,files,contradictory,transactions,clock,true);
         guardedWorker.process(guardedWorker.claim().orElseThrow());var snapshot=store.submission(ref,false);
         assertThat(moderation.approval(ref).state()).isEqualTo("MANUAL_REVIEW");assertThat(moderation.approval(ref).reason()).isEqualTo("INVALID");
         assertThat(jdbc.queryForObject("select count(*) from moderation_decision where submission_id=? and action='APPROVE'",Long.class,snapshot.id())).isZero();

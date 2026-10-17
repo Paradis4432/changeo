@@ -18,23 +18,23 @@ import org.springframework.transaction.support.TransactionTemplate;
 public class ModerationService implements ModerationAccess {
     private final ModerationStore store;
     private final OwnerRegistry owners;
-    private final IdentityAccess identity;
+    private final OwnerProtection protection;
     private final SecurityProof proof;
     private final FileAccess files;
     private final Admission admission;
     private final Clock clock;
     private final TransactionTemplate participating;
-    public ModerationService(ModerationStore store,OwnerRegistry owners,IdentityAccess identity,SecurityProof proof,FileAccess files,Admission admission,Clock clock,PlatformTransactionManager transactions) {
-        this.store=store;this.owners=owners;this.identity=identity;this.proof=proof;this.files=files;this.admission=admission;this.clock=clock;
+    public ModerationService(ModerationStore store,OwnerRegistry owners,OwnerProtection protection,SecurityProof proof,FileAccess files,Admission admission,Clock clock,PlatformTransactionManager transactions) {
+        this.store=store;this.owners=owners;this.protection=protection;this.proof=proof;this.files=files;this.admission=admission;this.clock=clock;
         this.participating=new TransactionTemplate(transactions);this.participating.setPropagationBehavior(TransactionDefinition.PROPAGATION_MANDATORY);
     }
     @Override public Approval submitForReview(AuthorContext author,ContentReference reference,String text,String declaredLabel,List<FileReference> attachments) {
         ModerationStore.requireTransaction();
         return participating.execute(status -> {
             if(!proof.actor().filter(author.actor().value()::equals).isPresent()) { throw ModerationStore.unavailable(); }
-            var owner=owners.require(reference);
-            identity.requireForUpdate(author.permission());
-            var canonical=owner.lockRevision(author,reference);
+            var protectedRevision=protection.protect(author.permission(),author,reference);
+            var owner=protectedRevision.owner();
+            var canonical=protectedRevision.canonical();
             ContentDigest.validate(text,declaredLabel,attachments);
             String digest=ContentDigest.payload(text,declaredLabel,attachments);
             if(!owner.current(reference) || !canonical.reference().equals(reference) || !canonical.text().equals(text) || !canonical.declaredLabel().equals(declaredLabel) || !canonical.digest().equals(digest) || !new HashSet<>(canonical.attachments()).equals(new HashSet<>(attachments))) { throw ModerationStore.unavailable(); }
@@ -65,11 +65,40 @@ public class ModerationService implements ModerationAccess {
         store.barrier(reference,false);
         return Optional.of(approval(store.submission(reference,true)));
     }
+    @Override public Map<ContentReference,Approval> approvalsForUpdate(Set<ContentReference> references) {
+        return participating.execute(status -> {
+            Set<ContentReference> exact=Set.copyOf(references);
+            if(exact.isEmpty() || exact.size()>32) { throw ModerationStore.unavailable(); }
+            Map<ContentReference,ModerationStore.Submission> discovered=new HashMap<>();
+            for(var reference:exact) {
+                owners.require(reference);
+                discovered.put(reference,store.submission(reference,false));
+            }
+            discovered.values().stream().map(ModerationStore.Submission::barrier).distinct()
+                    .sorted(Comparator.comparing(UUID::toString)).forEach(store::barrier);
+            Map<ContentReference,Approval> result=new HashMap<>();
+            for(var expected:discovered.values().stream().sorted(Comparator.comparing(value -> value.id().toString())).toList()) {
+                var current=store.submission(expected.id(),true);
+                if(!current.reference().equals(expected.reference()) || !current.barrier().equals(expected.barrier())
+                        || !current.digest().equals(expected.digest()) || !current.author().equals(expected.author())) {
+                    throw ModerationStore.unavailable();
+                }
+                owners.require(current.reference());
+                var input=store.input(current);
+                if(!ContentDigest.payload(input.text(),input.declaredLabel(),input.attachments()).equals(current.digest())) {
+                    throw ModerationStore.unavailable();
+                }
+                result.put(current.reference(),approval(current));
+            }
+            if(!result.keySet().equals(exact)) { throw ModerationStore.unavailable(); }
+            return Map.copyOf(result);
+        });
+    }
     @Transactional public void retry(UUID command,ContentReference reference,long generation) {
         var discovered=store.submission(reference,false);
         if(!proof.actor().filter(discovered.author().actor().value()::equals).isPresent()) { throw ModerationStore.unavailable(); }
-        identity.requireForUpdate(discovered.author().permission());
-        var owner=owners.require(reference);var canonical=owner.lockRevision(discovered.author(),reference);
+        var protectedRevision=protection.protect(discovered.author().permission(),discovered.author(),reference);
+        var owner=protectedRevision.owner();var canonical=protectedRevision.canonical();
         store.barrier(reference,false);var submission=store.submission(reference,true);
         String digest=ContentDigest.bytes((reference+":"+generation).getBytes(StandardCharsets.UTF_8));
         if(store.receipt(discovered.author().actor().value(),command,"RETRY",digest).isPresent()) { return; }

@@ -2,6 +2,7 @@ package ar.changeo.moderation;
 
 import ar.changeo.files.api.*;
 import ar.changeo.identity.api.*;
+import ar.changeo.moderation.api.ModerationAccess;
 import java.sql.Timestamp;
 import java.time.Clock;
 import java.util.*;
@@ -15,15 +16,16 @@ public class ModerationWorker {
     private final ModerationStore store;
     private final DecisionService decisions;
     private final IdentityAccess identity;
-    private final OwnerRegistry owners;
+    private final OwnerProtection protection;
+    private final org.springframework.beans.factory.ObjectProvider<ModerationAccess> moderation;
     private final FileAccess files;
     private final ReviewEngine engine;
     private final TransactionTemplate transaction;
     private final Clock clock;
     private final boolean enabled;
-    public ModerationWorker(ModerationStore store,DecisionService decisions,IdentityAccess identity,OwnerRegistry owners,FileAccess files,ReviewEngine engine,
+    public ModerationWorker(ModerationStore store,DecisionService decisions,IdentityAccess identity,OwnerProtection protection,org.springframework.beans.factory.ObjectProvider<ModerationAccess> moderation,FileAccess files,ReviewEngine engine,
                             PlatformTransactionManager transactions,Clock clock,@Value("${changeo.synthetic-moderation:false}") boolean enabled) {
-        this.store=store; this.decisions=decisions; this.identity=identity; this.owners=owners; this.files=files; this.engine=engine;
+        this.store=store; this.decisions=decisions; this.identity=identity; this.protection=protection; this.moderation=moderation; this.files=files; this.engine=engine;
         this.transaction=new TransactionTemplate(transactions); this.clock=clock; this.enabled=enabled;
     }
     public Optional<Claim> claim() {
@@ -81,10 +83,16 @@ public class ModerationWorker {
     private void activate(Claim claim) {
         transaction.executeWithoutResult(status -> {
             var discovered=store.submission(claim.submission(),false);
-            identity.requireForUpdate(discovered.author().permission());
-            var owner=owners.require(discovered.reference());
-            var canonical=owner.lockRevision(discovered.author(),discovered.reference());
-            store.barrier(claim.barrier());var submission=store.submission(claim.submission(),true);
+            var protectedRevision=protection.protect(discovered.author().permission(),discovered.author(),discovered.reference());
+            var owner=protectedRevision.owner();
+            var canonical=protectedRevision.canonical();
+            owner.prepareActivation(discovered.reference());
+            var approvals=moderation.getObject().approvalsForUpdate(protectedRevision.deliveryReferences());
+            for(var dependency:protectedRevision.dependencies()) {
+                if(!"APPROVED".equals(approvals.get(dependency).state())) { throw ModerationStore.unavailable(); }
+            }
+            var submission=store.submission(claim.submission(),false);
+            if(!submission.barrier().equals(claim.barrier()) || !submission.reference().equals(discovered.reference())) { throw ModerationStore.unavailable(); }
             if(!live(claim)) { return; }
             if(!owner.current(submission.reference()) || !canonical.digest().equals(submission.digest()) || !canonical.attachments().equals(store.attachments(submission)) || submission.recalled() || !submission.state().equals("APPROVED") || !Objects.equals(submission.decision(),claim.decision()) || submission.generation()!=claim.generation()) { complete(claim,"SUPERSEDED");return; }
             if(submission.label().equals("ADULT") && (!identity.decide(PermissionRequest.self(new AccountId(submission.author().subject().value()),Capability.VIEW_ADULT)).allowed() || !identity.decide(PermissionRequest.self(new AccountId(submission.author().actor().value()),Capability.VIEW_ADULT)).allowed())) { throw new ar.changeo.identity.IdentityFailure("Adult eligibility required"); }

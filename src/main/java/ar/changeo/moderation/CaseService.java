@@ -15,42 +15,52 @@ import org.springframework.transaction.annotation.Transactional;
 public class CaseService {
     private static final Set<String> REASONS=Set.of("MISLABEL","SAFETY","FALSE_POSITIVE","OTHER");
     private final ModerationStore store;
-    private final OwnerRegistry owners;
+    private final OwnerProtection protection;
+    private final org.springframework.beans.factory.ObjectProvider<ModerationAccess> moderation;
     private final IdentityAccess identity;
     private final SecurityProof proof;
     private final Admission admission;
     private final DecisionService decisions;
     private final FileAccess files;
     private final Clock clock;
-    CaseService(ModerationStore store,OwnerRegistry owners,IdentityAccess identity,SecurityProof proof,Admission admission,DecisionService decisions,FileAccess files,Clock clock) {
-        this.store=store;this.owners=owners;this.identity=identity;this.proof=proof;this.admission=admission;this.decisions=decisions;this.files=files;this.clock=clock;
+    CaseService(ModerationStore store,OwnerProtection protection,org.springframework.beans.factory.ObjectProvider<ModerationAccess> moderation,IdentityAccess identity,SecurityProof proof,Admission admission,DecisionService decisions,FileAccess files,Clock clock) {
+        this.store=store;this.protection=protection;this.moderation=moderation;this.identity=identity;this.proof=proof;this.admission=admission;this.decisions=decisions;this.files=files;this.clock=clock;
     }
     @Transactional public UUID open(UUID command,ContentReference ref,String kind,String reason,String note) {
-        UUID actor=actor();identity.requireForUpdate(PermissionRequest.self(new AccountId(actor),Capability.ACCESS_SUPPORT));
+        UUID actor=actor();
         if(!Set.of("REPORT","APPEAL").contains(kind) || !REASONS.contains(reason) || note==null || note.length()>2000) { throw new ModerationFailure("Motivo o texto de caso inválido"); }
         String digest=hash(ref+":"+kind+":"+reason+":"+note);
-        var replay=store.receipt(actor,command,"CASE",digest);if(replay.isPresent()) { return replay.orElseThrow(); }
-        admission.actor(actor,"case");
-        var discovered=store.submission(ref,false);var owner=owners.require(ref);owner.lockRevision(discovered.author(),ref);
-        store.barrier(ref,false);var submission=store.submission(ref,true);
+        var discovered=store.submission(ref,false);
+        var protectedRevision=protection.protect(PermissionRequest.self(new AccountId(actor),Capability.ACCESS_SUPPORT),discovered.author(),ref);
+        var owner=protectedRevision.owner();
+        if(kind.equals("REPORT")) {
+            var approvals=moderation.getObject().approvalsForUpdate(protectedRevision.deliveryReferences());
+            if(protectedRevision.dependencies().stream().anyMatch(dependency -> !approvals.get(dependency).state().equals("APPROVED"))) { throw ModerationStore.unavailable(); }
+        }
+        else { store.barrier(ref,false);store.submission(ref,true); }
+        var submission=store.submission(ref,false);
         if(kind.equals("APPEAL")) {
             if(!submission.author().actor().value().equals(actor) && !submission.author().subject().value().equals(actor)) { throw ModerationStore.unavailable(); }
         } else if(!owner.reportable(ref) || submission.recalled() || !submission.state().equals("APPROVED") || !identity.decide(PermissionRequest.self(new AccountId(actor),ContentReader.capability(submission.label()))).allowed()) { throw ModerationStore.unavailable(); }
+        var replay=store.receipt(actor,command,"CASE",digest);if(replay.isPresent()) { return replay.orElseThrow(); }
+        admission.actor(actor,"case");
         UUID id=UUID.randomUUID();
         store.jdbc.update("insert into moderation_case(id,reference_id,submission_id,reporter_id,kind,reason,note,state,created_at) values(?,?,?,?,?,?,?,'OPEN',?)",id,submission.barrier(),submission.id(),actor,kind,reason,note,Timestamp.from(clock.instant()));
         store.audit(actor,submission,id,"CASE_OPENED");store.receipt(actor,command,"CASE",digest,id);return id;
     }
     @Transactional public UUID reviewCase(UUID command,ContentReference ref) {
-        UUID actor=actor();guard(actor,false);
+        UUID actor=actor();var discovered=store.submission(ref,false);
+        protection.protect(PermissionRequest.self(new AccountId(actor),Capability.ADMIN_MODERATION_REVIEW),discovered.author(),ref);
         String digest=hash(ref.toString());var replay=store.receipt(actor,command,"REVIEW_CASE",digest);if(replay.isPresent()) { return replay.orElseThrow(); }
-        admission.actor(actor,"operator");var discovered=store.submission(ref,false);owners.require(ref).lockRevision(discovered.author(),ref);
+        admission.actor(actor,"operator");
         store.barrier(ref,false);var submission=store.submission(ref,true);UUID id=UUID.randomUUID();
         store.jdbc.update("insert into moderation_case(id,reference_id,submission_id,reporter_id,kind,reason,note,state,owner_id,created_at) values(?,?,?,?,'REPORT','SAFETY','','OWNED',?,?)",id,submission.barrier(),submission.id(),actor,actor,Timestamp.from(clock.instant()));
         store.audit(actor,submission,id,"REVIEW_CASE_OPENED");store.receipt(actor,command,"REVIEW_CASE",digest,id);return id;
     }
     @Transactional public void act(UUID command,UUID caseId,long version,String action,String label,String reason) {
-        UUID actor=actor();guard(actor,false);var discovered=caseRow(caseId,false);var preliminary=store.submission((UUID)discovered.get("submission_id"),false);
-        var owner=owners.require(preliminary.reference());var canonical=owner.lockRevision(preliminary.author(),preliminary.reference());
+        UUID actor=actor();var discovered=caseRow(caseId,false);var preliminary=store.submission((UUID)discovered.get("submission_id"),false);
+        var protectedRevision=protection.protect(PermissionRequest.self(new AccountId(actor),Capability.ADMIN_MODERATION_REVIEW),preliminary.author(),preliminary.reference());
+        var owner=protectedRevision.owner();var canonical=protectedRevision.canonical();
         store.barrier(preliminary.barrier());var submission=store.submission(preliminary.id(),true);var row=caseRow(caseId,true);
         String digest=hash(caseId+":"+version+":"+action+":"+label+":"+reason);
         if(store.receipt(actor,command,"CASE_ACTION",digest).isPresent()) { return; }
@@ -86,8 +96,8 @@ public class CaseService {
         store.audit(actor,submission,caseId,"CASE_"+action);store.receipt(actor,command,"CASE_ACTION",digest,caseId);
     }
     @Transactional public void withdraw(UUID command,UUID evidenceId,long version) {
-        UUID actor=actor();guard(actor,false);var preliminary=store.jdbc.queryForMap("select * from moderation_evidence where id=?",evidenceId);var discovered=store.submission((UUID)preliminary.get("submission_id"),false);
-        owners.require(discovered.reference()).lockRevision(discovered.author(),discovered.reference());store.barrier(discovered.barrier());var submission=store.submission(discovered.id(),true);
+        UUID actor=actor();var preliminary=store.jdbc.queryForMap("select * from moderation_evidence where id=?",evidenceId);var discovered=store.submission((UUID)preliminary.get("submission_id"),false);
+        protection.protect(PermissionRequest.self(new AccountId(actor),Capability.ADMIN_MODERATION_REVIEW),discovered.author(),discovered.reference());store.barrier(discovered.barrier());var submission=store.submission(discovered.id(),true);
         var row=store.jdbc.queryForMap("select * from moderation_evidence where id=? for update",evidenceId);String digest=hash(evidenceId+":"+version);
         if(store.receipt(actor,command,"WITHDRAW",digest).isPresent()) { return; }
         admission.actor(actor,"operator");if(((Number)row.get("version")).longValue()!=version || (Boolean)row.get("withdrawn")) { throw new ModerationFailure("La evidencia cambió"); }

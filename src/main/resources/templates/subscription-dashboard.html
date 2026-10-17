@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Suscripción de proveedor · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body><header th:replace="~{shell :: header}"></header><main id="main"><h1>Suscripción de proveedor</h1><div th:replace="~{shell :: notice}"></div>
+<section th:unless="${enabled}"><h2>Suscripciones deshabilitadas</h2><p>Suscripciones y beneficios deshabilitados en este entorno. No se crean inscripciones ni cobros. La participación de proveedor conserva sus controles originales. Los clientes no pagan suscripción.</p></section>
+<div th:if="${enabled}" th:with="s=${subscription}">
+  <section><h2>Tu estado</h2><dl>
+    <dt>Suscripción</dt><dd th:text="${s.stateLabel()}"></dd>
+    <dt>Nueva participación de proveedor</dt><dd th:text="${s.entitlement ? 'Habilitada durante tu período válido' : 'Requiere un período válido; tus obligaciones seleccionadas se conservan'}"></dd>
+    <dt>Vigente hasta, hora argentina</dt><dd th:text="${s.validUntil.present ? s.date(s.validUntil.orElseThrow()) : 'Sin período vigente'}"></dd>
+    <dt th:if="${!s.entitlement and s.benefitEnd.present}">Fin del último período gratuito o de prueba</dt><dd th:if="${!s.entitlement and s.benefitEnd.present}" th:text="${s.date(s.benefitEnd.orElseThrow())}"></dd>
+    <dt>Próxima fecha registrada, hora argentina</dt><dd th:text="${s.nextDate.present ? s.date(s.nextDate.orElseThrow()) : 'Sin renovación programada'}"></dd>
+    <dt>Consentimiento recurrente actual</dt><dd th:text="${s.recurringAuthorized ? 'Conservado para estos términos hasta cancelar' : 'Sin autorización de futuros períodos bajo los términos actuales'}"></dd>
+    <dt>Crédito de suscripción disponible</dt><dd>ARS <span th:text="${s.ars(s.creditMinor)}"></span></dd>
+    <dt>Deuda promocional no monetaria</dt><dd>ARS <span th:text="${s.ars(s.debtMinor)}"></span></dd>
+  </dl><p th:if="${s.frozen}" role="status">Un resultado incierto, una devolución o una corrección retiene futuros intentos automáticos. Cada resultado incierto conserva su clave original; una devolución exige compra actual y consentimiento nuevos.</p>
+  <p>Mensajes, archivos, trabajos seleccionados, aceptación final, reseñas, pagos y ayuda siguen sus permisos originales al vencer la suscripción. Los clientes no necesitan suscripción.</p>
+  <p th:if="${s.enrollment.present}"><a th:href="@{/subscriptions/progress(subject=${s.provider.value},enrollment=${s.enrollment.orElseThrow()})}">Ver progreso, crédito, logros y revisión</a></p></section>
+  <section><h2>Términos del ejemplo sintético</h2><p th:text="${s.policy.disclosure()}"></p>
+    <dl><dt>Versión actual</dt><dd th:text="${s.policy.version}"></dd><dt>Importe mensual completo</dt><dd>ARS <span th:text="${s.policy.grossArs()}"></span></dd><dt>Con crédito inicial válido de ARS 1,00</dt><dd>ARS <span th:text="${s.policy.creditedNetArs()}"></span> de cobro externo</dd><dt>Comisión absorbida por Changeo</dt><dd>ARS <span th:text="${s.ars(s.policy.feeMinor)}"></span>, desde capital independiente</dd></dl>
+    <details><summary>Reglas y huella de los términos</summary><p class="identifier" th:text="${s.policy.digest()}"></p><p>Campaña inicial SL1B-LOYALTY-2: servicio mínimo ARS 50,00 por trabajo; aceptación final por el cliente original, financiación completa, liberación y pago bancario distintos y confirmados. Cada pagador cliente cuenta una sola vez. Una dirección inversa registrada durante 30 días retiene al candidato posterior, aunque el otro trabajo cambie. Cubre relaciones conocidas y no prueba control físico oculto ni colusión. Reseñas y reputación son señales separadas.</p></details>
+  </section>
+  <section th:if="${s.canEnroll}"><h2 th:text="${s.validPaid ? 'Consentir la próxima renovación' : 'Elegir un período actual'}"></h2>
+    <p th:if="${s.validPaid}">Tu período pagado conserva sus términos y fecha. Este consentimiento empieza al terminarlo; no cobra otro período superpuesto.</p>
+    <form th:action="@{/subscriptions/enroll}" method="post">
+      <input type="hidden" name="command" th:value="${command}"><input type="hidden" name="subject" th:value="${s.provider.value}"><input type="hidden" name="version" th:value="${s.version}"><input type="hidden" name="policyDigest" th:value="${s.policy.digest()}">
+      <input th:if="${s.returnedPurchase.present}" type="hidden" name="predecessor" th:value="${s.returnedPurchase.orElseThrow()}">
+      <fieldset><legend>Modalidad</legend>
+        <label th:if="${s.foundingAvailable}"><input type="radio" name="mode" value="FREE"> Inicio gratuito de <span th:text="${s.policy.foundingDays}"></span> días, una sola vez, sin autorización de cobro posterior</label>
+        <label th:if="${s.trialAvailable}"><input type="radio" name="mode" value="TRIAL"> Prueba de <span th:text="${s.policy.trialDays}"></span> días, una sola vez, con renovación mensual consentida</label>
+        <label><input type="radio" name="mode" th:value="${s.validPaid ? 'RESUME' : 'PAID'}" checked> <span th:text="${s.validPaid ? 'Próximo período calendario' : 'Compra actual de un mes'}"></span> por ARS <span th:text="${s.policy.grossArs()}"></span> sin crédito</label>
+      </fieldset>
+      <label th:if="${s.creditMinor == 100}"><input type="checkbox" name="useCredit" value="true"> Aplicar mi crédito válido de ARS 1,00: cobro externo de ARS <span th:text="${s.policy.creditedNetArs()}"></span> en el período con crédito. Después del consumo, los períodos siguientes vuelven a ARS <span th:text="${s.policy.grossArs()}"></span>.</label>
+      <label><input type="checkbox" name="recurringConsent" value="true"> Para prueba, compra o renovación: acepto estos términos y el importe neto indicado; autorizo futuros períodos calendario hasta cancelar. Los cambios requieren mi consentimiento nuevo.</label>
+      <p>La opción gratuita no autoriza cobros. No se cobran meses omitidos. Un importe, crédito o término cambiado exige revisar la decisión antes del despacho.</p><button type="submit">Guardar decisión y términos</button>
+    </form>
+  </section>
+  <section th:if="${s.canEnroll and s.retry.present}"><h2>Reintentar el período sin efecto</h2><p>El resultado definitivo sin efecto permite una nueva clave vinculada al mismo período y consentimiento. Se conservan exactamente sus importes y selección de crédito.</p>
+    <form th:action="@{/subscriptions/enroll}" method="post" th:with="original=${s.retryPeriod().orElseThrow()}">
+      <input type="hidden" name="command" th:value="${command}"><input type="hidden" name="subject" th:value="${s.provider.value}"><input type="hidden" name="version" th:value="${s.version}"><input type="hidden" name="policyDigest" th:value="${s.policy.digest()}"><input type="hidden" name="mode" value="RETRY"><input type="hidden" name="predecessor" th:value="${s.retry.orElseThrow()}"><input type="hidden" name="useCredit" th:value="${original.promotionMinor == 100}">
+      <label><input type="checkbox" name="recurringConsent" value="true" required> Confirmo el reintento exacto: ARS <span th:text="${s.ars(original.externalMinor())}"></span> de cobro externo, con los términos guardados de este período.</label><button type="submit">Reintentar sin duplicar el período</button>
+    </form>
+  </section>
+  <section th:if="${s.enrollment.present}"><h2>Cancelar renovación</h2><form th:action="@{/subscriptions/cancel}" method="post"><input type="hidden" name="command" th:value="${command}"><input type="hidden" name="enrollment" th:value="${s.enrollment.orElseThrow()}"><input type="hidden" name="subject" th:value="${s.provider.value}"><input type="hidden" name="version" th:value="${s.version}"><button class="secondary" type="submit">Detener futuros cobros</button></form><p>Cancelar antes del despacho restaura las reservas sin efecto. Después del despacho, el mismo intento sigue en conciliación. El tiempo válido se conserva.</p></section>
+  <section><h2>Comprobantes de procesamiento sintético</h2><p>Historial privado. No son facturas fiscales ni prueba de pagos reales.</p><p th:if="${s.history.empty}">Todavía no hay intentos de cobro.</p>
+    <article th:each="period : ${s.history}"><h3 th:text="${s.historyState(period.state)}"></h3><p><span th:text="${s.date(period.start)}"></span> a <span th:text="${s.date(period.end)}"></span>, hora argentina.</p>
+      <dl><dt>Términos guardados</dt><dd th:text="${period.policyVersion}"></dd><dt>Total del período</dt><dd>ARS <span th:text="${s.ars(period.grossMinor)}"></span></dd><dt>Crédito seleccionado</dt><dd>ARS <span th:text="${s.ars(period.promotionMinor)}"></span></dd><dt>Importe externo exacto</dt><dd>ARS <span th:text="${s.ars(period.externalMinor())}"></span></dd><dt>Cobrado confirmado</dt><dd>ARS <span th:text="${s.ars(period.collectedMinor)}"></span></dd><dt>Devuelto confirmado</dt><dd>ARS <span th:text="${s.ars(period.returnedMinor)}"></span></dd><dt>Comisión absorbida prevista / gastada</dt><dd>ARS <span th:text="${s.ars(period.feeMinor)}"></span> / ARS <span th:text="${s.ars(period.feeSpentMinor)}"></span></dd></dl>
+      <details><summary>Referencia privada del comprobante</summary><dl><dt>Intento</dt><dd class="identifier" th:text="${period.operationId}"></dd><dt>Clave conservada</dt><dd class="identifier" th:text="${period.stableKey}"></dd><dt>Consentimiento original</dt><dd class="identifier" th:text="${period.consentId}"></dd><dt>Huella de términos guardados</dt><dd class="identifier" th:text="${period.policyDigest}"></dd></dl></details>
+    </article>
+  </section>
+</div><p><a href="/jobs/support">Obligaciones y derechos conservados</a> · <a href="/support">Ayuda y reclamos</a></p></main><footer th:replace="~{shell :: footer}"></footer></body></html>

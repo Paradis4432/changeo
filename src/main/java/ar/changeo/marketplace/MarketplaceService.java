@@ -5,6 +5,7 @@ import ar.changeo.identity.SecurityProof;
 import ar.changeo.identity.api.*;
 import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
+import ar.changeo.subscriptions.api.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import org.springframework.stereotype.Service;
@@ -16,15 +17,19 @@ public class MarketplaceService {
     private final MarketplaceStore store;
     private final SecurityProof proof;
     private final IdentityAccess identity;
+    private final ParticipantIdentityAccess participants;
+    private final ProviderEntitlementAccess entitlements;
     private final FileAccess files;
     private final ModerationAccess moderation;
     private final Admission admission;
     private final TransactionTemplate transaction;
 
     MarketplaceService(MarketplaceStore store, SecurityProof proof, IdentityAccess identity, FileAccess files,
-                       ModerationAccess moderation, Admission admission, PlatformTransactionManager transactions) {
+                       ModerationAccess moderation, Admission admission, PlatformTransactionManager transactions,
+                       ParticipantIdentityAccess participants, ProviderEntitlementAccess entitlements) {
         this.store=store; this.proof=proof; this.identity=identity; this.files=files; this.moderation=moderation;
         this.admission=admission; this.transaction=new TransactionTemplate(transactions);
+        this.participants=participants; this.entitlements=entitlements;
     }
 
     public ContentReference save(Draft draft) {
@@ -66,7 +71,7 @@ public class MarketplaceService {
             var original=store.revision(discovered,preparation.source().revisionId());
             if (!original.reference().equals(preparation.source())) { throw MarketplaceStore.unavailable(); }
             var author=context(actor,discovered.subject(),discovered.type(),discovered.type().publishCapability());
-            identity.requireForUpdate(author.permission());
+            protectPublication(author, discovered.type());
             String digest=digest(preparation.source()+":"+preparation.version()+":"+preparation.omitPreviousMedia(),preparation.uploads());
             var replay=store.receipt(actor,preparation.command(),"PREPARE",digest);
             if (replay.isPresent()) { return replay.orElseThrow(); }
@@ -102,7 +107,8 @@ public class MarketplaceService {
             boolean resume=action.equals("RESUME");
             if (!Set.of("PAUSE","RESUME","CLOSE").contains(action)) { throw MarketplaceStore.unavailable(); }
             var permission=context(actor,discovered.subject(),discovered.type(),discovered.type().publishCapability()).permission();
-            identity.requireForUpdate(permission);
+            if (resume) { protectPublication(context(actor, discovered.subject(), discovered.type(), discovered.type().publishCapability()), discovered.type()); }
+            else { identity.requireForUpdate(permission); }
             String digest=digest(id+":"+version+":"+action,List.of());
             if (store.receipt(actor,command,action,digest).isPresent()) { return; }
             admission.actor(actor,"marketplace-state");
@@ -137,6 +143,16 @@ public class MarketplaceService {
             result.add(files.intake(UUID.nameUUIDFromBytes((command+":"+index).getBytes(StandardCharsets.UTF_8)),author,reference,upload.mediaType(),upload.bytes()));
         }
         return result.stream().sorted(Comparator.comparing(file -> file.id().toString())).toList();
+    }
+    private void protectPublication(AuthorContext author, PresenceType type) {
+        if (!type.provider()) { identity.requireForUpdate(author.permission()); return; }
+        var discovery=entitlements.discover(Set.of(author.subject()));
+        Set<AccountId> accounts=new HashSet<>(discovery.requiredAccountIds());
+        accounts.add(new AccountId(author.actor().value())); accounts.add(new AccountId(author.subject().value()));
+        participants.controllers(Set.of(author.subject())).values().forEach(actor -> accounts.add(new AccountId(actor.value())));
+        var declared=Set.copyOf(accounts);
+        participants.requireForUpdate(author.permission(),declared);
+        entitlements.requireNewParticipationForUpdate(discovery,declared);
     }
     private static void editable(MarketplaceStore.Resource resource, long version) {
         if (resource.version()!=version || resource.lifecycle()!=PublicationLifecycle.OPEN) { throw new ModerationFailure("Versión desactualizada o publicación pausada/cerrada; revisá su estado antes de editar"); }

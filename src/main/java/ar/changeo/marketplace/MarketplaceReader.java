@@ -3,8 +3,10 @@ package ar.changeo.marketplace;
 import ar.changeo.files.api.*;
 import ar.changeo.identity.SecurityProof;
 import ar.changeo.identity.api.*;
+import ar.changeo.jobs.api.*;
 import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
+import ar.changeo.subscriptions.api.LoyaltyPublicAccess;
 import java.time.Clock;
 import java.util.*;
 import org.springframework.stereotype.Service;
@@ -19,15 +21,34 @@ public class MarketplaceReader {
     private final SecurityProof proof;
     private final ModerationAccess moderation;
     private final Clock clock;
+    private final JobReputationAccess reputation;
+    private final LoyaltyPublicAccess loyalty;
     private final TransactionTemplate transaction;
 
     MarketplaceReader(MarketplaceStore store, IdentityAccess identity, PublicIdentityBadgeAccess badges,
-                      SecurityProof proof, ModerationAccess moderation, Clock clock, PlatformTransactionManager transactions) {
+                      SecurityProof proof, ModerationAccess moderation, Clock clock, PlatformTransactionManager transactions, JobReputationAccess reputation, LoyaltyPublicAccess loyalty) {
         this.store=store; this.identity=identity; this.badges=badges; this.proof=proof; this.moderation=moderation;
         this.clock=clock; this.transaction=new TransactionTemplate(transactions);
+        this.reputation=reputation;
+        this.loyalty=loyalty;
     }
 
     public PublicView publicView(UUID id) { return transaction.execute(status -> currentInTransaction(id,Optional.empty())); }
+
+    public ComposedProfile composedProfile(UUID id, Optional<ReputationCursor> cursor) {
+        if (org.springframework.transaction.support.TransactionSynchronizationManager.isActualTransactionActive()) { throw new IllegalStateException("La composición requiere observaciones independientes"); }
+        var initial=publicView(id);
+        if (!initial.type().profile()) { throw MarketplaceStore.unavailable(); }
+        var observed=clock.instant();
+        var page=reputation.project(new SubjectId(initial.subject().value()),cursor);
+        var achievement=initial.type()==PresenceType.PROVIDER_PROFILE ? loyalty.current(new SubjectId(initial.subject().value())) : Optional.<LoyaltyPublicAccess.Achievement>empty();
+        var current=publicView(id);
+        if (!initial.reference().equals(current.reference()) || !initial.subject().equals(current.subject())
+                || initial.type()!=current.type() || !initial.label().equals(current.label())) { throw MarketplaceStore.unavailable(); }
+        return new ComposedProfile(current,page,achievement,observed,clock.instant());
+    }
+
+    public record ComposedProfile(PublicView profile, ReputationPage reputation, Optional<LoyaltyPublicAccess.Achievement> achievement, java.time.Instant firstProfileObservedAt, java.time.Instant finalProfileObservedAt) {}
 
     PublicView currentInTransaction(UUID id, Optional<Selection> selection) {
         MarketplaceStore.requireTransaction();

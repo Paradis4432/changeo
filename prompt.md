@@ -2,20 +2,13 @@
 
 $java-coding-standards
 
-$astra-flash-orchestrator
+$software-orchestrator
 
-Use gpt-6.1-sol with xhigh reasoning effort for the goal coordinator, feature
-coordinators/planners, developers, optional investigators and all reviewers.
-Dispatch native default agents with explicit model="gpt-6.1-sol" and
-reasoning_effort="xhigh". The installed astra_flash_builder developer role pins
-the same model and effort. Keep all other workflow requirements.
+Roles, models, review, ownership and recovery follow the global AGENTS.md role table and `$software-orchestrator`; this prompt adds only goal-specific requirements.
 
-You are the native gpt-6.1-sol xhigh goal coordinator for this quality-first goal.
+You are the root (goal coordinator) for this quality-first goal.
 Handle all active tasks below in supplied order, subject to the delivery gates.
-Apply the complete invoked
-skill and its role-relevant references at ~/.agents/skills/astra-flash-orchestrator/;
-this template supplies goal-specific permissions and requirements. Do not invent
-missing requirements or silently expand scope.
+Do not invent missing requirements or silently expand scope.
 
 # Changeo requirements and source authority
 
@@ -43,7 +36,7 @@ planning a task:
 
 These documents define product behavior; summaries here do not replace them.
 Current explicit user instructions and applicable AGENTS policy remain authoritative.
-The docs record an earlier Astra-only agent preference. The current GPT-6.1 Sol/xhigh
+The docs record an earlier Astra-only agent preference. The current global AGENTS.md
 role policy supplied for this goal supersedes that historical routing instruction;
 it does not select the production moderation model or authorize a vendor purchase.
 
@@ -140,13 +133,6 @@ verification environments. Do not turn them into a separate public prototype lau
 
 # Quality, permissions and goal ownership
 
-Correctness, complete requirements, independent reasoning and independent final
-review take priority over cost, time or agent count. Apply the shared policy at
-~/.agents/skills/astra-flash-orchestrator/references/code-quality.md. Preserve useful
-interfaces, clear ownership, understandable flow and performance. Scale documents
-and optional delegation to actual uncertainty; never omit required roles, impose
-arbitrary correction caps or reduce necessary verification to save tokens.
-
 - Work within the permitted Changeo workspace and explicitly authorized test environments.
   No remote server, production database, partner account or deployment authority is
   implied by this prompt. Inspect the actual baseline; preserve protected workspace
@@ -156,55 +142,14 @@ arbitrary correction caps or reduce necessary verification to save tokens.
 - Preserve all pre-existing work. No automatic staging, commit, merge, push or
   deployment follows completion; those require my applicable explicit instruction.
 
-Only you manage the overall /goal. Own global originals, requested card order,
-shared contracts, dependencies, permissions and completion state. Children never
-start goals. Honor explicit single-agent or plan-only overrides. Context handoffs
-do not reset history, migrate the goal, eliminate compaction or promise unlimited
-execution. Keep root context to current decisions, compact status and evidence paths.
 If you cannot resolve a required fact through authorized inspection, record the exact
 question and hold dependent work until I answer. Continue other unblocked tasks in
 order. Once all remaining work depends on my answers, pause the goal and ask in chat.
 Do not invent answers or treat elapsed time as approval.
 
-# Required feature roles and dispatch
-
-Each card gets a fresh native gpt-6.1-sol xhigh feature coordinator, one verified
-gpt-6.1-sol xhigh developer through astra_flash_builder, and a separate fresh
-native gpt-6.1-sol xhigh final reviewer. The coordinator owns detailed code discovery,
-planning and corrections; the developer implements/verifies; only the reviewer
-accepts. Neither coordinator implements or substitutes for a reviewer. No tiny-card
-shortcut or role reuse across cards. Retain the same feature agents for corrections.
-
-Use native nested delegation by the feature coordinator when available. Otherwise
-use the skill's root sibling-relay procedure with exact coordinator-authored briefs.
-Record one mode, sole dispatcher, actual role IDs and pending dispatches. Reconcile
-live children before retrying an uncertain spawn or changing mode. No duplicate
-writers, extra coordinator tiers, alternative agent CLIs or host configuration
-changes to enable nesting. Implementers/reviewers never delegate. Queue unavailable
-slots; missing required roles/routes remain blockers. Keep one active product writer
-per workspace and confirm accepted dependencies are actually present before use.
-
-Separate plan review is required only for a concrete high-risk design decision
-(persistence/data loss, concurrency/lifecycle ownership, authorization, broad shared
-contracts) or my explicit request. Record the reason or "not required". Resolve it
-before development with a GPT-6.1 Sol xhigh agent distinct from the final reviewer;
-reassess risk after material plan changes.
-
-Optional investigators/routing/integration auditors need a specific unanswered
-question or distinct risk and a reason existing roles/evidence cannot cover it
-efficiently. Record that reason in the existing checkpoint. Routine lookups or
-repeating accepted checks alone do not justify another agent; required feature
-roles and justified plan reviews remain mandatory.
-
 # Originals, briefs and bounded work
 
-Save complete goal originals, amendments, contracts and GOAL-CHECKPOINT.md under
-docs/agent-work/<goal>/. Save complete card originals, attachments, baseline,
-plan/briefs, independent reviews, reports, CHECKPOINT.md, .txt questions and logs
-under docs/agent-work/<feature>/. A single-card goal may share its directory; keep
-role-owned paths distinct. Other task documentation belongs under docs/ too.
-Summaries never replace original sources; preserve relevant dirty/staged/untracked
-content rather than treating HEAD alone as the baseline.
+Other task documentation belongs under docs/ too.
 
 Use templates/feature-coordinator-brief.md and templates/task-brief.md from the
 skill. Each handoff supplies complete original-source and restriction paths,
@@ -214,13 +159,6 @@ ownership boundaries, guarantees, accepted plan/findings, assumptions, unresolve
 questions and acceptance/verification criteria. Required loaded-skill attribution
 records names/full paths, read versus fully injected, and application evidence.
 
-Every role independently loads its complete applicable originals/guidance and
-inspects current relevant code. Retrieve truncated portions; reuse identical complete
-copies already available in context. Use fresh file-based briefs without parent
-history or unrelated cards. Load role-relevant references, keep large logs in files,
-and keep one authoritative evidence report per role; required checkpoints/notes link
-to its facts. Root must not repeat feature discovery, planning or review.
-
 For ambiguous reports, identify evidence that distinguishes remaining causes.
 Once authorized inspection establishes that the next decision requires unavailable
 browser/application/build/partner/configuration facts, save the diagnosis and exact question, stop dependent
@@ -228,57 +166,7 @@ work and continue other unblocked cards in order. Keep the required developer di
 and independent review. Static support or an empty patch does not prove a report
 invalid or fixed; avoid unrelated exploration without a discriminating question.
 
-Before dispatch, define the minimum durable deliverable: patch or evidenced no-change
-disposition, commands/results/logs, required report/checkpoint/notes, missing facts and
-resume action. Developers save evidence during work and verify artifacts exist and
-agree before final return. If a child ends promising to write them later, interrupt
-and resume that same child for the exact missing output using saved evidence.
-Diagnose repeated premature endings rather than restarting completed discovery.
-Batch known corrections, update affected sections and retain the same final reviewer.
-
-# Shared changes, corrections and recovery
-
-Follow references/coordination.md for shared-contract decisions. Feature coordinators
-hold affected work and report old/new API, data/event, ownership or behavior agreements,
-reason and affected cards. Root decides within existing authority, records the revision,
-updates affected briefs/checks, reopens affected acceptance and obtains required plan
-review. Ask me only for genuinely missing product decisions or authority. Resume against
-the accepted revision and actual dependency state; route source corrections through
-the responsible implementer and independent reviewer.
-
-Follow references/execution.md for correction diagnosis and blocker handling.
-Plan/spec defects require replanning; missing inputs, permissions, credentials,
-dependencies, environment or provider access remain blockers. A timeout, failed check,
-slow run or premature completion alone does not authorize a replacement writer.
-If the same underlying implementation failure survives materially different viable
-approaches, preserve evidence, partial work and the original baseline. The feature
-coordinator reassesses the plan and resumes the same gpt-6.1-sol xhigh developer
-with a viable in-scope approach, or reports an evidenced blocker. Keep one writer
-and the same independent reviewer for the entire patch. Do not substitute models,
-create a fallback writer or assign implementation to a coordinator or reviewer.
-
-Checkpoint meaningful decisions, handoffs, interruptions, writer ownership and acceptance.
-Return compact role IDs/current owner, baseline/contract revision, actual review verdict,
-validation paths, dependency effects, blockers and next action. Interrupt finished/idle
-children and resume the same roles when needed; do not interrupt healthy work for polling.
-After compaction/restart, reload role-relevant originals, decisions and checkpoint and
-reconcile live agents/dispatcher/writer. Never invent a context reset.
-
 # Routing, verification and completion
-
-Keep both coordinator levels, task producers/planners, developers, optional helpers
-and all reviewers explicitly on gpt-6.1-sol with xhigh reasoning effort. Use the
-installed astra_flash_builder role for development. Verify actual host models,
-reasoning effort and Router child-request attribution; self-identification is not
-proof. Distinguish host transport labels from inference provider. Reuse valid
-recorded evidence unless session/config
-facts change; resolve narrow gaps with targeted inspection. No global defaults,
-provider/Router/approval changes, silent substitutions or paid setup probes.
-
-Capture full logs and underlying command exit status on the first run. A successful
-output-filtering pipeline is not build success. Re-run after relevant changes, failures
-or new risks; reuse checks only while source, artifacts, environment and coverage match.
-Compilation alone does not verify runtime behavior; record missing verification.
 
 Use Spring Boot-managed JUnit Jupiter/AssertJ, MockMvc and PostgreSQL Testcontainers
 for meaningful behavioral boundaries, plus a small browser suite for responsive,
@@ -291,13 +179,6 @@ quarantine, billing transitions and ongoing obligations. Verify admin access/MFA
 backup restoration, reconciliation/support recovery and approved capacity targets.
 Capture actual commands/results and unverified limits. Documentation-only tasks need
 document consistency/link checks; do not claim application tests or production readiness.
-
-Root inspects actual independent verdicts and final integration state. Whole-goal
-regression and preservation checks remain required before completion: verify no
-existing feature was lost/reverted. Reuse accepted combined checks covering the final
-state, run missing checks or route findings through the owning feature. An extra
-integration auditor follows the optional-helper rule; it is not another default gate.
-Only the independent reviewer accepts a feature; root owns overall completion.
 
 Put unresolved questions/notes in .txt files with the relevant task identifier and
 specific docs/ requirement links; include external task links only when supplied. After

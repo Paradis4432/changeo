@@ -3,6 +3,8 @@ package ar.changeo.marketplace;
 import ar.changeo.files.api.*;
 import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
+import ar.changeo.identity.api.*;
+import ar.changeo.subscriptions.api.ProviderEntitlementAccess;
 import java.util.*;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Component;
@@ -11,10 +13,25 @@ import org.springframework.stereotype.Component;
 public class MarketplaceOwner implements ContentOwner {
     private final MarketplaceStore store;
     private final ObjectProvider<MarketplaceReader> readers;
+    private final ProviderEntitlementAccess entitlements;
 
-    MarketplaceOwner(MarketplaceStore store, ObjectProvider<MarketplaceReader> readers) { this.store=store; this.readers=readers; }
+    MarketplaceOwner(MarketplaceStore store, ObjectProvider<MarketplaceReader> readers, ProviderEntitlementAccess entitlements) { this.store=store; this.readers=readers; this.entitlements=entitlements; }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.PROFILE_BIO,SurfaceKind.OFFER_BODY,SurfaceKind.REQUEST_BODY); }
     @Override public boolean owns(ContentReference reference) { return store.owns(reference); }
+
+    @Override public Set<AccountId> identityParticipants(ContentReference reference) {
+        var resource = store.resource(reference.resourceId(), false);
+        var revision = store.revision(resource, reference.revisionId());
+        if (!resource.type().provider() || revision.author().capability() != Capability.NEW_PROVIDER_PARTICIPATION) { return Set.of(); }
+        return entitlements.discover(Set.of(new SubjectId(resource.subject()))).requiredAccountIds();
+    }
+
+    @Override public void prepareProtection(PermissionRequest permission, AuthorContext author, ContentReference reference, Set<AccountId> declaredIdentityAccounts) {
+        var resource = store.resource(reference.resourceId(), false);
+        if (resource.type().provider() && permission.capability() == Capability.NEW_PROVIDER_PARTICIPATION) {
+            entitlements.requireNewParticipationForUpdate(entitlements.discover(Set.of(new SubjectId(resource.subject()))), declaredIdentityAccounts);
+        }
+    }
 
     @Override public ReviewInput lockRevision(AuthorContext author, ContentReference reference) {
         var resource=store.resource(reference.resourceId(),true);

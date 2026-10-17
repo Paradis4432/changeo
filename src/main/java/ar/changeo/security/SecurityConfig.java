@@ -29,14 +29,14 @@ public class SecurityConfig {
     @Bean
     @ConditionalOnWebApplication
     SecurityFilterChain security(HttpSecurity http, AccountService accounts, AbuseLimits limits) throws Exception {
-        http.authorizeHttpRequests(auth -> auth.requestMatchers("/", "/style.css", "/register", "/login", "/password/forgot", "/password/reset", "/error").permitAll()
+        http.authorizeHttpRequests(auth -> auth.requestMatchers("/", "/style.css", "/conversations-poll.js", "/register", "/login", "/password/forgot", "/password/reset", "/error").permitAll()
                         .requestMatchers(HttpMethod.GET, "/content", "/content/{id}", "/content/{id}/preview", "/content/{id}/notification", "/content/files/{id}").permitAll()
                         .requestMatchers("/profiles/create", "/marketplace/create", "/marketplace/mine", "/marketplace/manage/**").authenticated()
                         .requestMatchers(HttpMethod.GET, "/marketplace", "/listings/{id}", "/listings/{id}/preview", "/listings/{id}/share", "/profiles/{id}", "/profiles/{id}/preview", "/profiles/{id}/share", "/profiles/account/{subject}/{type}", "/marketplace/files/{id}").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form -> form.loginPage("/login").defaultSuccessUrl("/account", true))
                 .logout(logout -> logout.logoutSuccessUrl("/"))
-                .headers(headers -> headers.contentSecurityPolicy(csp -> csp.policyDirectives("default-src 'self'; style-src 'self'; script-src 'none'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'"))
+                .headers(headers -> headers.contentSecurityPolicy(csp -> csp.policyDirectives("default-src 'self'; style-src 'self'; script-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'"))
                         .addHeaderWriter((request, response) -> {
                             response.setHeader("Referrer-Policy", "no-referrer");
                             response.setHeader("Cache-Control", "no-store");

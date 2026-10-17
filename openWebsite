@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
+umask 077
+
+url="http://127.0.0.1:8080"
+app_pid=""
+
+open_browser() {
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$url" >/dev/null 2>&1 && return
+  elif command -v open >/dev/null 2>&1; then
+    open "$url" >/dev/null 2>&1 && return
+  elif command -v gio >/dev/null 2>&1; then
+    gio open "$url" >/dev/null 2>&1 && return
+  fi
+  printf 'Open %s in your browser.\n' "$url" >&2
+}
+
+website_ready() {
+  curl --noproxy '*' --fail --silent --output /dev/null \
+    --connect-timeout 1 --max-time 2 "$url"
+}
+
+cleanup() {
+  if [[ -n "$app_pid" ]]; then
+    kill "$app_pid" 2>/dev/null || true
+    wait "$app_pid" 2>/dev/null || true
+  fi
+}
+
+if ! command -v curl >/dev/null 2>&1; then
+  printf 'Install curl to check website readiness.\n' >&2
+  exit 1
+fi
+
+if website_ready; then
+  printf 'Opening website already running at %s\n' "$url"
+  open_browser
+  exit 0
+fi
+
+export JAVA_HOME="${JAVA_HOME:-$PWD/.local-tools/jdk-25.0.4.1+1}"
+export MAVEN_USER_HOME="${MAVEN_USER_HOME:-$PWD/.local-tools/maven-user}"
+if [[ ! -x "$JAVA_HOME/bin/java" || ! -x "$JAVA_HOME/bin/javac" ]]; then
+  printf 'Set JAVA_HOME to a Java 25 JDK before running %s.\n' "$0" >&2
+  exit 1
+fi
+
+printf 'Building Changeo...\n'
+./mvnw -B -ntp -Dmaven.repo.local="$PWD/.local-tools/m2" -DskipTests package
+scripts/local-db.sh
+
+trap cleanup EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
+scripts/run-sandbox.sh &
+app_pid=$!
+
+printf 'Waiting for %s (Ctrl+C stops the website)...\n' "$url"
+deadline=$((SECONDS + 120))
+while (( SECONDS < deadline )); do
+  if ! kill -0 "$app_pid" 2>/dev/null; then
+    printf 'Website exited before it became ready.\n' >&2
+    if wait "$app_pid"; then
+      exit 1
+    else
+      exit $?
+    fi
+  fi
+  if website_ready; then
+    printf 'Website ready at %s\n' "$url"
+    open_browser &
+    wait "$app_pid"
+    exit 0
+  fi
+  sleep 1
+done
+
+printf 'Website did not become ready within 120 seconds.\n' >&2
+exit 1
