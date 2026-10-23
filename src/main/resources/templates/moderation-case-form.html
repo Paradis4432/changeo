@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisar caso · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header th:replace="~{shell :: header}"></header>
+<main id="main">
+    <h1 th:text="${kind == 'APPEAL' ? 'Revisar apelación' : 'Revisar reporte'}"></h1>
+    <p>El caso no se envió. Revisá los campos y volvé a enviarlo cuando estén corregidos.</p>
+    <form th:action="@{/moderation/cases}" method="post" th:object="${form}">
+        <div class="error" role="alert" th:if="${#fields.hasErrors('*')}">
+            <p>Corregí estos campos:</p>
+            <ul><li th:each="error : ${#fields.detailedErrors()}"><a th:href="${'#' + error.fieldName}" th:text="${error.message}"></a></li></ul>
+        </div>
+        <input type="hidden" name="command" th:value="${command}">
+        <input type="hidden" name="resource" th:value="${resource}">
+        <input type="hidden" name="revision" th:value="${revision}">
+        <input type="hidden" name="kind" th:value="${kind}">
+        <label for="reason">Motivo</label>
+        <select id="reason" th:field="*{reason}" th:attr="aria-invalid=${#fields.hasErrors('reason') ? 'true' : null},aria-describedby=${#fields.hasErrors('reason') ? 'reason-error' : null}">
+            <option value="">Elegí un motivo</option>
+            <option value="MISLABEL">Etiqueta incorrecta</option><option value="SAFETY">Seguridad</option><option value="FALSE_POSITIVE">Revisión incorrecta</option><option value="OTHER">Otro</option>
+        </select>
+        <p id="reason-error" class="error" th:if="${#fields.hasErrors('reason')}" th:errors="*{reason}"></p>
+        <label for="note">Información de prueba (opcional, hasta 2000 caracteres)</label>
+        <textarea id="note" th:field="*{note}" maxlength="2000" th:attr="aria-invalid=${#fields.hasErrors('note') ? 'true' : null},aria-describedby=${#fields.hasErrors('note') ? 'note-error' : null}"></textarea>
+        <p id="note-error" class="error" th:if="${#fields.hasErrors('note')}" th:errors="*{note}"></p>
+        <button type="submit" th:text="${kind == 'APPEAL' ? 'Abrir apelación' : 'Enviar reporte'}"></button>
+    </form>
+    <p><a href="/moderation/cases">Mis casos</a> · <a th:if="${kind == 'APPEAL'}" th:href="@{/moderation/own/{id}(id=${resource})}">Consultar estado propio</a><a th:if="${kind == 'REPORT'}" th:href="@{/content/{id}(id=${resource})}">Consultar contenido actual</a></p>
+</main>
+<footer th:replace="~{shell :: footer}"></footer>
+</body></html>

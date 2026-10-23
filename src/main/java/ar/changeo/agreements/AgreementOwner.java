@@ -29,6 +29,9 @@ public class AgreementOwner implements ContentOwner, AgreementAccess {
         this.store = store; this.jobs = jobs; this.conversations = conversations; this.moderation = moderation; this.readers = readers; this.notifications = notifications;
         this.entitlements = entitlements;
     }
+    @Override public Optional<String> caseOrigin(ContentReference reference) {
+        return Optional.of("/agreements/origin?kind=" + reference.ownerKind() + "&resource=" + reference.resourceId() + "&revision=" + reference.revisionId());
+    }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.QUOTE_DESCRIPTION); }
     @Override public boolean owns(ContentReference reference) {
         return reference.ownerKind() == SurfaceKind.QUOTE_DESCRIPTION && store.jdbc.queryForObject("select count(*) from agreements_revision where quote_id=? and id=?",
@@ -66,9 +69,9 @@ public class AgreementOwner implements ContentOwner, AgreementAccess {
         return new ReviewInput(reference, revision.terms().reviewText(), revision.declaredLabel(), revision.digest(), revision.attachments());
     }
     @Override public boolean current(ContentReference reference) { return discover(reference).current(); }
-    @Override public boolean reportable(ContentReference reference) {
+    @Override public boolean reportable(ContentReference reference, ActorId reporter, String effectiveLabel) {
         var revision = discover(reference);
-        conversations.requireEligible(jobs.discover(revision.jobId()).conversation());
+        conversations.requireReportable(jobs.discover(revision.jobId()).conversation().id(), reporter, effectiveLabel, Optional.of(reference));
         return revision.approved();
     }
     @Override @Transactional(propagation = Propagation.MANDATORY)

@@ -42,7 +42,7 @@ class ConversationsContainerIT extends ConversationJourneyPostgresTest {
             for (String table : tables) { retained.put(table, snapshot(statement, table)); }
             var history = original.info().applied();
             var upgraded = migration(schema, null);
-            assertThat(upgraded.migrate().migrationsExecuted).isEqualTo(4); upgraded.validate();
+            assertThat(upgraded.migrate().migrationsExecuted).isEqualTo(7); upgraded.validate();
             assertThat(upgraded.migrate().migrationsExecuted).isZero();
             for (var row : retained.entrySet()) { assertThat(snapshot(statement, row.getKey())).as(row.getKey()).isEqualTo(row.getValue()); }
             for (var before : history) {
@@ -53,7 +53,7 @@ class ConversationsContainerIT extends ConversationJourneyPostgresTest {
             try (var rows = statement.executeQuery("select count(*) from jobs_job")) { assertThat(rows.next()).isTrue(); assertThat(rows.getLong(1)).isZero(); }
         }
         var fresh = migration("conversations_fresh", null);
-        assertThat(fresh.migrate().migrationsExecuted).isEqualTo(9); fresh.validate(); assertThat(fresh.migrate().migrationsExecuted).isZero();
+        assertThat(fresh.migrate().migrationsExecuted).isEqualTo(12); fresh.validate(); assertThat(fresh.migrate().migrationsExecuted).isZero();
     }
 
     private Flyway migration(String schema, String target) {

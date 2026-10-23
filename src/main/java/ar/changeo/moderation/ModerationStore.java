@@ -55,6 +55,29 @@ class ModerationStore {
         return jdbc.queryForObject("select id from moderation_task where submission_id=? and kind=? and generation=?",UUID.class,submission.id(),kind,submission.generation());
     }
     void audit(UUID actor,Submission submission,UUID caseId,String action) { jdbc.update("insert into moderation_audit values(?,?,?,?,?,?,?)",UUID.randomUUID(),actor,submission.barrier(),submission.id(),caseId,action,Timestamp.from(clock.instant())); }
+    Optional<ModerationWorker.Claim> claim(String kind, int leaseSeconds) {
+        requireTransaction();
+        var rows=jdbc.queryForList("select * from moderation_task where (cast(? as varchar) is null or kind=?) and ((state in ('PENDING','RETRY_WAIT') and available_at<=?) or (state='CLAIMED' and lease_until<=?)) order by available_at,id for update skip locked limit 1",kind,kind,Timestamp.from(clock.instant()),Timestamp.from(clock.instant()));
+        if(rows.isEmpty()) { return Optional.empty(); }
+        var row=rows.getFirst(); UUID token=UUID.randomUUID(); UUID id=(UUID)row.get("id");
+        int attempts=(Integer)row.get("attempts");
+        jdbc.update("update moderation_task set state='CLAIMED',claim_token=?,lease_until=?,attempts=? where id=?",token,Timestamp.from(clock.instant().plusSeconds(leaseSeconds)),Math.min(3,attempts+1),id);
+        return Optional.of(new ModerationWorker.Claim(id,(UUID)row.get("reference_id"),(UUID)row.get("submission_id"),(String)row.get("kind"),((Number)row.get("generation")).longValue(),token,(UUID)row.get("decision_id"),attempts>=3));
+    }
+    boolean live(ModerationWorker.Claim claim) {
+        var rows=jdbc.queryForList("select claim_token,state,lease_until,submission_id,reference_id,kind,generation,decision_id from moderation_task where id=? for update",claim.id());
+        if(rows.isEmpty()) { return false; } var row=rows.getFirst();
+        return "CLAIMED".equals(row.get("state")) && claim.token().equals(row.get("claim_token")) && ((Timestamp)row.get("lease_until")).toInstant().isAfter(clock.instant())
+                && claim.submission().equals(row.get("submission_id")) && claim.barrier().equals(row.get("reference_id")) && claim.kind().equals(row.get("kind"))
+                && claim.generation()==((Number)row.get("generation")).longValue() && Objects.equals(claim.decision(),row.get("decision_id"));
+    }
+    void complete(ModerationWorker.Claim claim,String reason) { jdbc.update("update moderation_task set state='COMPLETE',reason=?,claim_token=null,lease_until=null where id=?",reason,claim.id()); }
+    void preparationHold(Submission submission,ModerationWorker.Claim claim,String reason) {
+        requireTransaction();
+        complete(claim,reason);
+        jdbc.update("update moderation_submission set state='MANUAL_REVIEW',label='ADULT',reason=?,generation=generation+1,version=version+1 where id=?",reason,submission.id());
+        audit(null,submission,null,"PREPARATION_HOLD");
+    }
     static void requireTransaction() { if(!TransactionSynchronizationManager.isActualTransactionActive()) { throw new ModerationFailure("Se requiere una transacción del propietario"); } }
     static ModerationFailure unavailable() { return new ModerationFailure("Contenido no disponible para este acceso"); }
     record Submission(UUID id,UUID barrier,ContentReference reference,AuthorContext author,String digest,String state,String label,String reason,boolean recalled,UUID decision,long generation,long version) {}

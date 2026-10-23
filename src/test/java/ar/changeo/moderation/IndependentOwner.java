@@ -28,7 +28,7 @@ final class IndependentOwner implements ContentOwner {
         var file=new FileReference((UUID)row.get("file_id"),ref,(String)row.get("file_digest"));return new ReviewInput(ref,(String)row.get("text"),"GENERAL",(String)row.get("digest"),List.of(file));
     }
     @Override public boolean current(ContentReference ref) { return ref.revisionId().equals(jdbc.queryForObject("select revision from fixture_canonical where id=?",UUID.class,ref.resourceId())); }
-    @Override public boolean reportable(ContentReference ref) { return ref.revisionId().equals(jdbc.queryForObject("select approved from fixture_canonical where id=?",UUID.class,ref.resourceId())); }
+    @Override public boolean reportable(ContentReference ref,ActorId reporter,String effectiveLabel) { return ref.revisionId().equals(jdbc.queryForObject("select approved from fixture_canonical where id=?",UUID.class,ref.resourceId())); }
     @Override public long activate(ContentReference ref) { jdbc.update("update fixture_canonical set approved=?,version=version+1 where id=?",ref.revisionId(),ref.resourceId());return jdbc.queryForObject("select version from fixture_canonical where id=?",Long.class,ref.resourceId()); }
     @Override public void recall(ContentReference ref) { jdbc.update("update fixture_canonical set approved=null,version=version+1 where id=? and approved=?",ref.resourceId(),ref.revisionId()); }
     String read(ContentReference ref) {
@@ -36,7 +36,7 @@ final class IndependentOwner implements ContentOwner {
         UUID author=jdbc.queryForObject("select actor from fixture_canonical where id=?",UUID.class,ref.resourceId());
         var input=lockRevision(new AuthorContext(new ActorId(author),new SubjectId(author),Capability.NEW_REQUEST),ref);
         moderation.barrier(ref,false);var decision=moderation.submission(ref,true);
-        if(!reportable(ref) || !decision.state().equals("APPROVED") || decision.recalled() || !decision.digest().equals(input.digest())) { throw ModerationStore.unavailable(); }
+        if(!reportable(ref,new ActorId(actor),decision.label()) || !decision.state().equals("APPROVED") || decision.recalled() || !decision.digest().equals(input.digest())) { throw ModerationStore.unavailable(); }
         return input.text();
     }
     @Override public void requireAttachment(FileReference file,FileAccess.Purpose purpose) {

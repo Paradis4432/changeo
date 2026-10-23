@@ -1,5 +1,43 @@
-<!doctype html><html lang="es-AR" xmlns:th="http://www.thymeleaf.org"><body>
-<header th:fragment="header"><a class="skip" href="#main">Ir al contenido</a><div class="banner">Entorno privado · Datos sintéticos · Dinero real deshabilitado</div><nav aria-label="Principal"><a class="brand" href="/">Changeo</a><a href="/marketplace">Buscar</a><a href="/marketplace/mine">Mis publicaciones</a><a href="/conversations">Conversaciones</a><a href="/notifications">Avisos</a><a href="/jobs/support">Obligaciones</a><a href="/subscriptions">Suscripción</a><a href="/account">Mi cuenta</a><a href="/account/guardian">Guardianes</a><a href="/moderation">Taller</a><a href="/content">Ejemplos aprobados</a><a href="/support">Ayuda</a><a href="/rights">Derechos</a><a href="/admin/mfa">Administración</a><form th:action="@{/logout}" method="post"><button class="secondary" type="submit">Salir</button></form></nav></header>
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header" th:with="signedIn=${#ctx.getExchange().getPrincipal() != null}">
+    <a class="skip" href="#main">Ir al contenido</a>
+    <div class="banner">Entorno privado · Datos sintéticos · Dinero real deshabilitado</div>
+    <nav class="site-nav" aria-label="Principal">
+        <a class="brand" href="/">Changeo</a>
+        <div class="primary-links">
+            <a href="/marketplace">Buscar</a>
+            <a th:if="${signedIn}" href="/marketplace/mine">Mis publicaciones</a>
+            <a th:if="${signedIn}" href="/conversations">Conversaciones</a>
+            <a th:unless="${signedIn}" href="/login">Ingresar</a>
+            <a th:unless="${signedIn}" href="/register">Crear cuenta</a>
+        </div>
+        <details th:if="${signedIn}" class="nav-group">
+            <summary>Mi cuenta</summary>
+            <div class="nav-links">
+                <a href="/account">Datos y preferencias</a>
+                <a href="/notifications">Avisos</a>
+                <a href="/jobs/support">Obligaciones</a>
+                <a href="/subscriptions">Suscripción</a>
+                <a href="/account/guardian">Guardianes</a>
+                <form th:action="@{/logout}" method="post"><button class="secondary" type="submit">Salir</button></form>
+            </div>
+        </details>
+        <details th:if="${signedIn}" class="nav-group">
+            <summary>Pruebas y administración</summary>
+            <div class="nav-links">
+                <a href="/moderation">Taller de moderación</a>
+                <a href="/content">Ejemplos aprobados</a>
+                <a href="/admin/mfa">Administración</a>
+            </div>
+        </details>
+    </nav>
+</header>
 <div th:fragment="notice" th:if="${notice}" class="notice" role="status" th:text="${notice}"></div>
-<footer th:fragment="footer"><p>Prueba local. No ingresar personas, menores reales ni datos personales. Solo contenido sintético de prueba. Sin servicios, contratos, saldos ni pagos reales.</p></footer>
-</body></html>
+<footer th:fragment="footer">
+    <nav class="footer-links" aria-label="Ayuda y derechos"><a href="/support">Ayuda</a><a href="/rights">Derechos</a></nav>
+    <p>Prueba local. No ingresar personas, menores reales ni datos personales. Solo contenido sintético de prueba. Sin servicios, contratos, saldos ni pagos reales.</p>
+</footer>
+</body>
+</html>

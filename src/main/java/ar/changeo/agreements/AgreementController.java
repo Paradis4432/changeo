@@ -38,6 +38,10 @@ public class AgreementController {
         this.syntheticPayments = syntheticPayments;
     }
     @ModelAttribute("syntheticPayments") public boolean syntheticPayments() { return syntheticPayments; }
+    @GetMapping("/agreements/origin") public String origin(@RequestParam SurfaceKind kind, @RequestParam UUID resource, @RequestParam UUID revision, Model model) {
+        model.addAttribute("origin", agreements.origin(new ContentReference(kind, resource, revision)));
+        return "agreement-origin";
+    }
     @GetMapping("/agreements/new") public String create(@RequestParam UUID job, @RequestParam UUID subject, @RequestParam(defaultValue = "INITIAL") String kind,
             @RequestParam(required = false) UUID resource, @RequestParam(required = false) UUID revision, Model model) {
         var context = agreements.composition(job, new SubjectId(subject));

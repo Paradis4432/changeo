@@ -4,6 +4,7 @@ import ar.changeo.agreements.api.AgreementAccess;
 import ar.changeo.conversations.api.ConversationAccess;
 import ar.changeo.files.api.*;
 import ar.changeo.identity.api.AccountId;
+import ar.changeo.identity.api.ActorId;
 import ar.changeo.jobs.api.*;
 import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
@@ -36,6 +37,9 @@ public class JobContentOwner implements ContentOwner {
         this.participation = participation;
         this.moderation = moderation;
     }
+    @Override public Optional<String> caseOrigin(ContentReference reference) {
+        return Optional.of("/jobs/origin?kind=" + reference.ownerKind() + "&resource=" + reference.resourceId() + "&revision=" + reference.revisionId());
+    }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.JOB_FEEDBACK, SurfaceKind.COMPLETED_JOB_REVIEW); }
     @Override public boolean owns(ContentReference reference) {
         return content.jdbc.queryForObject("select count(*) from jobs_authored a join jobs_revision r on r.resource_id=a.id where a.id=? and r.id=? and (a.kind='REVIEW')=?",
@@ -57,26 +61,40 @@ public class JobContentOwner implements ContentOwner {
         return revision.input();
     }
     @Override public void prepareActivation(ContentReference reference) {
+        if (!preparationAvailable(reference)) {
+            throw new ModerationFailure("Integración financiera pendiente: la ejecución requiere financiación completa exacta");
+        }
+    }
+    boolean preparationAvailable(ContentReference reference) {
         var resource = content.resource(reference.resourceId(), false);
         var job = jobs.discover(resource.jobId());
         if (!job.agreement().filter(resource.terms()::equals).isPresent()) { throw new IllegalArgumentException("Términos de ejecución incompatibles"); }
         if (resource.kind() != JobContentStore.Kind.SUPPORT_NOTE) {
             var funding = money.currentForUpdate(job.id(), resource.terms()).requireExact(job.id(), resource.terms());
-            if (!funding.permitsFundedWork()) {
-                throw new ModerationFailure("Integración financiera pendiente: la ejecución requiere financiación completa exacta");
-            }
+            return funding.permitsFundedWork();
         }
+        return true;
     }
     @Override public boolean current(ContentReference reference) { return reference.revisionId().equals(content.resource(reference.resourceId(), false).current()); }
-    @Override public boolean reportable(ContentReference reference) {
+    @Override public ActivationLifecycle activationLifecycle(ContentReference reference) {
         var resource = content.resource(reference.resourceId(), false);
-        conversations.requireEligible(jobs.discover(resource.jobId()).conversation());
+        if (!reference.equals(resource.reference(reference.revisionId()))) { throw new IllegalArgumentException("Contenido del trabajo incompatible"); }
+        return reference.revisionId().equals(resource.current()) && reference.revisionId().equals(resource.approved())
+                ? ActivationLifecycle.REAFFIRMATION : ActivationLifecycle.DELIVERY;
+    }
+    @Override public boolean reportable(ContentReference reference, ActorId reporter, String effectiveLabel) {
+        var resource = content.resource(reference.resourceId(), false);
+        conversations.requireReportable(jobs.discover(resource.jobId()).conversation().id(), reporter, effectiveLabel, Optional.of(resource.terms()));
         return reference.revisionId().equals(resource.approved());
     }
     @Override public long activate(ContentReference reference) {
         var resource = content.resource(reference.resourceId(), false);
         var job = jobs.discover(resource.jobId());
         if (!current(reference)) { throw new IllegalArgumentException("Revisión del trabajo desactualizada"); }
+        if (activationLifecycle(reference) == ActivationLifecycle.REAFFIRMATION) {
+            agreements.getObject().requireApproved(agreements.getObject().discover(resource.terms()));
+            return resource.version();
+        }
         conversations.requireEligible(job.conversation());
         if (resource.kind() != JobContentStore.Kind.SUPPORT_NOTE) {
             participation.requireContract(job.conversation());

@@ -24,8 +24,9 @@ public class ConversationWords {
         return switch (state) {
             case "PENDING" -> "Aviso pendiente";
             case "CLAIMED" -> "Comprobando el acceso antes de entregar";
+            case "RETRY_WAIT" -> "Aviso sin entregar; reintento automático pendiente";
             case "DELIVERED" -> "Aviso entregado en este sitio";
-            case "FAILED" -> "Aviso sin entregar; consultá el contenido y la ayuda disponibles";
+            case "FAILED" -> "Aviso sin entregar; los reintentos automáticos se agotaron. Consultá el contenido y la ayuda disponibles";
             default -> "Estado pendiente de confirmar";
         };
     }

@@ -56,20 +56,29 @@ public class MessageReader implements NoticeOwner {
     }
 
     @Transactional public List<MessageView> historicalPage(UUID threadId, SubjectId side) {
+        return historicalPage(threadId, side, Optional.empty()).messages();
+    }
+
+    @Transactional public HistoricalPage historicalPage(UUID threadId, SubjectId side, Optional<UUID> after) {
         ActorId actor = actor();
         conversations.protect(threadId, actor, side, Capability.ACCESS_EXISTING_OBLIGATION);
         var context = conversations.discover(threadId);
-        if (!jobs.lock(context.jobId()).accepted()) { throw ConversationFailure.unavailable(); }
-        var ids = store.jdbc.query("select id,approved_revision from conversations_authored where thread_id=? and approved_revision is not null order by id::text limit 10",
-                (row, index) -> new UUID[]{row.getObject(1, UUID.class), row.getObject(2, UUID.class)}, threadId);
+        var job = jobs.lock(context.jobId());
+        if (!job.accepted() || !job.conversation().equals(context)) { throw ConversationFailure.unavailable(); }
+        after.ifPresent(id -> {
+            if (!threadId.equals(store.resource(id, false).thread())) { throw ConversationFailure.unavailable(); }
+        });
+        var ids = store.jdbc.query("select id,approved_revision from conversations_authored where thread_id=? and approved_revision is not null and (cast(? as text) is null or id::text>?) order by id::text limit 11",
+                (row, index) -> new UUID[]{row.getObject(1, UUID.class), row.getObject(2, UUID.class)}, threadId, after.map(UUID::toString).orElse(null), after.map(UUID::toString).orElse(null));
+        var next = ids.size() > 10 ? Optional.of(ids.get(9)[0]) : Optional.<UUID>empty();
         Map<ContentReference, MessageStore.Resource> resources = new LinkedHashMap<>();
-        for (var id : ids) {
+        for (var id : ids.stream().limit(10).toList()) {
             var resource = store.resource(id[0], true);
             if (!threadId.equals(resource.thread()) || !id[1].equals(resource.approved())) { throw ConversationFailure.unavailable(); }
             resources.put(resource.reference(id[1]), resource);
         }
         var approvals = resources.isEmpty() ? Map.<ContentReference, ModerationAccess.Approval>of() : moderation.approvalsForUpdate(Set.copyOf(resources.keySet()));
-        if (!permissions.decide(PermissionRequest.self(new AccountId(actor.value()), Capability.SEND_MARKETPLACE_MESSAGE)).allowed()) { return List.of(); }
+        if (!permissions.decide(PermissionRequest.self(new AccountId(actor.value()), Capability.SEND_MARKETPLACE_MESSAGE)).allowed()) { return new HistoricalPage(List.of(), next); }
         List<MessageView> result = new ArrayList<>();
         for (var entry : resources.entrySet()) {
             var revision = store.revision(entry.getValue(), entry.getKey().revisionId());
@@ -78,7 +87,7 @@ public class MessageReader implements NoticeOwner {
                 result.add(new MessageView(entry.getKey(), revision.body(), approval.label(), revision.input().attachments(), entry.getValue().version(), 0));
             }
         }
-        return List.copyOf(result);
+        return new HistoricalPage(result, next);
     }
 
     private MessageView privateView(ContentReference reference, ActorId actor, SubjectId subject) {
@@ -97,6 +106,12 @@ public class MessageReader implements NoticeOwner {
         conversations.protect(threadId, actor, subject, Capability.SEND_MARKETPLACE_MESSAGE);
         var events = store.jdbc.query("select sequence,resource_id,revision_id,kind from conversations_event where thread_id=? and sequence>? order by sequence limit 10",
                 (row, index) -> new Event(row.getLong(1), row.getObject(2, UUID.class), row.getObject(3, UUID.class), row.getString(4)), threadId, after);
+        var messages = projectEvents(threadId, subject, actor, events);
+        long next = events.isEmpty() ? after : events.getLast().sequence();
+        return new PollPage(messages, next, events.size() == 10);
+    }
+
+    private List<MessageView> projectEvents(UUID threadId, SubjectId subject, ActorId actor, List<Event> events) {
         Map<UUID, MessageStore.Resource> resources = new HashMap<>();
         for (UUID id : events.stream().map(Event::resource).distinct().sorted(Comparator.comparing(UUID::toString)).toList()) {
             var resource = store.resource(id, true);
@@ -121,8 +136,7 @@ public class MessageReader implements NoticeOwner {
                 }
             }
         }
-        long next = events.isEmpty() ? after : events.getLast().sequence();
-        return new PollPage(messages, next, events.size() == 10);
+        return List.copyOf(messages);
     }
 
     @Transactional public PollPage recent(UUID threadId, SubjectId subject) {
@@ -131,9 +145,33 @@ public class MessageReader implements NoticeOwner {
         return poll(threadId, subject, after);
     }
 
+    @Transactional public HistoryPage history(UUID threadId, SubjectId subject, Optional<String> cursor) {
+        ActorId actor = actor();
+        conversations.protect(threadId, actor, subject, Capability.SEND_MARKETPLACE_MESSAGE);
+        var selected = cursor.map(HistoryCursor::parse);
+        selected.ifPresent(value -> {
+            var boundaries = store.jdbc.query("select sequence from conversations_event where thread_id=? and sequence in (?,?)",
+                    (row, index) -> row.getLong(1), threadId, value.before(), value.observed());
+            if (!boundaries.contains(value.before()) || !boundaries.contains(value.observed())) { throw ConversationFailure.unavailable(); }
+        });
+        long current = store.jdbc.queryForObject("select coalesce(max(sequence),0) from conversations_event where thread_id=?", Long.class, threadId);
+        long observed = selected.map(HistoryCursor::observed).orElse(current);
+        var descending = store.jdbc.query("select sequence,resource_id,revision_id,kind from conversations_event where thread_id=? and sequence<=? and (cast(? as bigint) is null or sequence<?) order by sequence desc limit 11",
+                (row, index) -> new Event(row.getLong(1), row.getObject(2, UUID.class), row.getObject(3, UUID.class), row.getString(4)),
+                threadId, observed, selected.map(HistoryCursor::before).orElse(null), selected.map(HistoryCursor::before).orElse(null));
+        var events = new ArrayList<>(descending.stream().limit(10).toList());
+        Collections.reverse(events);
+        var next = descending.size() > 10 ? Optional.of(new HistoryCursor(events.getFirst().sequence(), observed).encoded()) : Optional.<String>empty();
+        return new HistoryPage(projectEvents(threadId, subject, actor, events), next, selected.isPresent(), current > observed);
+    }
+
     @Transactional public List<MessageView> discussion(ContentReference listing) {
         var ids = store.jdbc.query("select id,approved_revision from conversations_authored where listing_id=? and listing_revision=? and listing_kind=? and approved_revision is not null order by id::text limit 10",
                 (row, index) -> new UUID[]{row.getObject(1, UUID.class), row.getObject(2, UUID.class)}, listing.resourceId(), listing.revisionId(), listing.ownerKind().name());
+        return discussion(listing, ids);
+    }
+
+    private List<MessageView> discussion(ContentReference listing, List<UUID[]> ids) {
         if (ids.isEmpty()) { return List.of(); }
         var owner = owners.getObject();
         List<ContentReference> ownReferences = new ArrayList<>();
@@ -197,13 +235,18 @@ public class MessageReader implements NoticeOwner {
     }
 
     private PreparedView ownRevision(MessageStore.Resource discovered, SubjectId subject) {
+        if (discovered.current() == null) { throw ConversationFailure.unavailable(); }
+        return ownRevision(discovered, subject, discovered.reference(discovered.current()));
+    }
+
+    private PreparedView ownRevision(MessageStore.Resource discovered, SubjectId subject, ContentReference reference) {
         ActorId actor = actor();
-        if (!discovered.actor().equals(actor.value()) || !discovered.subject().equals(subject.value()) || discovered.current() == null) { throw ConversationFailure.unavailable(); }
-        var reference = discovered.reference(discovered.current());
+        if (!discovered.actor().equals(actor.value()) || !discovered.subject().equals(subject.value()) || discovered.current() == null
+                || !reference.equals(discovered.reference(reference.revisionId()))) { throw ConversationFailure.unavailable(); }
         var owner = owners.getObject();
         var participants = owner.identityParticipants(reference);
         identity.requireForUpdate(PermissionRequest.self(new AccountId(actor.value()), Capability.ACCESS_SUPPORT), participants);
-        var advisory = store.revision(discovered, discovered.current());
+        var advisory = store.revision(discovered, reference.revisionId());
         var input = owner.lockRevision(advisory.author(), reference);
         var resource = store.resource(discovered.id(), false);
         if (!resource.equals(discovered) || !participants.equals(owner.identityParticipants(reference)) || !input.equals(advisory.input())) { throw ConversationFailure.unavailable(); }
@@ -218,6 +261,36 @@ public class MessageReader implements NoticeOwner {
         return new PreparedView(reference, resource.version(), status.map(ModerationAccess.Approval::state).orElse("PREPARED_UNSUBMITTED"),
                 status.map(ModerationAccess.Approval::reason).orElse("SUBMIT_REQUIRED"), visible ? advisory.body() : "Contenido oculto por la audiencia actual", resource.kind().name(),
                 Optional.ofNullable(resource.thread()), Optional.ofNullable(resource.listingId()), visible);
+    }
+
+    @Transactional(propagation = Propagation.NEVER)
+    public PreparedView origin(ContentReference reference) {
+        return authorTransaction.execute(status -> {
+            if (!store.owns(reference)) { throw ConversationFailure.unavailable(); }
+            var resource = store.resource(reference.resourceId(), false);
+            ActorId actor = actor();
+            if (resource.actor().equals(actor.value())) {
+                var own = ownRevision(resource, new SubjectId(resource.subject()), reference);
+                var revision = store.revision(resource, reference.revisionId());
+                var approval = moderation.findApprovalForUpdate(reference);
+                audience(approval.map(ModerationAccess.Approval::label).orElse(revision.input().declaredLabel()));
+                return own;
+            }
+            MessageView view;
+            if (resource.thread() == null) {
+                var visible = discussion(resource.listing(), List.<UUID[]>of(new UUID[]{reference.resourceId(), reference.revisionId()}));
+                if (visible.size() != 1) { throw ConversationFailure.unavailable(); }
+                view = visible.getFirst();
+            } else {
+                var context = conversations.discover(resource.thread());
+                if (!actor.equals(context.customerActor()) && !actor.equals(context.providerActor())) { throw ConversationFailure.unavailable(); }
+                var side = actor.equals(context.customerActor()) ? context.customer() : context.provider();
+                view = jobs.discover(context.jobId()).accepted()
+                        ? historical(reference, side).orElseThrow(ConversationFailure::unavailable)
+                        : privateView(reference, actor, side);
+            }
+            return new PreparedView(reference, view.version(), "APPROVED", "", view.body(), resource.kind().name(), Optional.empty(), Optional.empty(), true);
+        });
     }
 
     @Transactional(propagation = Propagation.MANDATORY)
@@ -239,12 +312,22 @@ public class MessageReader implements NoticeOwner {
 
     @Override public Set<SurfaceKind> noticeKinds() { return Set.of(SurfaceKind.PRIVATE_MESSAGE); }
     @Override @Transactional(propagation = Propagation.MANDATORY)
-    public void requireNotice(ContentReference reference, ActorId recipient) {
-        var resource = store.resource(reference.resourceId(), false);
-        if (resource.thread() == null) { throw ConversationFailure.unavailable(); }
-        var context = conversations.discover(resource.thread());
-        SubjectId subject = recipient.equals(context.customerActor()) ? context.customer() : context.provider();
-        privateView(reference, recipient, subject);
+    public boolean available(ContentReference reference, ActorId recipient) {
+        if (!noticeKinds().contains(reference.ownerKind()) || !store.owns(reference)) { throw ConversationFailure.unavailable(); }
+        var discovered = store.resource(reference.resourceId(), false);
+        if (discovered.thread() == null) { throw ConversationFailure.unavailable(); }
+        var subject = conversations.noticeSubject(discovered.thread(), recipient);
+        if (subject.isEmpty()) { return false; }
+        var resource = store.resource(reference.resourceId(), true);
+        if (!resource.equals(discovered)) { throw ConversationFailure.unavailable(); }
+        var revision = store.revision(resource, reference.revisionId());
+        var approval = moderation.approvalsForUpdate(Set.of(reference)).get(reference);
+        if (!approval.reference().equals(reference) || !approval.digest().equals(revision.input().digest())
+                || !Set.of("PENDING", "MANUAL_REVIEW", "APPROVED", "AWAITING_ELIGIBILITY", "FAILED", "REJECTED", "RECALLED").contains(approval.state())) {
+            throw ConversationFailure.unavailable();
+        }
+        audience(approval.label());
+        return visible(resource, revision, approval, Optional.of(recipient), subject);
     }
 
     private MessageView checked(MessageStore.Resource resource, MessageStore.Revision revision, ModerationAccess.Approval approval,
@@ -270,5 +353,24 @@ public class MessageReader implements NoticeOwner {
     }
     public record PreparedView(ContentReference reference, long version, String state, String reason, String body, String kind, Optional<UUID> thread, Optional<UUID> listing, boolean visible) {}
     public record PreparedPage(List<PreparedView> entries, Optional<UUID> next) { public PreparedPage { entries = List.copyOf(entries); } }
+    private record HistoryCursor(long before, long observed) {
+        HistoryCursor {
+            if (before <= 0 || observed < before) { throw ConversationFailure.unavailable(); }
+        }
+        static HistoryCursor parse(String text) {
+            if (!text.matches("[1-9][0-9]{0,18}:[1-9][0-9]{0,18}")) { throw ConversationFailure.unavailable(); }
+            var parts = text.split(":");
+            try { return new HistoryCursor(Long.parseLong(parts[0]), Long.parseLong(parts[1])); }
+            catch (NumberFormatException failure) { throw ConversationFailure.unavailable(); }
+        }
+        String encoded() { return before + ":" + observed; }
+    }
+    public record HistoryPage(List<MessageView> messages, Optional<String> next, boolean older, boolean laterActivity) {
+        public HistoryPage { messages = List.copyOf(messages); }
+        public static HistoryPage empty() { return new HistoryPage(List.of(), Optional.empty(), false, false); }
+    }
+    public record HistoricalPage(List<MessageView> messages, Optional<UUID> next) {
+        public HistoricalPage { messages = List.copyOf(messages); }
+    }
     public record PollPage(List<MessageView> messages, long next, boolean more) { public PollPage { messages = List.copyOf(messages); } }
 }

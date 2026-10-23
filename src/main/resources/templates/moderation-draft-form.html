@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisar borrador · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body><header th:replace="~{shell :: header}"></header><main id="main">
+<h1>Revisar borrador</h1><p>Este envío no guardó un borrador. Corregí los campos y volvé a guardarlo de forma manual.</p>
+<form th:fragment="draftFields" th:action="@{/moderation/drafts}" method="post" enctype="multipart/form-data" th:object="${form}">
+    <div class="error" role="alert" th:if="${#fields.hasErrors('*')}">
+        <p>El borrador no se guardó. Revisá estos errores:</p>
+        <ul><li th:each="error : ${#fields.detailedErrors()}"><a th:if="${!error.global}" th:href="${'#' + error.fieldName}" th:text="${error.message}"></a><span th:if="${error.global}" th:text="${error.message}"></span></li></ul>
+    </div>
+    <input type="hidden" th:field="*{command}"><input type="hidden" th:field="*{resource}"><input type="hidden" th:field="*{version}">
+    <p>Guardar crea una revisión privada sin enviarla a revisión ni publicarla. Enviar a revisión es un paso separado.</p>
+    <p th:if="${draftRecovery == true}">Se conserva solo texto de este envío, limitado a 32 KiB y escapado. Revisalo antes de guardar; los archivos deben seleccionarse otra vez. No se recuperó texto almacenado.</p>
+    <label for="text" th:text="${form.resource.isEmpty() ? 'Texto' : 'Nuevo texto completo'}"></label>
+    <textarea id="text" th:field="*{text}" maxlength="32768" rows="6" required aria-describedby="text-help text-error" th:attr="aria-invalid=${#fields.hasErrors('text') ? 'true' : null}"></textarea>
+    <p id="text-help">Hasta 32 KiB en UTF-8; tildes y otros caracteres pueden ocupar varios bytes. El texto nuevo reemplaza el texto completo de esta revisión.</p>
+    <p id="text-error" class="error" th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></p>
+    <label for="label">Etiqueta declarada</label>
+    <select id="label" th:field="*{label}" aria-describedby="label-error" th:attr="aria-invalid=${#fields.hasErrors('label') ? 'true' : null}"><option value="">Elegí una etiqueta</option><option value="GENERAL">General (incluye tatuajes)</option><option value="SENSITIVE">Sensible (anatomía o medicina)</option><option value="ADULT">Adulto (requiere edad y preferencia para verlo)</option></select>
+    <p id="label-error" class="error" th:if="${#fields.hasErrors('label')}" th:errors="*{label}"></p>
+    <label th:if="${form.resource.isEmpty()}" for="audience">Audiencia de prueba</label><select th:if="${form.resource.isEmpty()}" id="audience" th:field="*{audience}"><option value="PUBLIC">Pública, solo en este servidor local</option><option value="PRIVATE">Privada, solo participantes sintéticos</option></select>
+    <input th:if="${!form.resource.isEmpty()}" type="hidden" th:field="*{audience}"><p th:if="${!form.resource.isEmpty()}">La edición conserva la audiencia y el autor originales.</p>
+    <label for="participant">Participante sintético (UUID opcional para audiencia privada)</label><input id="participant" th:field="*{participant}" maxlength="36" aria-describedby="participant-help participant-error" th:attr="aria-invalid=${#fields.hasErrors('participant') ? 'true' : null}">
+    <p id="participant-help">Solo al crear un borrador privado. Una edición no cambia sus participantes.</p><p id="participant-error" class="error" th:if="${#fields.hasErrors('participant')}" th:errors="*{participant}"></p>
+    <label for="subject">Cuenta representada (UUID opcional; requiere autoridad actual)</label><input id="subject" th:field="*{subject}" maxlength="36" aria-describedby="subject-help subject-error" th:attr="aria-invalid=${#fields.hasErrors('subject') ? 'true' : null}">
+    <p id="subject-help">Al crear, vacío significa tu cuenta. Una edición conserva la cuenta representada original.</p><p id="subject-error" class="error" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></p>
+    <label for="upload">Adjunto nuevo opcional (hasta 1 MiB)</label><input id="upload" name="upload" type="file" accept="text/plain,image/png,image/jpeg,application/pdf,.stl" aria-describedby="upload-help">
+    <p id="upload-help">Texto UTF-8, PNG/JPEG limitados. PDF y modelos quedan en cuarentena sin descarga ni vista previa activa. El formulario completo admite hasta 5 MiB. Si hay un error, volvé a seleccionar el archivo. Dejarlo vacío guarda esta revisión sin adjuntos; los anteriores no se copian y sus bytes no se reemplazan.</p>
+    <p>Al seguir un enlace o salir de esta página podés perder cambios sin guardar. No se guardan automáticamente.</p>
+    <button type="submit" th:text="${form.resource.isEmpty() ? 'Guardar borrador' : 'Guardar edición'}"></button>
+</form>
+<p><a th:if="${!form.resource.isEmpty()}" th:href="@{/moderation/own/{id}(id=${form.resource})}">Consultar estado actual antes de editar</a> · <a href="/moderation">Volver al taller</a></p>
+</main><footer th:replace="~{shell :: footer}"></footer></body></html>

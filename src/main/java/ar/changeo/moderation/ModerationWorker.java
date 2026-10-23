@@ -3,6 +3,7 @@ package ar.changeo.moderation;
 import ar.changeo.files.api.*;
 import ar.changeo.identity.api.*;
 import ar.changeo.moderation.api.ModerationAccess;
+import ar.changeo.moderation.api.ContentOwner.ActivationLifecycle;
 import java.sql.Timestamp;
 import java.time.Clock;
 import java.util.*;
@@ -31,14 +32,7 @@ public class ModerationWorker {
     public Optional<Claim> claim() {
         standalone();
         if(!enabled) { return Optional.empty(); }
-        return transaction.execute(status -> {
-            var rows=store.jdbc.queryForList("select * from moderation_task where (state in ('PENDING','RETRY_WAIT') and available_at<=?) or (state='CLAIMED' and lease_until<=?) order by available_at,id for update skip locked limit 1",Timestamp.from(clock.instant()),Timestamp.from(clock.instant()));
-            if(rows.isEmpty()) { return Optional.empty(); }
-            var row=rows.getFirst(); UUID token=UUID.randomUUID(); UUID id=(UUID)row.get("id");
-            int attempts=(Integer)row.get("attempts"); boolean exhausted=attempts>=3;
-            store.jdbc.update("update moderation_task set state='CLAIMED',claim_token=?,lease_until=?,attempts=? where id=?",token,Timestamp.from(clock.instant().plusSeconds(30)),Math.min(3,attempts+1),id);
-            return Optional.of(new Claim(id,(UUID)row.get("reference_id"),(UUID)row.get("submission_id"),(String)row.get("kind"),((Number)row.get("generation")).longValue(),token,(UUID)row.get("decision_id"),exhausted));
-        });
+        return transaction.execute(status -> store.claim(null,30));
     }
     public boolean processOne() {
         var next=claim(); if(next.isEmpty()) { return false; } process(next.orElseThrow()); return true;
@@ -48,7 +42,7 @@ public class ModerationWorker {
         if(!enabled) { return; }
         if(claim.exhausted()) { failure(claim,"EXHAUSTED",true); return; }
         if(claim.kind().equals("ACTIVATE")) {
-            try { activate(claim); }
+            try { activateWithRetries(claim); }
             catch(ar.changeo.identity.IdentityFailure denied) { failure(claim,"ELIGIBILITY",true); }
             catch(ModerationFailure failure) { failure(claim,"BINDING",true); }
             catch(org.springframework.dao.TransientDataAccessException failure) { failure(claim,"OUTAGE",false); }
@@ -72,6 +66,29 @@ public class ModerationWorker {
         } catch(RuntimeException outage) { failure(claim,"OUTAGE",false); return; }
         finishReview(claim,result);
     }
+    private void activateWithRetries(Claim claim) {
+        for (int attempt = 0; attempt < 3; attempt++) {
+            try { activate(claim); return; }
+            catch (OwnerProtection.ActivationDiscoveryChanged changed) {
+                if (attempt == 2) { deferActivation(claim); }
+            }
+        }
+    }
+
+    private void deferActivation(Claim claim) {
+        transaction.executeWithoutResult(status -> {
+            store.barrier(claim.barrier());
+            var submission = store.submission(claim.submission(), true);
+            if (!submission.barrier().equals(claim.barrier())) { throw ModerationStore.unavailable(); }
+            if (!live(claim)) { return; }
+            if (submission.generation() != claim.generation() || submission.recalled() || !Objects.equals(submission.decision(), claim.decision())
+                    || !submission.state().equals("APPROVED")) { complete(claim, "SUPERSEDED"); return; }
+            int attempts = store.jdbc.queryForObject("select attempts from moderation_task where id=?", Integer.class, claim.id());
+            if (claim.exhausted() || attempts < 1) { throw ModerationStore.unavailable(); }
+            store.jdbc.update("update moderation_task set state='RETRY_WAIT',reason='CHANGED',attempts=attempts-1,claim_token=null,lease_until=null,available_at=? where id=?",
+                    Timestamp.from(clock.instant().plusSeconds(5)), claim.id());
+        });
+    }
     void finishReview(Claim claim,ReviewResult result) {
         transaction.executeWithoutResult(status -> {
             store.barrier(claim.barrier());var submission=store.submission(claim.submission(),true);
@@ -83,10 +100,11 @@ public class ModerationWorker {
     private void activate(Claim claim) {
         transaction.executeWithoutResult(status -> {
             var discovered=store.submission(claim.submission(),false);
-            var protectedRevision=protection.protect(discovered.author().permission(),discovered.author(),discovered.reference());
+            var activation=protection.protectActivation(discovered.author(),discovered.reference());
+            var protectedRevision=activation.revision();
             var owner=protectedRevision.owner();
             var canonical=protectedRevision.canonical();
-            owner.prepareActivation(discovered.reference());
+            if (activation.lifecycle() == ActivationLifecycle.DELIVERY) { owner.prepareActivation(discovered.reference()); }
             var approvals=moderation.getObject().approvalsForUpdate(protectedRevision.deliveryReferences());
             for(var dependency:protectedRevision.dependencies()) {
                 if(!"APPROVED".equals(approvals.get(dependency).state())) { throw ModerationStore.unavailable(); }
@@ -95,7 +113,7 @@ public class ModerationWorker {
             if(!submission.barrier().equals(claim.barrier()) || !submission.reference().equals(discovered.reference())) { throw ModerationStore.unavailable(); }
             if(!live(claim)) { return; }
             if(!owner.current(submission.reference()) || !canonical.digest().equals(submission.digest()) || !canonical.attachments().equals(store.attachments(submission)) || submission.recalled() || !submission.state().equals("APPROVED") || !Objects.equals(submission.decision(),claim.decision()) || submission.generation()!=claim.generation()) { complete(claim,"SUPERSEDED");return; }
-            if(submission.label().equals("ADULT") && (!identity.decide(PermissionRequest.self(new AccountId(submission.author().subject().value()),Capability.VIEW_ADULT)).allowed() || !identity.decide(PermissionRequest.self(new AccountId(submission.author().actor().value()),Capability.VIEW_ADULT)).allowed())) { throw new ar.changeo.identity.IdentityFailure("Adult eligibility required"); }
+            if(activation.lifecycle() == ActivationLifecycle.DELIVERY && submission.label().equals("ADULT") && (!identity.decide(PermissionRequest.self(new AccountId(submission.author().subject().value()),Capability.VIEW_ADULT)).allowed() || !identity.decide(PermissionRequest.self(new AccountId(submission.author().actor().value()),Capability.VIEW_ADULT)).allowed())) { throw new ar.changeo.identity.IdentityFailure("Adult eligibility required"); }
             for(var attachment:store.attachments(submission)) { if(!files.metadata(attachment).safe()) { complete(claim,"UNINSPECTABLE");return; } }
             long version=owner.activate(submission.reference());
             store.jdbc.update("insert into moderation_signal values(?,?,?,?,?,?,?) on conflict(decision_id) do nothing",UUID.randomUUID(),submission.barrier(),submission.id(),submission.decision(),"ACTIVATED",version,Timestamp.from(clock.instant()));
@@ -106,7 +124,7 @@ public class ModerationWorker {
         transaction.executeWithoutResult(status -> {
             store.barrier(claim.barrier());var submission=store.submission(claim.submission(),true);
             if(!live(claim)) { return; }
-            if(submission.generation()!=claim.generation() || submission.recalled()) { complete(claim,"SUPERSEDED"); return; }
+            if(submission.generation()!=claim.generation() || submission.recalled() || !Objects.equals(submission.decision(),claim.decision())) { complete(claim,"SUPERSEDED"); return; }
             int attempts=store.jdbc.queryForObject("select attempts from moderation_task where id=?",Integer.class,claim.id());
             boolean stop=terminal || attempts>=3;
             store.jdbc.update("update moderation_task set state=?,reason=?,claim_token=null,lease_until=null,available_at=? where id=?",stop ? "FAILED" : "RETRY_WAIT",reason,Timestamp.from(clock.instant().plusSeconds(5*attempts)),claim.id());
@@ -116,11 +134,9 @@ public class ModerationWorker {
         });
     }
     private boolean live(Claim claim) {
-        var rows=store.jdbc.queryForList("select claim_token,state,lease_until from moderation_task where id=? for update",claim.id());
-        if(rows.isEmpty()) { return false; } var row=rows.getFirst();
-        return "CLAIMED".equals(row.get("state")) && claim.token().equals(row.get("claim_token")) && ((Timestamp)row.get("lease_until")).toInstant().isAfter(clock.instant());
+        return store.live(claim);
     }
-    private void complete(Claim claim,String reason) { store.jdbc.update("update moderation_task set state='COMPLETE',reason=?,claim_token=null,lease_until=null where id=?",reason,claim.id()); }
+    private void complete(Claim claim,String reason) { store.complete(claim,reason); }
     private static int rank(String label) { return switch(label) { case "GENERAL" -> 0; case "SENSITIVE" -> 1; default -> 2; }; }
     private static void standalone() { if(TransactionSynchronizationManager.isActualTransactionActive()) { throw new ModerationFailure("El trabajador requiere una transacción independiente"); } }
     public record Claim(UUID id,UUID barrier,UUID submission,String kind,long generation,UUID token,UUID decision,boolean exhausted) {}

@@ -3,6 +3,7 @@ package ar.changeo.conversations;
 import ar.changeo.conversations.api.*;
 import ar.changeo.identity.api.*;
 import ar.changeo.jobs.api.*;
+import ar.changeo.moderation.api.ContentReference;
 import org.springframework.beans.factory.ObjectProvider;
 import java.util.*;
 import org.springframework.stereotype.Service;
@@ -52,16 +53,10 @@ public class ConversationGuard implements ConversationAccess {
         var discovered = discover(threadId);
         if (!discovered.participant(subject)) { throw ConversationFailure.unavailable(); }
         var accounts = participants(threadId);
-        var permission = new PermissionRequest(Optional.of(actor), Optional.of(historical(capability) ? new SubjectId(actor.value()) : subject), capability,
-                Set.of(Capability.ACCEPT_AGREEMENT, Capability.SYNTHETIC_FUNDING_ELIGIBILITY, Capability.ACCESS_EXISTING_OBLIGATION).contains(capability)
-                        ? Optional.of(discovered.jobContext()) : Optional.empty());
-        var decision = identity.requireForUpdate(permission, accounts);
+        var decision = identity.requireForUpdate(permission(discovered, actor, subject, capability), accounts);
         if (historical(capability)) {
             var job = jobs.getObject().discover(discovered.jobId());
-            if (!actor.equals(discovered.historicalActor(subject)) || !store.member(discovered, subject) || !job.accepted()
-                    || job.state() == JobSnapshot.State.NEGOTIATING || (subject.equals(discovered.customer()) && !job.legalPayer().filter(payer -> payer.value().equals(actor.value())).isPresent())) {
-                throw ConversationFailure.unavailable();
-            }
+            if (!retainedSide(discovered, job, actor, subject)) { throw ConversationFailure.unavailable(); }
         } else {
             requireCurrent(discovered);
             if (!actor.equals(discovered.historicalActor(subject))) { throw ConversationFailure.unavailable(); }
@@ -77,6 +72,41 @@ public class ConversationGuard implements ConversationAccess {
     @Override @Transactional(propagation = Propagation.MANDATORY)
     public void requireEligible(ConversationContext context) {
         if (!currentParticipants(context) || !currentAudience(context, context.listingLabel())) { throw ConversationFailure.unavailable(); }
+    }
+
+    @Override @Transactional(propagation = Propagation.MANDATORY)
+    public Optional<SubjectId> noticeSubject(UUID threadId, ActorId recipient) {
+        var discovered = discover(threadId);
+        var declared = noticeParticipants(threadId, recipient);
+        identity.requireForUpdate(PermissionRequest.self(new AccountId(recipient.value()), Capability.ACCESS_SUPPORT), declared);
+        if (!declared.equals(noticeParticipants(threadId, recipient))) { throw ConversationFailure.unavailable(); }
+        var context = lock(threadId);
+        if (!discovered.equals(context) || !declared.equals(noticeParticipants(threadId, recipient))) { throw ConversationFailure.unavailable(); }
+        MessageReader.audience(context.listingLabel());
+        if (!currentParticipants(context) || !currentAudience(context, context.listingLabel())) { return Optional.empty(); }
+        return List.of(context.customer(), context.provider()).stream()
+                .filter(subject -> recipient.equals(context.historicalActor(subject)))
+                .filter(subject -> permissions.decide(permission(context, recipient, subject, Capability.SEND_MARKETPLACE_MESSAGE)).allowed())
+                .findFirst();
+    }
+
+    @Override @Transactional(propagation = Propagation.MANDATORY)
+    public void requireReportable(UUID threadId, ActorId reporter, String effectiveLabel, Optional<ContentReference> terms) {
+        MessageReader.audience(effectiveLabel);
+        var context = discover(threadId);
+        var job = jobs.getObject().discover(context.jobId());
+        if (!job.conversation().equals(context)) { throw ConversationFailure.unavailable(); }
+        boolean retained = job.accepted() && job.state() != JobSnapshot.State.NEGOTIATING
+                && terms.map(reference -> job.agreement().filter(reference::equals).isPresent()).orElse(true);
+        var capability = retained ? Capability.ACCESS_EXISTING_OBLIGATION : Capability.SEND_MARKETPLACE_MESSAGE;
+        if (!retained) { requireCurrent(context); }
+        var side = List.of(context.customer(), context.provider()).stream()
+                .filter(subject -> reporter.equals(context.historicalActor(subject)))
+                .filter(subject -> !retained || retainedSide(context, job, reporter, subject))
+                .filter(subject -> sideAudience(reporter, subject, effectiveLabel))
+                .filter(subject -> permissions.decide(permission(context, reporter, subject, capability)).allowed())
+                .findFirst().orElseThrow(ConversationFailure::unavailable);
+        authorize(threadId, reporter, side, capability);
     }
 
     @Override @Transactional(propagation = Propagation.MANDATORY, readOnly = true)
@@ -113,6 +143,24 @@ public class ConversationGuard implements ConversationAccess {
     boolean sideAudience(ActorId actor, SubjectId subject, String label) {
         return !(label.equals("ADULT") && !actor.value().equals(subject.value()))
                 && permissions.decide(PermissionRequest.self(new AccountId(actor.value()), MessageReader.audience(label))).allowed();
+    }
+
+    private Set<AccountId> noticeParticipants(UUID threadId, ActorId recipient) {
+        Set<AccountId> accounts = new HashSet<>(participants(threadId));
+        accounts.add(new AccountId(recipient.value()));
+        return Set.copyOf(accounts);
+    }
+
+    private boolean retainedSide(ConversationContext context, JobSnapshot job, ActorId actor, SubjectId subject) {
+        return actor.equals(context.historicalActor(subject)) && store.member(context, subject) && job.accepted()
+                && job.state() != JobSnapshot.State.NEGOTIATING
+                && (!subject.equals(context.customer()) || job.legalPayer().filter(payer -> payer.value().equals(actor.value())).isPresent());
+    }
+
+    private static PermissionRequest permission(ConversationContext context, ActorId actor, SubjectId subject, Capability capability) {
+        return new PermissionRequest(Optional.of(actor), Optional.of(historical(capability) ? new SubjectId(actor.value()) : subject), capability,
+                Set.of(Capability.ACCEPT_AGREEMENT, Capability.SYNTHETIC_FUNDING_ELIGIBILITY, Capability.ACCESS_EXISTING_OBLIGATION).contains(capability)
+                        ? Optional.of(context.jobContext()) : Optional.empty());
     }
 
     private static boolean historical(Capability capability) { return capability == Capability.ACCESS_SUPPORT || capability == Capability.ACCESS_EXISTING_OBLIGATION; }

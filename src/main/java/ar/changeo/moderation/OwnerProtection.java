@@ -30,6 +30,35 @@ class OwnerProtection {
         return new ProtectedRevision(owner, canonical, dependencies);
     }
 
+    ProtectedActivation protectActivation(AuthorContext author, ContentReference reference) {
+        ContentOwner owner = owners.require(reference);
+        var discovered = activationDiscovery(owner, author, reference);
+        var admission = PermissionRequest.self(new AccountId(author.actor().value()), Capability.ACCESS_SUPPORT);
+        try { identity.requireForUpdate(admission, discovered.participants()); }
+        catch (IdentityDiscoveryChanged changed) { throw new ActivationDiscoveryChanged(); }
+        requireUnchanged(discovered, activationDiscovery(owner, author, reference));
+        PermissionRequest permission = discovered.lifecycle() == ContentOwner.ActivationLifecycle.DELIVERY ? author.permission() : admission;
+        if (discovered.lifecycle() == ContentOwner.ActivationLifecycle.DELIVERY) {
+            identity.requireForUpdate(permission, discovered.participants());
+        }
+        owner.prepareProtection(permission, author, reference, discovered.participants());
+        ReviewInput canonical = owner.lockRevision(author, reference);
+        requireUnchanged(discovered, activationDiscovery(owner, author, reference));
+        return new ProtectedActivation(new ProtectedRevision(owner, canonical, discovered.dependencies()), discovered.lifecycle());
+    }
+
+    private ActivationDiscovery activationDiscovery(ContentOwner owner, AuthorContext author, ContentReference reference) {
+        var participants = participants(owner, author.permission(), author, reference);
+        var dependencies = dependencies(owner, reference);
+        var lifecycle = owner.activationLifecycle(reference);
+        if (lifecycle == null) { throw ModerationStore.unavailable(); }
+        return new ActivationDiscovery(participants, dependencies, lifecycle);
+    }
+
+    private static void requireUnchanged(ActivationDiscovery expected, ActivationDiscovery current) {
+        if (!expected.equals(current)) { throw new ActivationDiscoveryChanged(); }
+    }
+
     private Set<AccountId> participants(ContentOwner owner, PermissionRequest permission, AuthorContext author, ContentReference reference) {
         Set<AccountId> accounts = new HashSet<>(owner.identityParticipants(reference));
         permission.actorId().ifPresent(actor -> accounts.add(new AccountId(actor.value())));
@@ -72,4 +101,8 @@ class OwnerProtection {
             return Set.copyOf(references);
         }
     }
+
+    record ProtectedActivation(ProtectedRevision revision, ContentOwner.ActivationLifecycle lifecycle) {}
+    private record ActivationDiscovery(Set<AccountId> participants, Set<ContentReference> dependencies, ContentOwner.ActivationLifecycle lifecycle) {}
+    static final class ActivationDiscoveryChanged extends RuntimeException {}
 }

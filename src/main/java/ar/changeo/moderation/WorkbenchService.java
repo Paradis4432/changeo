@@ -26,6 +26,23 @@ public class WorkbenchService {
     public WorkbenchService(WorkbenchStore store,IdentityAccess identity,SecurityProof proof,FileAccess files,ModerationAccess moderation,Admission admission,Clock clock,PlatformTransactionManager transactions,org.springframework.beans.factory.ObjectProvider<ContentReader> readers) {
         this.store=store; this.identity=identity; this.proof=proof; this.files=files; this.moderation=moderation; this.admission=admission; this.clock=clock; this.transaction=new TransactionTemplate(transactions);this.readers=readers;
     }
+    public void requireDraftAccess(Optional<UUID> resource,long version,String audience,Optional<UUID> subject) {
+        if(org.springframework.transaction.support.TransactionSynchronizationManager.isActualTransactionActive()) {
+            throw new ModerationFailure("La recuperación debe iniciar su propia transacción");
+        }
+        transaction.executeWithoutResult(status -> {
+            UUID actor=proof.actor().orElseThrow(ModerationStore::unavailable);
+            if(!Set.of("PUBLIC","PRIVATE").contains(audience)) { throw ModerationStore.unavailable(); }
+            WorkbenchStore.Resource discovered=resource.map(id->store.resource(id,false)).orElse(null);
+            AuthorContext author=discovered==null?new AuthorContext(new ActorId(actor),new SubjectId(subject.orElse(actor)),audience.equals("PRIVATE")?Capability.SEND_MARKETPLACE_MESSAGE:Capability.NEW_REQUEST):discovered.author();
+            if(!author.actor().value().equals(actor)) { throw ModerationStore.unavailable(); }
+            identity.requireForUpdate(author.permission());
+            if(discovered!=null) {
+                var current=store.resource(discovered.id(),true);
+                if(current.version()!=version || !current.author().equals(author) || !current.audience().equals(audience)) { throw ModerationStore.unavailable(); }
+            }
+        });
+    }
     public ContentReference save(Draft draft) {
         return transaction.execute(status -> {
             UUID actor=proof.actor().orElseThrow(ModerationStore::unavailable);

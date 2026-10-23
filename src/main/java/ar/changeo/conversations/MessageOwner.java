@@ -27,6 +27,9 @@ public class MessageOwner implements ContentOwner {
         this.store = store; this.conversations = conversations; this.identity = identity; this.listings = listings;
         this.notifications = notifications; this.readers = readers; this.clock = clock;
     }
+    @Override public Optional<String> caseOrigin(ContentReference reference) {
+        return Optional.of("/conversations/origin?kind=" + reference.ownerKind() + "&resource=" + reference.resourceId() + "&revision=" + reference.revisionId());
+    }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.PRIVATE_MESSAGE, SurfaceKind.QUESTION, SurfaceKind.COMMENT); }
     @Override public boolean owns(ContentReference reference) { return store.owns(reference); }
     @Override public Set<AccountId> identityParticipants(ContentReference reference) {
@@ -44,30 +47,40 @@ public class MessageOwner implements ContentOwner {
     }
     @Override public ReviewInput lockRevision(AuthorContext author, ContentReference reference) {
         var discovered = store.resource(reference.resourceId(), false);
+        ConversationContext thread = null;
         if (discovered.thread() == null) {
             var parent = listings.getObject().prepareResponse(discovered.listing());
             if (!parent.listing().subject().value().equals(discovered.listingSubject()) || !parent.publisher().value().equals(discovered.listingActor())) {
                 throw ConversationFailure.unavailable();
             }
-        } else { conversations.lock(discovered.thread()); }
+        } else { thread = conversations.lock(discovered.thread()); }
         var resource = store.resource(reference.resourceId(), true);
         var revision = store.revision(resource, reference.revisionId());
         if (!resource.reference(reference.revisionId()).equals(reference) || !revision.author().equals(author)) { throw ConversationFailure.unavailable(); }
+        if (thread != null && (!thread.id().equals(resource.thread()) || !thread.participant(author.subject())
+                || !thread.historicalActor(author.subject()).equals(author.actor()))) { throw ConversationFailure.unavailable(); }
         return revision.input();
     }
     @Override public boolean current(ContentReference reference) {
         return reference.revisionId().equals(store.resource(reference.resourceId(), false).current());
     }
-    @Override public boolean reportable(ContentReference reference) {
+    @Override public ActivationLifecycle activationLifecycle(ContentReference reference) {
+        var resource = store.resource(reference.resourceId(), false);
+        if (!resource.reference(reference.revisionId()).equals(reference)) { throw ConversationFailure.unavailable(); }
+        return resource.thread() != null && (resource.kind() == MessageStore.Kind.PRIVATE_MESSAGE || resource.kind() == MessageStore.Kind.PROPOSAL)
+                && reference.revisionId().equals(resource.approved()) ? ActivationLifecycle.REAFFIRMATION : ActivationLifecycle.DELIVERY;
+    }
+    @Override public boolean reportable(ContentReference reference, ActorId reporter, String effectiveLabel) {
         var resource = store.resource(reference.resourceId(), false);
         if (!reference.revisionId().equals(resource.approved())) { return false; }
         if (resource.thread() == null) { listings.getObject().requireOpen(resource.listing()); }
-        else { conversations.requireEligible(conversations.discover(resource.thread())); }
+        else { conversations.requireReportable(resource.thread(), reporter, effectiveLabel, Optional.empty()); }
         return true;
     }
     @Override public long activate(ContentReference reference) {
         var resource = store.resource(reference.resourceId(), false);
         if (!current(reference)) { throw ConversationFailure.unavailable(); }
+        if (activationLifecycle(reference) == ActivationLifecycle.REAFFIRMATION) { return resource.version(); }
         if (resource.thread() == null) { listings.getObject().requireOpen(resource.listing()); }
         else { conversations.requireEligible(conversations.discover(resource.thread())); }
         if (reference.revisionId().equals(resource.approved())) { return resource.version(); }

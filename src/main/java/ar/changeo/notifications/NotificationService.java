@@ -60,7 +60,7 @@ public class NotificationService implements NotificationAccess {
         return claim;
     }
     private void deliver(Claim claim) {
-        owner(claim.reference()).requireNotice(claim.reference(), claim.recipient());
+        if (!owner(claim.reference()).available(claim.reference(), claim.recipient())) { throw new IllegalStateException("Contenido actual no disponible"); }
         if (!live(claim)) { return; }
         jdbc.update("insert into notifications_local_delivery values(?,?) on conflict do nothing", claim.id(), Timestamp.from(clock.instant()));
         jdbc.update("update notifications_intent set state='DELIVERED',delivered_at=?,claim_token=null,lease_until=null,reason='LOCAL_ON_SITE' where id=?",
@@ -79,25 +79,37 @@ public class NotificationService implements NotificationAccess {
                 claim.attempts() == 3 ? "FAILED" : "RETRY_WAIT", Timestamp.from(clock.instant().plusSeconds(30L * claim.attempts())),
                 claim.attempts() == 3 ? "EXHAUSTED" : "CURRENT_CONTENT_UNAVAILABLE", claim.id());
     }
-    public List<Notice> own() {
+    @Transactional(propagation = Propagation.NEVER)
+    public List<Notice> own() { return own(Optional.empty()).notices(); }
+
+    @Transactional(propagation = Propagation.NEVER)
+    public NoticePage own(Optional<UUID> after) {
         ActorId actor = new ActorId(proof.actor().orElseThrow(() -> new IllegalArgumentException("Cuenta requerida")));
-        var candidates = jdbc.query("select * from notifications_intent where recipient_id=? order by created_at desc,id limit 20",
-                (row, index) -> new Notice(row.getObject("id", UUID.class), new ContentReference(SurfaceKind.valueOf(row.getString("owner_kind")),
-                        row.getObject("resource_id", UUID.class), row.getObject("revision_id", UUID.class)), row.getString("state"), row.getString("reason")), actor.value());
+        var candidates = candidates(actor, after);
         List<Notice> result = new ArrayList<>();
-        for (var candidate : candidates) {
-            Optional<Notice> current;
-            try {
-                current = transaction.execute(status -> {
-                    owner(candidate.reference()).requireNotice(candidate.reference(), actor);
-                    var rows = jdbc.query("select state,reason from notifications_intent where id=? and recipient_id=? for update",
-                            (row, index) -> new Notice(candidate.id(), candidate.reference(), row.getString(1), row.getString(2)), candidate.id(), actor.value());
-                    return rows.stream().findFirst();
-                });
-            } catch (RuntimeException unavailable) { current = Optional.empty(); }
+        for (var candidate : candidates.stream().limit(20).toList()) {
+            Optional<Notice> current = transaction.execute(status -> {
+                if (!owner(candidate.reference()).available(candidate.reference(), actor)) { return Optional.empty(); }
+                var rows = jdbc.query("select state,reason from notifications_intent where id=? and recipient_id=? for update",
+                        (row, index) -> new Notice(candidate.id(), candidate.reference(), row.getString(1), row.getString(2)), candidate.id(), actor.value());
+                return rows.stream().findFirst();
+            });
             current.ifPresent(result::add);
         }
-        return List.copyOf(result);
+        return new NoticePage(result, candidates.size() > 20 ? Optional.of(candidates.get(19).id()) : Optional.empty());
+    }
+    private List<Notice> candidates(ActorId actor, Optional<UUID> after) {
+        String selection = "select * from notifications_intent where recipient_id=?";
+        String order = " order by created_at desc,id limit 21";
+        org.springframework.jdbc.core.RowMapper<Notice> mapper = (row, index) -> new Notice(row.getObject("id", UUID.class),
+                new ContentReference(SurfaceKind.valueOf(row.getString("owner_kind")), row.getObject("resource_id", UUID.class), row.getObject("revision_id", UUID.class)),
+                row.getString("state"), row.getString("reason"));
+        if (after.isEmpty()) { return jdbc.query(selection + order, mapper, actor.value()); }
+        UUID anchor = after.orElseThrow();
+        var boundaries = jdbc.query("select created_at from notifications_intent where id=? and recipient_id=?", (row, index) -> row.getTimestamp(1), anchor, actor.value());
+        if (boundaries.size() != 1) { throw new IllegalArgumentException("Referencia de avisos no disponible"); }
+        var boundary = boundaries.getFirst();
+        return jdbc.query(selection + " and (created_at<? or (created_at=? and id>?))" + order, mapper, actor.value(), boundary, boundary, anchor);
     }
     private NoticeOwner owner(ContentReference reference) {
         var matches = owners.orderedStream().filter(owner -> owner.noticeKinds().contains(reference.ownerKind())).toList();
@@ -106,4 +118,7 @@ public class NotificationService implements NotificationAccess {
     }
     private record Claim(UUID id, ActorId recipient, ContentReference reference, long generation, UUID token, int attempts) {}
     public record Notice(UUID id, ContentReference reference, String state, String reason) {}
+    public record NoticePage(List<Notice> notices, Optional<UUID> next) {
+        public NoticePage { notices = List.copyOf(notices); }
+    }
 }

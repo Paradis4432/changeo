@@ -82,7 +82,9 @@ public class MarketplaceReader {
         return publicView(ids.getFirst());
     }
 
-    public OwnView own(UUID id) {
+    public OwnView own(UUID id) { return own(id, Optional.empty()); }
+
+    private OwnView own(UUID id, Optional<UUID> selected) {
         return transaction.execute(status -> {
             UUID actor=proof.actor().orElseThrow(MarketplaceStore::unavailable);
             var discovered=store.resource(id,false);
@@ -92,7 +94,7 @@ public class MarketplaceReader {
             boolean currentManager=identity.decide(permission).allowed();
             var resource=store.resource(id,true);
             if (!resource.subject().equals(discovered.subject()) || (!store.historicalParticipant(resource,actor) && !currentManager)) { throw MarketplaceStore.unavailable(); }
-            var ids=store.jdbc.query("select id from marketplace_revision where resource_id=? order by created_at desc,id desc limit 20", (row,index) -> row.getObject(1,UUID.class),id);
+            var ids=selected.map(List::of).orElseGet(() -> store.jdbc.query("select id from marketplace_revision where resource_id=? order by created_at desc,id desc limit 20", (row,index) -> row.getObject(1,UUID.class),id));
             List<OwnRevision> revisions=new ArrayList<>();
             for (UUID revisionId:ids) {
                 var revision=store.revision(resource,revisionId);
@@ -109,6 +111,27 @@ public class MarketplaceReader {
                         visible ? Optional.of(revision.details()) : Optional.empty(),revision.author(),revision.attachments().size(),revisionId.equals(resource.current()),revisionId.equals(resource.approved())));
             }
             return new OwnView(resource.id(),resource.subject(),resource.type(),resource.lifecycle(),resource.version(),currentManager,List.copyOf(revisions));
+        });
+    }
+
+    public OwnRevision origin(ContentReference reference) {
+        return transaction.execute(status -> {
+            if (!store.owns(reference)) { throw MarketplaceStore.unavailable(); }
+            var resource = store.resource(reference.resourceId(), false);
+            UUID actor = proof.actor().orElseThrow(MarketplaceStore::unavailable);
+            boolean own = store.historicalParticipant(resource, actor)
+                    || identity.decide(new AuthorContext(new ActorId(actor), new SubjectId(resource.subject()), resource.type().publishCapability()).permission()).allowed();
+            OwnRevision selected;
+            if (own) { selected = own(resource.id(), Optional.of(reference.revisionId())).revisions().getFirst(); }
+            else {
+                var view = currentInTransaction(resource.id(), Optional.empty());
+                if (!view.reference().equals(reference)) { throw MarketplaceStore.unavailable(); }
+                var revision = store.revision(store.resource(resource.id(), false), reference.revisionId());
+                selected = new OwnRevision(reference, "APPROVED", view.label(), "", Optional.of(view.details()), revision.author(), revision.attachments().size(),
+                        reference.revisionId().equals(resource.current()), true);
+            }
+            if (!Set.of("GENERAL", "SENSITIVE", "ADULT").contains(selected.label())) { throw MarketplaceStore.unavailable(); }
+            return selected;
         });
     }
 

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org"><body>
+<section id="conversation-updates" th:fragment="observation" th:with="refreshUrl=${historyCursor != null} ? @{/conversations/{id}/updates(id=${context.id},subject=${subject},history=${historyCursor},message=${selectedMessage},messageAfter=${messageAfter},quote=${selectedQuote},quoteAfter=${quoteAfter})} : @{/conversations/{id}/updates(id=${context.id},subject=${subject},message=${selectedMessage},messageAfter=${messageAfter},quote=${selectedQuote},quoteAfter=${quoteAfter})}" th:attr="data-refresh-url=${context.normalActions} ? ${refreshUrl} : null">
+<h1 th:text="${context.listingTitle}"></h1>
+<p>Conversación privada · <span th:text="${@conversationWords.mode(context.mode)}"></span>. La publicación original y sus términos acordados conservan su historial.</p>
+<p th:if="${context.capture.isEmpty()}" class="notice">El texto original no está disponible con su aprobación y audiencia actuales. La conversación y las obligaciones conservan su estado.</p>
+<details id="captured-listing" th:if="${context.capture.isPresent()}"><summary id="captured-listing-toggle">Contexto de la publicación al comenzar</summary><pre class="authored" th:text="${context.listingSnapshot}"></pre></details>
+<section id="delivered-messages">
+<h2>Mensajes entregados</h2>
+<div th:if="${context.normalActions}">
+<p th:text="${poll.older} ? 'Mensajes anteriores: intervalo seleccionado.' : 'Mensajes recientes: consulta automática.'"></p>
+<p>Cada página consulta hasta diez eventos en orden de entrega; las revisiones retiradas o no disponibles pueden dejar intervalos vacíos.</p>
+<p th:if="${poll.laterActivity}" role="status">Actividad posterior al consultar este historial. Podés volver a los mensajes recientes.</p>
+<nav aria-label="Historial de mensajes">
+<a id="history-older" data-history-link th:if="${poll.next.isPresent()}" th:href="@{/conversations/{id}(id=${context.id},subject=${subject},history=${poll.next.get()},message=${selectedMessage},messageAfter=${messageAfter},quote=${selectedQuote},quoteAfter=${quoteAfter})}">Mensajes anteriores</a>
+<a id="history-recent" data-history-link th:if="${poll.older}" th:href="@{/conversations/{id}(id=${context.id},subject=${subject},message=${selectedMessage},messageAfter=${messageAfter},quote=${selectedQuote},quoteAfter=${quoteAfter})}">Volver a mensajes recientes</a>
+</nav>
+<noscript><p>Sin JavaScript, navegar por el historial carga otra página y descarta los cambios sin guardar.</p></noscript>
+</div>
+<article class="card" th:each="message : ${poll.messages}" th:attr="data-message-revision=${message.reference.revisionId}"><p class="authored" th:text="${message.body}"></p><p th:text="${message.label}"></p><a th:each="file : ${message.attachments}" th:id="${'message-file-' + message.reference.revisionId + '-' + file.id}" th:href="@{/conversations/files/{id}(id=${file.id},kind=${file.content.ownerKind},resource=${file.content.resourceId},revision=${file.content.revisionId},digest=${file.digest})}">Descargar archivo aprobado</a>
+<form th:action="@{/conversations/cases}" method="post"><input type="hidden" name="command" th:value="${command}"><input type="hidden" name="kind" th:value="${message.reference.ownerKind}"><input type="hidden" name="resource" th:value="${message.reference.resourceId}"><input type="hidden" name="revision" th:value="${message.reference.revisionId}"><input type="hidden" name="caseKind" value="REPORT"><input type="hidden" name="reason" value="SAFETY"><button th:id="${'message-report-' + message.reference.revisionId}" class="secondary">Reportar esta revisión</button></form></article>
+<p th:if="${poll.messages.isEmpty()}">No hay mensajes aprobados disponibles en este intervalo.</p>
+</section>
+</section>
+</body></html>

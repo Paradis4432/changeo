@@ -52,6 +52,35 @@ public class ContentReader {
         }
         return new AuthorView(resource.id(),resource.version(),resource.audience(),List.copyOf(revisions));
     }
+    @Transactional public AuthorRevision origin(ContentReference reference) {
+        var discovered = workbench.resource(reference.resourceId(), false);
+        if (discovered.kind() != reference.ownerKind()) { throw ModerationStore.unavailable(); }
+        var actor = proof.actor().orElseThrow(ModerationStore::unavailable);
+        if (!discovered.actor().equals(actor) && !discovered.subject().equals(actor)) {
+            var visible = retrieve(reference.resourceId());
+            if (!visible.reference().equals(reference) || !Set.of("GENERAL", "SENSITIVE", "ADULT").contains(visible.label())) { throw ModerationStore.unavailable(); }
+            return new AuthorRevision(reference, visible.state(), visible.label(), visible.reason(), visible.text(), reference.revisionId().equals(discovered.current()), visible.attachments());
+        }
+        identity.requireForUpdate(PermissionRequest.self(new AccountId(actor), Capability.ACCESS_SUPPORT));
+        var resource = workbench.resource(reference.resourceId(), true);
+        if (!resource.equals(discovered)) { throw ModerationStore.unavailable(); }
+        var input = workbench.input(resource, reference.revisionId());
+        if (!ContentDigest.payload(input.text(), input.declaredLabel(), input.attachments()).equals(input.digest())) { throw ModerationStore.unavailable(); }
+        var found = moderation.find(reference, false);
+        if (found.isPresent()) {
+            moderation.barrier(reference, false);
+            var submission = moderation.submission(reference, true);
+            exact(resource, submission, reference);
+            found = Optional.of(submission);
+        }
+        String label = found.map(ModerationStore.Submission::label).orElse("ADULT");
+        if (!Set.of("GENERAL", "SENSITIVE", "ADULT").contains(label)) { throw ModerationStore.unavailable(); }
+        boolean visible = (!label.equals("ADULT") || resource.actor().equals(resource.subject()))
+                && identity.decide(PermissionRequest.self(new AccountId(actor), capability(label))).allowed();
+        return new AuthorRevision(reference, found.map(ModerationStore.Submission::state).orElse("DRAFT_PENDING_REVIEW"), label,
+                found.map(ModerationStore.Submission::reason).orElse("SUBMIT_REQUIRED"), visible ? input.text() : null,
+                reference.revisionId().equals(resource.current()), input.attachments());
+    }
     public void requireWorkbenchAttachment(FileReference file,FileAccess.Purpose purpose) {
         ModerationStore.requireTransaction();
         if(purpose==FileAccess.Purpose.REVIEW) {

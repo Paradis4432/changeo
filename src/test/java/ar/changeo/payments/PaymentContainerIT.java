@@ -44,7 +44,7 @@ class PaymentContainerIT extends PaymentPostgresTest {
             var migration = Flyway.configure().schemas("sandbox").defaultSchema("sandbox").dataSource(database.getJdbcUrl(), database.getUsername(), database.getPassword()).load();
             var originalHistory = migration.info().applied();
             assertThat(originalHistory).filteredOn(row -> row.getVersion() != null).hasSize(7);
-            assertThat(migration.migrate().migrationsExecuted).isEqualTo(2); migration.validate();
+            assertThat(migration.migrate().migrationsExecuted).isEqualTo(5); migration.validate();
             assertThat(migration.migrate().migrationsExecuted).isZero();
             for (var table : columns.entrySet()) {
                 assertThat(fingerprint(statement, table.getKey(), table.getValue(), table.getKey().equals("flyway_schema_history") ? historyRank : null))
@@ -59,7 +59,7 @@ class PaymentContainerIT extends PaymentPostgresTest {
             assertThat(run).matches("[a-z0-9-]+");
             Path receipt = Path.of("docs/agent-work/changeo-payments/developer/verification/populated-v7-container-upgrade-" + run + ".json");
             Files.createDirectories(receipt.getParent());
-            Files.writeString(receipt, "{\"actualPostgreSQL18\":true,\"originalTables\":" + columns.size() + ",\"fullOriginalColumnRowsPreserved\":true,\"originalSevenChecksumsPreserved\":true,\"additiveMigrationCount\":2,\"repeatMigrationCount\":0,\"privateDumpRemovedInsideOwnedContainer\":true}\n", StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.CREATE_NEW);
+            Files.writeString(receipt, "{\"actualPostgreSQL18\":true,\"originalTables\":" + columns.size() + ",\"fullOriginalColumnRowsPreserved\":true,\"originalSevenChecksumsPreserved\":true,\"additiveMigrationCount\":5,\"repeatMigrationCount\":0,\"privateDumpRemovedInsideOwnedContainer\":true}\n", StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.CREATE_NEW);
         }
         properties.add("spring.datasource.url", database::getJdbcUrl);
         properties.add("spring.datasource.username", database::getUsername);

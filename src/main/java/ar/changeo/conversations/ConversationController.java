@@ -44,6 +44,10 @@ public class ConversationController {
         this.syntheticPayments = syntheticPayments;
     }
     @ModelAttribute("syntheticPayments") public boolean syntheticPayments() { return syntheticPayments; }
+    @GetMapping("/conversations/origin") public String origin(@RequestParam SurfaceKind kind, @RequestParam UUID resource, @RequestParam UUID revision, Model model) {
+        model.addAttribute("origin", reader.origin(new ContentReference(kind, resource, revision)));
+        return "conversation-origin";
+    }
     @GetMapping("/conversations") public String inbox(@RequestParam(required = false) UUID subject, @AuthenticationPrincipal AccountPrincipal principal, Model model) {
         var selected = new SubjectId(subject == null ? principal.id() : subject);
         model.addAttribute("subject", selected.value()); model.addAttribute("guardianSubjects", guardians.own(principal.id()));
@@ -54,13 +58,14 @@ public class ConversationController {
         source(request); UUID thread = service.respond(listing, new SubjectId(subject), mode); return location(thread, subject);
     }
     @GetMapping("/conversations/{id}") public String thread(@PathVariable UUID id, @RequestParam(required = false) UUID subject,
-            @RequestParam(required = false) UUID message, @RequestParam(required = false) UUID messageAfter, @RequestParam(required = false) UUID quote, @RequestParam(required = false) UUID quoteAfter, @AuthenticationPrincipal AccountPrincipal principal, Model model) {
+            @RequestParam(required = false) UUID message, @RequestParam(required = false) UUID messageAfter, @RequestParam(required = false) UUID quote, @RequestParam(required = false) UUID quoteAfter, @RequestParam(required = false) String history, @AuthenticationPrincipal AccountPrincipal principal, Model model) {
         var context = conversations.discover(id);
         UUID selected = subject == null ? (context.customerActor().value().equals(principal.id()) ? context.customer().value() : context.provider().value()) : subject;
         var display = service.view(id, new SubjectId(selected));
         model.addAttribute("context", display); model.addAttribute("subject", selected); model.addAttribute("job", jobs.discover(display.jobId()));
         model.addAttribute("command", UUID.randomUUID());
-        model.addAttribute("poll", display.normalActions() ? reader.recent(id, new SubjectId(selected)) : new MessageReader.PollPage(List.of(), 0, false));
+        historyContext(model, history, message, messageAfter, quote, quoteAfter);
+        model.addAttribute("poll", display.normalActions() ? reader.history(id, new SubjectId(selected), Optional.ofNullable(history)) : MessageReader.HistoryPage.empty());
         var ownMessages = reader.ownPage(id, new SubjectId(selected), Optional.ofNullable(message), Optional.ofNullable(messageAfter));
         model.addAttribute("prepared", ownMessages.entries()); model.addAttribute("messageNext", ownMessages.next());
         List<ar.changeo.agreements.api.AgreementSnapshot> visible = new ArrayList<>();
@@ -75,6 +80,19 @@ public class ConversationController {
     }
     @GetMapping("/conversations/{id}/poll") @ResponseBody public MessageReader.PollPage poll(@PathVariable UUID id, @RequestParam UUID subject, @RequestParam(defaultValue = "0") long after) {
         return reader.poll(id, new SubjectId(subject), after);
+    }
+    @GetMapping("/conversations/{id}/updates") public String updates(@PathVariable UUID id, @RequestParam UUID subject, @RequestParam(required = false) String history,
+            @RequestParam(required = false) UUID message, @RequestParam(required = false) UUID messageAfter,
+            @RequestParam(required = false) UUID quote, @RequestParam(required = false) UUID quoteAfter, Model model) {
+        var selected = new SubjectId(subject);
+        var display = service.view(id, selected);
+        if (!display.normalActions()) { throw ConversationFailure.unavailable(); }
+        model.addAttribute("context", display);
+        model.addAttribute("subject", subject);
+        model.addAttribute("command", UUID.randomUUID());
+        historyContext(model, history, message, messageAfter, quote, quoteAfter);
+        model.addAttribute("poll", reader.history(id, selected, Optional.ofNullable(history)));
+        return "conversation-updates :: observation";
     }
     @PostMapping("/conversations/messages") public String save(@RequestParam UUID command, @RequestParam UUID thread, @RequestParam UUID subject,
             @RequestParam(required = false) UUID resource, @RequestParam(defaultValue = "0") long version, @RequestParam(defaultValue = "PRIVATE_MESSAGE") String kind,
@@ -139,6 +157,10 @@ public class ConversationController {
         source(request); var draft = reader.ownResource(resource, new SubjectId(subject));
         if (!draft.reference().equals(new ContentReference(kind, resource, revision))) { throw ConversationFailure.unavailable(); }
         moderation.retry(command, draft.reference(), generation); return "redirect:/conversations/authored/" + resource + "?subject=" + subject;
+    }
+    private static void historyContext(Model model, String history, UUID message, UUID messageAfter, UUID quote, UUID quoteAfter) {
+        model.addAttribute("historyCursor", history); model.addAttribute("selectedMessage", message); model.addAttribute("messageAfter", messageAfter);
+        model.addAttribute("selectedQuote", quote); model.addAttribute("quoteAfter", quoteAfter);
     }
     private void requireOwnMessage(UUID thread, UUID subject, ContentReference reference) {
         var draft = reader.ownResource(reference.resourceId(), new SubjectId(subject));

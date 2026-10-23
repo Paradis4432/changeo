@@ -6,5 +6,5 @@ import java.util.Set;
 
 public interface NoticeOwner {
     Set<SurfaceKind> noticeKinds();
-    void requireNotice(ContentReference reference, ActorId recipient);
+    boolean available(ContentReference reference, ActorId recipient);
 }

@@ -46,13 +46,13 @@ class MarketplaceContainerIT extends MarketplacePostgresTest {
             for (String table:retainedTables) { retained.put(table,snapshot(statement,table)); }
             var histories=before.info().applied();
             var upgrade=Flyway.configure().schemas(schema).defaultSchema(schema).dataSource(database.getJdbcUrl(),database.getUsername(),database.getPassword()).load();
-            assertThat(upgrade.migrate().migrationsExecuted).isEqualTo(5); upgrade.validate(); assertThat(upgrade.migrate().migrationsExecuted).isZero();
+            assertThat(upgrade.migrate().migrationsExecuted).isEqualTo(8); upgrade.validate(); assertThat(upgrade.migrate().migrationsExecuted).isZero();
             for (var entry:retained.entrySet()) { assertThat(snapshot(statement,entry.getKey())).as(entry.getKey()).isEqualTo(entry.getValue()); }
             for (var history:histories) { var actual=java.util.Arrays.stream(upgrade.info().applied()).filter(row -> java.util.Objects.equals(row.getVersion(),history.getVersion()) && row.getScript().equals(history.getScript())).findFirst().orElseThrow(); assertThat(actual.getChecksum()).isEqualTo(history.getChecksum()); assertThat(actual.getScript()).isEqualTo(history.getScript()); }
             try (var rows=statement.executeQuery("select count(*) from workbench_resource where id='00000000-0000-0000-0000-000000000002'")) { assertThat(rows.next()).isTrue(); assertThat(rows.getLong(1)).isEqualTo(1); }
         }
         var fresh=Flyway.configure().schemas("profiles_fresh").defaultSchema("profiles_fresh").dataSource(database.getJdbcUrl(),database.getUsername(),database.getPassword()).load();
-        assertThat(fresh.migrate().migrationsExecuted).isEqualTo(9); fresh.validate(); assertThat(fresh.migrate().migrationsExecuted).isZero();
+        assertThat(fresh.migrate().migrationsExecuted).isEqualTo(12); fresh.validate(); assertThat(fresh.migrate().migrationsExecuted).isZero();
     }
     String snapshot(java.sql.Statement statement,String table) throws java.sql.SQLException {
         try (var rows=statement.executeQuery("select jsonb_agg(to_jsonb(t) order by to_jsonb(t)::text)::text from "+table+" t")) {

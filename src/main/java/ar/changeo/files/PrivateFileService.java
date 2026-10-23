@@ -5,23 +5,19 @@ import ar.changeo.moderation.*;
 import ar.changeo.moderation.api.*;
 import ar.changeo.identity.SecurityProof;
 import ar.changeo.identity.api.IdentityAccess;
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.SeekableByteChannel;
-import java.nio.file.*;
-import java.nio.file.attribute.PosixFilePermissions;
 import java.sql.Timestamp;
 import java.time.Clock;
 import java.util.*;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.*;
 
 @Service
-public class PrivateFileService implements FileAccess {
+public class PrivateFileService implements FileAccess, ReviewFileAccess {
     private final JdbcTemplate jdbc;
     private final TransactionTemplate transaction;
     private final ObjectProvider<AttachmentAccessPolicy> policies;
@@ -29,20 +25,27 @@ public class PrivateFileService implements FileAccess {
     private final SecurityProof proof;
     private final Admission admission;
     private final Clock clock;
-    private final Path root;
+    private final LocalPrivateBlobStore local;
+    private final R2PrivateBlobStore remote;
     private final FileInspector inspector;
+    private ObjectProvider<ReviewFilePolicy> reviewPolicies;
+    @org.springframework.beans.factory.annotation.Autowired
+    void reviewPolicies(ObjectProvider<ReviewFilePolicy> reviewPolicies) { this.reviewPolicies=reviewPolicies; }
     public PrivateFileService(JdbcTemplate jdbc, PlatformTransactionManager transactions, ObjectProvider<AttachmentAccessPolicy> policies,
                               IdentityAccess identity, SecurityProof proof, Admission admission, Clock clock, FileInspector inspector,
-                              @Value("${changeo.files-root:.runtime/content-artifacts}") String root) {
+                              LocalPrivateBlobStore local, ObjectProvider<R2PrivateBlobStore> remote) {
         this.jdbc=jdbc; this.transaction=new TransactionTemplate(transactions); this.policies=policies;
-        this.inspector=inspector; this.identity=identity; this.proof=proof; this.admission=admission; this.clock=clock; this.root=Path.of(root).toAbsolutePath().normalize();
+        this.inspector=inspector; this.identity=identity; this.proof=proof; this.admission=admission; this.clock=clock;
+        this.local=local; this.remote=remote.getIfAvailable();
     }
+    @Transactional(propagation = Propagation.MANDATORY)
     @Override public FileReference intake(UUID command, AuthorContext author, ContentReference content, String mediaType, byte[] bytes) {
         requireTransaction();
         if (!proof.actor().filter(author.actor().value()::equals).isPresent()) { throw denied(); }
         identity.requireForUpdate(author.permission());
         if (bytes == null || bytes.length == 0 || bytes.length > 1048576) { throw new ModerationFailure("Archivo vacío o mayor que 1 MiB local"); }
-        String digest=ContentDigest.bytes(bytes);
+        byte[] immutable=bytes.clone();
+        String digest=ContentDigest.bytes(immutable);
         var existing=jdbc.queryForList("select id,digest,resource_id,revision_id,owner_kind,media_type from files_artifact where actor_id=? and command_id=?",author.actor().value(),command);
         if (!existing.isEmpty()) {
             var row=existing.getFirst();
@@ -50,13 +53,20 @@ public class PrivateFileService implements FileAccess {
             return new FileReference((UUID)row.get("id"),content,digest);
         }
         admission.actor(author.actor().value(),"upload");
-        FileInspector.Inspection inspection=inspector.inspect(mediaType,bytes);
+        FileInspector.Inspection inspection=inspector.inspect(mediaType,immutable);
         UUID id=UUID.randomUUID();
-        write(id,bytes);
+        PrivateBlobStore storage=remote==null?local:remote;
+        PrivateBlobStore.Blob blob=storage.create(id,mediaType,immutable);
         TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
-            @Override public void afterCompletion(int status) { if (status!=STATUS_COMMITTED) { remove(id); } }
+            @Override public void afterCompletion(int status) {
+                if(status!=STATUS_COMMITTED) { storage.rollback(blob); }
+                else if(blob instanceof PrivateBlobStore.Remote binding) { remote.committed(binding); }
+            }
         });
-        jdbc.update("insert into files_artifact values(?,?,?,?,?,?,?,?,?,?,?,?)",id,command,author.actor().value(),content.resourceId(),content.revisionId(),content.ownerKind().name(),digest,mediaType,bytes.length,inspection.safe(),inspection.reason(),Timestamp.from(clock.instant()));
+        jdbc.update("insert into files_artifact values(?,?,?,?,?,?,?,?,?,?,?,?)",id,command,author.actor().value(),content.resourceId(),content.revisionId(),content.ownerKind().name(),digest,mediaType,immutable.length,inspection.safe(),inspection.reason(),Timestamp.from(clock.instant()));
+        if(blob instanceof PrivateBlobStore.Remote binding) {
+            jdbc.update("insert into files_blob_binding values(?,'R2',?,?,?)",id,binding.storeId(),binding.objectKey(),binding.etag());
+        }
         return new FileReference(id,content,digest);
     }
     @Override public Metadata metadata(FileReference reference) {
@@ -74,40 +84,43 @@ public class PrivateFileService implements FileAccess {
             policy.requireCurrentAccess(reference,purpose);
             Metadata metadata=metadata(reference);
             if(!metadata.safe()) { throw denied(); }
-            byte[] bytes=copy(reference.id(),metadata.size());
+            byte[] bytes=copy(reference.id(),metadata.mediaType(),metadata.size());
             if(!ContentDigest.bytes(bytes).equals(reference.digest())) { throw denied(); }
             return new Download(bytes,metadata.mediaType());
         });
     }
-    private void directory() throws IOException {
-        Path current=root.getRoot();
-        for(Path component:root) {
-            current=current.resolve(component);
-            if(Files.isSymbolicLink(current)) { throw denied(); }
-        }
-        if(!Files.exists(root,LinkOption.NOFOLLOW_LINKS)) { Files.createDirectories(root,PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"))); }
-        if(!Files.isDirectory(root,LinkOption.NOFOLLOW_LINKS) || !Files.getPosixFilePermissions(root).equals(PosixFilePermissions.fromString("rwx------"))) { throw denied(); }
+    private byte[] copy(UUID id,String mediaType,long size) {
+        var bindings=jdbc.queryForList("select backend,store_id,object_key,etag from files_blob_binding where file_id=?",id);
+        if(bindings.isEmpty()) { return local.read(new PrivateBlobStore.Local(id),mediaType,size); }
+        var binding=bindings.getFirst();
+        if(remote==null || !"R2".equals(binding.get("backend"))) { throw denied(); }
+        return remote.read(new PrivateBlobStore.Remote(id,(String)binding.get("store_id"),(String)binding.get("object_key"),(String)binding.get("etag")),mediaType,size);
     }
-    private void write(UUID id,byte[] bytes) {
-        try {
-            directory();
-            try(var channel=Files.newByteChannel(root.resolve(id.toString()),Set.of(StandardOpenOption.WRITE,StandardOpenOption.CREATE_NEW,LinkOption.NOFOLLOW_LINKS),PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rw-------")))) {
-                ByteBuffer buffer=ByteBuffer.wrap(bytes); while(buffer.hasRemaining()) { channel.write(buffer); }
+    @Override public Material materialize(Request request) {
+        if (TransactionSynchronizationManager.isActualTransactionActive()) { throw denied(); }
+        var bounded = new TransactionTemplate(transaction.getTransactionManager());
+        bounded.setTimeout(35);
+        return bounded.execute(status -> {
+            jdbc.execute("set local lock_timeout = '2s'");
+            jdbc.execute("set local statement_timeout = '5s'");
+            long deadline = System.nanoTime() + java.time.Duration.ofSeconds(30).toNanos();
+            ReviewFilePolicy policy = reviewPolicies == null ? null : reviewPolicies.getIfUnique();
+            if (policy == null) { throw denied(); }
+            policy.requireCurrentReview(request);
+            List<ReviewFileAccess.File> material = new ArrayList<>();
+            for (var reference : request.attachments()) {
+                Metadata metadata = metadata(reference);
+                if (!metadata.safe() || !Set.of("text/plain", "image/png", "image/jpeg").contains(metadata.mediaType())
+                        || metadata.size() < 1 || metadata.size() > 1048576 || System.nanoTime() >= deadline) { throw denied(); }
+                byte[] bytes = copy(reference.id(), metadata.mediaType(), metadata.size());
+                if (bytes.length != metadata.size() || !ContentDigest.bytes(bytes).equals(reference.digest())
+                        || !inspector.inspect(metadata.mediaType(), bytes).safe() || System.nanoTime() >= deadline) { throw denied(); }
+                material.add(new ReviewFileAccess.File(reference, metadata.mediaType(), bytes));
             }
-        } catch(IOException failure) { throw new ModerationFailure("Almacenamiento privado no disponible"); }
+            if (System.nanoTime() >= deadline) { throw denied(); }
+            return new Material(material);
+        });
     }
-    private byte[] copy(UUID id,long size) {
-        try {
-            directory(); Path path=root.resolve(id.toString());
-            if(!Files.getPosixFilePermissions(path,LinkOption.NOFOLLOW_LINKS).equals(PosixFilePermissions.fromString("rw-------"))) { throw denied(); }
-            try(SeekableByteChannel channel=Files.newByteChannel(path,Set.of(StandardOpenOption.READ,LinkOption.NOFOLLOW_LINKS))) {
-                if(channel.size()!=size || size>1048576) { throw denied(); }
-                ByteBuffer buffer=ByteBuffer.allocate((int)size); while(buffer.hasRemaining()) { if(channel.read(buffer)<0) { throw denied(); } }
-                return buffer.array();
-            }
-        } catch(IOException failure) { throw new ModerationFailure("Archivo privado no disponible"); }
-    }
-    private void remove(UUID id) { try { Files.deleteIfExists(root.resolve(id.toString())); } catch(IOException failure) { throw new IllegalStateException("Private rollback cleanup failed",failure); } }
     private static void requireTransaction() { if(!TransactionSynchronizationManager.isActualTransactionActive()) { throw denied(); } }
     private static ModerationFailure denied() { return new ModerationFailure("Archivo no disponible para este acceso"); }
 }

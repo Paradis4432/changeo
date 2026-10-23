@@ -545,10 +545,10 @@ class ConversationJourneyPostgresTest {
         var protectedDelivery = new CountDownLatch(1); var release = new CountDownLatch(1); var first = new AtomicBoolean(true);
         MessageReader readerTarget = org.springframework.test.util.AopTestUtils.getUltimateTargetObject(messageReader);
         doAnswer(invocation -> {
-            invocation.callRealMethod();
+            var result = invocation.callRealMethod();
             if (first.compareAndSet(true, false)) { protectedDelivery.countDown(); assertThat(release.await(5, TimeUnit.SECONDS)).isTrue(); }
-            return null;
-        }).when(readerTarget).requireNotice(eq(fixture.message()), any());
+            return result;
+        }).when(readerTarget).available(eq(fixture.message()), any());
         try (var pool = Executors.newFixedThreadPool(2)) {
             try {
                 var lost = pool.submit(notices::runOnce); assertThat(protectedDelivery.await(5, TimeUnit.SECONDS)).isTrue();

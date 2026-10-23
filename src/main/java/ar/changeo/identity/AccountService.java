@@ -15,11 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class AccountService {
     private final IdentityStore store;
     private final PasswordEncoder passwords;
-    private final TokenDelivery delivery;
+    private final TokenDeliveryCoordinator delivery;
     private final Clock clock;
     private final SecureRandom random = new SecureRandom();
 
-    AccountService(IdentityStore store, PasswordEncoder passwords, TokenDelivery delivery, Clock clock) {
+    AccountService(IdentityStore store, PasswordEncoder passwords, TokenDeliveryCoordinator delivery, Clock clock) {
         this.store = store; this.passwords = passwords; this.delivery = delivery; this.clock = clock;
     }
 
@@ -89,10 +89,15 @@ public class AccountService {
         token.generation = purpose == TokenPurpose.CONTACT ? ++account.contactGeneration : ++account.recoveryGeneration;
         token.expiresAt = clock.instant().plusSeconds(purpose == TokenPurpose.CONTACT ? 1800 : 900);
         store.persist(token);
-        boolean delivered = delivery.deliver(account.id, purpose.name(), raw);
-        if (!delivered) { token.consumed = true; }
-        store.audit(account.id, account.id, delivered ? "TOKEN_DELIVERED_" + purpose : "TOKEN_DELIVERY_PENDING_" + purpose);
-        return delivered;
+        var preparation = delivery.prepare(token, account.securityEpoch, account.contact, raw);
+        if (preparation == TokenDeliveryCoordinator.Preparation.FAILED) { token.consumed = true; }
+        String action = switch (preparation) {
+            case LOCAL_DELIVERED -> "TOKEN_DELIVERED_";
+            case QUEUED -> "TOKEN_DELIVERY_QUEUED_";
+            case FAILED -> "TOKEN_DELIVERY_PENDING_";
+        };
+        store.audit(account.id, account.id, action + purpose);
+        return preparation == TokenDeliveryCoordinator.Preparation.LOCAL_DELIVERED;
     }
 
     private void consume(Optional<UUID> owner, TokenPurpose purpose, String raw, String password) {

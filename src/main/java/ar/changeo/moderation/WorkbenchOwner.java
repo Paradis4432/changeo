@@ -2,6 +2,7 @@ package ar.changeo.moderation;
 
 import ar.changeo.moderation.api.*;
 import ar.changeo.files.api.*;
+import ar.changeo.identity.api.ActorId;
 import java.util.*;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Component;
@@ -9,10 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 class WorkbenchOwner implements ContentOwner {
     private final WorkbenchStore store;
-    private final ar.changeo.identity.SecurityProof proof;
     private final ar.changeo.identity.api.IdentityAccess identity;
     private final ObjectProvider<ContentReader> reader;
-    WorkbenchOwner(WorkbenchStore store,ObjectProvider<ContentReader> reader,ar.changeo.identity.SecurityProof proof,ar.changeo.identity.api.IdentityAccess identity) { this.store=store; this.reader=reader; this.proof=proof; this.identity=identity; }
+    WorkbenchOwner(WorkbenchStore store,ObjectProvider<ContentReader> reader,ar.changeo.identity.api.IdentityAccess identity) { this.store=store; this.reader=reader; this.identity=identity; }
+    @Override public Optional<String> caseOrigin(ContentReference reference) {
+        return Optional.of("/moderation/origin?kind=" + reference.ownerKind() + "&resource=" + reference.resourceId() + "&revision=" + reference.revisionId());
+    }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.REQUEST_BODY,SurfaceKind.PRIVATE_MESSAGE); }
     @Override public boolean owns(ContentReference reference) {
         return Boolean.TRUE.equals(store.jdbc.queryForObject("select exists(select 1 from workbench_resource r join workbench_revision v on v.resource_id=r.id where r.id=? and v.id=? and r.kind=?)",Boolean.class,reference.resourceId(),reference.revisionId(),reference.ownerKind().name()));
@@ -25,9 +28,9 @@ class WorkbenchOwner implements ContentOwner {
         return input;
     }
     @Override public boolean current(ContentReference reference) { return reference.revisionId().equals(store.resource(reference.resourceId(),false).current()); }
-    @Override public boolean reportable(ContentReference reference) {
+    @Override public boolean reportable(ContentReference reference, ActorId reporter, String effectiveLabel) {
         var resource=store.resource(reference.resourceId(),false);
-        return reference.revisionId().equals(resource.approved()) && (resource.audience().equals("PUBLIC") || proof.actor().filter(id->store.member(resource,id) && identity.decide(ar.changeo.identity.api.PermissionRequest.self(new ar.changeo.identity.api.AccountId(id),ar.changeo.identity.api.Capability.SEND_MARKETPLACE_MESSAGE)).allowed()).isPresent());
+        return reference.revisionId().equals(resource.approved()) && (resource.audience().equals("PUBLIC") || store.member(resource,reporter.value()) && identity.decide(ar.changeo.identity.api.PermissionRequest.self(new ar.changeo.identity.api.AccountId(reporter.value()),ar.changeo.identity.api.Capability.SEND_MARKETPLACE_MESSAGE)).allowed());
     }
     @Override public long activate(ContentReference reference) {
         var resource=store.resource(reference.resourceId(),false);

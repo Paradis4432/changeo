@@ -3,6 +3,7 @@ package ar.changeo.marketplace;
 import ar.changeo.files.api.*;
 import ar.changeo.identity.api.JobContext.FulfillmentMode;
 import ar.changeo.identity.GuardianService;
+import ar.changeo.identity.SecurityProof;
 import ar.changeo.conversations.MessageReader;
 import ar.changeo.jobs.api.ReputationCursor;
 import ar.changeo.moderation.*;
@@ -10,14 +11,15 @@ import ar.changeo.moderation.api.*;
 import ar.changeo.security.AccountPrincipal;
 import jakarta.servlet.http.*;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import ar.changeo.marketplace.MarketplaceForms.Description;
+import ar.changeo.marketplace.MarketplaceForms.Coverage;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -35,13 +37,14 @@ public class MarketplaceController {
     private final MessageReader discussions;
     private final GuardianService guardians;
     private final boolean syntheticSubscriptions;
+    private final SecurityProof proof;
 
     MarketplaceController(MarketplaceService service, MarketplaceReader reader, DiscoveryService discovery, ModerationService moderation,
                           CaseService cases, FileAccess files, Admission admission, MessageReader discussions, GuardianService guardians,
-                          @Value("${changeo.synthetic-subscriptions:false}") boolean syntheticSubscriptions) {
+                          @Value("${changeo.synthetic-subscriptions:false}") boolean syntheticSubscriptions, SecurityProof proof) {
         this.service=service; this.reader=reader; this.discovery=discovery; this.moderation=moderation; this.cases=cases; this.files=files; this.admission=admission;
         this.discussions=discussions; this.guardians=guardians;
-        this.syntheticSubscriptions=syntheticSubscriptions;
+        this.syntheticSubscriptions=syntheticSubscriptions; this.proof=proof;
     }
 
     @GetMapping("/marketplace") public String search(@RequestParam(defaultValue="OFFER") PresenceType type,
@@ -52,58 +55,127 @@ public class MarketplaceController {
         model.addAttribute("provinces",MarketplaceDetails.PROVINCES);
         return "marketplace-search";
     }
+    @GetMapping("/marketplace/origin") public String origin(@RequestParam SurfaceKind kind, @RequestParam UUID resource, @RequestParam UUID revision, Model model) {
+        model.addAttribute("origin", reader.origin(new ContentReference(kind, resource, revision)));
+        return "marketplace-origin";
+    }
+
     @GetMapping("/marketplace/mine") public String mine(Model model) {
         model.addAttribute("resources",reader.ownResources()); model.addAttribute("syntheticSubscriptions",syntheticSubscriptions); return "marketplace-mine";
     }
 
     @GetMapping({"/marketplace/create","/profiles/create"}) public String create(@RequestParam PresenceType type,
-            @RequestParam(required=false) UUID subject,@AuthenticationPrincipal AccountPrincipal principal,Model model) {
-        model.addAttribute("type",type); model.addAttribute("subject",subject==null ? principal.id() : subject);
-        model.addAttribute("resource",null); model.addAttribute("version",0); model.addAttribute("details",null);
-        model.addAttribute("label","GENERAL"); return "marketplace-compose";
+            @RequestParam(required=false) UUID subject,@AuthenticationPrincipal AccountPrincipal principal,HttpServletRequest request,Model model) {
+        var composition=new Composition(UUID.randomUUID(),principal.id(),type,subject==null ? principal.id() : subject,Optional.empty(),0,
+                new Description("","","","GENERAL"),Coverage.initial(Optional.empty()),true);
+        request.getSession().setAttribute(COMPOSITION,composition);
+        return description(composition,model);
     }
-    @GetMapping("/marketplace/manage/{id}/edit") public String edit(@PathVariable UUID id,Model model) {
+    @GetMapping("/marketplace/manage/{id}/edit") public String edit(@PathVariable UUID id,HttpServletRequest request,Model model) {
         var own=reader.own(id);
         if (own.lifecycle()!=PublicationLifecycle.OPEN || own.current().details().isEmpty()) { throw new ModerationFailure("La edición requiere acceso al texto actual y una publicación abierta; consultá estado y preferencias"); }
-        model.addAttribute("type",own.type()); model.addAttribute("subject",own.subject()); model.addAttribute("resource",id);
-        model.addAttribute("version",own.version()); model.addAttribute("details",own.current().details().orElseThrow());
-        model.addAttribute("label",own.current().details().isPresent() ? own.current().label() : "GENERAL"); return "marketplace-compose";
-    }
-
-    @PostMapping("/marketplace/compose") public String compose(@RequestParam PresenceType type,@RequestParam UUID subject,
-            @RequestParam(required=false) UUID resource,@RequestParam(defaultValue="0") long version,@RequestParam String title,
-            @RequestParam String body,@RequestParam(defaultValue="") String tags,@RequestParam String label,HttpServletRequest request,Model model) {
-        source(request);
-        if (title.isBlank() || title.length()>160 || body.isBlank() || body.length()>12000 || tags.length()>350 || !Set.of("GENERAL","SENSITIVE","ADULT").contains(label)) {
-            throw new ModerationFailure("Revisá título, descripción, etiquetas y clasificación");
-        }
-        Optional<MarketplaceDetails> previous=Optional.empty();
-        if (resource!=null) {
-            var own=reader.own(resource);
-            if (!own.subject().equals(subject) || own.type()!=type || own.version()!=version || own.lifecycle()!=PublicationLifecycle.OPEN) {
-                throw new ModerationFailure("La publicación cambió; volvé a abrir la edición actual");
-            }
-            previous=own.current().details();
-            if (previous.isEmpty()) { throw MarketplaceStore.unavailable(); }
-        }
-        var composition=new Composition(UUID.randomUUID(),type,subject,Optional.ofNullable(resource),version,title,body,tags,label,previous);
+        var details=own.current().details().orElseThrow();
+        var composition=new Composition(UUID.randomUUID(),actor(),own.type(),own.subject(),Optional.of(id),own.version(),
+                new Description(details.title(),details.body(),String.join(", ",details.tags()),own.current().label()),Coverage.initial(Optional.of(details)),true);
         request.getSession().setAttribute(COMPOSITION,composition);
-        model.addAttribute("composition",composition); model.addAttribute("provinces",MarketplaceDetails.PROVINCES); return "marketplace-coverage";
+        return description(composition,model);
     }
 
-    @PostMapping("/marketplace/drafts") public String save(@RequestParam UUID stage,@RequestParam String province,@RequestParam String area,
-            @RequestParam Set<FulfillmentMode> modes,@RequestParam(defaultValue="") String availability,@RequestParam(required=false) BigDecimal amount,
-            @RequestParam(required=false) LocalDate deadline,@RequestParam(defaultValue="false") boolean badgeOptIn,
-            @RequestParam(required=false) List<MultipartFile> uploads,HttpServletRequest request,RedirectAttributes redirect) throws IOException {
+    @PostMapping("/marketplace/compose") public String compose(@RequestParam(required=false) UUID stage,
+            @RequestParam PresenceType type,@RequestParam UUID subject,@RequestParam(required=false) UUID resource,
+            @RequestParam(defaultValue="0") long version,@ModelAttribute("form") Description form,BindingResult errors,HttpServletRequest request,Model model) {
         source(request);
-        Object found=request.getSession().getAttribute(COMPOSITION);
-        if (!(found instanceof Composition composition) || !composition.stage().equals(stage)) { throw new ModerationFailure("El formulario cambió o venció. Empezá de nuevo"); }
-        var tags=composition.tags().isBlank() ? List.<String>of() : Arrays.stream(composition.tags().split(",",-1)).toList();
-        var details=new MarketplaceDetails(composition.title(),composition.body(),tags,province,area,modes,availability,Optional.ofNullable(amount),Optional.ofNullable(deadline),badgeOptIn);
-        var reference=service.save(new MarketplaceService.Draft(stage,composition.resource(),composition.version(),composition.type(),composition.subject(),details,composition.label(),uploads(uploads)));
+        Composition composition;
+        if (stage!=null) {
+            composition=current(stage,true,request);
+        } else {
+            composition=new Composition(UUID.randomUUID(),actor(),type,subject,Optional.ofNullable(resource),version,form,Coverage.initial(Optional.empty()),true);
+            if (resource!=null) {
+                var own=reader.own(resource);
+                if (!own.subject().equals(subject) || own.type()!=type) { throw MarketplaceStore.unavailable(); }
+                composition=new Composition(composition.stage(),composition.actor(),type,subject,Optional.of(resource),version,form,Coverage.initial(own.current().details()),true);
+            }
+            currentResource(composition);
+        }
+        composition=new Composition(composition.stage(),composition.actor(),composition.type(),composition.subject(),composition.resource(),composition.version(),form,composition.coverage(),true);
+        form.validate(errors);
+        if (errors.hasErrors()) {
+            request.getSession().setAttribute(COMPOSITION,composition);
+            return description(composition,model);
+        }
+        composition=new Composition(UUID.randomUUID(),composition.actor(),composition.type(),composition.subject(),composition.resource(),composition.version(),form,composition.coverage(),false);
+        request.getSession().setAttribute(COMPOSITION,composition);
+        model.asMap().remove(BindingResult.MODEL_KEY_PREFIX+"form");
+        model.addAttribute("form",composition.coverage());
+        return coverage(composition,model);
+    }
+
+    @PostMapping("/marketplace/back") public String back(@RequestParam UUID stage,@ModelAttribute("form") Coverage form,
+            BindingResult errors,HttpServletRequest request,Model model) {
+        source(request);
+        var current=current(stage,false,request);
+        var composition=new Composition(UUID.randomUUID(),current.actor(),current.type(),current.subject(),current.resource(),current.version(),current.description(),form,true);
+        request.getSession().setAttribute(COMPOSITION,composition);
+        model.asMap().remove(BindingResult.MODEL_KEY_PREFIX+"form");
+        model.addAttribute("form",composition.description());
+        model.addAttribute("reselectFiles",true);
+        return description(composition,model);
+    }
+
+    @PostMapping("/marketplace/drafts") public String save(@RequestParam UUID stage,@ModelAttribute("form") Coverage form,BindingResult errors,
+            @RequestParam(required=false) List<MultipartFile> uploads,HttpServletRequest request,Model model,RedirectAttributes redirect) throws IOException {
+        source(request);
+        var composition=current(stage,false,request);
+        var details=form.details(composition.description(),composition.type(),errors);
+        var selected=uploads==null ? List.<MultipartFile>of() : uploads.stream().filter(file -> !file.isEmpty()).toList();
+        if (selected.size()>4 || selected.stream().anyMatch(file -> file.getSize()>1048576)) { errors.reject("uploads","Elegí hasta cuatro archivos nuevos de hasta 1 MiB cada uno"); }
+        if (errors.hasErrors()) {
+            model.addAttribute("reselectFiles",true);
+            return coverage(composition,model);
+        }
+        var reference=service.save(new MarketplaceService.Draft(stage,composition.resource(),composition.version(),composition.type(),composition.subject(),details,composition.description().label(),uploads(selected)));
         request.getSession().removeAttribute(COMPOSITION);
         redirect.addFlashAttribute("notice","Borrador privado guardado. Revisá la vista previa y prepará una revisión nueva para publicar.");
         return "redirect:/marketplace/manage/"+reference.resourceId();
+    }
+
+    @GetMapping("/marketplace/recover") public String recover(@RequestParam UUID stage, HttpServletRequest request, Model model) {
+        String[] stages=request.getParameterValues("stage");
+        if (stages==null || stages.length!=1 || !stage.toString().equals(stages[0])) { throw new IllegalArgumentException("Referencia de recuperación inválida"); }
+        var composition=current(stage,false,request);
+        model.addAttribute("form",composition.coverage());
+        model.addAttribute("uploadRecovery",true);
+        model.addAttribute("reselectFiles",true);
+        return coverage(composition,model);
+    }
+
+    private UUID actor() { return proof.actor().orElseThrow(MarketplaceStore::unavailable); }
+    private Composition current(UUID stage, boolean description, HttpServletRequest request) {
+        var session=request.getSession(false);
+        Object found=session==null ? null : session.getAttribute(COMPOSITION);
+        if (!(found instanceof Composition composition) || !composition.actor().equals(actor()) || !composition.stage().equals(stage) || composition.editingDescription()!=description) {
+            throw new ModerationFailure("El formulario cambió o venció. Volvé a Mis publicaciones para consultar el estado o empezar de nuevo");
+        }
+        currentResource(composition);
+        return composition;
+    }
+    private void currentResource(Composition composition) {
+        composition.resource().ifPresent(id -> {
+            var own=reader.own(id);
+            if (!own.subject().equals(composition.subject()) || own.type()!=composition.type() || own.version()!=composition.version()
+                    || own.lifecycle()!=PublicationLifecycle.OPEN || own.current().details().isEmpty()) {
+                throw new ModerationFailure("La publicación cambió. Volvé a Mis publicaciones y abrí la edición actual antes de continuar");
+            }
+        });
+    }
+    private static String description(Composition composition, Model model) {
+        model.addAttribute("composition",composition);
+        if (!model.containsAttribute("form")) { model.addAttribute("form",composition.description()); }
+        return "marketplace-compose";
+    }
+    private static String coverage(Composition composition, Model model) {
+        model.addAttribute("composition",composition); model.addAttribute("provinces",MarketplaceDetails.PROVINCES);
+        return "marketplace-coverage";
     }
 
     @GetMapping("/marketplace/manage/{id}") public String own(@PathVariable UUID id,Model model) {
@@ -167,5 +239,8 @@ public class MarketplaceController {
         if (files!=null) { for (var file:files) { if (!file.isEmpty()) { uploads.add(new MarketplaceService.Upload(Objects.requireNonNullElse(file.getContentType(),"application/octet-stream"),file.getBytes())); } } }
         return List.copyOf(uploads);
     }
-    public record Composition(UUID stage, PresenceType type, UUID subject, Optional<UUID> resource, long version, String title, String body, String tags, String label, Optional<MarketplaceDetails> previous) {}
+    public record Composition(UUID stage, UUID actor, PresenceType type, UUID subject, Optional<UUID> resource, long version,
+                              Description description, Coverage coverage, boolean editingDescription) {
+        public String title() { return description.title(); }
+    }
 }

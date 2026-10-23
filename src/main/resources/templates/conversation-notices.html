@@ -1,1 +1,25 @@
-<!doctype html><html lang="es-AR" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Avisos · Changeo</title><link rel="stylesheet" href="/style.css"></head><body><header th:replace="~{shell :: header}"></header><main id="main"><h1>Estado de avisos</h1><p>Los avisos locales tienen su propio estado de entrega. Cada consulta vuelve a verificar tu acceso al contenido aprobado; no se incluyen extractos privados ni pendientes.</p><p th:if="${notices.isEmpty()}">No hay avisos actualmente disponibles.</p><article class="card" th:each="notice : ${notices}"><p th:text="${@conversationWords.notice(notice.state)}"></p></article><a href="/conversations">Abrir conversaciones disponibles</a></main><footer th:replace="~{shell :: footer}"></footer></body></html>
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Avisos · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header th:replace="~{shell :: header}"></header>
+<main id="main">
+    <h1>Estado de avisos</h1>
+    <p>Los avisos se entregan solamente en este sitio. Cada consulta vuelve a verificar tu acceso al contenido aprobado; no se incluyen extractos privados ni pendientes.</p>
+    <p>Esta página revisa hasta 20 avisos. Su entrega es independiente de la entrega del mensaje o contenido.</p>
+    <p th:if="${notices.isEmpty()}">No hay avisos actualmente disponibles en esta página.</p>
+    <article class="card" th:each="notice : ${notices}">
+        <p th:text="${@conversationWords.notice(notice.state)}"></p>
+        <a th:if="${origins.get(notice.id).isPresent()}" th:href="${origins.get(notice.id).orElseThrow()}">Consultar contenido del aviso</a>
+        <p th:if="${origins.get(notice.id).isEmpty()}">Este aviso no tiene una consulta directa disponible.</p>
+    </article>
+    <nav th:if="${next.isPresent() or older}" aria-label="Páginas de avisos">
+        <a th:if="${next.isPresent()}" th:href="@{/notifications(after=${next.orElseThrow()})}">Consultar avisos anteriores</a>
+        <a th:if="${older}" href="/notifications">Volver a los avisos recientes</a>
+    </nav>
+    <p><a href="/conversations">Abrir conversaciones disponibles</a></p>
+    <p><a href="/support">Consultar ayuda disponible</a></p>
+</main>
+<footer th:replace="~{shell :: footer}"></footer>
+</body>
+</html>

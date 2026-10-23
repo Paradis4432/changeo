@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Corregir evidencia privada · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body><header th:replace="~{shell :: header}"></header><main id="main">
+<h1>Corregir evidencia privada</h1>
+<form th:action="@{/jobs/content}" method="post" enctype="multipart/form-data" th:object="${form}">
+<input type="hidden" name="command" th:value="${command}"><input type="hidden" name="job" th:value="${jobId}"><input type="hidden" name="subject" th:value="${subject}"><input th:if="${resource != null}" type="hidden" name="resource" th:value="${resource}"><input type="hidden" name="version" th:value="${version}">
+<div role="alert" aria-labelledby="job-errors-title" tabindex="-1" id="job-errors">
+<h2 id="job-errors-title">Revisá estos campos</h2><p>No se guardó esta revisión. Conservamos el texto dentro del límite permitido; corregilo antes de reintentar.</p>
+<ul><li th:each="error : ${#fields.detailedErrors()}"><span th:if="${error.global}" th:text="${error.message}"></span><a th:unless="${error.global}" th:href="${'#job-' + error.fieldName}" th:text="${error.message}"></a></li></ul>
+</div>
+<label for="job-kind">Etapa</label><select th:if="${resource == null}" id="job-kind" th:field="*{kind}" th:attr="aria-invalid=${#fields.hasErrors('kind') ? 'true' : null},aria-describedby=${#fields.hasErrors('kind') ? 'job-kind-error' : null}">
+<option th:if="${!{'PROGRESS','FEEDBACK','FINAL_DELIVERY','SUPPORT_NOTE','REVIEW'}.contains(form.kind)}" th:value="${form.kind}" th:text="${'Etapa inválida: ' + form.kind}"></option>
+<option value="SUPPORT_NOTE">Explicación privada para ayuda</option><option value="PROGRESS">Avance</option><option value="FEEDBACK">Devolución incluida</option><option value="FINAL_DELIVERY">Entrega final</option><option value="REVIEW">Reseña del trabajo completado</option></select>
+<input th:if="${resource != null}" type="hidden" name="kind" th:value="${form.kind}"><input th:if="${resource != null}" id="job-kind" readonly th:value="${@conversationWords.content(form.kind)}" aria-describedby="job-edit-stage"><p th:if="${resource != null}" id="job-edit-stage">La edición conserva la etapa de esta evidencia.</p>
+<p id="job-kind-error" th:if="${#fields.hasErrors('kind')}" th:errors="*{kind}"></p>
+<label for="job-body">Descripción</label><textarea id="job-body" name="body" maxlength="12000" rows="6" required th:text="${form.body}" th:attr="aria-invalid=${#fields.hasErrors('body') ? 'true' : null},aria-describedby=${#fields.hasErrors('body') ? 'job-body-error' : null}"></textarea>
+<p id="job-body-error" th:if="${#fields.hasErrors('body')}" th:errors="*{body}"></p>
+<label for="job-score">Valoración, solo para una reseña</label><input id="job-score" name="score" th:value="${form.score}" inputmode="numeric" maxlength="40" th:attr="aria-invalid=${#fields.hasErrors('score') ? 'true' : null},aria-describedby=${#fields.hasErrors('score') ? 'job-score-help job-score-error' : 'job-score-help'}">
+<p id="job-score-help">Para una reseña, ingresá un entero de 1 a 5. Para cualquier otra etapa, dejá la valoración vacía.</p><p id="job-score-error" th:if="${#fields.hasErrors('score')}" th:errors="*{score}"></p>
+<label for="job-label">Clasificación</label><select id="job-label" th:field="*{label}" th:attr="aria-invalid=${#fields.hasErrors('label') ? 'true' : null},aria-describedby=${#fields.hasErrors('label') ? 'job-label-error' : null}">
+<option th:if="${!{'GENERAL','SENSITIVE','ADULT'}.contains(form.label)}" th:value="${form.label}" th:text="${'Clasificación inválida: ' + form.label}"></option>
+<option value="GENERAL">General</option><option value="SENSITIVE">Sensible</option><option value="ADULT">Adulto</option></select>
+<p id="job-label-error" th:if="${#fields.hasErrors('label')}" th:errors="*{label}"></p>
+<p>Volvé a seleccionar los archivos: el navegador no los conserva. Los archivos anteriores se omiten; adjuntalos de nuevo si corresponde. La etapa y los permisos se vuelven a verificar al guardar.</p>
+<label for="job-files">Hasta cuatro archivos nuevos de 1 MiB cada uno</label><input id="job-files" name="uploads" type="file" multiple><button>Guardar sin entregar</button>
+<p>Guardar no entrega la evidencia: cada revisión y archivo requiere envío explícito a moderación.</p>
+</form><p><a th:href="@{/jobs/{id}(id=${jobId},subject=${subject})}">Consultar trabajo y estado actual</a> · <a th:href="@{/jobs/{id}/authored(id=${jobId},subject=${subject},content=${resource})}">Mis revisiones privadas</a></p>
+</main><footer th:replace="~{shell :: footer}"></footer></body></html>

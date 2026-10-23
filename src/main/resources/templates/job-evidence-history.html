@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es-AR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Evidencia del trabajo · Changeo</title><link rel="stylesheet" href="/style.css"></head>
+<body><header th:replace="~{shell :: header}"></header><main id="main">
+<h1>Evidencia aprobada del trabajo</h1>
+<p>Consultá avances, devoluciones, entregas, explicaciones y reseñas disponibles para tu audiencia actual. La entrega final seleccionada y su aceptación se consultan en el trabajo.</p>
+<section th:fragment="evidence(retained)" th:with="retained=${retained ?: false}" aria-labelledby="evidence-heading">
+<h2 id="evidence-heading">Evidencia aprobada disponible</h2>
+<p>Hasta diez referencias por página, en orden de referencia, no por fecha. Cada entrada es una observación protegida independiente y vuelve a comprobar revisión, audiencia y archivos.</p>
+<p id="evidence-navigation-help">Estos enlaces abren otra página. El texto y los archivos sin guardar de otros formularios pueden perderse al navegar.</p>
+<p id="evidence-empty" th:if="${evidencePage.entries.isEmpty()}">No hay evidencia visible en este tramo. Si hay más páginas, podés continuar; el acceso actual puede ocultar entradas.</p>
+<article class="card" th:each="entry : ${evidencePage.entries}" th:attr="data-evidence-resource=${entry.reference.resourceId},data-evidence-revision=${entry.reference.revisionId}">
+<h3 th:text="${@conversationWords.content(entry.kind)}"></h3><p class="authored" th:text="${entry.body}"></p>
+<p th:if="${entry.score != null}">Valoración: <span th:text="${entry.score}"></span> de 5</p>
+<p th:if="${entry.label == 'SENSITIVE'}">Contenido sensible</p><p th:if="${entry.label == 'ADULT'}">Contenido para adultos</p>
+<a th:each="file : ${entry.attachments}" th:href="@{/conversations/files/{id}(id=${file.id},kind=${file.content.ownerKind},resource=${file.content.resourceId},revision=${file.content.revisionId},digest=${file.digest})}">Descargar evidencia aprobada</a>
+<form th:unless="${retained}" th:action="@{/conversations/cases}" method="post"><input type="hidden" name="command" th:value="${command}"><input type="hidden" name="kind" th:value="${entry.reference.ownerKind}"><input type="hidden" name="resource" th:value="${entry.reference.resourceId}"><input type="hidden" name="revision" th:value="${entry.reference.revisionId}"><input type="hidden" name="caseKind" value="REPORT"><input type="hidden" name="reason" value="SAFETY"><button class="secondary">Reportar evidencia aprobada</button></form>
+</article>
+<nav aria-label="Páginas de evidencia aprobada" aria-describedby="evidence-navigation-help">
+<a id="evidence-previous" th:if="${evidencePage.previous.isPresent()}" th:href="${retained} ? @{/jobs/{id}/support(id=${support.jobId},subject=${subject},messageAfter=${messageAfter},evidenceBefore=${evidencePage.previous.get()})} : @{/jobs/{id}/evidence(id=${jobId},subject=${subject},evidenceBefore=${evidencePage.previous.get()})}">Evidencia anterior</a>
+<a id="evidence-next" th:if="${evidencePage.next.isPresent()}" th:href="${retained} ? @{/jobs/{id}/support(id=${support.jobId},subject=${subject},messageAfter=${messageAfter},evidenceAfter=${evidencePage.next.get()})} : @{/jobs/{id}/evidence(id=${jobId},subject=${subject},evidenceAfter=${evidencePage.next.get()})}">Más evidencia aprobada</a>
+<a id="evidence-first" th:if="${evidencePage.selected}" th:href="${retained} ? @{/jobs/{id}/support(id=${support.jobId},subject=${subject},messageAfter=${messageAfter})} : @{/jobs/{id}/evidence(id=${jobId},subject=${subject})}">Volver al comienzo de la evidencia</a>
+</nav>
+</section><p><a th:href="@{/jobs/{id}(id=${jobId},subject=${subject})}">Volver al trabajo y la entrega final seleccionada</a></p></main><footer th:replace="~{shell :: footer}"></footer></body></html>

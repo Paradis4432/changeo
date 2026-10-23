@@ -1,0 +1,56 @@
+name: Selected sandbox checks and package
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_original_containers:
+        description: Run original nonfinancial container checks on the authorized hosted engine
+        type: boolean
+        default: false
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  selected-checks:
+    name: DB-free boundary checks and ordinary JAR
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Run selected tests and package
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p .runtime
+          flock .runtime/agent-build.lock ./mvnw -B -ntp -Dtest=SandboxSafetyTest,TotpTest,AgreementTermsTest,FileInspectorTest package
+
+  original-containers:
+    name: Optional original PostgreSQL and moderation container checks
+    if: ${{ inputs.run_original_containers }}
+    needs: selected-checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Run unchanged selected container suites
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p .runtime
+          flock .runtime/agent-build.lock ./mvnw -B -ntp -Dtest=SandboxSafetyTest,TotpTest,AgreementTermsTest,FileInspectorTest -Dit.test=PostgresContainerIT,ModerationContainerIT verify

@@ -45,7 +45,7 @@ class IdentityStore {
         }
         Map<UUID, LinkIdentity> after = activeLinks(requested);
         if (!before.equals(after)) {
-            throw new IdentityFailure("La autoridad cambió. Reintentar en una transacción nueva");
+            throw new ar.changeo.identity.api.IdentityDiscoveryChanged();
         }
         after.values().stream().map(LinkIdentity::id).distinct().sorted(Comparator.comparing(UUID::toString))
                 .forEach(id -> {

@@ -16,6 +16,9 @@ public class MarketplaceOwner implements ContentOwner {
     private final ProviderEntitlementAccess entitlements;
 
     MarketplaceOwner(MarketplaceStore store, ObjectProvider<MarketplaceReader> readers, ProviderEntitlementAccess entitlements) { this.store=store; this.readers=readers; this.entitlements=entitlements; }
+    @Override public Optional<String> caseOrigin(ContentReference reference) {
+        return Optional.of("/marketplace/origin?kind=" + reference.ownerKind() + "&resource=" + reference.resourceId() + "&revision=" + reference.revisionId());
+    }
     @Override public Set<SurfaceKind> kinds() { return Set.of(SurfaceKind.PROFILE_BIO,SurfaceKind.OFFER_BODY,SurfaceKind.REQUEST_BODY); }
     @Override public boolean owns(ContentReference reference) { return store.owns(reference); }
 
@@ -50,7 +53,7 @@ public class MarketplaceOwner implements ContentOwner {
         return resource.lifecycle()==PublicationLifecycle.OPEN && reference.revisionId().equals(resource.current())
                 && revision.author().capability()==resource.type().publishCapability();
     }
-    @Override public boolean reportable(ContentReference reference) {
+    @Override public boolean reportable(ContentReference reference, ActorId reporter, String effectiveLabel) {
         var resource=store.resource(reference.resourceId(),false);
         return resource.lifecycle()==PublicationLifecycle.OPEN && reference.revisionId().equals(resource.approved());
     }
